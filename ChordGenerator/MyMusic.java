@@ -1,7 +1,7 @@
 /*
 	This code was mostly an exercise in how to generate every major/minor
-	triad using only two small arrays. Later on I might write some music
-	quizzes of sorts using this logic.
+	triad and seventh chord using only two small arrays. Later on I might
+	write some music quizzes of sorts using this logic.
 */
 
 import java.util.*;
