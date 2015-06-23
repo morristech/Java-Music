@@ -1,12 +1,3 @@
-/**
-* To do: make an array of roman numerals. how can they be tied to the keys?
-* also, an array of names for the keys themselves; how can I input them into the print statements?
-*
-* GUI quiz? Or just put in JavaScript and upload to mobile.sheridan, maybe
-* --shuffle pitch classes (in new array), and as for roman numeral in that key.
-* the redundancy of chords will be useful in this respect because e.g. a C-major chord can be I, IV, VII, etc.
-*/
-
 import java.util.*;
 
 public class MyMusic {
@@ -19,25 +10,16 @@ public class MyMusic {
 		pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
 		accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
 
-		triad = new String[3];
-
-		//are these all necessary? all the minor triads are present already in the majorKeys
-		//probably OK because the Strings are reference types; i.e. no new objects in memory are require
-		//
-		//for a chord quiz program, the minor triad arrays wouldn't even be needed since the major triad
-		//arrays already have them covered. in fact, they even cover things like C-major triads 4 times.
-		//how to avoid that redundacy?
-
 		//makeChords(true==sharps false==flats, true==major false==minor, true==triad false==7th chord);
 		majorKeys = new String[][][][] {
-		//	makeChords(true, true, true), //sharp major key triads
-		//	makeChords(false, true, true), //flat major key triads
+			makeChords(true, true, true), //sharp major key triads
+			makeChords(false, true, true), //flat major key triads
 			makeChords(true, true, false), //sharp major key 7ths
 			makeChords(false, true, false) //flat major key 7ths
 		}; //getting redundancy with key of C-major. probably this is OK
 		minorKeys = new String[][][][] {
-		//	makeChords(true, false, true), //sharp minor key triads
-		//	makeChords(false, false, true), //flat minor key triads
+			makeChords(true, false, true), //sharp minor key triads
+			makeChords(false, false, true), //flat minor key triads
 			makeChords(true, false, false), //sharp minor key 7ths
 			makeChords(false, false, false) //flat minor key 7ths
 		}; //getting redundancy with key of A-minor. probably this is OK
@@ -47,7 +29,6 @@ public class MyMusic {
 		MyMusic m = new MyMusic();
 		printEveryChordMade(m);
 
-		//m.printTriad("f");
 		/*
 
 		c  d  e  f  g  a  b
@@ -154,15 +135,6 @@ public class MyMusic {
 			break;
 		}
 		return acc;
-	}
-	//this can be better: make it access triads[][][][][] somehow since all the triads are already inside of it
-	public void printTriad(String s) {
-		s = s.toUpperCase();
-		int startingIndex = Arrays.asList(pitchClassesArray).indexOf(s);
-		triad[0] = s;
-		triad[1] = pitchClassesArray[(startingIndex + 2) % NUMBER_OF_PITCH_CLASSES]; //wrap around diatonic collection with % operator
-		triad[2] = pitchClassesArray[(startingIndex + 4) % NUMBER_OF_PITCH_CLASSES];
-		p(triad);
 	}
 	public static void printEveryChordMade(MyMusic m) {
 		for (String[][][][] mode: m.chords) {
