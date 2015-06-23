@@ -1,10 +1,15 @@
+/*
+	This code was mostly an exercise in how to generate every major/minor
+	triad using only two small arrays. Later on I might write some music
+	quizzes of sorts using this logic.
+*/
+
 import java.util.*;
 
 public class MyMusic {
 	String[] pitchClassesArray, accidentalsArray, triad;
 	String[][][][] majorKeys, minorKeys;
 	String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
-	public static final int NUMBER_OF_PITCH_CLASSES = 7;
 
 	public MyMusic() {
 		pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
