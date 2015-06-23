@@ -1,0 +1,124 @@
+.root {
+    -fx-font-size: 16;
+     -fx-accent: #818181;
+}
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #666666;
+}
+.button {
+-fx-background-color: linear-gradient(#666666, #4d5052); 
+-fx-text-fill: #7fc15b;
+}
+.slider .axis {
+    -fx-tick-label-fill: #9876aa; 
+ /*   -fx-tick-label-font-weight: bold; */
+}
+.slider .axis .axis-tick-mark, .slider .axis .axis-minor-tick-mark {
+    -fx-fill: null;
+    -fx-stroke: #4d5052;
+}
+.slider .thumb {
+    -fx-background-color: #4d5052;
+    -fx-border-color: #2b2b2b;
+}
+.slider .track {
+    -fx-background-color: #4d5052;
+}
+.text-area .content {  
+   -fx-background-color: #4d5052;
+   -fx-text-fill: #a9b7c6;
+} 
+/* http://stackoverflow.com/questions/13200439/javafx2-2-making-a-scrollbar-with-transparent-background */
+.text-area {  
+   -fx-background-color: #4d5052;
+}
+.text-area .scroll-pane {
+    -fx-background-color: #4d5052;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: #4d5052;
+}
+.text-area .scroll-bar .increment-button {
+    -fx-background-color: #4d5052;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 3;
+    -fx-shape: null;
+}
+
+.text-area .scroll-bar .decrement-button {
+    -fx-background-color: #4d5052;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 3;
+    -fx-shape: null;
+}
+
+.text-area .scroll-bar:vertical {
+ -fx-background-color: #2b2b2b;
+}
+
+.text-area .scroll-bar:vertical .track-background {
+  -fx-background-color: #2b2b2b;
+}
+
+.text-area .scroll-bar:vertical .track {
+ -fx-background-color: #4d5052;
+}
+
+.text-area .hide-thumb .scroll-bar:vertical .thumb {
+ -fx-background-color: #2b2b2b;
+}
+.text-area .thumb {
+ -fx-background-color: #666666;
+/* -fx-border-color: #666666; */
+}
+.radio-button {
+	-fx-color: #4d5052;
+}
+.radio-button .dot {
+  -fx-mark-color:  #2b2b2b ;
+}
+.radio-button:hover .radio {
+    -fx-color: #4d5052;
+}
+.radio-button .radio  {
+   -fx-background-color: #4d5052;
+}
+.radio-button:selected .dot {
+   -fx-background-color: #2b2b2b;
+}
+
+/* http://stackoverflow.com/questions/19343531/javafx-combobox-styling */
+.combo-box .list-cell {
+	-fx-background-color: #4d5052;
+	-fx-text-fill: #9876aa;
+	-fx-color: #4d5052
+}
+.combo-box {
+	-fx-background-color: #4d5052;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+-fx-background-color: #666666;
+}
+
+.combo-box-base  
+{
+-fx-background-color: radial-gradient(radius 100%, #666666, #4d5052);
+}
+.combo-box-base:hover
+{
+	-fx-color: #4d5052;
+}
+.combo-box-base:showing 
+{
+	-fx-color: #666666;
+}
+.combo-box-base:focused {
+-fx-background-color: linear-gradient(#666666, #4d5052);
+}
+.combo-box .arrow {
+-fx-background-color: #666666;
+}
