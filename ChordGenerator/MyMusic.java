@@ -85,7 +85,7 @@ public class MyMusic {
 	//chordSize == true is for triads. chordSize == false is for 7th chords.
 	public String[][][] makeChords(boolean accidental, boolean mode, boolean chordSize) { //{"C", "D", "E", "F", "G", "A", "B"};
 		String[][][] arr = new String[8][7][chordSize ? 3 : 4]; //8 keys, 7 chords per key, 3 or 4 pitch classes per chord.
-		int index = mode ? 0 : 5;				//why 8 keys? because Cmajor to C#major, Aminor to Abminor, etc., is each 8 keys total.
+		int index = mode ? 0 : 5;	//why 8 keys? because Cmajor to C#major, Aminor to Abminor, etc., is each 8 keys total.
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
 				for (int k = 0; k < arr[i][j].length; k++) {
@@ -95,7 +95,7 @@ public class MyMusic {
 				index = (index + (chordSize ? 2 : 0)) % 7;
 			}
 			index = (index + (accidental ? 4 : 3)) % 7; //these magic numbers just have to do with
-		}												//how intervals work in music
+		}						//how intervals work in music
 		return arr;
 	}
 	//accidental == true means return sharps. accidental == false means return flats.
