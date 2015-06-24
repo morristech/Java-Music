@@ -17,7 +17,7 @@
 *	decision making to decide which octave to use (the bass note should always use the lowest possible
 *	octave, though).
 *
-*/
+*/ 
 
 import java.util.*;
 import javafx.application.*;
@@ -76,8 +76,8 @@ public class ChordGeneratorGUI extends Application {
 		pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
 		accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
 		modeArray = new String[] {"-major", "-minor"};
-		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "vii°"};
-		romanNumeralsMinorArray = new String[] {"i", "ii°", "III", "iv", "v", "VI", "VII"}; //no modal mixture; will this be an issue?
+		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "viiÂ°"};
+		romanNumeralsMinorArray = new String[] {"i", "iiÂ°", "III", "iv", "v", "VI", "VII"}; //no modal mixture; will this be an issue?
 		triadicInversions = new String[] {"", "6", "6/4"}; //I used empty string for a 5/3 chord
 		seventhInversions = new String[] {"7", "6/5", "4/3", "4/2"};
 
@@ -474,8 +474,8 @@ public class ChordGeneratorGUI extends Application {
 				  : seventhInversions[inversionIndex]
 		);
 
-		if (b >= 2 && rightAnswer.contains("°")) { //if chord is a 7th chord (b==2 or b==3) and contains a °, it's actually a half-diminished chord
-			rightAnswer = rightAnswer.replace("°", "ø"); //so replace the ° with a ø
+		if (b >= 2 && rightAnswer.contains("Â°")) { //if chord is a 7th chord (b==2 or b==3) and contains a Â°, it's actually a half-diminished chord
+			rightAnswer = rightAnswer.replace("Â°", "Ã¸"); //so replace the Â° with a Ã¸
 		}
 
 		keyLabel.setText("in the key of " + keyNames[a][b % 2][c]); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
@@ -513,9 +513,9 @@ public class ChordGeneratorGUI extends Application {
 						|| Arrays.asList(wrongAnswerArray).contains(wrongAnswer)  //avoids duplicate wrong answers
 				);
 				if (chordSize == 4
-						&& wrongAnswer.contains("°")) { //randomly give a wrong answer a half-diminished symbol, otherwise
+						&& wrongAnswer.contains("Â°")) { //randomly give a wrong answer a half-diminished symbol, otherwise
 					if (Math.random() < 0.5) { //when a half-dim symbol appears, that'd always be the correct answer
-						wrongAnswer = wrongAnswer.replace("°", "ø");
+						wrongAnswer = wrongAnswer.replace("Â°", "Ã¸");
 					}
 				}
 				answerButtonArray[i].setText(wrongAnswer);
