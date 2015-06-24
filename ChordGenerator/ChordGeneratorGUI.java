@@ -229,7 +229,7 @@ public class ChordGeneratorGUI extends Application {
 		primaryStage.show();
 	}
 
-		/* //old thoughts on how to add appropriate accidentals to the chords generated
+		/* //Old thoughts on how to add appropriate accidentals to the chords generated
 
 		c  d  e  f  g  a  b
 		g  a  b  c  d  e  f#	                  [6]
