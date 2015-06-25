@@ -4,6 +4,7 @@
 *	But now I shoved it into a GUI to make it a music theory quiz.
 *
 *	TODO
+*	Make it apply to bass clef as well.
 *	Make interface look less basic.
 *	Add other common "modal-mixture" chords like V in minor, applied chords...this latter
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
@@ -52,7 +53,7 @@ public class ChordGeneratorGUI extends Application {
 		notehead4, notehead5, notehead6, notehead7,
 		notehead8, notehead9, notehead10, notehead11,
 		notehead12, notehead13,
-		ledgerLineC4, ledgerLineA5;
+		ledgerLineC4, suppLedgerLineC4, ledgerLineA5;
 	Label[] sharps, flats, noteheads;
 	Label[][] accidentals;
 
@@ -60,7 +61,7 @@ public class ChordGeneratorGUI extends Application {
 	String[] pitchClassesArray, accidentalsArray,
 		modeArray, romanNumeralsMajorArray,
 		romanNumeralsMinorArray, triadicInversions,
-		seventhInversions, pitchClassesArrayFromB;
+		seventhInversions;
 	String[][][] keyNames;
 	String[][][][] majorKeys, minorKeys;
 	String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
@@ -81,7 +82,6 @@ public class ChordGeneratorGUI extends Application {
 
 		//Initialize music quiz variables
 		pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
-		pitchClassesArrayFromB = new String[] {"B", "C", "D", "E", "F", "G", "A"}; //need this because notehead positions start at B3
 		accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
 		modeArray = new String[] {"-major", "-minor"};
 		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "vii°"};
@@ -130,6 +130,7 @@ public class ChordGeneratorGUI extends Application {
 		notehead12 = new Label("\uD834\uDD5D");
 		notehead13 = new Label("\uD834\uDD5D");
 		ledgerLineC4 = new Label("\u2015");
+		suppLedgerLineC4 = new Label("\u2015");
 		ledgerLineA5 = new Label("\u2015");
 		noteheads = new Label[] {
 			notehead0, notehead1,
@@ -203,7 +204,7 @@ public class ChordGeneratorGUI extends Application {
 			b.setFont(buttonFont);
 		}
 
-		//add to GridPane
+		//add to GridPanes
 		myGridPane.add(questionLabel, 0, 0);
 		musicStaffGridPane.add(trebleClef, 0, 0);
 		musicStaffGridPane.add(staffLines1, 0, 0);
@@ -239,6 +240,7 @@ public class ChordGeneratorGUI extends Application {
 		musicStaffGridPane.add(notehead13, 2, 0);
 		musicStaffGridPane.add(ledgerLineA5, 2, 0);
 		musicStaffGridPane.add(ledgerLineC4, 2, 0);
+		musicStaffGridPane.add(suppLedgerLineC4, 2, 0);
 
 		myGridPane.add(musicStaffGridPane, 0, 1);
 		myGridPane.add(keyLabel, 0, 2);
@@ -281,6 +283,7 @@ public class ChordGeneratorGUI extends Application {
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
 
+		//tedious
 		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
 		cSharp.setTranslateY(-24);		cSharp.setTranslateX(-4);
 		gSharp.setTranslateY(-69);		gSharp.setTranslateX(12);
@@ -314,6 +317,7 @@ public class ChordGeneratorGUI extends Application {
 
 		ledgerLineA5.setTranslateY(-81); ledgerLineA5.setTranslateX(3);
 		ledgerLineC4.setTranslateY(57);  ledgerLineC4.setTranslateX(3);
+		suppLedgerLineC4.setTranslateY(57); suppLedgerLineC4.setTranslateX(34);
 
 		for (Label[] mode: accidentals) {
 			for (Label acc: mode) {
@@ -326,6 +330,7 @@ public class ChordGeneratorGUI extends Application {
 		staffLines2.setFont(musicFont120);
 		staffLines3.setFont(musicFont120);
 		ledgerLineC4.setFont(musicFont58);
+		suppLedgerLineC4.setFont(musicFont58);
 		ledgerLineA5.setFont(musicFont58);
 		for (Label nh: noteheads) {
 			nh.setFont(musicFont115);
@@ -582,7 +587,7 @@ public class ChordGeneratorGUI extends Application {
 			}
 		}
 		/* //the old way I printed.
-		for (String[][][][] mode: m.chords) {
+		for (String[][][][] mode: cg.chords) {
 			for (String[][][] accidentalType: mode) {
 				for (String[][] key: accidentalType) {
 					for (String[] triad: key) {
@@ -650,29 +655,33 @@ public class ChordGeneratorGUI extends Application {
 
 		//get the bass note of the shuffled chord and display it and the
 		//C4 ledger line if necessary
-		for (int i = 0; i < pitchClassesArrayFromB.length; i++) {
-			if (pitchClassesArrayFromB[i].equals(
+		for (int i = 6, j = 0; j < pitchClassesArray.length; i = (i + 1) % NUM_PITCH_CLASSES, j++) { //i = 6 because noteheads starts at "B", while the pitchClassesArray starts at "C"
+			if (pitchClassesArray[i].equals(
 					aRandomChordShuffled[0].substring(0, 1))) {
-				verticalIndex = i;
+				verticalIndex = j;
 				noteheads[verticalIndex].setVisible(true);  //move to the right by num_accidentals * a constant?
-				if (verticalIndex == 0 || verticalIndex == 1) {
+				if (verticalIndex == 0 || verticalIndex == 1) { //if the pitch is either B3 or C4 it needs a ledger line
 					ledgerLineC4.setVisible(true);
 				}
 				break;
 			}
 		}
+		//for B-C-E-G the ledger line needs to be double the length. use a supplementary ledger
 		//input the remaining 2-3 pitches
-		for (int i = verticalIndex, j = verticalIndex, k = 0;
+		for (int i = verticalIndex + 1, j = verticalIndex, k = 0; //i = verticalIndex + 1 again because noteheads starts at "B" while pitchClassesArray starts at "C"
 				i < noteheads.length && k < everythingButBassNote.length;
-				i++, j = (j + 1) % 7) {
-			if (pitchClassesArrayFromB[j].equals(everythingButBassNote[k])) {
+				i++, j = (j + 1) % NUM_PITCH_CLASSES) {
+			if (pitchClassesArray[j].equals(everythingButBassNote[k])) {
 				noteheads[i].setVisible(true);
 				k++;
-				if (i == 13) {
+				if (i == 13) { //if the note is A5 it needs a ledger. i don't think this is ever needed, however
 					ledgerLineA5.setVisible(true);
 				}
-				if (i > 0 && noteheads[i - 1].isVisible()) {
-					noteheads[i].setTranslateX(40);
+				if (i > 0 && noteheads[i - 1].isVisible()) { //if the pitch added before this one is an interval of a 2nd below
+					noteheads[i].setTranslateX(40); //it, then it must shift to the right a little to make space
+					if (i == 1) { //if the baseNote is "B" and the next pitch to be added is "C", a huge ledger line is needed
+						suppLedgerLineC4.setVisible(true); //supplementary ledger
+					}
 				}
 			}
 		}
@@ -695,6 +704,7 @@ public class ChordGeneratorGUI extends Application {
 		}
 		ledgerLineA5.setVisible(false);
 		ledgerLineC4.setVisible(false);
+		suppLedgerLineC4.setVisible(false);
 	}
 	public void createWrongAnswers(int chordSize, int rightAnswerIndex) {
 		wrongAnswerArray = new String[answerButtonArray.length - 1]; //4 buttons, so (4 - 1) wrong answers
@@ -760,7 +770,7 @@ public class ChordGeneratorGUI extends Application {
 		);
 		/*
 		//random triad:
-		p(mmq.chords[(int)(Math.random() * 2)]
+		p(cg.chords[(int)(Math.random() * 2)]
 			[(int)(Math.random() * 2)]
 			[(int)(Math.random() * 8)]
 			[(int)(Math.random() * 7)]
@@ -768,7 +778,7 @@ public class ChordGeneratorGUI extends Application {
 		*/
 		/*
 		//random 7th chord:
-		p(mmq.chords[(int)(Math.random() * 2)]
+		p(cg.chords[(int)(Math.random() * 2)]
 			[(int)(2 + Math.random() * 2)]
 			[(int)(Math.random() * 8)]
 			[(int)(Math.random() * 7)]
