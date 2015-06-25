@@ -9,9 +9,8 @@
 *	Add other common "modal-mixture" chords like V in minor, applied chords...this latter
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
 *	e.g. a VII7 in C-minor would 'usually' be a V7 of III.
-*	Change a lot of the magic numbers to final int variables? Might be even less readable that way.
 *	Add timer? Add score? Add average time per question [from generate button clicked to
-*	correct answer answered]?
+*	correct answer answered]? Wrong attempts vs correct attempts?
 *
 *	Drawing staff ideas: an array of x/y values for each potential pitch class. Perhaps use random
 *	decision making to decide which octave to use (the bass note should always use the lowest possible
@@ -32,28 +31,40 @@ import javafx.scene.text.*;
 public class ChordGeneratorGUI extends Application {
 
 	//JavaFX members
-	GridPane myGridPane;
+	GridPane myGridPane, musicStaffGridPane;
 	Button answerButton1, answerButton2,
 		answerButton3, answerButton4,
 		generateChordButton;
 	Button[] answerButtonArray;
-	TextField questionTextField;
 	Label questionLabel, correctMsgLabel,
 		aLabel, bLabel, cLabel, dLabel,
-		keyLabel, notesLabel, keySubLabel;
+		keyLabel, notesLabel;
 	Scene scene;
-	MyMusicQuiz mmq;
 	boolean a1, a2, a3, a4;
 	String rightAnswer, wrongAnswer;
 	String[] wrongAnswerArray;
 	Font buttonFont;
 	int rightAnswerIndex;
 
+	//JavaFX music staff members
+	Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers refer to find sizes
+	Label trebleClef, bassClef,
+		staffLines1, staffLines2, staffLines3,
+		fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
+		bFlat, eFlat, aFlat, dFlat, gFlat, cFlat, fFlat,
+		notehead0, notehead1, notehead2, notehead3,
+		notehead4, notehead5, notehead6, notehead7,
+		notehead8, notehead9, notehead10, notehead11,
+		notehead12, notehead13,
+		ledgerLineC4, ledgerLineA5;
+	Label[] sharps, flats, noteheads;
+	Label[][] accidentals;
+
 	//Music quiz members
 	String[] pitchClassesArray, accidentalsArray,
 		modeArray, romanNumeralsMajorArray,
 		romanNumeralsMinorArray, triadicInversions,
-		seventhInversions;
+		seventhInversions, pitchClassesArrayFromB;
 	String[][][] keyNames;
 	String[][][][] majorKeys, minorKeys;
 	String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
@@ -74,6 +85,7 @@ public class ChordGeneratorGUI extends Application {
 
 		//Initialize music quiz variables
 		pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
+		pitchClassesArrayFromB = new String[] {"B", "C", "D", "E", "F", "G", "A"}; //need this because notehead positions start at B3
 		accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
 		modeArray = new String[] {"-major", "-minor"};
 		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "vii°"};
@@ -81,6 +93,66 @@ public class ChordGeneratorGUI extends Application {
 		triadicInversions = new String[] {"", "6", "6/4"}; //I used empty string for a 5/3 chord
 		seventhInversions = new String[] {"7", "6/5", "4/3", "4/2"};
 
+		//initialize music staff notation variables
+		musicStaffGridPane = new GridPane();
+		musicFont55 = new Font("FreeSerif", 55);
+		musicFont58 = new Font("FreeSerif", 58);
+		musicFont115 = new Font("FreeSerif", 115);
+		musicFont120 = new Font("FreeSerif", 120);
+		musicFont160 = new Font("FreeSerif", 160);
+		trebleClef = new Label("\uD834\uDD1E");
+		bassClef = new Label("\uD834\uDD22");
+		staffLines1 = new Label("\uD834\uDD1A");
+		staffLines2 = new Label("\uD834\uDD1A");
+		staffLines3 = new Label("\uD834\uDD1A");
+		fSharp = new Label("\u266F");
+		cSharp = new Label("\u266F");
+		gSharp = new Label("\u266F");
+		dSharp = new Label("\u266F");
+		aSharp = new Label("\u266F");
+		eSharp = new Label("\u266F");
+		bSharp = new Label("\u266F");
+		bFlat = new Label("\u266D");
+		eFlat = new Label("\u266D");
+		aFlat = new Label("\u266D");
+		dFlat = new Label("\u266D");
+		gFlat = new Label("\u266D");
+		cFlat = new Label("\u266D");
+		fFlat = new Label("\u266D");
+		notehead0 = new Label("\uD834\uDD5D");
+		notehead1 = new Label("\uD834\uDD5D");
+		notehead2 = new Label("\uD834\uDD5D");
+		notehead3 = new Label("\uD834\uDD5D");
+		notehead4 = new Label("\uD834\uDD5D");
+		notehead5 = new Label("\uD834\uDD5D");
+		notehead6 = new Label("\uD834\uDD5D");
+		notehead7 = new Label("\uD834\uDD5D");
+		notehead8 = new Label("\uD834\uDD5D");
+		notehead9 = new Label("\uD834\uDD5D");
+		notehead10 = new Label("\uD834\uDD5D");
+		notehead11 = new Label("\uD834\uDD5D");
+		notehead12 = new Label("\uD834\uDD5D");
+		notehead13 = new Label("\uD834\uDD5D");
+		ledgerLineC4 = new Label("\u2015");
+		ledgerLineA5 = new Label("\u2015");
+		noteheads = new Label[] {
+			notehead0, notehead1,
+			notehead2, notehead3, notehead4,
+			notehead5, notehead6, notehead7,
+			notehead8, notehead9, notehead10,
+			notehead11, notehead12, notehead13,
+		};
+		sharps = new Label[] {
+			fSharp, cSharp, gSharp, dSharp,
+			aSharp, eSharp, bSharp
+		};
+		flats = new Label[] {
+			bFlat, eFlat, aFlat,
+			dFlat, gFlat, cFlat, fFlat
+		};
+		accidentals = new Label[][] {sharps, flats};
+
+		//Initialize music quiz variables.
 		//generate all possible keys (without double-accidentals)
 		makeKeyNames();
 
@@ -105,7 +177,7 @@ public class ChordGeneratorGUI extends Application {
 		chords = new String[][][][][] {majorKeys, minorKeys};
 
 
-		//initialize JavaFX class members
+		//initialize non-music notation JavaFX class members
 		myGridPane = new GridPane();
 		answerButton1 = new Button();
 		answerButton2 = new Button();
@@ -114,14 +186,12 @@ public class ChordGeneratorGUI extends Application {
 		answerButtonArray = new Button[] {answerButton1,
 			answerButton2, answerButton3, answerButton4};
 		generateChordButton = new Button("Generate new question");
-		questionTextField = new TextField();
-		questionLabel = new Label("Analyze this chord");
+		questionLabel = new Label("Analyze the following chord:");
 		aLabel = new Label("A.");
 		bLabel = new Label("B.");
 		cLabel = new Label("C.");
 		dLabel = new Label("D.");
 		keyLabel = new Label();
-		keySubLabel = new Label("(the leftmost pitch-class is\nconsidered the bass-note.)");
 		correctMsgLabel = new Label();
 		notesLabel = new Label(
 			"Note: this program only interprets the chords\n" +
@@ -139,9 +209,43 @@ public class ChordGeneratorGUI extends Application {
 
 		//add to GridPane
 		myGridPane.add(questionLabel, 0, 0);
-		myGridPane.add(questionTextField, 0, 1);
+		musicStaffGridPane.add(trebleClef, 0, 0);
+		musicStaffGridPane.add(staffLines1, 0, 0);
+		musicStaffGridPane.add(staffLines2, 1, 0);
+		musicStaffGridPane.add(staffLines3, 2, 0);
+		musicStaffGridPane.add(fSharp, 1, 0);
+		musicStaffGridPane.add(cSharp, 1, 0);
+		musicStaffGridPane.add(gSharp, 1, 0);
+		musicStaffGridPane.add(dSharp, 1, 0);
+		musicStaffGridPane.add(aSharp, 1, 0);
+		musicStaffGridPane.add(eSharp, 1, 0);
+		musicStaffGridPane.add(bSharp, 1, 0);
+		musicStaffGridPane.add(bFlat, 1, 0);
+		musicStaffGridPane.add(eFlat, 1, 0);
+		musicStaffGridPane.add(aFlat, 1, 0);
+		musicStaffGridPane.add(dFlat, 1, 0);
+		musicStaffGridPane.add(gFlat, 1, 0);
+		musicStaffGridPane.add(cFlat, 1, 0);
+		musicStaffGridPane.add(fFlat, 1, 0);
+		musicStaffGridPane.add(notehead0, 2, 0);
+		musicStaffGridPane.add(notehead1, 2, 0);
+		musicStaffGridPane.add(notehead2, 2, 0);
+		musicStaffGridPane.add(notehead3, 2, 0);
+		musicStaffGridPane.add(notehead4, 2, 0);
+		musicStaffGridPane.add(notehead5, 2, 0);
+		musicStaffGridPane.add(notehead6, 2, 0);
+		musicStaffGridPane.add(notehead7, 2, 0);
+		musicStaffGridPane.add(notehead8, 2, 0);
+		musicStaffGridPane.add(notehead9, 2, 0);
+		musicStaffGridPane.add(notehead10, 2, 0);
+		musicStaffGridPane.add(notehead11, 2, 0);
+		musicStaffGridPane.add(notehead12, 2, 0);
+		musicStaffGridPane.add(notehead13, 2, 0);
+		musicStaffGridPane.add(ledgerLineA5, 2, 0);
+		musicStaffGridPane.add(ledgerLineC4, 2, 0);
+
+		myGridPane.add(musicStaffGridPane, 0, 1);
 		myGridPane.add(keyLabel, 0, 2);
-		myGridPane.add(keySubLabel, 0, 3);
 		myGridPane.add(aLabel, 0, 4);
 		myGridPane.add(answerButton1, 1, 4);
 		myGridPane.add(bLabel, 2, 4);
@@ -158,30 +262,80 @@ public class ChordGeneratorGUI extends Application {
 		myGridPane.setHgap(15);
 		myGridPane.setVgap(15);
 		myGridPane.setPadding(new Insets(10, 10, 10, 10));
-		questionTextField.setAlignment(Pos.CENTER);
 		GridPane.setColumnSpan(questionLabel, 4);
-		GridPane.setColumnSpan(questionTextField, 4);
 		GridPane.setColumnSpan(keyLabel, 4);
-		GridPane.setColumnSpan(keySubLabel, 4);
 		GridPane.setColumnSpan(correctMsgLabel, 4);
 		GridPane.setColumnSpan(generateChordButton, 4);
 		GridPane.setColumnSpan(notesLabel, 4);
+		GridPane.setColumnSpan(musicStaffGridPane, 4);
 		GridPane.setHalignment(generateChordButton, HPos.CENTER);
 		GridPane.setHalignment(questionLabel, HPos.CENTER);
 		GridPane.setHalignment(correctMsgLabel, HPos.CENTER);
-		GridPane.setHalignment(keyLabel, HPos.CENTER);
-		GridPane.setHalignment(keySubLabel, HPos.CENTER);
+		GridPane.setHalignment(keyLabel, HPos.LEFT);
 		GridPane.setHalignment(notesLabel, HPos.CENTER);
-		answerButton1.setMinWidth(85);
-		answerButton2.setMinWidth(85);
-		answerButton3.setMinWidth(85);
-		answerButton4.setMinWidth(85);
+		answerButton1.setMinWidth(110);
+		answerButton2.setMinWidth(110);
+		answerButton3.setMinWidth(110);
+		answerButton4.setMinWidth(110);
 		GridPane.setHalignment(aLabel, HPos.LEFT);
 		GridPane.setHalignment(bLabel, HPos.RIGHT);
 		GridPane.setHalignment(cLabel, HPos.LEFT);
-		GridPane.setHalignment(dLabel, HPos.RIGHT);
-		questionTextField.setEditable(false);
-		correctMsgLabel.setStyle("-fx-font-weight: bold;");
+		GridPane.setHalignment(dLabel, HPos.RIGHT);;
+		correctMsgLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
+		questionLabel.setPadding(new Insets(0, 0, 20, 0));
+		keyLabel.setTranslateX(52);
+
+		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
+		cSharp.setTranslateY(-24);		cSharp.setTranslateX(-4);
+		gSharp.setTranslateY(-69);		gSharp.setTranslateX(12);
+		dSharp.setTranslateY(-37);		dSharp.setTranslateX(28);
+		aSharp.setTranslateY(-1);		aSharp.setTranslateX(44);
+		eSharp.setTranslateY(-48);		eSharp.setTranslateX(60);
+		bSharp.setTranslateY(-13);		bSharp.setTranslateX(76);
+
+		bFlat.setTranslateY(-13);		bFlat.setTranslateX(-20);
+		eFlat.setTranslateY(-48);		eFlat.setTranslateX(-4);
+		aFlat.setTranslateY(-1);		aFlat.setTranslateX(12);
+		dFlat.setTranslateY(-36);		dFlat.setTranslateX(28);
+		gFlat.setTranslateY(10);		gFlat.setTranslateX(44);
+		cFlat.setTranslateY(-24);		cFlat.setTranslateX(60);
+		fFlat.setTranslateY(21);		fFlat.setTranslateX(76);
+
+		notehead13.setTranslateY(-101);	notehead13.setTranslateX(10); //A5
+		notehead12.setTranslateY(-90); 	notehead12.setTranslateX(10); //G5
+		notehead11.setTranslateY(-78);	notehead11.setTranslateX(10); //F5
+		notehead10.setTranslateY(-67); 	notehead10.setTranslateX(10); //E5
+		notehead9.setTranslateY(-55);	notehead9.setTranslateX(10); //D5
+		notehead8.setTranslateY(-44); 	notehead8.setTranslateX(10); //C5
+		notehead7.setTranslateY(-32);	notehead7.setTranslateX(10); //B4
+		notehead6.setTranslateY(-21);	notehead6.setTranslateX(10); //A4
+		notehead5.setTranslateY(-9);	notehead5.setTranslateX(10); //G4
+		notehead4.setTranslateY(2); 	notehead4.setTranslateX(10); //F4
+		notehead3.setTranslateY(14);	notehead3.setTranslateX(10); //E4
+		notehead2.setTranslateY(26); 	notehead2.setTranslateX(10); //D4
+		notehead1.setTranslateY(37); 	notehead1.setTranslateX(10); //C4
+		notehead0.setTranslateY(49);	notehead0.setTranslateX(10); //B3
+
+		ledgerLineA5.setTranslateY(-81); ledgerLineA5.setTranslateX(3);
+		ledgerLineC4.setTranslateY(57);  ledgerLineC4.setTranslateX(3);
+
+		for (Label[] mode: accidentals) {
+			for (Label acc: mode) {
+				acc.setFont(musicFont55);
+			}
+		}
+		trebleClef.setFont(musicFont120);
+		bassClef.setFont(musicFont120);
+		staffLines1.setFont(musicFont120);
+		staffLines2.setFont(musicFont120);
+		staffLines3.setFont(musicFont120);
+		ledgerLineC4.setFont(musicFont58);
+		ledgerLineA5.setFont(musicFont58);
+		for (Label nh: noteheads) {
+			nh.setFont(musicFont115);
+		}
+		keyLabel.setFont(new Font("Serif", 19));
+		questionLabel.setFont(new Font("Serif", 17));
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
@@ -224,7 +378,7 @@ public class ChordGeneratorGUI extends Application {
 		getRandomChord();
 		scene = new Scene(myGridPane);
 		generateChordButton.requestFocus();
-		primaryStage.setTitle("RN Analysis Quiz");
+		primaryStage.setTitle("Nick's RN Analysis Quiz");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -278,7 +432,7 @@ public class ChordGeneratorGUI extends Application {
 	//accidental == true means use sharps. accidental == false means use flats.
 	//mode == true is for major keys. mode == false is for minor keys.
 	//chordSize == true is for triads. chordSize == false is for 7th chords.
-	public String[][][] makeChords(boolean accidental, boolean mode, boolean chordSize) {
+	public String[][][] makeChords(boolean accidental, boolean mode, boolean chordSize) { //I don't want to phase out the magic numbers associated with chordSize
 		String[][][] arr = new String[8][7][chordSize ? 3 : 4]; //8 keys, 7 chords per key, 3 or 4 pitch classes per chord.
 		int index = mode ? START_C_MAJOR : START_A_MINOR;	//why 8 keys? because Cmajor to C#major, Aminor to Abminor, etc., is each 8 keys total.
 		//mode ? 0 : 5, that means if major key, start the looping on C, if minor key, start on A(minor)
@@ -289,11 +443,11 @@ public class ChordGeneratorGUI extends Application {
 					index = (index + 2) % NUM_PITCH_CLASSES; //interval of 2 is a musical interval of a third
 				} //for reference: pitchClassesArray = {"C", "D", "E", "F", "G", "A", "B"};
 				index = (index + (chordSize ? 2 : 0)) % NUM_PITCH_CLASSES; //if I'm making triads, 2, if seventh chords, 0. this
-			}											//is just how traversing the pitch-class array in mod 7 worked out, because
-														//C-E-G are intervals of 2 from C to G, but D-F-A (the next chord) is an interval
-														//of 4 from G to D (2 + 2 = 4; i.e. 2 from the k loop, and now 2 from the j loop)
-														//but C-E-G-B is just an interval of 2 from B to D for D-F-A-C (2 + 0 = 2; i.e.
-														//2 from the k loop, 0 from the j loop
+			}										//is just how traversing the pitch-class array in mod 7 worked out, because
+													//C-E-G are intervals of 2 from C to G, but D-F-A (the next chord) is an interval
+													//of 4 from G to D (2 + 2 = 4; i.e. 2 from the k loop, and now 2 from the j loop)
+													//but C-E-G-B is just an interval of 2 from B to D for D-F-A-C (2 + 0 = 2; i.e.
+													//2 from the k loop, 0 from the j loop
 			index = (index + (accidental ? ASC_FIFTHS : ASC_FOURTHS)) % NUM_PITCH_CLASSES; //if i'm using sharp accidentals, that means i'm ascending by fifths (4 ints)
 		}								//but if I'm using flats, that means ascending fourths (3 ints)
 		return arr;
@@ -312,7 +466,7 @@ public class ChordGeneratorGUI extends Application {
 			}
 		}
 	}
-		/* deprecated code, but I might want to look back at it:
+		/* deprecated code, but I might want to look back at it in future:
 		keyNames = new String[4][8];
 		boolean interval = true,	//true == a fifth interval, false == a fourth interval
 				accidental = true,	//true == sharps, false == flats
@@ -420,13 +574,13 @@ public class ChordGeneratorGUI extends Application {
 		}
 		return acc;
 	}
-	public static void printEveryChordMade(ChordGenerator m) {
-		for (int i = 0; i < m.chords.length; i++) { //len = 2
-			for (int j = 0; j < m.chords[i].length; j++) { //len = 4 (2 when commented out half)
-				for (int p = 0; p < m.chords[i][j].length; p++) { //len = 8, eight keys;
-					System.out.println(m.keyNames[i][j % 2][p]); //j % 2 because I repeat key names for both triads and 7th chords; see getRandomChord()
-					for (int q = 0; q < m.chords[i][j][p].length; q++) { //len = 7, seven chords per key
-						p(m.chords[i][j][p][q]);
+	public static void printEveryChordMade(ChordGeneratorGUI cg) {
+		for (int i = 0; i < cg.chords.length; i++) { //len = 2
+			for (int j = 0; j < cg.chords[i].length; j++) { //len = 4 (2 when commented out half)
+				for (int p = 0; p < cg.chords[i][j].length; p++) { //len = 8, eight keys;
+					System.out.println(cg.keyNames[i][j % 2][p]); //j % 2 because I repeat key names for both triads and 7th chords; see getRandomChord()
+					for (int q = 0; q < cg.chords[i][j][p].length; q++) { //len = 7, seven chords per key
+						p(cg.chords[i][j][p][q]);
 					}
 				}
 			}
@@ -478,12 +632,73 @@ public class ChordGeneratorGUI extends Application {
 			rightAnswer = rightAnswer.replace("°", "ø"); //so replace the ° with a ø
 		}
 
-		keyLabel.setText("in the key of " + keyNames[a][b % 2][c]); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
-		questionTextField.setText(Arrays.toString(aRandomChordShuffled));	//, the "chords" one is a length of 4 (thus, b could be a value of 3 or 4).
+		keyLabel.setText(keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
 		rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
 		answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
+		setNotationInvisible();
+		displayPitches(aRandomChordShuffled, c, d);
+		displayKeySignature(b, c);
 		createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
+	}
+	public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
+		int verticalIndex = 0;
+		String[] everythingButBassNote = new String[aRandomChordShuffled.length - 1];
+
+		//get every pitch from the shuffled chord except the bass note and sort them;
+		//this is needed for a tightly packed chord input on the musical staff
+		for (int i = 0; i < everythingButBassNote.length; i++) {
+			everythingButBassNote[i] = aRandomChordShuffled[i + 1].substring(0, 1);
+		}
+		Arrays.sort(everythingButBassNote);
+
+		//get the bass note of the shuffled chord and display it and the
+		//C4 ledger line if necessary
+		for (int i = 0; i < pitchClassesArrayFromB.length; i++) {
+			if (pitchClassesArrayFromB[i].equals(
+					aRandomChordShuffled[0].substring(0, 1))) {
+				verticalIndex = i;
+				noteheads[verticalIndex].setVisible(true);  //move to the right by num_accidentals * a constant?
+				if (verticalIndex == 0 || verticalIndex == 1) {
+					ledgerLineC4.setVisible(true);
+				}
+				break;
+			}
+		}
+		//input the remaining 2-3 pitches
+		for (int i = verticalIndex, j = verticalIndex, k = 0;
+				i < noteheads.length && k < everythingButBassNote.length;
+				i++, j = (j + 1) % 7) {
+			if (pitchClassesArrayFromB[j].equals(everythingButBassNote[k])) {
+				noteheads[i].setVisible(true);
+				k++;
+				if (i == 13) {
+					ledgerLineA5.setVisible(true);
+				}
+				if (i > 0 && noteheads[i - 1].isVisible()) {
+					noteheads[i].setTranslateX(40);
+				}
+			}
+		}
+	}
+	public void displayKeySignature(int sharpsOrFlats, int numAccidentals) {
+		for (int i = 0; i < numAccidentals; i++) {
+			accidentals[sharpsOrFlats % 2][i].setVisible(true);
+		}
+	}
+	//"reset" the key signature / noteheads
+	public void setNotationInvisible() {
+		for (Label[] mode: accidentals) {
+			for (Label acc: mode) {
+				acc.setVisible(false);
+			}
+		}
+		for (Label note: noteheads) {
+			note.setVisible(false);
+			note.setTranslateX(10);
+		}
+		ledgerLineA5.setVisible(false);
+		ledgerLineC4.setVisible(false);
 	}
 	public void createWrongAnswers(int chordSize, int rightAnswerIndex) {
 		wrongAnswerArray = new String[answerButtonArray.length - 1]; //4 buttons, so (4 - 1) wrong answers
@@ -526,7 +741,7 @@ public class ChordGeneratorGUI extends Application {
 	//getRandomChord() replaces all the magic numbers in this method
 	//with less magical values (e.g. array lengths)
 	public void printRandomChordKeyRN() {
-		//lengths of each dimension: mmq.chords[2][4][8][7]);
+		//lengths of each dimension: chords[2][4][8][7]);
 		//random triad or 7th chord
 		int a = (int)(Math.random() * 2),
 			b = (int)(Math.random() * 4),
