@@ -5,6 +5,7 @@
 *
 *	TODO
 *	Make it apply to bass clef as well.
+*	Why does the sharp-accidental font sometimes leave a dot behind after going invisible?
 *	Make interface look less basic.
 *	Add other common "modal-mixture" chords like V in minor, applied chords...this latter
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
@@ -44,7 +45,7 @@ public class ChordGeneratorGUI extends Application {
 	int rightAnswerIndex;
 
 	//JavaFX music staff members
-	Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers refer to find sizes
+	Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers at end of variable name refer to font sizes
 	Label trebleClef, bassClef,
 		staffLines1, staffLines2, staffLines3,
 		fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
@@ -283,7 +284,7 @@ public class ChordGeneratorGUI extends Application {
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
 
-		//tedious
+		//tediousness
 		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
 		cSharp.setTranslateY(-24);		cSharp.setTranslateX(-4);
 		gSharp.setTranslateY(-69);		gSharp.setTranslateX(12);
@@ -384,52 +385,6 @@ public class ChordGeneratorGUI extends Application {
 		primaryStage.show();
 	}
 
-		/* //old thoughts on how to add appropriate accidentals to the chords generated
-
-		c  d  e  f  g  a  b
-		g  a  b  c  d  e  f#	                  [6]
-		d  e  f# g  a  b  c#	      [2]         [6]
-		a  b  c# d  e  f# g#	      [2]      [5][6]
-		e  f# g# a  b  c# d#	   [1][2]      [5][6]
-		b  c# d# e  f# g# a#	   [1][2]   [4][5][6]
-		f# g# a# b  c# d# e#	[0][1][2]   [4][5][6]
-		c# d# e# f# g# a# b#	[0][1][2][3][4][5][6]
-
-		arr.length - 1
-		arr.length - 1, arr.length / 3
-		arr.length - 1, arr.length - 2, arr.length / 3
-		arr.length - 1, arr.length - 2, arr.length / 3, arr.length / 3 - 1
-		arr.length - 1, arr.length - 2, arr.length - 3, arr.length / 3, arr.length / 3 - 1
-		arr.length - 1, arr.length - 2, arr.length - 3, arr.length / 3, arr.length / 3 - 1, arr.length / 3 - 2
-		arr.length - 1, arr.length - 2, arr.length - 3, arr.length - 4, arr.length / 3, arr.length / 3 - 1, arr.length / 3 - 2
-
-		c  d  e  f  g  a  b
-		d  e  f# g  a  b  c#	      [2]         [6]
-		e  f# g# a  b  c# d#	   [1][2]      [5][6]
-		f# g# a# b  c# d# e#	[0][1][2]   [4][5][6]
-		g  a  b  c  d  e  f#	                  [6]
-		a  b  c# d  e  f# g#	      [2]      [5][6]
-		b  c# d# e  f# g# a#	   [1][2]   [4][5][6]
-
-		a  b  c  d  e  f  g
-		b  c# d  e  f# g# a
-		c# d# e  f# g# a  b
-		d# e# f# g# a# b  c#
-		e  f# g  a  b  c  d
-		f# g# a  b  c# d  e
-		g# a# b  c# d# e  f#
-
-		a  b  c  d  e  f  g
-		e  f# g  a  b  c  d
-		b  c# d  e  f# g# a
-		f# g# a  b  c# d  e
-		c# d# e  f# g# a  b
-		g# a# b  c# d# e  f#
-		d# e# f# g# a# b  c#
-		a# b# c# d# e# f# g#
-
-		*/
-
 	//accidental == true means use sharps. accidental == false means use flats.
 	//mode == true is for major keys. mode == false is for minor keys.
 	//chordSize == true is for triads. chordSize == false is for 7th chords.
@@ -467,54 +422,6 @@ public class ChordGeneratorGUI extends Application {
 			}
 		}
 	}
-		/* deprecated code, but I might want to look back at it in future:
-		keyNames = new String[4][8];
-		boolean interval = true,	//true == a fifth interval, false == a fourth interval
-				accidental = true,	//true == sharps, false == flats
-				mode = true;		//true == major mode, false == minor mode
-		for (int i = 0; i < keyNames.length; i++) {
-			for (int j = 0, k = mode ? 0 : 5;
-					j < keyNames[i].length;
-					j++, k = (k + (interval ? 4 : 3)) % 7) {
-				keyNames[i][j] =
-					pitchClassesArray[k].concat(
-						getAccidental(j, k, accidental
-					).concat(modeArray[mode ? 0 : 1]));
-			}
-			if (i == 0 || i == 2) {
-				interval = false;
-				accidental = false;
-			} else {
-				interval = true;
-				accidental = true;
-			}
-			if (i == 1) {
-				mode = false;
-			}
-		}
-
-		//vomit-inducing alternative ideas
-		for (int i = 0, j = 0, k = 0, m = 8, n = 16, p = 24, q = 5, r = 5;
-				i < 8 && m < 16 && n < 24 && p < keyNames.length;
-				i++, j = ((j + 4) % 7), k = ((k + 3) % 7), m++,
-				n++, p++, q = ((q + 4) % 7), r = ((r + 3) % 7)) {
-			keyNames[i] = pitchClassesArray[j].concat(modeArray[0]);
-			keyNames[m] = pitchClassesArray[k].concat(modeArray[0]);
-			keyNames[n] = pitchClassesArray[q].concat(modeArray[1]);
-			keyNames[p] = pitchClassesArray[r].concat(modeArray[1]);
-		}
-
-		C-major G-major D-major ... C#-major
-		C-major F-major Bbmajor ... Cb-major
-		A-minor E-minor B-minor ... A#-minor
-		A-minor D-minor G-minor ... Ab-minor
-
-		pitchClassesArray[0].concat(modeArray[0]);
-		pitchClassesArray[0].concat(modeArray[1]);
-		pitchClassesArray[1].concat(modeArray[0]);
-		pitchClassesArray[1].concat(modeArray[0]);
-
-		*/
 
 	/*
 		getAccidental:
@@ -574,32 +481,6 @@ public class ChordGeneratorGUI extends Application {
 			break;
 		}
 		return acc;
-	}
-	public static void printEveryChordMade(ChordGeneratorGUI cg) {
-		for (int i = 0; i < cg.chords.length; i++) { //len = 2
-			for (int j = 0; j < cg.chords[i].length; j++) { //len = 4 (2 when commented out half)
-				for (int p = 0; p < cg.chords[i][j].length; p++) { //len = 8, eight keys;
-					System.out.println(cg.keyNames[i][j % 2][p]); //j % 2 because I repeat key names for both triads and 7th chords; see getRandomChord()
-					for (int q = 0; q < cg.chords[i][j][p].length; q++) { //len = 7, seven chords per key
-						p(cg.chords[i][j][p][q]);
-					}
-				}
-			}
-		}
-		/* //the old way I printed.
-		for (String[][][][] mode: cg.chords) {
-			for (String[][][] accidentalType: mode) {
-				for (String[][] key: accidentalType) {
-					for (String[] triad: key) {
-						p(triad);
-					}
-					System.out.println("================");
-				}
-				System.out.println("================");
-			}
-			System.out.println("================");
-		}
-		*/
 	}
 	//generic method to print an array to the terminal
 	public static <E> void p(E[] arr) {
@@ -742,48 +623,6 @@ public class ChordGeneratorGUI extends Application {
 				answerButtonArray[i].setText(wrongAnswer);
 			}
 		}
-	}
-	//for printing to the terminal (testing)
-	//getRandomChord() replaces all the magic numbers in this method
-	//with less magical values (e.g. array lengths)
-	public void printRandomChordKeyRN() {
-		//lengths of each dimension: chords[2][4][8][7]);
-		//random triad or 7th chord
-		int a = (int)(Math.random() * 2),
-			b = (int)(Math.random() * 4),
-			c = (int)(Math.random() * 8),
-			d = (int)(Math.random() * 7);
-
-		String[] aChord = chords[a][b][c][d];
-		String[] aShuffledChord = shuffleChord(aChord);
-		String bassNote = aShuffledChord[0];
-		int inversionIndex = Arrays.asList(aChord).indexOf(bassNote);
-
-		System.out.println(keyNames[a][b % 2][c]);
-		p(aShuffledChord);
-		System.out.println((a == 0
-			? romanNumeralsMajorArray[d]
-			: romanNumeralsMinorArray[d]).concat(
-			b < 2 ? triadicInversions[inversionIndex]
-				  : seventhInversions[inversionIndex]
-			)
-		);
-		/*
-		//random triad:
-		p(cg.chords[(int)(Math.random() * 2)]
-			[(int)(Math.random() * 2)]
-			[(int)(Math.random() * 8)]
-			[(int)(Math.random() * 7)]
-		);
-		*/
-		/*
-		//random 7th chord:
-		p(cg.chords[(int)(Math.random() * 2)]
-			[(int)(2 + Math.random() * 2)]
-			[(int)(Math.random() * 8)]
-			[(int)(Math.random() * 7)]
-		);
-		*/
 	}
 	public String[] shuffleChord(String[] arr) {
 		List<String> arrList = new ArrayList<String>(Arrays.asList(arr));
