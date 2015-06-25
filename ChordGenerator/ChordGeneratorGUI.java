@@ -3,8 +3,7 @@
 *	triad and seventh chord built from small arrays.
 *	But now I shoved it into a GUI to make it a music theory quiz.
 *
-*	TODO musicians don't want to look at sets of chords like [G, B, D], they
-*	want to look at music notation. How can I use javafx paint to draw these chords?
+*	TODO
 *	Make interface look less basic.
 *	Add other common "modal-mixture" chords like V in minor, applied chords...this latter
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
@@ -12,11 +11,8 @@
 *	Add timer? Add score? Add average time per question [from generate button clicked to
 *	correct answer answered]? Wrong attempts vs correct attempts?
 *
-*	Drawing staff ideas: an array of x/y values for each potential pitch class. Perhaps use random
-*	decision making to decide which octave to use (the bass note should always use the lowest possible
-*	octave, though).
 *
-*/ 
+*/
 
 import java.util.*;
 import javafx.application.*;
@@ -88,8 +84,8 @@ public class ChordGeneratorGUI extends Application {
 		pitchClassesArrayFromB = new String[] {"B", "C", "D", "E", "F", "G", "A"}; //need this because notehead positions start at B3
 		accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
 		modeArray = new String[] {"-major", "-minor"};
-		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "viiÂ°"};
-		romanNumeralsMinorArray = new String[] {"i", "iiÂ°", "III", "iv", "v", "VI", "VII"}; //no modal mixture; will this be an issue?
+		romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "vii°"};
+		romanNumeralsMinorArray = new String[] {"i", "ii°", "III", "iv", "v", "VI", "VII"}; //no modal mixture; will this be an issue?
 		triadicInversions = new String[] {"", "6", "6/4"}; //I used empty string for a 5/3 chord
 		seventhInversions = new String[] {"7", "6/5", "4/3", "4/2"};
 
@@ -383,7 +379,7 @@ public class ChordGeneratorGUI extends Application {
 		primaryStage.show();
 	}
 
-		/* //Old thoughts on how to add appropriate accidentals to the chords generated
+		/* //old thoughts on how to add appropriate accidentals to the chords generated
 
 		c  d  e  f  g  a  b
 		g  a  b  c  d  e  f#	                  [6]
@@ -628,8 +624,8 @@ public class ChordGeneratorGUI extends Application {
 				  : seventhInversions[inversionIndex]
 		);
 
-		if (b >= 2 && rightAnswer.contains("Â°")) { //if chord is a 7th chord (b==2 or b==3) and contains a Â°, it's actually a half-diminished chord
-			rightAnswer = rightAnswer.replace("Â°", "Ã¸"); //so replace the Â° with a Ã¸
+		if (b >= 2 && rightAnswer.contains("°")) { //if chord is a 7th chord (b==2 or b==3) and contains a °, it's actually a half-diminished chord
+			rightAnswer = rightAnswer.replace("°", "ø"); //so replace the ° with a ø
 		}
 
 		keyLabel.setText(keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
@@ -728,9 +724,9 @@ public class ChordGeneratorGUI extends Application {
 						|| Arrays.asList(wrongAnswerArray).contains(wrongAnswer)  //avoids duplicate wrong answers
 				);
 				if (chordSize == 4
-						&& wrongAnswer.contains("Â°")) { //randomly give a wrong answer a half-diminished symbol, otherwise
+						&& wrongAnswer.contains("°")) { //randomly give a wrong answer a half-diminished symbol, otherwise
 					if (Math.random() < 0.5) { //when a half-dim symbol appears, that'd always be the correct answer
-						wrongAnswer = wrongAnswer.replace("Â°", "Ã¸");
+						wrongAnswer = wrongAnswer.replace("°", "ø");
 					}
 				}
 				answerButtonArray[i].setText(wrongAnswer);
