@@ -1,4 +1,7 @@
 /**
+*	NB: Without the FreeSerif.ttf font available on your computer, this program
+*	will not display any of the necessary music notation
+*
 *	This code was originally an exercise in how to generate every major/minor
 *	triad and seventh chord built from small arrays.
 *	But now I shoved it into a GUI to make it a music theory quiz.
@@ -10,6 +13,9 @@
 *	Add other common "modal-mixture" chords like V in minor, applied chords...this latter
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
 *	e.g. a VII7 in C-minor would 'usually' be a V7 of III.
+*
+*	Common applied chords: in minor: VII7 == V7 / III, V7 / i
+*
 *	Add timer? Add score? Add average time per question [from generate button clicked to
 *	correct answer answered]? Wrong attempts vs correct attempts?
 *
@@ -92,11 +98,11 @@ public class ChordGeneratorGUI extends Application {
 
 		//initialize music staff notation variables
 		musicStaffGridPane = new GridPane();
-		musicFont55 = new Font("FreeSerif", 55);
-		musicFont58 = new Font("FreeSerif", 58);
-		musicFont115 = new Font("FreeSerif", 115);
-		musicFont120 = new Font("FreeSerif", 120);
-		musicFont160 = new Font("FreeSerif", 160);
+		musicFont55 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 55);
+		musicFont58 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 58);
+		musicFont115 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 115);
+		musicFont120 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 120);
+		musicFont160 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 160);
 		trebleClef = new Label("\uD834\uDD1E");
 		bassClef = new Label("\uD834\uDD22");
 		staffLines1 = new Label("\uD834\uDD1A");
@@ -183,7 +189,7 @@ public class ChordGeneratorGUI extends Application {
 		answerButton4 = new Button();
 		answerButtonArray = new Button[] {answerButton1,
 			answerButton2, answerButton3, answerButton4};
-		generateChordButton = new Button("Generate new question");
+		generateChordButton = new Button("Generate new chord");
 		questionLabel = new Label("Analyze the following chord:");
 		aLabel = new Label("A.");
 		bLabel = new Label("B.");
@@ -192,13 +198,13 @@ public class ChordGeneratorGUI extends Application {
 		keyLabel = new Label();
 		correctMsgLabel = new Label();
 		notesLabel = new Label(
-			"Note: this program only interprets the chords\n" +
-			"at face value. It does not understand applied\n" +
-			"chords, passing chords, suspensions, or\n" +
-			"modulation; analyze accordingly. For example,\n" +
-			"a Bb7 chord in C-minor will have to be answered\n" +
-			"literally as VII7 rather than something like,\n" +
-			"\"V7 of I in the relative major.\""
+			"Note: this program only interprets the chords at face\n" +
+			"value. It does not understand applied chords, passing\n" +
+			"chords, suspensions, added chords, or modulation; \n" +
+			"analyze accordingly. For example, a Bb7 chord in \n" +
+			"C-minor will have to be answered literally as VII7\n" +
+			"rather than something like, \"V7 of I in the relative\n" +
+			"major.\""
 		);
 		buttonFont = new Font("Courier New", 12);
 		for (Button b: answerButtonArray) {
@@ -336,40 +342,36 @@ public class ChordGeneratorGUI extends Application {
 		for (Label nh: noteheads) {
 			nh.setFont(musicFont115);
 		}
-		keyLabel.setFont(new Font("Serif", 19));
-		questionLabel.setFont(new Font("Serif", 17));
+		keyLabel.setFont(new Font("FreeSerif", 19));
+		questionLabel.setFont(new Font("SansSerif", 16)); //Serif or SansSerif doesn't seem to make a diff
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
 			getRandomChord();
 		});
 		answerButton1.setOnAction((ActionEvent e) -> {
-			if (rightAnswer != null
-				&& answerButton1.getText().equals(rightAnswer)) {
+			if (rightAnswer != null && rightAnswerIndex == 0) {
 				correctMsgLabel.setText("Correct!");
 			} else if (rightAnswer != null) {
 				correctMsgLabel.setText("Incorrect.");
 			}
 		});
 		answerButton2.setOnAction((ActionEvent e) -> {
-			if (rightAnswer != null
-				&& answerButton2.getText().equals(rightAnswer)) {
+			if (rightAnswer != null && rightAnswerIndex == 1) {
 				correctMsgLabel.setText("Correct!");
 			} else if (rightAnswer != null) {
 				correctMsgLabel.setText("Incorrect.");
 			}
 		});
 		answerButton3.setOnAction((ActionEvent e) -> {
-			if (rightAnswer != null
-				&& answerButton3.getText().equals(rightAnswer)) {
+			if (rightAnswer != null && rightAnswerIndex == 2) {
 				correctMsgLabel.setText("Correct!");
 			} else if (rightAnswer != null) {
 				correctMsgLabel.setText("Incorrect.");
 			}
 		});
 		answerButton4.setOnAction((ActionEvent e) -> {
-			if (rightAnswer != null
-				&& answerButton4.getText().equals(rightAnswer)) {
+			if (rightAnswer != null && rightAnswerIndex == 3) {
 				correctMsgLabel.setText("Correct!");
 			} else if (rightAnswer != null) {
 				correctMsgLabel.setText("Incorrect.");
@@ -514,6 +516,8 @@ public class ChordGeneratorGUI extends Application {
 			rightAnswer = rightAnswer.replace("°", "ø"); //so replace the ° with a ø
 		}
 
+		//changeVII7toV7ofIII();
+
 		keyLabel.setText(keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
 		rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
 		answerButtonArray[rightAnswerIndex].setText(rightAnswer);
@@ -522,6 +526,20 @@ public class ChordGeneratorGUI extends Application {
 		displayPitches(aRandomChordShuffled, c, d);
 		displayKeySignature(b, c);
 		createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
+	}
+	//Changes VII 7th chords to an applied chord of their key's respective
+	//relative major. I'm still debating whether to include this; there is no
+	//best choice.
+	public void changeVII7toV7ofIII() {
+		if (rightAnswer.equals("VII7")) {
+				rightAnswer = "V7 of III";
+		} else if (rightAnswer.equals("VII6/5")) {
+				rightAnswer = "V6/5 of III";
+		} else if (rightAnswer.equals("VII4/3")) {
+				rightAnswer = "V4/3 of III";
+		} else if (rightAnswer.equals("VII4/2")) {
+				rightAnswer = "V4/2 of III";
+		}
 	}
 	public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
 		int verticalIndex = 0;
@@ -536,9 +554,12 @@ public class ChordGeneratorGUI extends Application {
 
 		//get the bass note of the shuffled chord and display it and the
 		//C4 ledger line if necessary
-		for (int i = 6, j = 0; j < pitchClassesArray.length; i = (i + 1) % NUM_PITCH_CLASSES, j++) { //i = 6 because noteheads starts at "B", while the pitchClassesArray starts at "C"
+		for (int i = 6, j = 0;
+				j < pitchClassesArray.length;
+				i = (i + 1) % NUM_PITCH_CLASSES, j++) { //i = 6 because noteheads starts at "B", while the pitchClassesArray starts at "C"
 			if (pitchClassesArray[i].equals(
-					aRandomChordShuffled[0].substring(0, 1))) {
+					aRandomChordShuffled[0].substring(0, 1))
+			) {
 				verticalIndex = j;
 				noteheads[verticalIndex].setVisible(true);  //move to the right by num_accidentals * a constant?
 				if (verticalIndex == 0 || verticalIndex == 1) { //if the pitch is either B3 or C4 it needs a ledger line
@@ -549,18 +570,18 @@ public class ChordGeneratorGUI extends Application {
 		}
 		//for B-C-E-G the ledger line needs to be double the length. use a supplementary ledger
 		//input the remaining 2-3 pitches
-		for (int i = verticalIndex + 1, j = verticalIndex, k = 0; //i = verticalIndex + 1 again because noteheads starts at "B" while pitchClassesArray starts at "C"
-				i < noteheads.length && k < everythingButBassNote.length;
-				i++, j = (j + 1) % NUM_PITCH_CLASSES) {
-			if (pitchClassesArray[j].equals(everythingButBassNote[k])) {
-				noteheads[i].setVisible(true);
+		for (int i = verticalIndex, j = verticalIndex + 1, k = 0; //j = verticalIndex + 1 again because noteheads starts at "B" while pitchClassesArray starts at "C"
+				j < noteheads.length && k < everythingButBassNote.length; //this could be much more readable if I created an alternate pitchClassesArray that started on "B"
+				i = (i + 1) % NUM_PITCH_CLASSES, j++) {
+			if (pitchClassesArray[i].equals(everythingButBassNote[k])) {
+				noteheads[j].setVisible(true);
 				k++;
-				if (i == 13) { //if the note is A5 it needs a ledger. i don't think this is ever needed, however
-					ledgerLineA5.setVisible(true);
+				if (j == 13) { //if the note is A5 it needs a ledger. i don't think this is ever needed, however, since the chords seem to have
+					ledgerLineA5.setVisible(true); //a max pitch of G5
 				}
-				if (i > 0 && noteheads[i - 1].isVisible()) { //if the pitch added before this one is an interval of a 2nd below
-					noteheads[i].setTranslateX(40); //it, then it must shift to the right a little to make space
-					if (i == 1) { //if the baseNote is "B" and the next pitch to be added is "C", a huge ledger line is needed
+				if (j > 0 && noteheads[j - 1].isVisible()) { //if the pitch added before this one is an interval of a 2nd below
+					noteheads[j].setTranslateX(40); //it, then it must shift to the right a little to make space
+					if (j == 1) { //if the baseNote is "B" and the next pitch to be added is "C", a huge ledger line is needed
 						suppLedgerLineC4.setVisible(true); //supplementary ledger
 					}
 				}
