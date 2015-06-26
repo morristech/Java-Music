@@ -20,15 +20,6 @@
 *
 *	Common applied chords: in minor: VII7 == V7 / III, V7 / i
 *
-*	Add timer? Add score? Add average time per question [from generate button clicked to
-*	correct answer answered]? Wrong attempts vs correct attempts? "Challenge mode"?
-*	Radiobuttons: triads only, 7ths only, both(random). clef: treble only, bass only, both(random);
-*
-*	Modes: hard (4-7 accidentals only), intermediate (0-3 accidentals), all accidentals.
-*
-*	Add some kind of checkmark/wrong red X to incorrect responses/correct answers
-*
-*
 */
 
 import java.util.*;
@@ -234,6 +225,11 @@ public class ChordGeneratorGUI extends Application {
 		difficultyRadios = new ToggleGroup();
 		easyRadio.setToggleGroup(difficultyRadios);
 		hardRadio.setToggleGroup(difficultyRadios);
+	//	musicStaffGridPane.setScaleX(musicStaffGridPane.getScaleX() * 1.1);
+	//	musicStaffGridPane.setScaleY(musicStaffGridPane.getScaleY() * 1.1);
+	//	myGridPane.setScaleX(musicStaffGridPane.getScaleX() * 1.2);
+	//	myGridPane.setScaleY(musicStaffGridPane.getScaleY() * 1.2);
+
 
 		//add to GridPanes
 		//myGridPane.add(questionLabel, 0, 0);
@@ -283,15 +279,15 @@ public class ChordGeneratorGUI extends Application {
 		myGridPane.add(answerButton3, 1, 5);
 		myGridPane.add(dLabel, 2, 5);
 		myGridPane.add(answerButton4, 3, 5);
-		myGridPane.add(scoreLabel, 0, 6);
-		myGridPane.add(scorePointsLabel, 0, 6);
-		myGridPane.add(refreshButton, 0, 6);
-		myGridPane.add(generateChordButton, 1, 6);
-		myGridPane.add(numLabel, 3, 6);
-		myGridPane.add(acciLabel, 3, 6);
-		myGridPane.add(dentalsLabel, 3, 6);
-		myGridPane.add(easyRadio, 3, 6);
-		myGridPane.add(hardRadio, 3, 6);
+		myGridPane.add(generateChordButton, 0, 6);
+		myGridPane.add(scoreLabel, 0, 7);
+		myGridPane.add(scorePointsLabel, 0, 7);
+		myGridPane.add(refreshButton, 0, 7);
+		myGridPane.add(numLabel, 3, 7);
+		myGridPane.add(acciLabel, 3, 7);
+		myGridPane.add(dentalsLabel, 3, 7);
+		myGridPane.add(easyRadio, 3, 7);
+		myGridPane.add(hardRadio, 3, 7);
 		//myGridPane.add(correctMsgLabel, 0, 7);
 		//myGridPane.add(notesLabel, 0, 8);
 
@@ -302,7 +298,7 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setColumnSpan(questionLabel, 4);
 		GridPane.setColumnSpan(keyLabel, 4);
 		GridPane.setColumnSpan(correctMsgLabel, 4);
-		GridPane.setColumnSpan(generateChordButton, 3);
+		GridPane.setColumnSpan(generateChordButton, 4);
 		GridPane.setColumnSpan(scoreLabel, 2);
 		GridPane.setColumnSpan(scorePointsLabel, 2);
 		GridPane.setColumnSpan(refreshButton, 2);
@@ -313,17 +309,13 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setHalignment(correctMsgLabel, HPos.CENTER);
 		GridPane.setHalignment(keyLabel, HPos.LEFT);
 		GridPane.setHalignment(notesLabel, HPos.CENTER);
-		answerButton1.setMinWidth(140);
-		answerButton2.setMinWidth(140);
-		answerButton3.setMinWidth(140);
-		answerButton4.setMinWidth(140);
 		GridPane.setHalignment(aLabel, HPos.LEFT);
 		GridPane.setHalignment(bLabel, HPos.RIGHT);
 		GridPane.setHalignment(cLabel, HPos.LEFT);
 		GridPane.setHalignment(dLabel, HPos.RIGHT);;
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
-		musicStaffGridPane.setTranslateX(37);
+		musicStaffGridPane.setTranslateX(7);
 
 		//tediousness
 		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
@@ -369,6 +361,7 @@ public class ChordGeneratorGUI extends Application {
 		for (Button b: answerButtonArray) {
 			b.setId("answerButtons");
 			b.setFont(Font.font("Courier New", FontWeight.BOLD, 18));
+			b.setMinWidth(110);
 		}
 		//myGridPane.setStyle("-fx-background-color: white; -fx-stroke: #737374");
 		trebleClef.setFont(musicFont120);
@@ -388,25 +381,26 @@ public class ChordGeneratorGUI extends Application {
 		refreshButton.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 20));
 		refreshButton.setPadding(new Insets(0, 4, 0, 4));
 		scoreLabel.setTranslateY(0);
-		scoreLabel.setTranslateX(37);
+		scoreLabel.setTranslateX(40);
 		scorePointsLabel.setTranslateY(16);
-		scorePointsLabel.setTranslateX(37);
+		scorePointsLabel.setTranslateX(40);
 		refreshButton.setTranslateY(8);
+		refreshButton.setTranslateX(3);
 		numLabel.setId("numAccidentals");
 		acciLabel.setId("numAccidentals");
 		dentalsLabel.setId("numAccidentals");
 		numLabel.setTranslateY(-12);
-		numLabel.setTranslateX(54);
+		numLabel.setTranslateX(22);
 		acciLabel.setTranslateY(2);
-		acciLabel.setTranslateX(61);
+		acciLabel.setTranslateX(26);
 		dentalsLabel.setTranslateY(16);
-		dentalsLabel.setTranslateX(41);
+		dentalsLabel.setTranslateX(9);
 		easyRadio.setId("difficulty");
 		hardRadio.setId("difficulty");
-		easyRadio.setTranslateY(-12);
-		easyRadio.setTranslateX(94);
-		hardRadio.setTranslateY(12);
-		hardRadio.setTranslateX(94);
+		easyRadio.setTranslateY(-10);
+		easyRadio.setTranslateX(62);
+		hardRadio.setTranslateY(14);
+		hardRadio.setTranslateX(62);
 		hardRadio.setSelected(true);
 		keyLabel.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 22));
 		questionLabel.setFont(Font.font(null, 18));
@@ -421,7 +415,7 @@ public class ChordGeneratorGUI extends Application {
 		}
 		generateChordButton.setFont(Font.font(null, FontWeight.BOLD, 16));
 		generateChordButton.setId("gcButton");
-		generateChordButton.setTranslateX(-17);
+		generateChordButton.setMaxWidth(300);
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
@@ -523,12 +517,14 @@ public class ChordGeneratorGUI extends Application {
 
 		//set up scene/stage
 		getRandomChord();
-		scene = new Scene(myGridPane);
+		scene = new Scene(myGridPane, 325, 448);
 		scene.getStylesheets().add("CGStyles.css");
 		generateChordButton.requestFocus();
 		primaryStage.setTitle("Nick's RN Analysis Quiz");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	//	System.out.println(scene.getWidth());
+	//	System.out.println(scene.getHeight());
 	}
 
 	//accidental == true means use sharps. accidental == false means use flats.
