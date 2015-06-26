@@ -47,17 +47,21 @@ public class ChordGeneratorGUI extends Application {
 	GridPane myGridPane, musicStaffGridPane;
 	Button answerButton1, answerButton2,
 		answerButton3, answerButton4,
-		generateChordButton;
+		generateChordButton, refreshButton;
 	Button[] answerButtonArray;
 	Label questionLabel, correctMsgLabel,
 		aLabel, bLabel, cLabel, dLabel,
-		keyLabel, notesLabel;
+		keyLabel, notesLabel, scoreLabel,
+		scorePointsLabel, numLabel, acciLabel,
+		dentalsLabel;
 	Label[] qLabels;
+	RadioButton easyRadio, hardRadio;
+	ToggleGroup difficultyRadios;
 	Scene scene;
-	boolean a1, a2, a3, a4;
+	boolean a1, a2, a3, a4, stopCounting;
 	String rightAnswer, wrongAnswer;
 	String[] wrongAnswerArray;
-	int rightAnswerIndex;
+	int rightAnswerIndex, correct, total;
 
 	//JavaFX music staff members
 	Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers at end of variable name refer to font sizes
@@ -148,6 +152,10 @@ public class ChordGeneratorGUI extends Application {
 		ledgerLineC4 = new Label("\u2015");
 		suppLedgerLineC4 = new Label("\u2015");
 		ledgerLineA5 = new Label("\u2015");
+		scoreLabel = new Label("Score\n");
+		scorePointsLabel = new Label(correct + " / " + total);
+		refreshButton = new Button("\u21BA");
+
 		noteheads = new Label[] {
 			notehead0, notehead1,
 			notehead2, notehead3, notehead4,
@@ -215,9 +223,17 @@ public class ChordGeneratorGUI extends Application {
 			"rather than something like, \"V7 of I in the relative\n" +
 			"major.\""
 		);
+		numLabel = new Label("Num.");
+		acciLabel = new Label("acci-");
+		dentalsLabel = new Label("dentals");
 		qLabels = new Label[] {aLabel,
 			bLabel, cLabel, dLabel
 		};
+		easyRadio = new RadioButton("0-3");
+		hardRadio = new RadioButton("All");
+		difficultyRadios = new ToggleGroup();
+		easyRadio.setToggleGroup(difficultyRadios);
+		hardRadio.setToggleGroup(difficultyRadios);
 
 		//add to GridPanes
 		//myGridPane.add(questionLabel, 0, 0);
@@ -267,7 +283,15 @@ public class ChordGeneratorGUI extends Application {
 		myGridPane.add(answerButton3, 1, 5);
 		myGridPane.add(dLabel, 2, 5);
 		myGridPane.add(answerButton4, 3, 5);
-		myGridPane.add(generateChordButton, 0, 6);
+		myGridPane.add(scoreLabel, 0, 6);
+		myGridPane.add(scorePointsLabel, 0, 6);
+		myGridPane.add(refreshButton, 0, 6);
+		myGridPane.add(generateChordButton, 1, 6);
+		myGridPane.add(numLabel, 3, 6);
+		myGridPane.add(acciLabel, 3, 6);
+		myGridPane.add(dentalsLabel, 3, 6);
+		myGridPane.add(easyRadio, 3, 6);
+		myGridPane.add(hardRadio, 3, 6);
 		//myGridPane.add(correctMsgLabel, 0, 7);
 		//myGridPane.add(notesLabel, 0, 8);
 
@@ -278,7 +302,10 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setColumnSpan(questionLabel, 4);
 		GridPane.setColumnSpan(keyLabel, 4);
 		GridPane.setColumnSpan(correctMsgLabel, 4);
-		GridPane.setColumnSpan(generateChordButton, 4);
+		GridPane.setColumnSpan(generateChordButton, 3);
+		GridPane.setColumnSpan(scoreLabel, 2);
+		GridPane.setColumnSpan(scorePointsLabel, 2);
+		GridPane.setColumnSpan(refreshButton, 2);
 		GridPane.setColumnSpan(notesLabel, 4);
 		GridPane.setColumnSpan(musicStaffGridPane, 4);
 		GridPane.setHalignment(generateChordButton, HPos.CENTER);
@@ -286,17 +313,17 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setHalignment(correctMsgLabel, HPos.CENTER);
 		GridPane.setHalignment(keyLabel, HPos.LEFT);
 		GridPane.setHalignment(notesLabel, HPos.CENTER);
-		answerButton1.setMinWidth(110);
-		answerButton2.setMinWidth(110);
-		answerButton3.setMinWidth(110);
-		answerButton4.setMinWidth(110);
+		answerButton1.setMinWidth(140);
+		answerButton2.setMinWidth(140);
+		answerButton3.setMinWidth(140);
+		answerButton4.setMinWidth(140);
 		GridPane.setHalignment(aLabel, HPos.LEFT);
 		GridPane.setHalignment(bLabel, HPos.RIGHT);
 		GridPane.setHalignment(cLabel, HPos.LEFT);
 		GridPane.setHalignment(dLabel, HPos.RIGHT);;
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
-		musicStaffGridPane.setTranslateX(9);
+		musicStaffGridPane.setTranslateX(37);
 
 		//tediousness
 		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
@@ -355,19 +382,46 @@ public class ChordGeneratorGUI extends Application {
 		for (Label nh: noteheads) {
 			nh.setFont(musicFont115);
 		}
-		keyLabel.setFont(Font.font("Serif", 22));
+		scoreLabel.setId("score");
+		scorePointsLabel.setId("score");
+		refreshButton.setId("refresh");
+		refreshButton.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 20));
+		refreshButton.setPadding(new Insets(0, 4, 0, 4));
+		scoreLabel.setTranslateY(0);
+		scoreLabel.setTranslateX(37);
+		scorePointsLabel.setTranslateY(16);
+		scorePointsLabel.setTranslateX(37);
+		refreshButton.setTranslateY(8);
+		numLabel.setId("numAccidentals");
+		acciLabel.setId("numAccidentals");
+		dentalsLabel.setId("numAccidentals");
+		numLabel.setTranslateY(-12);
+		numLabel.setTranslateX(54);
+		acciLabel.setTranslateY(2);
+		acciLabel.setTranslateX(61);
+		dentalsLabel.setTranslateY(16);
+		dentalsLabel.setTranslateX(41);
+		easyRadio.setId("difficulty");
+		hardRadio.setId("difficulty");
+		easyRadio.setTranslateY(-12);
+		easyRadio.setTranslateX(94);
+		hardRadio.setTranslateY(12);
+		hardRadio.setTranslateX(94);
+		hardRadio.setSelected(true);
+		keyLabel.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 22));
 		questionLabel.setFont(Font.font(null, 18));
 		questionLabel.setStyle("-fx-text-fill: #737374;");
 		correctMsgLabel.setFont(Font.font(null, FontWeight.BOLD, 16));
 		correctMsgLabel.setStyle("-fx-text-fill: #737374;");
 		for (Label l: qLabels) {
 			l.setMinWidth(20);
-			l.setTranslateX(7);
+			l.setTranslateX(10);
 			l.setId("qLabels");
-			l.setFont(Font.font("FreeSerif", 16));
+			l.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 22));
 		}
 		generateChordButton.setFont(Font.font(null, FontWeight.BOLD, 16));
 		generateChordButton.setId("gcButton");
+		generateChordButton.setTranslateX(-17);
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
@@ -376,10 +430,21 @@ public class ChordGeneratorGUI extends Application {
 		answerButton1.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 0) {
 				//correctMsgLabel.setText("Correct!");
+				if (!stopCounting) {
+					correct++;
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				aLabel.setText("\u2714");
 				aLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
 				//correctMsgLabel.setText("Incorrect.");
+				if (!stopCounting) {
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				aLabel.setText("\u2718");
 				aLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
@@ -387,10 +452,21 @@ public class ChordGeneratorGUI extends Application {
 		answerButton2.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 1) {
 				//correctMsgLabel.setText("Correct!");
+				if (!stopCounting) {
+					correct++;
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				bLabel.setText("\u2714");
 				bLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
 				//correctMsgLabel.setText("Incorrect.");
+				if (!stopCounting) {
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				bLabel.setText("\u2718");
 				bLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
@@ -398,10 +474,21 @@ public class ChordGeneratorGUI extends Application {
 		answerButton3.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 2) {
 				//correctMsgLabel.setText("Correct!");
+				if (!stopCounting) {
+					correct++;
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				cLabel.setText("\u2714");
 				cLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
 				//correctMsgLabel.setText("Incorrect.");
+				if (!stopCounting) {
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				cLabel.setText("\u2718");
 				cLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
@@ -409,13 +496,29 @@ public class ChordGeneratorGUI extends Application {
 		answerButton4.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 3) {
 				//correctMsgLabel.setText("Correct!");
+				if (!stopCounting) {
+					correct++;
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				dLabel.setText("\u2714");
 				dLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
 				//correctMsgLabel.setText("Incorrect.");
+				if (!stopCounting) {
+					total++;
+					scorePointsLabel.setText(correct + " / " + total);
+					stopCounting = true;
+				}
 				dLabel.setText("\u2718");
 				dLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
+		});
+		refreshButton.setOnAction((ActionEvent e) -> {
+			correct = 0;
+			total = 0;
+			scorePointsLabel.setText(correct + " / " + total);
 		});
 
 		//set up scene/stage
@@ -534,6 +637,7 @@ public class ChordGeneratorGUI extends Application {
 		System.out.printf("%-2s]%n", arr[arr.length - 1]);
 	}
 	public void getRandomChord() {
+		stopCounting = false;
 		correctMsgLabel.setText(null); //erases label until user answers next question
 		clearChecksAndXs();
 
@@ -541,7 +645,7 @@ public class ChordGeneratorGUI extends Application {
 		//so I can just use lengths of the zeroth index of things like chords[0].length with confidence
 		int a = (int)(Math.random() * chords.length), //chords.length == 2
 			b = (int)(Math.random() * chords[0].length), //chords[0].length == 4
-			c = (int)(Math.random() * chords[0][0].length), //chords[0][0].length == 8
+			c = (int)(Math.random() * (easyRadio.isSelected() ? 4 : chords[0][0].length)), //chords[0][0].length == 8
 			d = (int)(Math.random() * chords[0][0][0].length); //chords[0][0][0].length == 7
 		String[] aRandomChord = chords[a][b][c][d],
 				 aRandomChordShuffled = shuffleChord(aRandomChord);
