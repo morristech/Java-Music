@@ -1,10 +1,12 @@
 /**
-*	NB: Without the FreeSerif.ttf font available on your computer, this program
+*	NB: Without FreeSerif.ttf in the same folder as this program, the program
 *	will not display any of the necessary music notation
 *
 *	This code was originally an exercise in how to generate every major/minor
 *	triad and seventh chord built from small arrays.
 *	But now I shoved it into a GUI to make it a music theory quiz.
+*
+*	480 potential combinations of keys/chords to analyze!
 *
 *	TODO
 *	Make it apply to bass clef as well.
@@ -14,10 +16,17 @@
 *	addition would be interpretive. How can I ensure that the user agrees with my interpretation,
 *	e.g. a VII7 in C-minor would 'usually' be a V7 of III.
 *
+*	No chords have accidentals. Could this be a feature added in the future?
+*
 *	Common applied chords: in minor: VII7 == V7 / III, V7 / i
 *
 *	Add timer? Add score? Add average time per question [from generate button clicked to
-*	correct answer answered]? Wrong attempts vs correct attempts?
+*	correct answer answered]? Wrong attempts vs correct attempts? "Challenge mode"?
+*	Radiobuttons: triads only, 7ths only, both(random). clef: treble only, bass only, both(random);
+*
+*	Modes: hard (4-7 accidentals only), intermediate (0-3 accidentals), all accidentals.
+*
+*	Add some kind of checkmark/wrong red X to incorrect responses/correct answers
 *
 *
 */
@@ -47,7 +56,6 @@ public class ChordGeneratorGUI extends Application {
 	boolean a1, a2, a3, a4;
 	String rightAnswer, wrongAnswer;
 	String[] wrongAnswerArray;
-	Font buttonFont;
 	int rightAnswerIndex;
 
 	//JavaFX music staff members
@@ -189,7 +197,7 @@ public class ChordGeneratorGUI extends Application {
 		answerButton4 = new Button();
 		answerButtonArray = new Button[] {answerButton1,
 			answerButton2, answerButton3, answerButton4};
-		generateChordButton = new Button("Generate new chord");
+		generateChordButton = new Button("New chord");
 		questionLabel = new Label("Analyze the following chord:");
 		aLabel = new Label("A.");
 		bLabel = new Label("B.");
@@ -206,10 +214,6 @@ public class ChordGeneratorGUI extends Application {
 			"rather than something like, \"V7 of I in the relative\n" +
 			"major.\""
 		);
-		buttonFont = new Font("Courier New", 12);
-		for (Button b: answerButtonArray) {
-			b.setFont(buttonFont);
-		}
 
 		//add to GridPanes
 		myGridPane.add(questionLabel, 0, 0);
@@ -286,7 +290,6 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setHalignment(bLabel, HPos.RIGHT);
 		GridPane.setHalignment(cLabel, HPos.LEFT);
 		GridPane.setHalignment(dLabel, HPos.RIGHT);;
-		correctMsgLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 16;");
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
 
@@ -331,6 +334,10 @@ public class ChordGeneratorGUI extends Application {
 				acc.setFont(musicFont55);
 			}
 		}
+		for (Button b: answerButtonArray) {
+			b.setFont(Font.font("Courier New", 18));
+		//	b.setStyle("-fx-border: 6px solid; -fx-border-color: #87e9b8;");
+		}
 		trebleClef.setFont(musicFont120);
 		bassClef.setFont(musicFont120);
 		staffLines1.setFont(musicFont120);
@@ -342,8 +349,19 @@ public class ChordGeneratorGUI extends Application {
 		for (Label nh: noteheads) {
 			nh.setFont(musicFont115);
 		}
-		keyLabel.setFont(new Font("FreeSerif", 19));
-		questionLabel.setFont(new Font("SansSerif", 16)); //Serif or SansSerif doesn't seem to make a diff
+		keyLabel.setFont(Font.font("Serif", 22));
+		questionLabel.setFont(Font.font("Serif", 18));
+		correctMsgLabel.setFont(Font.font(null, FontWeight.BOLD, 16));
+		aLabel.setFont(Font.font("Serif", 16));
+		bLabel.setFont(Font.font("Serif", 16));
+		cLabel.setFont(Font.font("Serif", 16));
+		dLabel.setFont(Font.font("Serif", 16));
+		aLabel.setTranslateX(7);
+		bLabel.setTranslateX(7);
+		cLabel.setTranslateX(7);
+		dLabel.setTranslateX(7);
+		generateChordButton.setFont(Font.font(null, 16));
+		generateChordButton.setStyle("-fx-base: #E1E6FA;");
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
@@ -400,10 +418,10 @@ public class ChordGeneratorGUI extends Application {
 					arr[i][j][k] = pitchClassesArray[index].concat(getAccidental(i, index, accidental));
 					index = (index + 2) % NUM_PITCH_CLASSES; //interval of 2 is a musical interval of a third
 				} //for reference: pitchClassesArray = {"C", "D", "E", "F", "G", "A", "B"};
-				index = (index + (chordSize ? 2 : 0)) % NUM_PITCH_CLASSES; //if I'm making triads, 2, if seventh chords, 0. this
+				index = (index + (chordSize ? 2 : 0)) % NUM_PITCH_CLASSES; //chordSize ? 2 : 0 --> if I'm making triads, 2, if seventh chords, 0. this
 			}										//is just how traversing the pitch-class array in mod 7 worked out, because
 													//C-E-G are intervals of 2 from C to G, but D-F-A (the next chord) is an interval
-													//of 4 from G to D (2 + 2 = 4; i.e. 2 from the k loop, and now 2 from the j loop)
+													//of 4 from G to D (2 + 2 = 4; i.e. 2 from the k loop, and 2 from the j loop)
 													//but C-E-G-B is just an interval of 2 from B to D for D-F-A-C (2 + 0 = 2; i.e.
 													//2 from the k loop, 0 from the j loop
 			index = (index + (accidental ? ASC_FIFTHS : ASC_FOURTHS)) % NUM_PITCH_CLASSES; //if i'm using sharp accidentals, that means i'm ascending by fifths (4 ints)
