@@ -200,10 +200,10 @@ public class ChordGeneratorGUI extends Application {
 			answerButton2, answerButton3, answerButton4};
 		generateChordButton = new Button("New chord");
 		questionLabel = new Label("Analyze the following chord:");
-		aLabel = new Label("A.");
-		bLabel = new Label("B.");
-		cLabel = new Label("C.");
-		dLabel = new Label("D.");
+		aLabel = new Label("\u2718");
+		bLabel = new Label("\u2718");
+		cLabel = new Label("\u2718");
+		dLabel = new Label("\u2718");
 		keyLabel = new Label();
 		correctMsgLabel = new Label();
 		notesLabel = new Label(
@@ -268,7 +268,7 @@ public class ChordGeneratorGUI extends Application {
 		myGridPane.add(dLabel, 2, 5);
 		myGridPane.add(answerButton4, 3, 5);
 		myGridPane.add(generateChordButton, 0, 6);
-		myGridPane.add(correctMsgLabel, 0, 7);
+		//myGridPane.add(correctMsgLabel, 0, 7);
 		//myGridPane.add(notesLabel, 0, 8);
 
 		//set alignments/prettiness
@@ -296,6 +296,7 @@ public class ChordGeneratorGUI extends Application {
 		GridPane.setHalignment(dLabel, HPos.RIGHT);;
 		questionLabel.setPadding(new Insets(0, 0, 20, 0));
 		keyLabel.setTranslateX(52);
+		musicStaffGridPane.setTranslateX(9);
 
 		//tediousness
 		fSharp.setTranslateY(-60);		fSharp.setTranslateX(-20);
@@ -360,9 +361,10 @@ public class ChordGeneratorGUI extends Application {
 		correctMsgLabel.setFont(Font.font(null, FontWeight.BOLD, 16));
 		correctMsgLabel.setStyle("-fx-text-fill: #737374;");
 		for (Label l: qLabels) {
+			l.setMinWidth(20);
 			l.setTranslateX(7);
 			l.setId("qLabels");
-			l.setFont(Font.font(null, 16));
+			l.setFont(Font.font("FreeSerif", 16));
 		}
 		generateChordButton.setFont(Font.font(null, FontWeight.BOLD, 16));
 		generateChordButton.setId("gcButton");
@@ -373,30 +375,46 @@ public class ChordGeneratorGUI extends Application {
 		});
 		answerButton1.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 0) {
-				correctMsgLabel.setText("Correct!");
+				//correctMsgLabel.setText("Correct!");
+				aLabel.setText("\u2714");
+				aLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
-				correctMsgLabel.setText("Incorrect.");
+				//correctMsgLabel.setText("Incorrect.");
+				aLabel.setText("\u2718");
+				aLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
 		});
 		answerButton2.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 1) {
-				correctMsgLabel.setText("Correct!");
+				//correctMsgLabel.setText("Correct!");
+				bLabel.setText("\u2714");
+				bLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
-				correctMsgLabel.setText("Incorrect.");
+				//correctMsgLabel.setText("Incorrect.");
+				bLabel.setText("\u2718");
+				bLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
 		});
 		answerButton3.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 2) {
-				correctMsgLabel.setText("Correct!");
+				//correctMsgLabel.setText("Correct!");
+				cLabel.setText("\u2714");
+				cLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
-				correctMsgLabel.setText("Incorrect.");
+				//correctMsgLabel.setText("Incorrect.");
+				cLabel.setText("\u2718");
+				cLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
 		});
 		answerButton4.setOnAction((ActionEvent e) -> {
 			if (rightAnswer != null && rightAnswerIndex == 3) {
-				correctMsgLabel.setText("Correct!");
+				//correctMsgLabel.setText("Correct!");
+				dLabel.setText("\u2714");
+				dLabel.setStyle("-fx-text-fill: #87e9b8;");
 			} else if (rightAnswer != null) {
-				correctMsgLabel.setText("Incorrect.");
+				//correctMsgLabel.setText("Incorrect.");
+				dLabel.setText("\u2718");
+				dLabel.setStyle("-fx-text-fill: #f2ac9c;");
 			}
 		});
 
@@ -517,6 +535,7 @@ public class ChordGeneratorGUI extends Application {
 	}
 	public void getRandomChord() {
 		correctMsgLabel.setText(null); //erases label until user answers next question
+		clearChecksAndXs();
 
 		//lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
 		//so I can just use lengths of the zeroth index of things like chords[0].length with confidence
@@ -614,6 +633,11 @@ public class ChordGeneratorGUI extends Application {
 	public void displayKeySignature(int sharpsOrFlats, int numAccidentals) {
 		for (int i = 0; i < numAccidentals; i++) {
 			accidentals[sharpsOrFlats % 2][i].setVisible(true);
+		}
+	}
+	public void clearChecksAndXs() {
+		for (Label l: qLabels) {
+			l.setStyle("-fx-text-fill: #f9f9f9");
 		}
 	}
 	//"reset" the key signature / noteheads
