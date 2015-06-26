@@ -52,6 +52,7 @@ public class ChordGeneratorGUI extends Application {
 	Label questionLabel, correctMsgLabel,
 		aLabel, bLabel, cLabel, dLabel,
 		keyLabel, notesLabel;
+	Label[] qLabels;
 	Scene scene;
 	boolean a1, a2, a3, a4;
 	String rightAnswer, wrongAnswer;
@@ -214,9 +215,12 @@ public class ChordGeneratorGUI extends Application {
 			"rather than something like, \"V7 of I in the relative\n" +
 			"major.\""
 		);
+		qLabels = new Label[] {aLabel,
+			bLabel, cLabel, dLabel
+		};
 
 		//add to GridPanes
-		myGridPane.add(questionLabel, 0, 0);
+		//myGridPane.add(questionLabel, 0, 0);
 		musicStaffGridPane.add(trebleClef, 0, 0);
 		musicStaffGridPane.add(staffLines1, 0, 0);
 		musicStaffGridPane.add(staffLines2, 1, 0);
@@ -265,7 +269,7 @@ public class ChordGeneratorGUI extends Application {
 		myGridPane.add(answerButton4, 3, 5);
 		myGridPane.add(generateChordButton, 0, 6);
 		myGridPane.add(correctMsgLabel, 0, 7);
-		myGridPane.add(notesLabel, 0, 8);
+		//myGridPane.add(notesLabel, 0, 8);
 
 		//set alignments/prettiness
 		myGridPane.setHgap(15);
@@ -335,9 +339,10 @@ public class ChordGeneratorGUI extends Application {
 			}
 		}
 		for (Button b: answerButtonArray) {
-			b.setFont(Font.font("Courier New", 18));
-		//	b.setStyle("-fx-border: 6px solid; -fx-border-color: #87e9b8;");
+			b.setId("answerButtons");
+			b.setFont(Font.font("Courier New", FontWeight.BOLD, 18));
 		}
+		//myGridPane.setStyle("-fx-background-color: white; -fx-stroke: #737374");
 		trebleClef.setFont(musicFont120);
 		bassClef.setFont(musicFont120);
 		staffLines1.setFont(musicFont120);
@@ -350,18 +355,17 @@ public class ChordGeneratorGUI extends Application {
 			nh.setFont(musicFont115);
 		}
 		keyLabel.setFont(Font.font("Serif", 22));
-		questionLabel.setFont(Font.font("Serif", 18));
+		questionLabel.setFont(Font.font(null, 18));
+		questionLabel.setStyle("-fx-text-fill: #737374;");
 		correctMsgLabel.setFont(Font.font(null, FontWeight.BOLD, 16));
-		aLabel.setFont(Font.font("Serif", 16));
-		bLabel.setFont(Font.font("Serif", 16));
-		cLabel.setFont(Font.font("Serif", 16));
-		dLabel.setFont(Font.font("Serif", 16));
-		aLabel.setTranslateX(7);
-		bLabel.setTranslateX(7);
-		cLabel.setTranslateX(7);
-		dLabel.setTranslateX(7);
-		generateChordButton.setFont(Font.font(null, 16));
-		generateChordButton.setStyle("-fx-base: #E1E6FA;");
+		correctMsgLabel.setStyle("-fx-text-fill: #737374;");
+		for (Label l: qLabels) {
+			l.setTranslateX(7);
+			l.setId("qLabels");
+			l.setFont(Font.font(null, 16));
+		}
+		generateChordButton.setFont(Font.font(null, FontWeight.BOLD, 16));
+		generateChordButton.setId("gcButton");
 
 		//set Listeners
 		generateChordButton.setOnAction((ActionEvent e) -> {
@@ -399,6 +403,7 @@ public class ChordGeneratorGUI extends Application {
 		//set up scene/stage
 		getRandomChord();
 		scene = new Scene(myGridPane);
+		scene.getStylesheets().add("CGStyles.css");
 		generateChordButton.requestFocus();
 		primaryStage.setTitle("Nick's RN Analysis Quiz");
 		primaryStage.setScene(scene);
