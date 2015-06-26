@@ -214,8 +214,8 @@ public class ChordGeneratorGUI extends Application {
 			"rather than something like, \"V7 of I in the relative\n" +
 			"major.\""
 		);
-		numLabel = new Label("Num.");
-		acciLabel = new Label("acci-");
+		numLabel = new Label("Number");
+		acciLabel = new Label("of acci-");
 		dentalsLabel = new Label("dentals");
 		qLabels = new Label[] {aLabel,
 			bLabel, cLabel, dLabel
@@ -390,9 +390,9 @@ public class ChordGeneratorGUI extends Application {
 		acciLabel.setId("numAccidentals");
 		dentalsLabel.setId("numAccidentals");
 		numLabel.setTranslateY(-12);
-		numLabel.setTranslateX(22);
+		numLabel.setTranslateX(2);
 		acciLabel.setTranslateY(2);
-		acciLabel.setTranslateX(26);
+		acciLabel.setTranslateX(8);
 		dentalsLabel.setTranslateY(16);
 		dentalsLabel.setTranslateX(9);
 		easyRadio.setId("difficulty");
