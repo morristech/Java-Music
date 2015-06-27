@@ -779,8 +779,8 @@ public class ChordGeneratorGUI extends Application {
 							? triadicInversions[randomInversionIndex] //arr len = 3
 							: seventhInversions[randomInversionIndex] //arr len = 4
 					);
-				} while (wrongAnswer.equals(rightAnswer) //avoids a duplicate right answer
-						|| Arrays.asList(wrongAnswerArray).contains(wrongAnswer)  //avoids duplicate wrong answers
+				} while (wrongAnswer.equalsIgnoreCase(rightAnswer) //avoids a duplicate right answer
+						|| containsCaseInsensitive(wrongAnswer, wrongAnswerArray)  //avoids duplicate wrong answers
 				);
 				if (chordSize == 4
 						&& wrongAnswer.contains("°")) { //randomly give a wrong answer a half-diminished symbol, otherwise
@@ -791,6 +791,14 @@ public class ChordGeneratorGUI extends Application {
 				answerButtonArray[i].setText(wrongAnswer);
 			}
 		}
+	}
+	public static boolean containsCaseInsensitive(String s, String[] sArr) {
+		for (int i = 0; i < sArr.length; i++) {
+			if (sArr[i] != null && s.equalsIgnoreCase(sArr[i])) {
+				return true;
+			}
+		}
+		return false;
 	}
 	public String[] shuffleChord(String[] arr) {
 		List<String> arrList = new ArrayList<String>(Arrays.asList(arr));
