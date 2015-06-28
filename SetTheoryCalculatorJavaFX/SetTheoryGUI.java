@@ -76,7 +76,7 @@ public class SetTheoryGUI extends Application {
 		addNodesToPanes();
 
 		scene = new Scene(gridPane);
-		scene.getStylesheets().add("styles.css");
+		scene.getStylesheets().add("css/styles.css");
 		input_textfield.requestFocus(); //this only works after Scene is created
 		primaryStage.setTitle("Nick's Pitch Class Set Theory Calculator");
 		primaryStage.setScene(scene);
