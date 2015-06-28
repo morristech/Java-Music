@@ -13,11 +13,11 @@ intention with writing this program was to assist students having difficulty wit
 </div>
 <br><br>
 
-**SetTheoryCalculatorJavaFX** also uses JavaFX to display a music analysis tool use in
-pitch-class set theory, a course commonly taught to second- or third-year music students at
-university. A user enters a collection of pitch-classes and the program essentially
+**SetTheoryCalculatorJavaFX** also uses JavaFX to display a music analysis tool used in
+pitch-class set theory, a topic commonly taught to both undergraduates and graduates at university.
+A user enters a collection of pitch-classes and the program essentially
 sorts these values in a variety of ways. The Normal Form sort, for instance, arranges the 
-input into a rotation which is the most left-packed version (or right-packed, depending
+input into its most left-packed rotation (or right-packed, depending
 on whether the Forte or Rahn algorithm is chosen, respectively).
 
 <div align="center">
