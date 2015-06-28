@@ -8,4 +8,6 @@ chord. Each choice is a Roman numeral signifying what scale degree the chord is 
 an Arabic numeral to denote its inversion. This is a common activity in undergraduate music classes and my 
 intention with writing this program was to assist students having difficulty with that concept.
 
-![RN Quiz](https://github.com/nihk/Java-Music/blob/master/ChordGenerator/screenshot.png "RN Quiz")
+<p align="center">
+   <img src="https://github.com/nihk/Java-Music/blob/master/ChordGenerator/screenshot.png">
+</p>
