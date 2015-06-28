@@ -11,7 +11,7 @@ intention with writing this program was to assist students having difficulty wit
 <div align="center">
    <img src="https://github.com/nihk/Java-Music/blob/master/ChordGenerator/screenshot.png">
 </div>
-
+<br><br>
 
 **SetTheoryCalculatorJavaFX** also uses JavaFX to display a music analysis tool use in
 pitch-class set theory, a course commonly taught to second- or third-year music students at
