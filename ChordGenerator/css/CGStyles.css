@@ -1,0 +1,72 @@
+.root {
+    -fx-font-size: 16;
+    -fx-background-color: #f9f9f9;
+}
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #666666;
+}
+#gcButton {
+    -fx-border-color: #f2ac9c; 
+    -fx-border-width: 3px;
+    -fx-border-radius: 3px; 
+    -fx-background-color: #f2ac9c; 
+    -fx-text-fill: #f9f9f9;
+}
+#gcButton:pressed { 
+    -fx-background-color: #f9f9f9; 
+    -fx-text-fill: #f2ac9c;
+}
+#answerButtons {
+    -fx-border-color: #87e9b8; 
+    -fx-border-width: 3px;
+    -fx-border-radius: 3px; 
+    -fx-background-color: #f9f9f9; 
+    -fx-text-fill: #737374;
+}
+#answerButtons:pressed {
+    -fx-background-color: #87e9b8; 
+    -fx-text-fill: #ffffff;   
+}
+#score {
+   -fx-text-fill: #f2ac9c;
+   -fx-font-weight: bold;
+}
+#refresh {
+   -fx-border-color: #f2ac9c; 
+   -fx-border-width: 2px;
+   -fx-border-radius: 2px;
+   -fx-background-color: #f2ac9c; 
+   -fx-text-fill: #f9f9f9;
+}
+#refresh:pressed { 
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+    -fx-background-color: #f9f9f9; 
+    -fx-text-fill: #f2ac9c;
+}
+#numAccidentals {
+   -fx-text-fill: #f2ac9c;
+   -fx-font-weight: bold;
+   -fx-font-size: 14;
+}
+#difficulty {
+   -fx-text-fill: #f2ac9c;
+   -fx-font-weight: bold;
+   -fx-font-size: 14;
+}
+.radio-button .radio  {
+   -fx-background-color: #f9f9f9, #f9f9f9, #f2ac9c, #f9f9f9;
+   -fx-background-insets: 0 0 -1 0,  0,  1,  2;
+   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+   -fx-padding: 0.333333em; /* 4 -- padding from outside edge to the inner black dot */
+}
+.radio-button .dot {
+  -fx-mark-color:  #f2ac9c ;
+}
+.radio-button:hover .radio {
+    -fx-color: #f9f9f9;
+}
+.radio-button:selected .dot {
+   -fx-background-color: #f2ac9c;
+   -fx-background-insets: 0 0 0 0, 0;
+}

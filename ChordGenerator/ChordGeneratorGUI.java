@@ -102,11 +102,11 @@ public class ChordGeneratorGUI extends Application {
 
 		//initialize music staff notation variables
 		musicStaffGridPane = new GridPane();
-		musicFont55 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 55);
-		musicFont58 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 58);
-		musicFont115 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 115);
-		musicFont120 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 120);
-		musicFont160 = Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 160);
+		musicFont55 = Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 55);
+		musicFont58 = Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 58);
+		musicFont115 = Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 115);
+		musicFont120 = Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 120);
+		musicFont160 = Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 160);
 		trebleClef = new Label("\uD834\uDD1E");
 		bassClef = new Label("\uD834\uDD22");
 		staffLines1 = new Label("\uD834\uDD1A");
@@ -378,7 +378,7 @@ public class ChordGeneratorGUI extends Application {
 		scoreLabel.setId("score");
 		scorePointsLabel.setId("score");
 		refreshButton.setId("refresh");
-		refreshButton.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 20));
+		refreshButton.setFont(Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 20));
 		refreshButton.setPadding(new Insets(0, 4, 0, 4));
 		scoreLabel.setTranslateY(0);
 		scoreLabel.setTranslateX(40);
@@ -402,7 +402,7 @@ public class ChordGeneratorGUI extends Application {
 		hardRadio.setTranslateY(14);
 		hardRadio.setTranslateX(62);
 		hardRadio.setSelected(true);
-		keyLabel.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 22));
+		keyLabel.setFont(Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 22));
 		questionLabel.setFont(Font.font(null, 18));
 		questionLabel.setStyle("-fx-text-fill: #737374;");
 		correctMsgLabel.setFont(Font.font(null, FontWeight.BOLD, 16));
@@ -411,7 +411,7 @@ public class ChordGeneratorGUI extends Application {
 			l.setMinWidth(20);
 			l.setTranslateX(10);
 			l.setId("qLabels");
-			l.setFont(Font.loadFont(getClass().getResourceAsStream("FreeSerif.ttf"), 22));
+			l.setFont(Font.loadFont(getClass().getResourceAsStream("fonts/FreeSerif.ttf"), 22));
 		}
 		generateChordButton.setFont(Font.font(null, FontWeight.BOLD, 16));
 		generateChordButton.setId("gcButton");
@@ -518,7 +518,7 @@ public class ChordGeneratorGUI extends Application {
 		//set up scene/stage
 		getRandomChord();
 		scene = new Scene(myGridPane, 325, 448);
-		scene.getStylesheets().add("CGStyles.css");
+		scene.getStylesheets().add("css/CGStyles.css");
 		generateChordButton.requestFocus();
 		primaryStage.setTitle("Nick's RN Analysis Quiz");
 		primaryStage.setScene(scene);
