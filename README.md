@@ -14,7 +14,7 @@ intention with writing this program was to assist students having difficulty wit
 <br><br>
 
 **SetTheoryCalculatorJavaFX** also uses JavaFX to display a music analysis tool used in
-pitch-class set theory, a topic commonly taught to both undergraduates and graduates at university.
+pitch-class set theory, a topic commonly taught to both undergraduate and graduate students at university.
 A user enters a collection of pitch-classes and the program essentially
 sorts these values in a variety of ways. The Normal Form sort, for instance, arranges the 
 input into its most left-packed rotation (or right-packed, depending
