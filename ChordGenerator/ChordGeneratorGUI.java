@@ -35,28 +35,28 @@ import javafx.scene.text.*;
 public class ChordGeneratorGUI extends Application {
 
 	//JavaFX members
-	GridPane myGridPane, musicStaffGridPane;
-	Button answerButton1, answerButton2,
+	private GridPane myGridPane, musicStaffGridPane;
+	private Button answerButton1, answerButton2,
 		answerButton3, answerButton4,
 		generateChordButton, refreshButton;
-	Button[] answerButtonArray;
-	Label questionLabel, correctMsgLabel,
+	private Button[] answerButtonArray;
+	private Label questionLabel, correctMsgLabel,
 		aLabel, bLabel, cLabel, dLabel,
 		keyLabel, notesLabel, scoreLabel,
 		scorePointsLabel, numLabel, acciLabel,
 		dentalsLabel;
-	Label[] qLabels;
-	RadioButton easyRadio, hardRadio;
-	ToggleGroup difficultyRadios;
-	Scene scene;
-	boolean a1, a2, a3, a4, stopCounting;
-	String rightAnswer, wrongAnswer;
-	String[] wrongAnswerArray;
-	int rightAnswerIndex, correct, total;
+	private Label[] qLabels;
+	private RadioButton easyRadio, hardRadio;
+	private ToggleGroup difficultyRadios;
+	private Scene scene;
+	private boolean a1, a2, a3, a4, stopCounting;
+	private String rightAnswer, wrongAnswer;
+	private String[] wrongAnswerArray;
+	private int rightAnswerIndex, correct, total;
 
 	//JavaFX music staff members
-	Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers at end of variable name refer to font sizes
-	Label trebleClef, bassClef,
+	private Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers at end of variable name refer to font sizes
+	private Label trebleClef, bassClef,
 		staffLines1, staffLines2, staffLines3,
 		fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
 		bFlat, eFlat, aFlat, dFlat, gFlat, cFlat, fFlat,
@@ -65,17 +65,17 @@ public class ChordGeneratorGUI extends Application {
 		notehead8, notehead9, notehead10, notehead11,
 		notehead12, notehead13,
 		ledgerLineC4, suppLedgerLineC4, ledgerLineA5;
-	Label[] sharps, flats, noteheads;
-	Label[][] accidentals;
+	private Label[] sharps, flats, noteheads;
+	private Label[][] accidentals;
 
 	//Music quiz members
-	String[] pitchClassesArray, accidentalsArray,
+	private String[] pitchClassesArray, accidentalsArray,
 		modeArray, romanNumeralsMajorArray,
 		romanNumeralsMinorArray, triadicInversions,
 		seventhInversions;
-	String[][][] keyNames;
-	String[][][][] majorKeys, minorKeys;
-	String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
+	private String[][][] keyNames;
+	private String[][][][] majorKeys, minorKeys;
+	private String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
 	public static final int NUM_PITCH_CLASSES = 7, //the number of pitch classes in a diatonic collection
 		THIRD_INTERVAL = 2, //though in music a third implies an interval of 3, it's actually 2
 		START_C_MAJOR = 0, //to start looping through major keys built from pitchClassesArray starting on index 0
