@@ -72,12 +72,15 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButton4 = (Button)findViewById(R.id.answerButton4);
         answerButtonArray = new Button[] {answerButton1,
                 answerButton2, answerButton3, answerButton4};
-
+/*
         //font
         freeSerifPath = "fonts/FreeSerif.ttf";
         trebleClef = (TextView)findViewById(R.id.trebleClef);
         tf = Typeface.createFromAsset(getAssets(), freeSerifPath);
-        trebleClef.setTypeface(tf);
+        trebleClef.setTypeface(tf); */
+
+        trebleClef = (TextView)findViewById(R.id.trebleClef);
+       // trebleClef.setText("\uD834\uDD1E");
 
         //set listeners
         View.OnClickListener gcListener = new View.OnClickListener() {
