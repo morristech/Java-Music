@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MTRNAQuizActivity"
+    android:background="#f9f9f9">
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Treble Clef"
+        android:id="@+id/trebleClef"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:text="New Chord"
+        android:id="@+id/generateChordButton"
+        android:textSize="25sp"
+        android:typeface="sans"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:background="@drawable/pink_buttons"
+        android:textColor="@drawable/pink_buttons_text"
+        android:layout_above="@+id/refreshButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u21BA"
+        android:id="@+id/refreshButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"
+        android:background="@drawable/pink_buttons"
+        android:textColor="@drawable/pink_buttons_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:id="@+id/textView2"
+        android:textSize="24sp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_above="@+id/textView4"
+        android:layout_toRightOf="@+id/refreshButton"
+        android:layout_toEndOf="@+id/refreshButton"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textView3"
+        android:textSize="24sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textView4"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/textView5"
+        android:textSize="24sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number\nof acci-\ndentals"
+        android:id="@+id/numAccidentals"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/easyRadio"
+        android:layout_toStartOf="@+id/easyRadio" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0-3"
+        android:id="@+id/easyRadio"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/generateChordButton"
+        android:layout_alignEnd="@+id/generateChordButton"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All"
+        android:id="@+id/hardRadio"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/easyRadio"
+        android:layout_alignStart="@+id/easyRadio"
+        android:textColor="#f2ac9c"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/answerButton1"
+        android:layout_marginBottom="141dp"
+        android:layout_above="@+id/generateChordButton"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:background="@drawable/green_buttons"
+        android:textColor="@drawable/green_buttons_text"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/answerButton2"
+        android:background="@drawable/green_buttons"
+        android:textColor="@drawable/green_buttons_text"
+        android:layout_alignTop="@+id/answerButton1"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/answerButton3"
+        android:layout_below="@+id/answerButton2"
+        android:layout_alignLeft="@+id/answerButton1"
+        android:layout_alignStart="@+id/answerButton1"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/green_buttons"
+        android:textColor="@drawable/green_buttons_text"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/answerButton4"
+        android:layout_alignBottom="@+id/answerButton3"
+        android:layout_alignLeft="@+id/numAccidentals"
+        android:layout_alignStart="@+id/numAccidentals"
+        android:background="@drawable/green_buttons"
+        android:textColor="@drawable/green_buttons_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2718"
+        android:id="@+id/textView6"
+        android:textSize="50sp"
+        android:layout_above="@+id/answerButton3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2718"
+        android:id="@+id/textView7"
+        android:textSize="50sp"
+        android:layout_alignBottom="@+id/answerButton3"
+        android:layout_toLeftOf="@+id/answerButton3"
+        android:layout_toStartOf="@+id/answerButton3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2718"
+        android:id="@+id/textView8"
+        android:textSize="50sp"
+        android:layout_alignBottom="@+id/answerButton2"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2718"
+        android:id="@+id/textView9"
+        android:textSize="50sp"
+        android:layout_alignBottom="@+id/answerButton3"
+        android:layout_toLeftOf="@+id/answerButton4"
+        android:layout_toStartOf="@+id/answerButton4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key TextView"
+        android:id="@+id/keyTextView"
+        android:layout_above="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginBottom="32dp"
+        android:textSize="26sp" />
+</RelativeLayout>
