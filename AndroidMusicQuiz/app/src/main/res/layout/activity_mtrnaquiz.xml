@@ -9,11 +9,11 @@
     tools:context=".MTRNAQuizActivity"
     android:background="#f9f9f9">
 
-    <TextView
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Music staff here"
-        android:id="@+id/textView"
+        android:text="Treble Clef"
+        android:id="@+id/trebleClef"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -113,14 +113,14 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/radioButton"
-        android:layout_toStartOf="@+id/radioButton" />
+        android:layout_toLeftOf="@+id/easyRadio"
+        android:layout_toStartOf="@+id/easyRadio" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0-3"
-        android:id="@+id/radioButton"
+        android:id="@+id/easyRadio"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignRight="@+id/generateChordButton"
         android:layout_alignEnd="@+id/generateChordButton"
@@ -132,10 +132,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="All"
-        android:id="@+id/radioButton2"
+        android:id="@+id/hardRadio"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/radioButton"
-        android:layout_alignStart="@+id/radioButton"
+        android:layout_alignLeft="@+id/easyRadio"
+        android:layout_alignStart="@+id/easyRadio"
         android:textColor="#f2ac9c"
         android:textStyle="bold"
         android:textSize="18sp" />
@@ -233,4 +233,15 @@
         android:layout_alignBottom="@+id/answerButton3"
         android:layout_toLeftOf="@+id/answerButton4"
         android:layout_toStartOf="@+id/answerButton4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key TextView"
+        android:id="@+id/keyTextView"
+        android:layout_above="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginBottom="32dp"
+        android:textSize="26sp" />
 </RelativeLayout>
