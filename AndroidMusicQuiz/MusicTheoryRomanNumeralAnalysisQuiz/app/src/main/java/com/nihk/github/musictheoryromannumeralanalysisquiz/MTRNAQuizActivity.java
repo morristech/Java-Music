@@ -1,5 +1,6 @@
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -58,10 +59,9 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mtrnaquiz);
 
-
-
         //instantiations
         cg = new ChordGenerator();
+        trebleClef = (TextView)findViewById(R.id.trebleClef);
         generateChordButton = (Button)findViewById(R.id.generateChordButton);
         keyTextView = (TextView)findViewById(R.id.keyTextView);
         easyRadio = (RadioButton)findViewById(R.id.easyRadio);
@@ -72,6 +72,18 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButton4 = (Button)findViewById(R.id.answerButton4);
         answerButtonArray = new Button[] {answerButton1,
                 answerButton2, answerButton3, answerButton4};
+        scorePointsTextView = (TextView)findViewById(R.id.scorePointsTextView);
+        aTextView = (TextView)findViewById(R.id.aTextView);
+        bTextView = (TextView)findViewById(R.id.bTextView);
+        cTextView = (TextView)findViewById(R.id.cTextView);
+        dTextView = (TextView)findViewById(R.id.dTextView);
+        qTextViews = new TextView[] {
+                aTextView, bTextView, cTextView, dTextView
+        };
+        refreshButton = (Button)findViewById(R.id.refreshButton);
+        trebleClef = (TextView)findViewById(R.id.trebleClef);
+        // trebleClef.setText("\uD834\uDD1E");
+
 /*
         //font
         freeSerifPath = "fonts/FreeSerif.ttf";
@@ -79,8 +91,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         tf = Typeface.createFromAsset(getAssets(), freeSerifPath);
         trebleClef.setTypeface(tf); */
 
-        trebleClef = (TextView)findViewById(R.id.trebleClef);
-       // trebleClef.setText("\uD834\uDD1E");
+
+
 
         //set listeners
         View.OnClickListener gcListener = new View.OnClickListener() {
@@ -89,17 +101,127 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 getRandomChord();
             }
         };
+        View.OnClickListener a1Listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rightAnswer != null && rightAnswerIndex == 0) {
+                    if (!stopCounting) {
+                        correct++;
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    aTextView.setText("\u2714");
+                    aTextView.setTextColor(Color.parseColor("#87e9b8"));
+                } else if (rightAnswer != null) {
+                    if (!stopCounting) {
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    aTextView.setText("\u2718");
+                    aTextView.setTextColor(Color.parseColor("#f2ac9c"));
+                }
+            }
+        };
+        View.OnClickListener a2Listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rightAnswer != null && rightAnswerIndex == 1) {
+                    if (!stopCounting) {
+                        correct++;
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    bTextView.setText("\u2714");
+                    bTextView.setTextColor(Color.parseColor("#87e9b8"));
+                } else if (rightAnswer != null) {
+                    if (!stopCounting) {
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    bTextView.setText("\u2718");
+                    bTextView.setTextColor(Color.parseColor("#f2ac9c"));
+                }
+            }
+        };
+        View.OnClickListener a3Listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rightAnswer != null && rightAnswerIndex == 2) {
+                    if (!stopCounting) {
+                        correct++;
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    cTextView.setText("\u2714");
+                    cTextView.setTextColor(Color.parseColor("#87e9b8"));
+                } else if (rightAnswer != null) {
+                    if (!stopCounting) {
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    cTextView.setText("\u2718");
+                    cTextView.setTextColor(Color.parseColor("#f2ac9c"));
+                }
+            }
+        };
+        View.OnClickListener a4Listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rightAnswer != null && rightAnswerIndex == 3) {
+                    if (!stopCounting) {
+                        correct++;
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    dTextView.setText("\u2714");
+                    dTextView.setTextColor(Color.parseColor("#87e9b8"));
+                } else if (rightAnswer != null) {
+                    if (!stopCounting) {
+                        total++;
+                        scorePointsTextView.setText(correct + " / " + total);
+                        stopCounting = true;
+                    }
+                    dTextView.setText("\u2718");
+                    dTextView.setTextColor(Color.parseColor("#f2ac9c"));
+                }
+            }
+        };
+        View.OnClickListener refreshListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                correct = 0;
+                total = 0;
+                scorePointsTextView.setText(correct + " / " + total);
+            }
+        };
         generateChordButton.setOnClickListener(gcListener);
+        answerButton1.setOnClickListener(a1Listener);
+        answerButton2.setOnClickListener(a2Listener);
+        answerButton3.setOnClickListener(a3Listener);
+        answerButton4.setOnClickListener(a4Listener);
+        refreshButton.setOnClickListener(refreshListener);
+
+        //object settings
+        hardRadio.setChecked(true);
+
+        getRandomChord();
     }
     public void getRandomChord() {
         stopCounting = false;
-        //clearChecksAndXs();
+        clearChecksAndXs();
 
         //lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
         //so I can just use lengths of the zeroth index of things like chords[0].length with confidence
         int a = (int)(Math.random() * cg.chords.length), //chords.length == 2
                 b = (int)(Math.random() * cg.chords[0].length), //chords[0].length == 4
-                c = (int)(Math.random() * (easyRadio.isSelected() ? 4 : cg.chords[0][0].length)), //chords[0][0].length == 8
+                c = (int)(Math.random() * (easyRadio.isChecked() ? 4 : cg.chords[0][0].length)), //chords[0][0].length == 8
                 d = (int)(Math.random() * cg.chords[0][0][0].length); //chords[0][0][0].length == 7
         String[] aRandomChord = cg.chords[a][b][c][d],
                 aRandomChordShuffled = shuffleChord(aRandomChord);
@@ -116,6 +238,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             rightAnswer = rightAnswer.replace("\u00B0", "\u00F8"); //so replace the degree with a O WITH STROKE
         }
 
+        trebleClef.setText(Arrays.toString(aRandomChordShuffled));
         //changeVII7toV7ofIII();
 
         keyTextView.setText(cg.keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
@@ -172,7 +295,12 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
         return false;
     }
-    /*
+    public void clearChecksAndXs() {
+        for (TextView tv: qTextViews) {
+            tv.setTextColor(Color.parseColor("#f9f9f9"));
+        }
+    }
+/*
     //"reset" the key signature / noteheads
     public void setNotationInvisible() {
         for (TextView[] mode: accidentals) {

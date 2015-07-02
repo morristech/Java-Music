@@ -1,223 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:useDefaultMargins="true"
-    android:alignmentMode="alignBounds"
-    android:columnOrderPreserved="false"
-
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-
-    android:columnCount="4"
-    android:rowCount="7"
-    android:background="#f9f9f9"
-    >
-    <!--
-    <GridLayout
-        android:columnCount="2"
-        android:rowCount="0"
-        >
-        <TextView
-            android:layout_row="0"
-            android:layout_column="0"
-            />
-
-    </GridLayout> -->
-    <TextView
-        android:id="@+id/trebleClef"
-        android:text="Music score here\n\n\n\n\n\n\n\n"
-        android:textSize="32sp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:layout_columnSpan="4"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp" />
-
-    <TextView
-        android:id="@+id/keyTextView"
-        android:text="Key Area: "
-        android:textSize="32sp"
-        android:layout_row="1"
-        android:layout_column="1"
-        android:typeface="serif"
-        android:layout_marginBottom="20dp"/>
-
-    <TextView
-        android:id="@+id/aTextView"
-        android:text="\u2718"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="2"
-        android:layout_column="0"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/answerButton1"
-        android:text="viiø4/3"
-        android:textSize="32sp"
-        android:layout_row="2"
-        android:layout_column="1"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        android:textAllCaps="false"
-        android:background="@drawable/green_buttons"
-        android:textColor="@drawable/green_buttons_text"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal" />
-    <TextView
-        android:id="@+id/bTextView"
-        android:text="\u2718"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="2"
-        android:layout_column="2"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/answerButton2"
-        android:text="viiø4/3"
-        android:textSize="32sp"
-        android:layout_row="2"
-        android:layout_column="3"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        android:textAllCaps="false"
-        android:background="@drawable/green_buttons"
-        android:textColor="@drawable/green_buttons_text"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal" />
-    <TextView
-        android:id="@+id/cTextView"
-        android:text="\u2718"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="3"
-        android:layout_column="0"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/answerButton3"
-        android:text="viiø4/3"
-        android:textSize="32sp"
-        android:layout_row="3"
-        android:layout_column="1"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        android:textAllCaps="false"
-        android:background="@drawable/green_buttons"
-        android:textColor="@drawable/green_buttons_text"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal" />
-    <TextView
-        android:id="@+id/dTextView"
-        android:text="\u2718"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="3"
-        android:layout_column="2"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/answerButton4"
-        android:text="viiø4/3"
-        android:textSize="32sp"
-        android:layout_row="3"
-        android:layout_column="3"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        android:textAllCaps="false"
-        android:background="@drawable/green_buttons"
-        android:textColor="@drawable/green_buttons_text"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:id="@+id/generateChordButton"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#f9f9f9">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text="New Chord"
-        android:textSize="32sp"
-        android:layout_row="4"
-        android:layout_column="0"
-        android:layout_columnSpan="4"
-        android:layout_gravity="center_horizontal"
-        android:textAllCaps="false"
-        android:background="@drawable/pink_buttons"
-        android:textColor="@drawable/pink_buttons_text"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/refreshButton"
-        android:text="\u21BA"
-        android:textSize="30sp"
-        android:background="@drawable/pink_buttons"
-        android:textColor="@drawable/pink_buttons_text"
-        android:textStyle="bold"
-        android:layout_row="5"
-        android:layout_rowSpan="2"
-        android:layout_column="0"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="bottom"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.00"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/trebleClef"
+                android:text="Music notation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:typeface="serif" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/scoreTextView"
-        android:text="Score"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="5"
-        android:layout_column="1"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="bottom"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.00"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/scoreIntsTextView"
-        android:text="0 / 0"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="6"
-        android:layout_column="1"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"/>
-
-    <TextView
-        android:id="@+id/numAccidentals"
-        android:text="Number\nof acci-\ndentals"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:layout_row="5"
-        android:layout_rowSpan="2"
-        android:layout_column="2"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="bottom"/>
-
-    <RadioButton
-        android:id="@+id/easyRadio"
-        android:text="0-3"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:textStyle="bold"
-        android:layout_row="5"
-        android:layout_column="3"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="bottom"/>
-
-    <RadioButton
-        android:id="@+id/hardRadio"
-        android:text="All"
-        android:textSize="32sp"
-        android:textColor="#f2ac9c"
-        android:textStyle="bold"
-        android:layout_row="6"
-        android:layout_column="3"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="bottom"/>
-
-</GridLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.00"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/keyTextView"
+                    android:text="Key area:"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:typeface="serif" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.00"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/aTextView"
+                    android:text="\u2718"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#f2ac9c"
+                    android:textSize="58sp"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/answerButton1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="viiø4/3"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textAllCaps="false"
+                    android:background="@drawable/green_buttons"
+                    android:textColor="@drawable/green_buttons_text"
+                    android:layout_margin="5dp" />
+                <TextView
+                    android:id="@+id/bTextView"
+                    android:text="\u2718"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#f2ac9c"
+                    android:textSize="58sp"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/answerButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="vii"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textAllCaps="false"
+                    android:background="@drawable/green_buttons"
+                    android:textColor="@drawable/green_buttons_text"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.00"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/cTextView"
+                    android:text="\u2718"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#f2ac9c"
+                    android:textSize="58sp"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/answerButton3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="ii4/2"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textAllCaps="false"
+                    android:background="@drawable/green_buttons"
+                    android:textColor="@drawable/green_buttons_text"
+                    android:layout_margin="5dp" />
+                <TextView
+                    android:id="@+id/dTextView"
+                    android:text="\u2718"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#f2ac9c"
+                    android:textSize="58sp"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/answerButton4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="V6/5"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textAllCaps="false"
+                    android:background="@drawable/green_buttons"
+                    android:textColor="@drawable/green_buttons_text"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.00"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/generateChordButton"
+                    android:text="New Chord"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="45sp"
+                    android:background="@drawable/pink_buttons"
+                    android:textColor="@drawable/pink_buttons_text"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.00"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/refreshButton"
+                    android:text="\u21BA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="80sp"
+                    android:background="@drawable/pink_buttons"
+                    android:textColor="@drawable/pink_buttons_text"
+                    android:textStyle="bold"
+                    android:gravity="top"
+                    android:layout_margin="5dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/scoreTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Score"
+                        android:textSize="36sp"
+                        android:textColor="#f2ac9c"
+                        android:textStyle="bold"
+                        android:gravity="left"
+                        android:layout_marginLeft="5dp" />
+                    <TextView
+                        android:id="@+id/scorePointsTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="0 / 0"
+                        android:textSize="36sp"
+                        android:textColor="#f2ac9c"
+                        android:textStyle="bold"
+                        android:gravity="left"
+                        android:layout_marginLeft="5dp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/numAccidentalsTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Number\nof acci-\ndentals"
+                    android:textSize="32sp"
+                    android:textColor="#f2ac9c"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RadioButton
+                            android:id="@+id/easyRadio"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="0-3"
+                            android:textSize="32sp"
+                            android:textColor="#f2ac9c"
+                            android:textStyle="bold" />
+                        <RadioButton
+                            android:id="@+id/hardRadio"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="All"
+                            android:textSize="32sp"
+                            android:textColor="#f2ac9c"
+                            android:textStyle="bold"
+                            android:buttonTint="#f2ac9c" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
