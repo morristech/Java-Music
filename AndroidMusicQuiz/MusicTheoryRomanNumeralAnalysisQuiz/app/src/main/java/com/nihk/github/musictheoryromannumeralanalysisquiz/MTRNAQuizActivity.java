@@ -38,7 +38,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     //Music staff members
    // private Font musicFont55, musicFont58, musicFont115, musicFont120, musicFont160; //numbers at end of variable name refer to font sizes
     private TextView trebleClef, bassClef,
-            staffLines1, staffLines2, staffLines3,
+            staffLines,
             fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
             bFlat, eFlat, aFlat, dFlat, gFlat, cFlat, fFlat,
             notehead0, notehead1, notehead2, notehead3,
@@ -82,17 +82,35 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         };
         refreshButton = (Button)findViewById(R.id.refreshButton);
         trebleClef = (TextView)findViewById(R.id.trebleClef);
-        // trebleClef.setText("\uD834\uDD1E");
+        staffLines = (TextView)findViewById(R.id.staffLines);
 
-/*
-        //font
-        freeSerifPath = "fonts/FreeSerif.ttf";
-        trebleClef = (TextView)findViewById(R.id.trebleClef);
-        tf = Typeface.createFromAsset(getAssets(), freeSerifPath);
-        trebleClef.setTypeface(tf); */
+        fSharp = (TextView)findViewById(R.id.fSharp);
+        cSharp = (TextView)findViewById(R.id.cSharp);
+        gSharp = (TextView)findViewById(R.id.gSharp);
+        dSharp = (TextView)findViewById(R.id.dSharp);
+        aSharp = (TextView)findViewById(R.id.aSharp);
+        eSharp = (TextView)findViewById(R.id.eSharp);
+        bSharp = (TextView)findViewById(R.id.bSharp);
 
+        bFlat = (TextView)findViewById(R.id.bFlat);
+        eFlat = (TextView)findViewById(R.id.eFlat);
+        aFlat = (TextView)findViewById(R.id.aFlat);
+        dFlat = (TextView)findViewById(R.id.dFlat);
+        gFlat = (TextView)findViewById(R.id.gFlat);
+        cFlat = (TextView)findViewById(R.id.cFlat);
+        fFlat = (TextView)findViewById(R.id.fFlat);
 
-
+        sharps = new TextView[] {
+                fSharp, cSharp, gSharp, dSharp,
+                aSharp, eSharp, bSharp
+        };
+        flats = new TextView[] {
+                bFlat, eFlat, aFlat,
+                dFlat, gFlat, cFlat, fFlat
+        };
+        accidentals = new TextView[][]{
+                sharps, flats
+        };
 
         //set listeners
         View.OnClickListener gcListener = new View.OnClickListener() {
@@ -210,6 +228,15 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         //object settings
         hardRadio.setChecked(true);
+        trebleClef.setText("\uD834\uDD1E"); //for some reason xml doesn't lke these "paired" unicode strings
+        staffLines.setText("\uD834\uDD1A\uD834\uDD1A\uD834\uDD1A");
+
+/*
+        //font
+        freeSerifPath = "fonts/FreeSerif.ttf";
+        trebleClef = (TextView)findViewById(R.id.trebleClef);
+        tf = Typeface.createFromAsset(getAssets(), freeSerifPath);
+        trebleClef.setTypeface(tf); */
 
         getRandomChord();
     }
@@ -238,16 +265,16 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             rightAnswer = rightAnswer.replace("\u00B0", "\u00F8"); //so replace the degree with a O WITH STROKE
         }
 
-        trebleClef.setText(Arrays.toString(aRandomChordShuffled));
+        //trebleClef.setText(Arrays.toString(aRandomChordShuffled));
         //changeVII7toV7ofIII();
 
         keyTextView.setText(cg.keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
         rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
-        //setNotationInvisible();
+        setNotationInvisible();
         //displayPitches(aRandomChordShuffled, c, d);
-        //displayKeySignature(b, c);
+        displayKeySignature(b, c);
         createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
     }
     public void createWrongAnswers(int chordSize, int rightAnswerIndex) {
@@ -287,6 +314,11 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             }
         }
     }
+    public void displayKeySignature(int sharpsOrFlats, int numAccidentals) {
+        for (int i = 0; i < numAccidentals; i++) {
+            accidentals[sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
+        }
+    }
     public static boolean containsCaseInsensitive(String s, String[] sArr) {
         for (int i = 0; i < sArr.length; i++) {
             if (sArr[i] != null && s.equalsIgnoreCase(sArr[i])) {
@@ -300,22 +332,22 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             tv.setTextColor(Color.parseColor("#f9f9f9"));
         }
     }
-/*
     //"reset" the key signature / noteheads
     public void setNotationInvisible() {
         for (TextView[] mode: accidentals) {
             for (TextView acc: mode) {
-                acc.setVisible(false);
+                acc.setVisibility(View.INVISIBLE);
             }
         }
+        /*
         for (TextView note: noteheads) {
             note.setVisible(false);
             note.setTranslateX(10);
         }
         ledgerLineA5.setVisible(false);
         ledgerLineC4.setVisible(false);
-        suppLedgerLineC4.setVisible(false);
-    } */
+        suppLedgerLineC4.setVisible(false); */
+    }
     public String[] shuffleChord(String[] arr) {
         List<String> arrList = new ArrayList<String>(Arrays.asList(arr));
         Collections.shuffle(arrList);
