@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import java.util.Arrays;
@@ -33,6 +35,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     private boolean a1, a2, a3, a4, stopCounting;
     private String rightAnswer, wrongAnswer;
     private String[] wrongAnswerArray;
+    private FrameLayout.LayoutParams flp;
     private int rightAnswerIndex, correct, total;
 
     //Music staff members
@@ -45,7 +48,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             notehead4, notehead5, notehead6, notehead7,
             notehead8, notehead9, notehead10, notehead11,
             notehead12, notehead13,
-            ledgerLineC4, suppLedgerLineC4, ledgerLineA5;
+            ledgerLineC4, suppLedgerLineC4;
     private TextView[] sharps, flats, noteheads;
     private TextView[][] accidentals;
     private String freeSerifPath;
@@ -111,6 +114,34 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         accidentals = new TextView[][]{
                 sharps, flats
         };
+
+        notehead0 = (TextView)findViewById(R.id.notehead0);
+        notehead1 = (TextView)findViewById(R.id.notehead1);
+        notehead2 = (TextView)findViewById(R.id.notehead2);
+        notehead3 = (TextView)findViewById(R.id.notehead3);
+        notehead4 = (TextView)findViewById(R.id.notehead4);
+        notehead5 = (TextView)findViewById(R.id.notehead5);
+        notehead6 = (TextView)findViewById(R.id.notehead6);
+        notehead7 = (TextView)findViewById(R.id.notehead7);
+        notehead8 = (TextView)findViewById(R.id.notehead8);
+        notehead9 = (TextView)findViewById(R.id.notehead9);
+        notehead10 = (TextView)findViewById(R.id.notehead10);
+        notehead11 = (TextView)findViewById(R.id.notehead11);
+        notehead12 = (TextView)findViewById(R.id.notehead12);
+        notehead13 = (TextView)findViewById(R.id.notehead13);
+
+        noteheads = new TextView[] {
+                notehead0, notehead1,
+                notehead2, notehead3, notehead4,
+                notehead5, notehead6, notehead7,
+                notehead8, notehead9, notehead10,
+                notehead11, notehead12, notehead13,
+        };
+
+        ledgerLineC4 = (TextView)findViewById(R.id.ledgerLineC4);
+        suppLedgerLineC4 = (TextView)findViewById(R.id.suppLedgerLineC4);
+
+        flp = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
         //set listeners
         View.OnClickListener gcListener = new View.OnClickListener() {
@@ -230,6 +261,9 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         hardRadio.setChecked(true);
         trebleClef.setText("\uD834\uDD1E"); //for some reason xml doesn't lke these "paired" unicode strings
         staffLines.setText("\uD834\uDD1A\uD834\uDD1A\uD834\uDD1A");
+        for (TextView tv: noteheads) {
+            tv.setText("\uD834\uDD5D");
+        }
 
 /*
         //font
@@ -265,7 +299,6 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             rightAnswer = rightAnswer.replace("\u00B0", "\u00F8"); //so replace the degree with a O WITH STROKE
         }
 
-        //trebleClef.setText(Arrays.toString(aRandomChordShuffled));
         //changeVII7toV7ofIII();
 
         keyTextView.setText(cg.keyNames[a][b % 2][c].concat(": ")); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
@@ -273,9 +306,55 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
         setNotationInvisible();
-        //displayPitches(aRandomChordShuffled, c, d);
+        displayPitches(aRandomChordShuffled, c, d);
         displayKeySignature(b, c);
         createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
+    }
+    public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
+        int verticalIndex = 0;
+        String[] everythingButBassNote = new String[aRandomChordShuffled.length - 1];
+
+        //get every pitch from the shuffled chord except the bass note and sort them;
+        //this is needed for a tightly packed chord input on the musical staff
+        for (int i = 0; i < everythingButBassNote.length; i++) {
+            everythingButBassNote[i] = aRandomChordShuffled[i + 1].substring(0, 1);
+        }
+        Arrays.sort(everythingButBassNote);
+
+        //get the bass note of the shuffled chord and display it and the
+        //C4 ledger line if necessary
+        for (int i = 6, j = 0;
+             j < cg.pitchClassesArray.length;
+             i = (i + 1) % cg.NUM_PITCH_CLASSES, j++) { //i = 6 because noteheads starts at "B", while the pitchClassesArray starts at "C"
+            if (cg.pitchClassesArray[i].equals(
+                    aRandomChordShuffled[0].substring(0, 1))
+                    ) {
+                verticalIndex = j;
+                noteheads[verticalIndex].setVisibility(View.VISIBLE);  //move to the right by num_accidentals * a constant?
+                if (verticalIndex == 0 || verticalIndex == 1) { //if the pitch is either B3 or C4 it needs a ledger line
+                    ledgerLineC4.setVisibility(View.VISIBLE);
+                }
+                break;
+            }
+        }
+        //for B-C-E-G the ledger line needs to be double the length. use a supplementary ledger
+        //input the remaining 2-3 pitches
+        for (int i = verticalIndex, j = verticalIndex + 1, k = 0; //j = verticalIndex + 1 again because noteheads starts at "B" while pitchClassesArray starts at "C"
+             j < noteheads.length && k < everythingButBassNote.length; //this could be much more readable if I created an alternate pitchClassesArray that started on "B"
+             i = (i + 1) % cg.NUM_PITCH_CLASSES, j++) {
+            if (cg.pitchClassesArray[i].equals(everythingButBassNote[k])) {
+                noteheads[j].setVisibility(View.VISIBLE);
+                k++;
+                if (j > 0 && noteheads[j - 1].getVisibility() == View.VISIBLE) { //if the pitch added before this one is an interval of a 2nd below
+                    System.out.println(noteheads[j].getLeft() + " " + noteheads[j].getTop() + " " +  noteheads[j].getRight() + " "  +noteheads[j].getBottom());
+                    flp.setMargins(noteheads[j].getLeft() + 50, noteheads[j].getTop(), noteheads[j].getRight(), noteheads[j].getBottom());
+                    noteheads[j].setTranslationX(70); //it, then it must shift to the right a little to make space
+                    if (j == 1) { //if the baseNote is "B" and the next pitch to be added is "C", a huge ledger line is needed
+                        suppLedgerLineC4.setVisibility(View.VISIBLE); //supplementary ledger
+                    }
+                }
+            }
+        }
     }
     public void createWrongAnswers(int chordSize, int rightAnswerIndex) {
         wrongAnswerArray = new String[answerButtonArray.length - 1]; //4 buttons, so (4 - 1) wrong answers
@@ -339,14 +418,13 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 acc.setVisibility(View.INVISIBLE);
             }
         }
-        /*
+
         for (TextView note: noteheads) {
-            note.setVisible(false);
-            note.setTranslateX(10);
+            note.setVisibility(View.INVISIBLE);
+            note.setTranslationX(0);
         }
-        ledgerLineA5.setVisible(false);
-        ledgerLineC4.setVisible(false);
-        suppLedgerLineC4.setVisible(false); */
+        ledgerLineC4.setVisibility(View.INVISIBLE);
+        suppLedgerLineC4.setVisibility(View.INVISIBLE);
     }
     public String[] shuffleChord(String[] arr) {
         List<String> arrList = new ArrayList<String>(Arrays.asList(arr));
