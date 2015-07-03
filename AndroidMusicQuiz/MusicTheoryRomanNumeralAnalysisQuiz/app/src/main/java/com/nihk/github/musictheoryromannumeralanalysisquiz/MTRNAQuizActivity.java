@@ -4,8 +4,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -24,22 +22,19 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             generateChordButton, refreshButton;
     private Button[] answerButtonArray;
     private TextView aTextView, bTextView, cTextView, dTextView,
-            keyTextView, notesTextView, scoreTextView,
-            scorePointsTextView, numTextView, acciTextView,
-            dentalsTextView;
+            keyTextView, scoreTextView, scorePointsTextView,
+            numAccidentalsTextView;
     private TextView[] qTextViews;
     private RadioButton easyRadio, hardRadio;
-    //private ToggleGroup difficultyRadios;
-    private boolean a1, a2, a3, a4, stopCounting;
+    private boolean stopCounting;
     private String rightAnswer, wrongAnswer;
     private String[] wrongAnswerArray;
     private int rightAnswerIndex, correct, total;
     private float scale;
-    public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
+    //public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
 
     //Music staff members
-    private TextView trebleClef, bassClef,
-            staffLines,
+    private TextView trebleClef, staffLines,
             fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
             bFlat, eFlat, aFlat, dFlat, gFlat, cFlat, fFlat,
             notehead0, notehead1, notehead2, notehead3,
@@ -49,8 +44,6 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             ledgerLineC4, suppLedgerLineC4;
     private TextView[] sharps, flats, noteheads;
     private TextView[][] accidentals;
-    private String freeSerifPath;
-    private Typeface tf;
 
     //Music quiz members
     private ChordGenerator cg;
@@ -74,7 +67,9 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButton4 = (Button)findViewById(R.id.answerButton4);
         answerButtonArray = new Button[] {answerButton1,
                 answerButton2, answerButton3, answerButton4};
+        scoreTextView = (TextView)findViewById(R.id.scoreTextView);
         scorePointsTextView = (TextView)findViewById(R.id.scorePointsTextView);
+        numAccidentalsTextView = (TextView)findViewById(R.id.numAccidentalsTextView);
         aTextView = (TextView)findViewById(R.id.aTextView);
         bTextView = (TextView)findViewById(R.id.bTextView);
         cTextView = (TextView)findViewById(R.id.cTextView);
@@ -261,20 +256,23 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         for (TextView tv: noteheads) {
             tv.setText("\uD834\uDD5D");
         }
-
-/*
-        //font
-        freeSerifPath = "fonts/FreeSerif.ttf";
-        trebleClef = (TextView)findViewById(R.id.trebleClef);
-        tf = Typeface.createFromAsset(getAssets(), freeSerifPath);
-        trebleClef.setTypeface(tf); */
-        String firaMonoPath = "fonts/FiraMono-Bold.ttf";
+        String neutonBoldPath = "fonts/Neuton-Bold.ttf";
+        String neutonRegPath = "fonts/Neuton-Bold.ttf";
+        Typeface tf1 = Typeface.createFromAsset(getAssets(), neutonBoldPath);
+        Typeface tf2 = Typeface.createFromAsset(getAssets(), neutonRegPath);
         for (Button b: answerButtonArray) {
-            b.setTypeface(Typeface.createFromAsset(getAssets(), firaMonoPath));
+            b.setTypeface(tf1);
         }
 
+        generateChordButton.setTypeface(tf2);
+        scoreTextView.setTypeface(tf2);
+        scorePointsTextView.setTypeface(tf2);
+        numAccidentalsTextView.setTypeface(tf2);
+        easyRadio.setTypeface(tf2);
+        hardRadio.setTypeface(tf2);
+        keyTextView.setTypeface(tf2);
 
-        getRandomChord();
+        getRandomChord(); //so when the app starts it will produce its first chord to be analysed
 
     }
     public void getRandomChord() {

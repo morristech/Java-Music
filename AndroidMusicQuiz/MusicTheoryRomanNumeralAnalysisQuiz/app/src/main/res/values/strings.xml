@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="flat">\u266D</string>
+    <string name="sharp">\u266F</string>
+    <string name="ledger">\u2015</string>
 </resources>
