@@ -13,11 +13,11 @@ intention with writing this program was to assist students having difficulty wit
 </div>
 <br><br>
 
-In the **AndroidMusicQuiz** folder is a WIP of an Android version of ChordGenerator. I'm still in the process of
-optimizing it for multiple screens. Here's a look at it on the Nexus 7 tablet.
+In the **AndroidMusicQuiz** folder is an Android version of ChordGenerator. Here's a look at it on a
+Google Nexus S emulator (Genymotion). Will submit to Google Play Store after enough layout optimizations.
 
 <div align="center">
-   <img src="https://github.com/nihk/Java-Music/blob/master/AndroidMusicQuiz/AStudioScreenshot.png">
+   <img src="https://github.com/nihk/Java-Music/blob/master/AndroidMusicQuiz/screenshot.png">
 </div>
 <br><br>
 
