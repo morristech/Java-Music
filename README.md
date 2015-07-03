@@ -13,6 +13,14 @@ intention with writing this program was to assist students having difficulty wit
 </div>
 <br><br>
 
+In the **AndroidMusicQuiz** folder is a WIP of an Android version of ChordGenerator. I'm still in the process of
+optimizing it for multiple screens. Here's a look at it on the Nexus 7 tablet.
+
+<div align="center">
+   <img src="https://github.com/nihk/Java-Music/blob/master/AndroidMusicQuiz/AStudioScreenshot.png">
+</div>
+<br><br>
+
 **SetTheoryCalculatorJavaFX** also uses JavaFX to display a music analysis tool used in
 pitch-class set theory, a topic commonly taught to both undergraduate and graduate students at university.
 A user enters a collection of pitch-classes and the program essentially
