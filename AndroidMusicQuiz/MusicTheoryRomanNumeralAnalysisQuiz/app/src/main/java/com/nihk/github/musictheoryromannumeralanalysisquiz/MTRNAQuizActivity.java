@@ -1,3 +1,8 @@
+// Note: this program only interprets the chords at face value. It does not understand applied
+// chords, passing chords, suspensions modulation, or any chord function in the Riemannian sense;
+// analyze accordingly. For example, a Bb7 chord in C-minor will have to be answered literally as
+// VII7 rather than something like "V7 of I in the relative major."
+
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
 import android.graphics.Color;
@@ -13,39 +18,27 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class MTRNAQuizActivity extends ActionBarActivity {
 
-    //Boring interface members
-    private Button answerButton1, answerButton2,
-            answerButton3, answerButton4,
-            generateChordButton, refreshButton;
+    //declare boring interface members
     private Button[] answerButtonArray;
     private TextView aTextView, bTextView, cTextView, dTextView,
-            keyTextView, scoreTextView, scorePointsTextView,
-            numAccidentalsTextView;
+            keyTextView, scorePointsTextView;
     private TextView[] qTextViews;
     private RadioButton easyRadio, hardRadio;
-    private boolean stopCounting;
-    private String rightAnswer, wrongAnswer;
+    private boolean stopCounting, isTrebleClef;
+    private String rightAnswer, wrongAnswer, checkMark, xMark;
     private String[] wrongAnswerArray;
-    private int rightAnswerIndex, correct, total;
-    private float scale;
+    private int rightAnswerIndex, correct, total, pink, green;
     //public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
 
-    //Music staff members
-    private TextView trebleClef, staffLines,
-            fSharp, cSharp, gSharp, dSharp, aSharp, eSharp, bSharp,
-            bFlat, eFlat, aFlat, dFlat, gFlat, cFlat, fFlat,
-            notehead0, notehead1, notehead2, notehead3,
-            notehead4, notehead5, notehead6, notehead7,
-            notehead8, notehead9, notehead10, notehead11,
-            notehead12, notehead13,
-            ledgerLineC4, suppLedgerLineC4;
-    private TextView[] sharps, flats, noteheads;
-    private TextView[][] accidentals;
+    //declare the music staff members
+    private String dim, halfDim;
+    private TextView trebleClef, bassClef;
+    private TextView[] noteheads, noteheadsR;
+    private TextView[][][] accidentals;
 
-    //Music quiz members
+    //new object from a class in this package
     private ChordGenerator cg;
 
     @Override
@@ -53,89 +46,164 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mtrnaquiz);
 
-        //instantiations
-        cg = new ChordGenerator();
-        scale = getResources().getDisplayMetrics().density; //so I can use java to move by dp and not just px
-        trebleClef = (TextView)findViewById(R.id.trebleClef);
-        generateChordButton = (Button)findViewById(R.id.generateChordButton);
-        keyTextView = (TextView)findViewById(R.id.keyTextView);
-        easyRadio = (RadioButton)findViewById(R.id.easyRadio);
-        hardRadio = (RadioButton)findViewById(R.id.hardRadio);
-        answerButton1 = (Button)findViewById(R.id.answerButton1);
-        answerButton2 = (Button)findViewById(R.id.answerButton2);
-        answerButton3 = (Button)findViewById(R.id.answerButton3);
-        answerButton4 = (Button)findViewById(R.id.answerButton4);
+        //declarations and initializations of both member non-member vars
+        Button answerButton1 = (Button)findViewById(R.id.answerButton1);
+        Button answerButton2 = (Button)findViewById(R.id.answerButton2);
+        Button answerButton3 = (Button)findViewById(R.id.answerButton3);
+        Button answerButton4 = (Button)findViewById(R.id.answerButton4);
+
         answerButtonArray = new Button[] {answerButton1,
-                answerButton2, answerButton3, answerButton4};
-        scoreTextView = (TextView)findViewById(R.id.scoreTextView);
-        scorePointsTextView = (TextView)findViewById(R.id.scorePointsTextView);
-        numAccidentalsTextView = (TextView)findViewById(R.id.numAccidentalsTextView);
+                answerButton2, answerButton3, answerButton4
+        };
+        wrongAnswerArray = new String[answerButtonArray.length - 1]; //4 buttons, so (4 - 1) wrong answers
+
         aTextView = (TextView)findViewById(R.id.aTextView);
         bTextView = (TextView)findViewById(R.id.bTextView);
         cTextView = (TextView)findViewById(R.id.cTextView);
         dTextView = (TextView)findViewById(R.id.dTextView);
+
+        checkMark = "\u2714";
+        xMark = "\u2718";
+
         qTextViews = new TextView[] {
                 aTextView, bTextView, cTextView, dTextView
         };
-        refreshButton = (Button)findViewById(R.id.refreshButton);
+
+        Button generateChordButton = (Button)findViewById(R.id.generateChordButton);
+        Button refreshButton = (Button)findViewById(R.id.refreshButton);
+
+        keyTextView = (TextView)findViewById(R.id.keyTextView);
+        easyRadio = (RadioButton)findViewById(R.id.easyRadio);
+        hardRadio = (RadioButton)findViewById(R.id.hardRadio);
+        TextView scoreTextView = (TextView)findViewById(R.id.scoreTextView);
+        scorePointsTextView = (TextView)findViewById(R.id.scorePointsTextView);
+        TextView numAccidentalsTextView = (TextView)findViewById(R.id.numAccidentalsTextView);
+
         trebleClef = (TextView)findViewById(R.id.trebleClef);
-        staffLines = (TextView)findViewById(R.id.staffLines);
+        bassClef = (TextView)findViewById(R.id.bassClef);
 
-        fSharp = (TextView)findViewById(R.id.fSharp);
-        cSharp = (TextView)findViewById(R.id.cSharp);
-        gSharp = (TextView)findViewById(R.id.gSharp);
-        dSharp = (TextView)findViewById(R.id.dSharp);
-        aSharp = (TextView)findViewById(R.id.aSharp);
-        eSharp = (TextView)findViewById(R.id.eSharp);
-        bSharp = (TextView)findViewById(R.id.bSharp);
+        TextView fSharpTreb = (TextView)findViewById(R.id.fSharpTreb);
+        TextView cSharpTreb = (TextView)findViewById(R.id.cSharpTreb);
+        TextView gSharpTreb = (TextView)findViewById(R.id.gSharpTreb);
+        TextView dSharpTreb = (TextView)findViewById(R.id.dSharpTreb);
+        TextView aSharpTreb = (TextView)findViewById(R.id.aSharpTreb);
+        TextView eSharpTreb = (TextView)findViewById(R.id.eSharpTreb);
+        TextView bSharpTreb = (TextView)findViewById(R.id.bSharpTreb);
 
-        bFlat = (TextView)findViewById(R.id.bFlat);
-        eFlat = (TextView)findViewById(R.id.eFlat);
-        aFlat = (TextView)findViewById(R.id.aFlat);
-        dFlat = (TextView)findViewById(R.id.dFlat);
-        gFlat = (TextView)findViewById(R.id.gFlat);
-        cFlat = (TextView)findViewById(R.id.cFlat);
-        fFlat = (TextView)findViewById(R.id.fFlat);
+        TextView bFlatTreb = (TextView)findViewById(R.id.bFlatTreb);
+        TextView eFlatTreb = (TextView)findViewById(R.id.eFlatTreb);
+        TextView aFlatTreb = (TextView)findViewById(R.id.aFlatTreb);
+        TextView dFlatTreb = (TextView)findViewById(R.id.dFlatTreb);
+        TextView gFlatTreb = (TextView)findViewById(R.id.gFlatTreb);
+        TextView cFlatTreb = (TextView)findViewById(R.id.cFlatTreb);
+        TextView fFlatTreb = (TextView)findViewById(R.id.fFlatTreb);
 
-        sharps = new TextView[] {
-                fSharp, cSharp, gSharp, dSharp,
-                aSharp, eSharp, bSharp
+        TextView fSharpBass = (TextView)findViewById(R.id.fSharpBass);
+        TextView cSharpBass = (TextView)findViewById(R.id.cSharpBass);
+        TextView gSharpBass = (TextView)findViewById(R.id.gSharpBass);
+        TextView dSharpBass = (TextView)findViewById(R.id.dSharpBass);
+        TextView aSharpBass = (TextView)findViewById(R.id.aSharpBass);
+        TextView eSharpBass = (TextView)findViewById(R.id.eSharpBass);
+        TextView bSharpBass = (TextView)findViewById(R.id.bSharpBass);
+
+        TextView bFlatBass = (TextView)findViewById(R.id.bFlatBass);
+        TextView eFlatBass = (TextView)findViewById(R.id.eFlatBass);
+        TextView aFlatBass = (TextView)findViewById(R.id.aFlatBass);
+        TextView dFlatBass = (TextView)findViewById(R.id.dFlatBass);
+        TextView gFlatBass = (TextView)findViewById(R.id.gFlatBass);
+        TextView cFlatBass = (TextView)findViewById(R.id.cFlatBass);
+        TextView fFlatBass = (TextView)findViewById(R.id.fFlatBass);
+
+        TextView[] sharpsTreb = new TextView[] {
+                fSharpTreb, cSharpTreb, gSharpTreb, dSharpTreb,
+                aSharpTreb, eSharpTreb, bSharpTreb
         };
-        flats = new TextView[] {
-                bFlat, eFlat, aFlat,
-                dFlat, gFlat, cFlat, fFlat
+        TextView[] flatsTreb = new TextView[] {
+                bFlatTreb, eFlatTreb, aFlatTreb,
+                dFlatTreb, gFlatTreb, cFlatTreb, fFlatTreb
         };
-        accidentals = new TextView[][]{
-                sharps, flats
+        TextView[] sharpsBass = new TextView[] {
+                fSharpBass, cSharpBass, gSharpBass, dSharpBass,
+                aSharpBass, eSharpBass, bSharpBass
+        };
+        TextView[] flatsBass = new TextView[] {
+                bFlatBass, eFlatBass, aFlatBass,
+                dFlatBass, gFlatBass, cFlatBass, fFlatBass
+        };
+        TextView[][] accidentalsA = new TextView[][] {
+                sharpsTreb, flatsBass //this weird order just works out this way because of % 2 in the display key sig method
+        };
+        TextView[][] accidentalsB = new TextView[][] {
+                sharpsBass, flatsTreb //this weird order just works out this way because of % 2 in the display key sig method
+        };
+        accidentals = new TextView[][][] {
+                accidentalsA, accidentalsB
         };
 
-        notehead0 = (TextView)findViewById(R.id.notehead0);
-        notehead1 = (TextView)findViewById(R.id.notehead1);
-        notehead2 = (TextView)findViewById(R.id.notehead2);
-        notehead3 = (TextView)findViewById(R.id.notehead3);
-        notehead4 = (TextView)findViewById(R.id.notehead4);
-        notehead5 = (TextView)findViewById(R.id.notehead5);
-        notehead6 = (TextView)findViewById(R.id.notehead6);
-        notehead7 = (TextView)findViewById(R.id.notehead7);
-        notehead8 = (TextView)findViewById(R.id.notehead8);
-        notehead9 = (TextView)findViewById(R.id.notehead9);
-        notehead10 = (TextView)findViewById(R.id.notehead10);
-        notehead11 = (TextView)findViewById(R.id.notehead11);
-        notehead12 = (TextView)findViewById(R.id.notehead12);
-        notehead13 = (TextView)findViewById(R.id.notehead13);
+        for (TextView[] acc: accidentalsB) {
+            for (TextView tv: acc) {
+                tv.setVisibility(View.INVISIBLE);
+            }
+        };
+        bassClef.setVisibility(View.INVISIBLE);
+
+        TextView noteheadA3 = (TextView)findViewById(R.id.noteheadA3);
+        TextView noteheadB3 = (TextView)findViewById(R.id.noteheadB3);
+        TextView noteheadC4 = (TextView)findViewById(R.id.noteheadC4);
+        TextView noteheadD4 = (TextView)findViewById(R.id.noteheadD4);
+        TextView noteheadE4 = (TextView)findViewById(R.id.noteheadE4);
+        TextView noteheadF4 = (TextView)findViewById(R.id.noteheadF4);
+        TextView noteheadG4 = (TextView)findViewById(R.id.noteheadG4);
+        TextView noteheadA4 = (TextView)findViewById(R.id.noteheadA4);
+        TextView noteheadB4 = (TextView)findViewById(R.id.noteheadB4);
+        TextView noteheadC5 = (TextView)findViewById(R.id.noteheadC5);
+        TextView noteheadD5 = (TextView)findViewById(R.id.noteheadD5);
+        TextView noteheadE5 = (TextView)findViewById(R.id.noteheadE5);
+        TextView noteheadF5 = (TextView)findViewById(R.id.noteheadF5);
+        TextView noteheadG5 = (TextView)findViewById(R.id.noteheadG5);
+        TextView noteheadA5 = (TextView)findViewById(R.id.noteheadA5);
+
+        TextView noteheadA3r = (TextView)findViewById(R.id.noteheadA3r);
+        TextView noteheadB3r = (TextView)findViewById(R.id.noteheadB3r);
+        TextView noteheadC4r = (TextView)findViewById(R.id.noteheadC4r);
+        TextView noteheadD4r = (TextView)findViewById(R.id.noteheadD4r);
+        TextView noteheadE4r = (TextView)findViewById(R.id.noteheadE4r);
+        TextView noteheadF4r = (TextView)findViewById(R.id.noteheadF4r);
+        TextView noteheadG4r = (TextView)findViewById(R.id.noteheadG4r);
+        TextView noteheadA4r = (TextView)findViewById(R.id.noteheadA4r);
+        TextView noteheadB4r = (TextView)findViewById(R.id.noteheadB4r);
+        TextView noteheadC5r = (TextView)findViewById(R.id.noteheadC5r);
+        TextView noteheadD5r = (TextView)findViewById(R.id.noteheadD5r);
+        TextView noteheadE5r = (TextView)findViewById(R.id.noteheadE5r);
+        TextView noteheadF5r = (TextView)findViewById(R.id.noteheadF5r);
+        TextView noteheadG5r = (TextView)findViewById(R.id.noteheadG5r);
+        TextView noteheadA5r = (TextView)findViewById(R.id.noteheadA5r);
 
         noteheads = new TextView[] {
-                notehead0, notehead1,
-                notehead2, notehead3, notehead4,
-                notehead5, notehead6, notehead7,
-                notehead8, notehead9, notehead10,
-                notehead11, notehead12, notehead13,
+                noteheadA3,
+                noteheadB3, noteheadC4, noteheadD4,
+                noteheadE4, noteheadF4, noteheadG4,
+                noteheadA4, noteheadB4, noteheadC5,
+                noteheadD5, noteheadE5, noteheadF5,
+                noteheadG5, noteheadA5
+        };
+        noteheadsR = new TextView[] {
+                noteheadA3r,
+                noteheadB3r, noteheadC4r, noteheadD4r,
+                noteheadE4r, noteheadF4r, noteheadG4r,
+                noteheadA4r, noteheadB4r, noteheadC5r,
+                noteheadD5r, noteheadE5r, noteheadF5r,
+                noteheadG5r, noteheadA5r
         };
 
-        ledgerLineC4 = (TextView)findViewById(R.id.ledgerLineC4);
-        suppLedgerLineC4 = (TextView)findViewById(R.id.suppLedgerLineC4);
+        pink = Color.parseColor("#f2ac9c");
+        green = Color.parseColor("#87e9b8");
+        dim = "\u00B0";
+        halfDim = "\u00F8";
+       //float scale = getResources().getDisplayMetrics().density; //so I can use java to move layout elements by dp and not just px
+        cg = new ChordGenerator();
 
-        //set listeners
+        //set and attach listeners
         View.OnClickListener gcListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,93 +213,25 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         View.OnClickListener a1Listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswer != null && rightAnswerIndex == 0) {
-                    if (!stopCounting) {
-                        correct++;
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    aTextView.setText("\u2714");
-                    aTextView.setTextColor(Color.parseColor("#87e9b8"));
-                } else if (rightAnswer != null) {
-                    if (!stopCounting) {
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    aTextView.setText("\u2718");
-                    aTextView.setTextColor(Color.parseColor("#f2ac9c"));
-                }
+                changeCounterAndCheckmarks(aTextView, 0);
             }
         };
         View.OnClickListener a2Listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswer != null && rightAnswerIndex == 1) {
-                    if (!stopCounting) {
-                        correct++;
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    bTextView.setText("\u2714");
-                    bTextView.setTextColor(Color.parseColor("#87e9b8"));
-                } else if (rightAnswer != null) {
-                    if (!stopCounting) {
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    bTextView.setText("\u2718");
-                    bTextView.setTextColor(Color.parseColor("#f2ac9c"));
-                }
+                changeCounterAndCheckmarks(bTextView, 1);
             }
         };
         View.OnClickListener a3Listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswer != null && rightAnswerIndex == 2) {
-                    if (!stopCounting) {
-                        correct++;
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    cTextView.setText("\u2714");
-                    cTextView.setTextColor(Color.parseColor("#87e9b8"));
-                } else if (rightAnswer != null) {
-                    if (!stopCounting) {
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    cTextView.setText("\u2718");
-                    cTextView.setTextColor(Color.parseColor("#f2ac9c"));
-                }
+                changeCounterAndCheckmarks(cTextView, 2);
             }
         };
         View.OnClickListener a4Listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswer != null && rightAnswerIndex == 3) {
-                    if (!stopCounting) {
-                        correct++;
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    dTextView.setText("\u2714");
-                    dTextView.setTextColor(Color.parseColor("#87e9b8"));
-                } else if (rightAnswer != null) {
-                    if (!stopCounting) {
-                        total++;
-                        scorePointsTextView.setText(correct + " / " + total);
-                        stopCounting = true;
-                    }
-                    dTextView.setText("\u2718");
-                    dTextView.setTextColor(Color.parseColor("#f2ac9c"));
-                }
+                changeCounterAndCheckmarks(dTextView, 3);
             }
         };
         View.OnClickListener refreshListener = new View.OnClickListener() {
@@ -249,35 +249,31 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButton4.setOnClickListener(a4Listener);
         refreshButton.setOnClickListener(refreshListener);
 
-        //object settings
+        //altering the xml layout with javacode
         hardRadio.setChecked(true);
-        trebleClef.setText("\uD834\uDD1E"); //for some reason xml doesn't lke these "paired" unicode strings
-        staffLines.setText("\uD834\uDD1A\uD834\uDD1A\uD834\uDD1A\uD834\uDD1A");
-        for (TextView tv: noteheads) {
-            tv.setText("\uD834\uDD5D");
-        }
         String neutonBoldPath = "fonts/Neuton-Bold.ttf";
-        String neutonRegPath = "fonts/Neuton-Bold.ttf";
-        Typeface tf1 = Typeface.createFromAsset(getAssets(), neutonBoldPath);
-        Typeface tf2 = Typeface.createFromAsset(getAssets(), neutonRegPath);
+        Typeface tf = Typeface.createFromAsset(getAssets(), neutonBoldPath);
         for (Button b: answerButtonArray) {
-            b.setTypeface(tf1);
+            b.setTypeface(tf);
         }
-
-        generateChordButton.setTypeface(tf2);
-        scoreTextView.setTypeface(tf2);
-        scorePointsTextView.setTypeface(tf2);
-        numAccidentalsTextView.setTypeface(tf2);
-        easyRadio.setTypeface(tf2);
-        hardRadio.setTypeface(tf2);
-        keyTextView.setTypeface(tf2);
+        aTextView.setTypeface(tf);
+        bTextView.setTypeface(tf);
+        cTextView.setTypeface(tf);
+        dTextView.setTypeface(tf);
+        generateChordButton.setTypeface(tf);
+        scoreTextView.setTypeface(tf);
+        scorePointsTextView.setTypeface(tf);
+        numAccidentalsTextView.setTypeface(tf);
+        easyRadio.setTypeface(tf);
+        hardRadio.setTypeface(tf);
+        keyTextView.setTypeface(tf);
 
         getRandomChord(); //so when the app starts it will produce its first chord to be analysed
-
     }
     public void getRandomChord() {
-        stopCounting = false;
-        clearChecksAndXs();
+        stopCounting = false; //score can go again up with each Next Chord button click
+        isTrebleClef = false; //a reset so it can try for either treb or bass clef
+        clearChecksAndXs(); //hide previous chords' wrong/right answer textviews
 
         //lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
         //so I can just use lengths of the zeroth index of things like chords[0].length with confidence
@@ -296,8 +292,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                         : cg.seventhInversions[inversionIndex]
         );
 
-        if (b >= 2 && rightAnswer.contains("\u00B0")) { //if chord is a 7th chord (b==2 or b==3) and contains a degree, it's actually a half-diminished chord
-            rightAnswer = rightAnswer.replace("\u00B0", "\u00F8"); //so replace the degree with a O WITH STROKE
+        if (b >= 2 && rightAnswer.contains(dim)) { //if chord is a 7th chord (b==2 or b==3) and contains a degree, it's actually a half-diminished chord
+            rightAnswer = rightAnswer.replace(dim, halfDim); //so replace the degree with a O WITH STROKE
         }
 
         //changeVII7toV7ofIII();
@@ -307,8 +303,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
         setNotationInvisible();
-        displayPitches(aRandomChordShuffled, c, d);
         displayKeySignature(b, c);
+        displayPitches(aRandomChordShuffled, c, d);
         createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
     }
     public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
@@ -322,41 +318,49 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
         Arrays.sort(everythingButBassNote);
 
-        //get the bass note of the shuffled chord and display it and the
-        //C4 ledger line if necessary
-        for (int i = 6, j = 0;
+        //This is a hacky fix for a bug that happens with a B-A-D-F or B-G-D-F chord in the bass clef only. The staff runs out of space
+        //after filling in the first two pitches of that chord, because there is no low B available below the bass staff in this music font.
+        //Normally this would easily be possible to fix by hand, but arrays.sort sorts from A-Z for the non-bass-note pitches. I could just change arrays.sort
+        //into something that starts from a pitch other than A, but this would cause even more unforeseen issues down the line.
+        if (!isTrebleClef && aRandomChordShuffled[0].equals(cg.pitchClassesArray[6])
+                && (everythingButBassNote[0].equals(cg.pitchClassesArray[4]) || everythingButBassNote[0].equals(cg.pitchClassesArray[5]))) {
+            String firstElement = everythingButBassNote[0];
+            for (int i = 1; i < everythingButBassNote.length; i++) {
+                everythingButBassNote[i - 1] = everythingButBassNote[i];
+            }
+            everythingButBassNote[everythingButBassNote.length - 1] = firstElement;
+        }
+
+        //get the bass note of the shuffled chord and display it
+        for (int i = isTrebleClef ? 5 : 0, j = 0; //trebclef ? start on pitchclass A, else start on pitchclass C
              j < cg.pitchClassesArray.length;
-             i = (i + 1) % cg.NUM_PITCH_CLASSES, j++) { //i = 6 because noteheads starts at "B", while the pitchClassesArray starts at "C"
+             i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
             if (cg.pitchClassesArray[i].equals(
                     aRandomChordShuffled[0].substring(0, 1))
                     ) {
                 verticalIndex = j;
                 noteheads[verticalIndex].setVisibility(View.VISIBLE);  //move to the right by num_accidentals * a constant?
-                if (verticalIndex == 0 || verticalIndex == 1) { //if the pitch is either B3 or C4 it needs a ledger line
-                    ledgerLineC4.setVisibility(View.VISIBLE);
-                }
                 break;
             }
         }
-        //for B-C-E-G the ledger line needs to be double the length. use a supplementary ledger
         //input the remaining 2-3 pitches
-        for (int i = verticalIndex, j = verticalIndex + 1, k = 0; //j = verticalIndex + 1 again because noteheads starts at "B" while pitchClassesArray starts at "C"
-             j < noteheads.length && k < everythingButBassNote.length; //this could be much more readable if I created an alternate pitchClassesArray that started on "B"
-             i = (i + 1) % cg.NUM_PITCH_CLASSES, j++) {
+        //confusing line below: the trebleclef lowest possible displayed note is A3, but pitchClassesArray starts at C, so I'll start at pitchClassesArray[(0 - 2) % 7] to begin on A instead,
+        //but it might be a negative so + 7 (NUM_PITCH..) solves that, since I'm using modulus anyway (but modulus doesnt work on negative values)
+        for (int i = isTrebleClef ? ((verticalIndex - 2 + ChordGenerator.NUM_PITCH_CLASSES) % ChordGenerator.NUM_PITCH_CLASSES) : verticalIndex, j = verticalIndex, k = 0;
+             j < noteheads.length && k < everythingButBassNote.length;
+             i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
             if (cg.pitchClassesArray[i].equals(everythingButBassNote[k])) {
                 noteheads[j].setVisibility(View.VISIBLE);
                 k++;
                 if (j > 0 && noteheads[j - 1].getVisibility() == View.VISIBLE) { //if the pitch added before this one is an interval of a 2nd below
-                    noteheads[j].setTranslationX(22 * scale + 0.5f); //it, then it must shift to the right a little to make space
-                    if (j == 1) { //if the baseNote is "B" and the next pitch to be added is "C", a huge ledger line is needed
-                        suppLedgerLineC4.setVisibility(View.VISIBLE); //supplementary ledger
-                    }
+                    noteheads[j].setVisibility(View.INVISIBLE);
+                    noteheadsR[j].setVisibility(View.VISIBLE);  //it, then it must shift to the right a little to make space
                 }
             }
         }
     }
+    //creates text for the three answerButtons which hold incorrect answer values
     public void createWrongAnswers(int chordSize, int rightAnswerIndex) {
-        wrongAnswerArray = new String[answerButtonArray.length - 1]; //4 buttons, so (4 - 1) wrong answers
         int randomRNIndex = 0,
                 randomInversionIndex = 0,
                 randomModeIndex = 0; //default to zero values for these.
@@ -393,8 +397,15 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
     }
     public void displayKeySignature(int sharpsOrFlats, int numAccidentals) {
+        int bassOrTreble = (int)(Math.random() * 2); //randomly choose between treble and bass clef
+        if (bassOrTreble == 0) {
+            trebleClef.setVisibility(View.VISIBLE);
+            isTrebleClef = true;
+        } else {
+            bassClef.setVisibility(View.VISIBLE);
+        }
         for (int i = 0; i < numAccidentals; i++) {
-            accidentals[sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
+            accidentals[bassOrTreble][sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
         }
     }
     public static boolean containsCaseInsensitive(String s, String[] sArr) {
@@ -410,20 +421,44 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             tv.setTextColor(Color.parseColor("#f9f9f9"));
         }
     }
-    //"reset" the key signature / noteheads
+    //"reset" the clef / key signature / noteheads
     public void setNotationInvisible() {
-        for (TextView[] mode: accidentals) {
-            for (TextView acc: mode) {
-                acc.setVisibility(View.INVISIBLE);
+        trebleClef.setVisibility(View.INVISIBLE);
+        bassClef.setVisibility(View.INVISIBLE);
+        for (TextView[][] clef: accidentals) {
+            for (TextView[] mode: clef) {
+                for (TextView acc: mode) {
+                    acc.setVisibility(View.INVISIBLE);
+                }
             }
         }
 
         for (TextView note: noteheads) {
             note.setVisibility(View.INVISIBLE);
-            note.setTranslationX(0); //need minimum API level of 14 for this
         }
-        ledgerLineC4.setVisibility(View.INVISIBLE);
-        suppLedgerLineC4.setVisibility(View.INVISIBLE);
+        for (TextView noteR: noteheadsR) {
+            noteR.setVisibility(View.INVISIBLE);
+        }
+    }
+    public void changeCounterAndCheckmarks(TextView tv, int clickedButton) {
+        if (rightAnswer != null && rightAnswerIndex == clickedButton) {
+            if (!stopCounting) {
+                correct++;
+                total++;
+                scorePointsTextView.setText(correct + " / " + total);
+                stopCounting = true;
+            }
+            tv.setText(checkMark);
+            tv.setTextColor(green);
+        } else if (rightAnswer != null) {
+            if (!stopCounting) {
+                total++;
+                scorePointsTextView.setText(correct + " / " + total);
+                stopCounting = true;
+            }
+            tv.setText(xMark);
+            tv.setTextColor(pink);
+        }
     }
     public String[] shuffleChord(String[] arr) {
         List<String> arrList = new ArrayList<String>(Arrays.asList(arr));
