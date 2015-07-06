@@ -13,11 +13,11 @@ public class ChordGenerator {
             START_C_MAJOR = 0, //to start looping through major keys built from pitchClassesArray starting on index 0
             START_A_MINOR = 5, //to start looping through minor keys built from pitchClassesArray starting on index 5
             ASC_FIFTHS = 4, //looping through pitchClassesArray by ascending fifths means a new key will be 4 indices higher
-    //than the previous. this also implies sharp accidentals will accumulate.
-    ASC_FOURTHS = 3,//looping through pitchClassesArray by ascending fourths means a new key will be 3 indices higher
-    //than the previous. this also implies flat accidentals will accumulate. this is the same as
-    //descending fifths effectively.
-    MAJOR_MODE = 0, //in modeArray index 0 means major mode
+                            //than the previous. this also implies sharp accidentals will accumulate.
+            ASC_FOURTHS = 3,//looping through pitchClassesArray by ascending fourths means a new key will be 3 indices higher
+                            //than the previous. this also implies flat accidentals will accumulate. this is the same as
+                            //descending fifths effectively.
+            MAJOR_MODE = 0, //in modeArray index 0 means major mode
             MINOR_MODE = 1; //in modeArray index 1 means minor mode
 
     public ChordGenerator() {
