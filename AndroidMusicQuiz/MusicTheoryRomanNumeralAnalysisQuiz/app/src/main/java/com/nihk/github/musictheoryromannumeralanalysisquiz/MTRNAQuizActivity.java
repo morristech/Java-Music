@@ -19,8 +19,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MTRNAQuizActivity extends ActionBarActivity {
-
-    //declare boring interface members
     private Button[] answerButtonArray;
     private TextView aTextView, bTextView, cTextView, dTextView,
             keyTextView, scorePointsTextView, trebleClef, bassClef, altoClef;
@@ -30,7 +28,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     private boolean stopCounting, isTrebleClef, isBassClef;
     private String rightAnswer, wrongAnswer, checkMark, xMark, dim, halfDim, colonSpace;
     private String[] wrongAnswerArray;
-    private int rightAnswerIndex, correct, total, pink, green, offWhite;
+    private int rightAnswerIndex, correct, total, pink, green;
     //public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
     private ChordGenerator cg;
 
@@ -39,7 +37,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mtrnaquiz);
 
-        //declarations and initializations of both member non-member vars
+        //declarations and/or initializations of member and non-member vars
         Button answerButton1 = (Button)findViewById(R.id.answerButton1);
         Button answerButton2 = (Button)findViewById(R.id.answerButton2);
         Button answerButton3 = (Button)findViewById(R.id.answerButton3);
@@ -215,7 +213,6 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         pink = Color.parseColor("#f2ac9c");
         green = Color.parseColor("#87e9b8");
-        offWhite = Color.parseColor("#f9f9f9");
         dim = "\u00B0";
         halfDim = "\u00F8";
        //float scale = getResources().getDisplayMetrics().density; //so I can use java to move layout elements by dp and not just px
@@ -283,10 +280,15 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         getRandomChord(); //so when the app starts it will produce its first chord to be analysed
     }
-    public void getRandomChord() {
+    //cleans up the interface; a clean slate for the new chord
+    public void resetThings() {
         stopCounting = false; //score can go again up with each Next Chord button click
-        isTrebleClef = false; //a reset so it can try for either treb or bass clef
-        clearChecksAndXs(); //hide previous chords' wrong/right answer textviews
+        isTrebleClef = false; //a reset so it can try for either treb, bass, or alto clef
+        isBassClef = false;
+        setNotationInvisible();
+    }
+    public void getRandomChord() {
+        resetThings(); //in preparation for the new chord
 
         //lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
         //so I can just use lengths of the zeroth index of things like chords[0].length with confidence
@@ -313,7 +315,6 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
-        setNotationInvisible();
         displayKeySignature(b, c);
         displayPitches(aRandomChordShuffled, c, d);
         createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
@@ -337,6 +338,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             accidentals[randomClef][sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
         }
     }
+    //this method too many lines?
     public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
         int verticalIndex = 0;
         String[] everythingButBassNote = new String[aRandomChordShuffled.length - 1];
@@ -417,15 +419,15 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                                     ? cg.triadicInversions[randomInversionIndex] //arr len = 3
                                     : cg.seventhInversions[randomInversionIndex] //arr len = 4
                     );
+                    if (chordSize == 4
+                            && wrongAnswer.contains(dim)) { //randomly give a wrong answer a half-diminished symbol, otherwise
+                        if (Math.random() < 0.5) { //when a half-dim symbol appears, that'd always be the correct answer
+                            wrongAnswer = wrongAnswer.replace(dim, halfDim);
+                        }
+                    }
                 } while (wrongAnswer.equalsIgnoreCase(rightAnswer) //avoids a duplicate right answer
                         || containsCaseInsensitive(wrongAnswer, wrongAnswerArray)  //avoids duplicate wrong answers
-                        );
-                if (chordSize == 4
-                        && wrongAnswer.contains(dim)) { //randomly give a wrong answer a half-diminished symbol, otherwise
-                    if (Math.random() < 0.5) { //when a half-dim symbol appears, that'd always be the correct answer
-                        wrongAnswer = wrongAnswer.replace(dim, halfDim);
-                    }
-                }
+                );
                 answerButtonArray[i].setText(wrongAnswer);
             }
         }
@@ -438,12 +440,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
         return false;
     }
-    public void clearChecksAndXs() {
-        for (TextView tv: qTextViews) {
-            tv.setTextColor(offWhite);
-        }
-    }
-    //"reset" the clef / key signature / noteheads to make a clean slate for the next random chord
+    //"reset" the clef / key signature / noteheads /checkmarks to make a clean slate for the next random chord
     public void setNotationInvisible() {
         trebleClef.setVisibility(View.INVISIBLE);
         bassClef.setVisibility(View.INVISIBLE);
@@ -461,6 +458,9 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         for (TextView noteR: noteheadsR) {
             noteR.setVisibility(View.INVISIBLE);
         }
+        for (TextView tv: qTextViews) {
+            tv.setVisibility(View.INVISIBLE);
+        }
     }
     public void changeCounterAndCheckmarks(TextView tv, int clickedButton) {
         if (rightAnswer != null && rightAnswerIndex == clickedButton) {
@@ -470,6 +470,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 scorePointsTextView.setText(correct + " / " + total);
                 stopCounting = true;
             }
+            tv.setVisibility(View.VISIBLE);
             tv.setText(checkMark);
             tv.setTextColor(green);
         } else if (rightAnswer != null) {
@@ -478,6 +479,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 scorePointsTextView.setText(correct + " / " + total);
                 stopCounting = true;
             }
+            tv.setVisibility(View.VISIBLE);
             tv.setText(xMark);
             tv.setTextColor(pink);
         }

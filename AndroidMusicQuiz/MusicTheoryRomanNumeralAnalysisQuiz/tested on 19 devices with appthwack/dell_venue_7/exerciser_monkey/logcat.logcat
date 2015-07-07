@@ -1,0 +1,1675 @@
+    "--------- beginning of /dev/log/main"  1
+Debug "2015-07-07 01:37:56.698641" 1617 AppThwack /tz/ 20412 2
+Debug "2015-07-07 01:37:56.708641" 1617 AppThwack "sha1: a55d37081750df439b8b019c14a8d0bafdc7869f" 20412 3
+Debug "2015-07-07 01:37:56.718641" 1617 AppThwackDeviceManager "taskStatus update (a55d37081750df439b8b019c14a8d0bafdc7869f: {""state"":1})" 1617 4
+Debug "2015-07-07 01:37:56.718641" 1617 AppThwack /task/a55d37081750df439b8b019c14a8d0bafdc7869f 20412 5
+Debug "2015-07-07 01:37:56.718641" 1617 AppThwackDeviceManager "taskStatus update (a55d37081750df439b8b019c14a8d0bafdc7869f: {""result"":{""tz"":""America/New_York""},""state"":2})" 1617 6
+Debug "2015-07-07 01:37:56.788641" 1617 AppThwack /task/a55d37081750df439b8b019c14a8d0bafdc7869f/status 20416 7
+Debug "2015-07-07 01:37:56.808641" 1617 AppThwack /task/a55d37081750df439b8b019c14a8d0bafdc7869f/status 20417 8
+Debug "2015-07-07 01:37:56.828641" 1617 AppThwack /task/a55d37081750df439b8b019c14a8d0bafdc7869f/status 20418 9
+Debug "2015-07-07 01:37:56.848641" 1617 AppThwack /task/a55d37081750df439b8b019c14a8d0bafdc7869f/status 20419 10
+Debug "2015-07-07 01:37:57.158641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 11
+Debug "2015-07-07 01:37:57.158641" 497 WifiStateMachine "processMsg: ConnectedState" 562 12
+Debug "2015-07-07 01:37:57.158641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 13
+Info "2015-07-07 01:37:57.158641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 14
+Debug "2015-07-07 01:37:57.158641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 15
+Debug "2015-07-07 01:37:57.158641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 16
+Debug "2015-07-07 01:37:57.178641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 17
+Info "2015-07-07 01:37:57.178641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 18
+Info "2015-07-07 01:37:57.178641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 19
+Info "2015-07-07 01:37:57.178641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 20
+Info "2015-07-07 01:37:57.178641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 21
+Debug "2015-07-07 01:37:57.178641" 497 WifiStateMachine "handleMessage: X" 562 22
+Debug "2015-07-07 01:37:57.198641" 20422 AndroidRuntime  20422 23
+Debug "2015-07-07 01:37:57.198641" 20422 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20422 24
+Debug "2015-07-07 01:37:57.198641" 20422 AndroidRuntime "CheckJNI is OFF" 20422 25
+Info "2015-07-07 01:37:57.198641" 20422 AndroidRuntime "Kernel Release Version: 3.10.20" 20422 26
+Info "2015-07-07 01:37:57.198641" 20422 dalvikvm "No library specified. The standard exception handler will be used" 20422 27
+Debug "2015-07-07 01:37:57.208641" 20422 dalvikvm "Trying to load lib libjavacore.so 0x0" 20422 28
+Debug "2015-07-07 01:37:57.208641" 20422 dalvikvm "Added shared lib libjavacore.so 0x0" 20422 29
+Debug "2015-07-07 01:37:57.208641" 20422 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20422 30
+Debug "2015-07-07 01:37:57.208641" 20422 dalvikvm "Added shared lib libnativehelper.so 0x0" 20422 31
+Debug "2015-07-07 01:37:57.208641" 20422 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20422 32
+Debug "2015-07-07 01:37:57.218641" 20422 dalvikvm "Extra Options: not specified" 20422 33
+Debug "2015-07-07 01:37:57.238641" 20422 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20422 34
+Error "2015-07-07 01:37:57.348641" 20422 memtrack "Couldn't load memtrack module (No such file or directory)" 20422 35
+Error "2015-07-07 01:37:57.348641" 20422 android.os.Debug "failed to load memtrack module: -2" 20422 36
+Debug "2015-07-07 01:37:57.398641" 20422 AndroidRuntime "Calling main entry com.android.commands.input.Input" 20422 37
+Info "2015-07-07 01:37:57.408641" 20422 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17648140, downTime=17648140, deviceId=-1, source=0x101 }" 20422 38
+Info "2015-07-07 01:37:57.418641" 20422 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17648140, downTime=17648140, deviceId=-1, source=0x101 }" 20422 39
+Debug "2015-07-07 01:37:57.418641" 20422 AndroidRuntime "Shutting down VM" 20422 40
+Info "2015-07-07 01:37:57.418641" 20422 dalvikvm "Total arena pages for JIT: 11" 20430 41
+Info "2015-07-07 01:37:57.418641" 20422 dalvikvm "Total arena pages for JIT: 12" 20430 42
+Debug "2015-07-07 01:37:57.418641" 20422 dalvikvm "GC_CONCURRENT freed 101K, 17% free 633K/756K, paused 0ms+0ms, total 1ms" 20427 43
+Info "2015-07-07 01:37:57.418641" 20422 dalvikvm "Total arena pages for JIT: 13" 20430 44
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 45
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 46
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 47
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 48
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 49
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 50
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 51
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 52
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 53
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 54
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 55
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 56
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 57
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 58
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 59
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 60
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 61
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 62
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 63
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 64
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 65
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 66
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 67
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 68
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 69
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 70
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 71
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 72
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 73
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 74
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 75
+Debug "2015-07-07 01:37:57.428641" 20422 dalvikvm "Compiler shutdown in progress - discarding request" 20430 76
+Debug "2015-07-07 01:37:57.888641" 20433 AndroidRuntime  20433 77
+Debug "2015-07-07 01:37:57.888641" 20433 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20433 78
+Debug "2015-07-07 01:37:57.888641" 20433 AndroidRuntime "CheckJNI is OFF" 20433 79
+Info "2015-07-07 01:37:57.888641" 20433 AndroidRuntime "Kernel Release Version: 3.10.20" 20433 80
+Info "2015-07-07 01:37:57.888641" 20433 dalvikvm "No library specified. The standard exception handler will be used" 20433 81
+Debug "2015-07-07 01:37:57.908641" 20433 dalvikvm "Trying to load lib libjavacore.so 0x0" 20433 82
+Debug "2015-07-07 01:37:57.908641" 20433 dalvikvm "Added shared lib libjavacore.so 0x0" 20433 83
+Debug "2015-07-07 01:37:57.908641" 20433 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20433 84
+Debug "2015-07-07 01:37:57.908641" 20433 dalvikvm "Added shared lib libnativehelper.so 0x0" 20433 85
+Debug "2015-07-07 01:37:57.908641" 20433 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20433 86
+Debug "2015-07-07 01:37:57.918641" 20433 dalvikvm "Extra Options: not specified" 20433 87
+Debug "2015-07-07 01:37:57.948641" 20433 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20433 88
+Error "2015-07-07 01:37:58.068641" 20433 memtrack "Couldn't load memtrack module (No such file or directory)" 20433 89
+Error "2015-07-07 01:37:58.068641" 20433 android.os.Debug "failed to load memtrack module: -2" 20433 90
+Debug "2015-07-07 01:37:58.128641" 20433 AndroidRuntime "Calling main entry com.android.commands.input.Input" 20433 91
+Info "2015-07-07 01:37:58.138641" 20433 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17648870, downTime=17648870, deviceId=-1, source=0x101 }" 20433 92
+Info "2015-07-07 01:37:58.148641" 20433 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17648870, downTime=17648870, deviceId=-1, source=0x101 }" 20433 93
+Info "2015-07-07 01:37:58.148641" 20433 dalvikvm "Total arena pages for JIT: 11" 20441 94
+Info "2015-07-07 01:37:58.148641" 20433 dalvikvm "Total arena pages for JIT: 12" 20441 95
+Info "2015-07-07 01:37:58.148641" 20433 dalvikvm "Total arena pages for JIT: 13" 20441 96
+Debug "2015-07-07 01:37:58.148641" 20433 AndroidRuntime "Shutting down VM" 20433 97
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "GC_CONCURRENT freed 101K, 17% free 633K/756K, paused 0ms+0ms, total 3ms" 20438 98
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 99
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 100
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 101
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 102
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 103
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 104
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 105
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 106
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 107
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 108
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 109
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 110
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 111
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 112
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 113
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 114
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 115
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 116
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 117
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 118
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 119
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 120
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 121
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 122
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 123
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 124
+Debug "2015-07-07 01:37:58.158641" 20433 dalvikvm "Compiler shutdown in progress - discarding request" 20441 125
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 25" 739 126
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 26" 739 127
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 27" 739 128
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 28" 739 129
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 29" 739 130
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 30" 739 131
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 31" 739 132
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 32" 739 133
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 33" 739 134
+Info "2015-07-07 01:37:58.328641" 732 dalvikvm "Total arena pages for JIT: 34" 739 135
+Debug "2015-07-07 01:37:58.598641" 20444 AndroidRuntime  20444 136
+Debug "2015-07-07 01:37:58.598641" 20444 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20444 137
+Debug "2015-07-07 01:37:58.598641" 20444 AndroidRuntime "CheckJNI is OFF" 20444 138
+Info "2015-07-07 01:37:58.598641" 20444 AndroidRuntime "Kernel Release Version: 3.10.20" 20444 139
+Info "2015-07-07 01:37:58.598641" 20444 dalvikvm "No library specified. The standard exception handler will be used" 20444 140
+Debug "2015-07-07 01:37:58.608641" 20444 dalvikvm "Trying to load lib libjavacore.so 0x0" 20444 141
+Debug "2015-07-07 01:37:58.608641" 20444 dalvikvm "Added shared lib libjavacore.so 0x0" 20444 142
+Debug "2015-07-07 01:37:58.618641" 20444 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20444 143
+Debug "2015-07-07 01:37:58.618641" 20444 dalvikvm "Added shared lib libnativehelper.so 0x0" 20444 144
+Debug "2015-07-07 01:37:58.618641" 20444 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20444 145
+Debug "2015-07-07 01:37:58.628641" 20444 dalvikvm "Extra Options: not specified" 20444 146
+Debug "2015-07-07 01:37:58.648641" 20444 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20444 147
+Error "2015-07-07 01:37:58.778641" 20444 memtrack "Couldn't load memtrack module (No such file or directory)" 20444 148
+Error "2015-07-07 01:37:58.778641" 20444 android.os.Debug "failed to load memtrack module: -2" 20444 149
+Debug "2015-07-07 01:37:58.838641" 20444 AndroidRuntime "Calling main entry com.android.commands.input.Input" 20444 150
+Info "2015-07-07 01:37:58.838641" 20444 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17649573, downTime=17649573, deviceId=-1, source=0x101 }" 20444 151
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 11" 20452 152
+Info "2015-07-07 01:37:58.848641" 20444 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17649573, downTime=17649573, deviceId=-1, source=0x101 }" 20444 153
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 12" 20452 154
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 13" 20452 155
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 14" 20452 156
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 15" 20452 157
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 16" 20452 158
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 17" 20452 159
+Info "2015-07-07 01:37:58.848641" 20444 dalvikvm "Total arena pages for JIT: 18" 20452 160
+Debug "2015-07-07 01:37:58.848641" 20444 AndroidRuntime "Shutting down VM" 20444 161
+Info "2015-07-07 01:37:58.858641" 20444 dalvikvm "Total arena pages for JIT: 19" 20452 162
+Info "2015-07-07 01:37:58.858641" 20444 dalvikvm "Total arena pages for JIT: 20" 20452 163
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "GC_CONCURRENT freed 101K, 17% free 633K/756K, paused 1ms+0ms, total 2ms" 20449 164
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 165
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 166
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 167
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 168
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 169
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 170
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 171
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 172
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 173
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 174
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 175
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 176
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 177
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 178
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 179
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 180
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 181
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 182
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 183
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 184
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 185
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 186
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 187
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 188
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 189
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 190
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 191
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 192
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 193
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 194
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 195
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 196
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 197
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 198
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 199
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 200
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 201
+Debug "2015-07-07 01:37:58.858641" 20444 dalvikvm "Compiler shutdown in progress - discarding request" 20452 202
+Debug "2015-07-07 01:37:58.998641" 497 AccelerometerSimpleCalibration "data z positive" 509 203
+Debug "2015-07-07 01:37:58.998641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 204
+Debug "2015-07-07 01:37:59.268641" 20455 AndroidRuntime  20455 205
+Debug "2015-07-07 01:37:59.268641" 20455 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20455 206
+Debug "2015-07-07 01:37:59.268641" 20455 AndroidRuntime "CheckJNI is OFF" 20455 207
+Info "2015-07-07 01:37:59.268641" 20455 AndroidRuntime "Kernel Release Version: 3.10.20" 20455 208
+Info "2015-07-07 01:37:59.268641" 20455 dalvikvm "No library specified. The standard exception handler will be used" 20455 209
+Debug "2015-07-07 01:37:59.278641" 20455 dalvikvm "Trying to load lib libjavacore.so 0x0" 20455 210
+Debug "2015-07-07 01:37:59.278641" 20455 dalvikvm "Added shared lib libjavacore.so 0x0" 20455 211
+Debug "2015-07-07 01:37:59.278641" 20455 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20455 212
+Debug "2015-07-07 01:37:59.278641" 20455 dalvikvm "Added shared lib libnativehelper.so 0x0" 20455 213
+Debug "2015-07-07 01:37:59.278641" 20455 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20455 214
+Debug "2015-07-07 01:37:59.298641" 20455 dalvikvm "Extra Options: not specified" 20455 215
+Debug "2015-07-07 01:37:59.318641" 20455 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20455 216
+Error "2015-07-07 01:37:59.448641" 20455 memtrack "Couldn't load memtrack module (No such file or directory)" 20455 217
+Error "2015-07-07 01:37:59.448641" 20455 android.os.Debug "failed to load memtrack module: -2" 20455 218
+Debug "2015-07-07 01:37:59.498641" 20455 AndroidRuntime "Calling main entry com.android.commands.input.Input" 20455 219
+Info "2015-07-07 01:37:59.498641" 20455 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17650236, downTime=17650236, deviceId=-1, source=0x101 }" 20455 220
+Info "2015-07-07 01:37:59.508641" 20455 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17650236, downTime=17650236, deviceId=-1, source=0x101 }" 20455 221
+Info "2015-07-07 01:37:59.508641" 20455 dalvikvm "Total arena pages for JIT: 11" 20463 222
+Info "2015-07-07 01:37:59.508641" 20455 dalvikvm "Total arena pages for JIT: 12" 20463 223
+Info "2015-07-07 01:37:59.508641" 20455 dalvikvm "Total arena pages for JIT: 13" 20463 224
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 14" 20463 225
+Debug "2015-07-07 01:37:59.518641" 20455 AndroidRuntime "Shutting down VM" 20455 226
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 15" 20463 227
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 16" 20463 228
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "GC_CONCURRENT freed 101K, 17% free 633K/756K, paused 0ms+0ms, total 1ms" 20460 229
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 17" 20463 230
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 18" 20463 231
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 19" 20463 232
+Info "2015-07-07 01:37:59.518641" 20455 dalvikvm "Total arena pages for JIT: 20" 20463 233
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 234
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 235
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 236
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 237
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 238
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 239
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 240
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 241
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 242
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 243
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 244
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 245
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 246
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 247
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 248
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 249
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 250
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 251
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 252
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 253
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 254
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 255
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 256
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 257
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 258
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 259
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 260
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 261
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 262
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 263
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 264
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 265
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 266
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 267
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 268
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 269
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 270
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 271
+Debug "2015-07-07 01:37:59.518641" 20455 dalvikvm "Compiler shutdown in progress - discarding request" 20463 272
+Verbose "2015-07-07 01:37:59.998641" 782 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1UBSy_y642KXGEx3_L2zMdC88_wmLwSuZupMgNv9s-umFuA42__7v22d4Ekg4NBd9Fjdosw3MqOsylvVYs5-EX5tA7trAWxWXE34_WUg83alCyDxvyTE0HSlyWCa2BRgY2S_USxAlBhjEaxiwyAVGXQBqq3PaWrxTVYOapOujrWoMgiBXvl9Ad0tdnVAM3UoN3cuhXL91wA6JmZ8GON9Ag9-_-0S3kyR08Ih2F_RPJMWxyEuoM" 20368 273
+Debug "2015-07-07 01:37:59.998641" 20466 AndroidRuntime  20466 274
+Debug "2015-07-07 01:37:59.998641" 20466 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20466 275
+Debug "2015-07-07 01:37:59.998641" 20466 AndroidRuntime "CheckJNI is OFF" 20466 276
+Info "2015-07-07 01:37:59.998641" 20466 AndroidRuntime "Kernel Release Version: 3.10.20" 20466 277
+Info "2015-07-07 01:37:59.998641" 20466 dalvikvm "No library specified. The standard exception handler will be used" 20466 278
+Info "2015-07-07 01:37:59.998641" 782 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 20368 279
+Debug "2015-07-07 01:38:00.018641" 20466 dalvikvm "Trying to load lib libjavacore.so 0x0" 20466 280
+Debug "2015-07-07 01:38:00.018641" 20466 dalvikvm "Added shared lib libjavacore.so 0x0" 20466 281
+Debug "2015-07-07 01:38:00.028641" 20466 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20466 282
+Debug "2015-07-07 01:38:00.028641" 20466 dalvikvm "Added shared lib libnativehelper.so 0x0" 20466 283
+Debug "2015-07-07 01:38:00.028641" 20466 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20466 284
+Debug "2015-07-07 01:38:00.038641" 20466 dalvikvm "Extra Options: not specified" 20466 285
+Debug "2015-07-07 01:38:00.058641" 20466 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20466 286
+Info "2015-07-07 01:38:00.168641" 782 ConfigFetchService "fetch service done; releasing wakelock" 782 287
+Info "2015-07-07 01:38:00.168641" 782 ConfigFetchService "stopping self" 782 288
+Debug "2015-07-07 01:38:00.178641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 289
+Debug "2015-07-07 01:38:00.178641" 497 WifiStateMachine "processMsg: ConnectedState" 562 290
+Debug "2015-07-07 01:38:00.178641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 291
+Info "2015-07-07 01:38:00.178641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 292
+Debug "2015-07-07 01:38:00.178641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 293
+Debug "2015-07-07 01:38:00.178641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 294
+Debug "2015-07-07 01:38:00.178641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 295
+Error "2015-07-07 01:38:00.178641" 20466 memtrack "Couldn't load memtrack module (No such file or directory)" 20466 296
+Error "2015-07-07 01:38:00.178641" 20466 android.os.Debug "failed to load memtrack module: -2" 20466 297
+Info "2015-07-07 01:38:00.188641" 497 "WifiHW  " "REPLY: RSSI=-45" 562 298
+Info "2015-07-07 01:38:00.188641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 299
+Info "2015-07-07 01:38:00.188641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 300
+Info "2015-07-07 01:38:00.188641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 301
+Debug "2015-07-07 01:38:00.188641" 497 WifiStateMachine "handleMessage: X" 562 302
+Debug "2015-07-07 01:38:00.238641" 20466 AndroidRuntime "Calling main entry com.android.commands.input.Input" 20466 303
+Info "2015-07-07 01:38:00.238641" 20466 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17650977, downTime=17650977, deviceId=-1, source=0x101 }" 20466 304
+Info "2015-07-07 01:38:00.248641" 20466 dalvikvm "Total arena pages for JIT: 11" 20475 305
+Info "2015-07-07 01:38:00.248641" 20466 dalvikvm "Total arena pages for JIT: 12" 20475 306
+Info "2015-07-07 01:38:00.248641" 20466 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=17650977, downTime=17650977, deviceId=-1, source=0x101 }" 20466 307
+Info "2015-07-07 01:38:00.248641" 20466 dalvikvm "Total arena pages for JIT: 13" 20475 308
+Debug "2015-07-07 01:38:00.258641" 20466 AndroidRuntime "Shutting down VM" 20466 309
+Debug "2015-07-07 01:38:00.258641" 20466 dalvikvm "GC_CONCURRENT freed 101K, 17% free 633K/756K, paused 1ms+0ms, total 2ms" 20472 310
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 311
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 312
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 313
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 314
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 315
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 316
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 317
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 318
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 319
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 320
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 321
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 322
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 323
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 324
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 325
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 326
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 327
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 328
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 329
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 330
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 331
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 332
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 333
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 334
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 335
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 336
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 337
+Debug "2015-07-07 01:38:00.268641" 20466 dalvikvm "Compiler shutdown in progress - discarding request" 20475 338
+Debug "2015-07-07 01:38:00.708641" 20478 AndroidRuntime  20478 339
+Debug "2015-07-07 01:38:00.708641" 20478 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20478 340
+Debug "2015-07-07 01:38:00.708641" 20478 AndroidRuntime "CheckJNI is OFF" 20478 341
+Info "2015-07-07 01:38:00.708641" 20478 AndroidRuntime "Kernel Release Version: 3.10.20" 20478 342
+Info "2015-07-07 01:38:00.708641" 20478 dalvikvm "No library specified. The standard exception handler will be used" 20478 343
+Debug "2015-07-07 01:38:00.718641" 20478 dalvikvm "Trying to load lib libjavacore.so 0x0" 20478 344
+Debug "2015-07-07 01:38:00.718641" 20478 dalvikvm "Added shared lib libjavacore.so 0x0" 20478 345
+Debug "2015-07-07 01:38:00.718641" 20478 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20478 346
+Debug "2015-07-07 01:38:00.718641" 20478 dalvikvm "Added shared lib libnativehelper.so 0x0" 20478 347
+Debug "2015-07-07 01:38:00.718641" 20478 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20478 348
+Debug "2015-07-07 01:38:00.738641" 20478 dalvikvm "Extra Options: not specified" 20478 349
+Debug "2015-07-07 01:38:00.758641" 20478 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20478 350
+Error "2015-07-07 01:38:00.878641" 20478 memtrack "Couldn't load memtrack module (No such file or directory)" 20478 351
+Error "2015-07-07 01:38:00.878641" 20478 android.os.Debug "failed to load memtrack module: -2" 20478 352
+Debug "2015-07-07 01:38:00.938641" 20478 AndroidRuntime "Calling main entry com.android.commands.am.Am" 20478 353
+Info "2015-07-07 01:38:00.948641" 20478 dalvikvm "Total arena pages for JIT: 11" 20486 354
+Info "2015-07-07 01:38:00.948641" 20478 dalvikvm "Total arena pages for JIT: 12" 20486 355
+Info "2015-07-07 01:38:00.948641" 20478 dalvikvm "Total arena pages for JIT: 13" 20486 356
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 14" 20486 357
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 15" 20486 358
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 16" 20486 359
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 17" 20486 360
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 18" 20486 361
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 19" 20486 362
+Info "2015-07-07 01:38:00.958641" 20478 dalvikvm "Total arena pages for JIT: 20" 20486 363
+    "--------- beginning of /dev/log/system"  364
+Info "2015-07-07 01:38:00.988641" 497 ActivityManager "START u0 {flg=0x10000000 cmp=com.trellis.appthwackdevicemanager/.RotatePortrait} from pid 20478" 768 365
+Debug "2015-07-07 01:38:01.008641" 20478 AndroidRuntime "Shutting down VM" 20478 366
+Debug "2015-07-07 01:38:01.008641" 20478 dalvikvm "GC_CONCURRENT freed 98K, 16% free 669K/788K, paused 2ms+0ms, total 3ms" 20483 367
+Debug "2015-07-07 01:38:01.018641" 20478 dalvikvm "Compiler shutdown in progress - discarding request" 20486 368
+Debug "2015-07-07 01:38:01.018641" 20478 dalvikvm "Compiler shutdown in progress - discarding request" 20486 369
+Debug "2015-07-07 01:38:01.028641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 10034 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 732com.android.server.InputMethodManagerService.windowGainedFocus(InputMethodManagerService.java:1882)" 687 370
+Verbose "2015-07-07 01:38:01.028641" 497 InputMethodManagerService "windowGainedFocus: android.os.BinderProxy@21eed3f8 controlFlags=#0 softInputMode=#120 windowFlags=#1910100" 687 371
+Warning "2015-07-07 01:38:01.028641" 497 InputMethodManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@21d37f18 attribute=null, token = android.os.BinderProxy@21cb7788" 687 372
+Debug "2015-07-07 01:38:01.468641" 732 dalvikvm "GC_CONCURRENT freed 4236K, 34% free 8255K/12412K, paused 3ms+3ms, total 31ms" 735 373
+Debug "2015-07-07 01:38:01.598641" 497 AccelerometerSimpleCalibration "data z positive" 509 374
+Debug "2015-07-07 01:38:01.598641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 375
+Debug "2015-07-07 01:38:03.188641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 376
+Debug "2015-07-07 01:38:03.188641" 497 WifiStateMachine "processMsg: ConnectedState" 562 377
+Debug "2015-07-07 01:38:03.188641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 378
+Info "2015-07-07 01:38:03.188641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 379
+Debug "2015-07-07 01:38:03.188641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 380
+Debug "2015-07-07 01:38:03.188641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 381
+Debug "2015-07-07 01:38:03.198641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 382
+Info "2015-07-07 01:38:03.198641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 383
+Info "2015-07-07 01:38:03.198641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 384
+Info "2015-07-07 01:38:03.198641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 385
+Info "2015-07-07 01:38:03.198641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 386
+Debug "2015-07-07 01:38:03.198641" 497 WifiStateMachine "handleMessage: X" 562 387
+Debug "2015-07-07 01:38:04.198641" 497 AccelerometerSimpleCalibration "data z positive" 509 388
+Debug "2015-07-07 01:38:04.198641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 389
+Debug "2015-07-07 01:38:04.408641" 20489 AndroidRuntime  20489 390
+Debug "2015-07-07 01:38:04.408641" 20489 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20489 391
+Debug "2015-07-07 01:38:04.408641" 20489 AndroidRuntime "CheckJNI is OFF" 20489 392
+Info "2015-07-07 01:38:04.408641" 20489 AndroidRuntime "Kernel Release Version: 3.10.20" 20489 393
+Info "2015-07-07 01:38:04.408641" 20489 dalvikvm "No library specified. The standard exception handler will be used" 20489 394
+Debug "2015-07-07 01:38:04.418641" 20489 dalvikvm "Trying to load lib libjavacore.so 0x0" 20489 395
+Debug "2015-07-07 01:38:04.418641" 20489 dalvikvm "Added shared lib libjavacore.so 0x0" 20489 396
+Debug "2015-07-07 01:38:04.428641" 20489 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20489 397
+Debug "2015-07-07 01:38:04.428641" 20489 dalvikvm "Added shared lib libnativehelper.so 0x0" 20489 398
+Debug "2015-07-07 01:38:04.428641" 20489 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20489 399
+Debug "2015-07-07 01:38:04.428641" 20489 dalvikvm "Extra Options: not specified" 20489 400
+Debug "2015-07-07 01:38:04.448641" 20489 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20489 401
+Error "2015-07-07 01:38:04.548641" 20489 memtrack "Couldn't load memtrack module (No such file or directory)" 20489 402
+Error "2015-07-07 01:38:04.548641" 20489 android.os.Debug "failed to load memtrack module: -2" 20489 403
+Debug "2015-07-07 01:38:04.588641" 20489 AndroidRuntime "Calling main entry com.android.commands.am.Am" 20489 404
+Info "2015-07-07 01:38:04.588641" 20489 dalvikvm "Total arena pages for JIT: 11" 20497 405
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 12" 20497 406
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 13" 20497 407
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 14" 20497 408
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 15" 20497 409
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 16" 20497 410
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 17" 20497 411
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 18" 20497 412
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 19" 20497 413
+Info "2015-07-07 01:38:04.598641" 20489 dalvikvm "Total arena pages for JIT: 20" 20497 414
+Debug "2015-07-07 01:38:04.638641" 20489 AndroidRuntime "Shutting down VM" 20489 415
+Info "2015-07-07 01:38:04.638641" 1617 APPTHWACK "ORIENTATION: 0" 20500 416
+Debug "2015-07-07 01:38:04.638641" 20489 dalvikvm "GC_CONCURRENT freed 99K, 16% free 669K/788K, paused 0ms+0ms, total 2ms" 20494 417
+Info "2015-07-07 01:38:05.188641" 821 ConfigService onDestroy 821 418
+Verbose "2015-07-07 01:38:05.558641" 497 AlarmManager "triggered: flg=0x4 cmp=com.android.vending/com.google.android.finsky.services.ContentSyncService" 497 419
+Verbose "2015-07-07 01:38:05.558641" 497 AlarmManager "Pkg: com.android.vending" 497 420
+Debug "2015-07-07 01:38:05.698641" 19796 "Finsky  " "[573] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 19827 421
+Debug "2015-07-07 01:38:05.698641" 19796 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 19796 422
+Debug "2015-07-07 01:38:06.148641" 20503 AndroidRuntime  20503 423
+Debug "2015-07-07 01:38:06.148641" 20503 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20503 424
+Debug "2015-07-07 01:38:06.148641" 20503 AndroidRuntime "CheckJNI is OFF" 20503 425
+Info "2015-07-07 01:38:06.148641" 20503 AndroidRuntime "Kernel Release Version: 3.10.20" 20503 426
+Info "2015-07-07 01:38:06.148641" 20503 dalvikvm "No library specified. The standard exception handler will be used" 20503 427
+Debug "2015-07-07 01:38:06.158641" 20503 dalvikvm "Trying to load lib libjavacore.so 0x0" 20503 428
+Debug "2015-07-07 01:38:06.158641" 20503 dalvikvm "Added shared lib libjavacore.so 0x0" 20503 429
+Debug "2015-07-07 01:38:06.158641" 20503 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20503 430
+Debug "2015-07-07 01:38:06.158641" 20503 dalvikvm "Added shared lib libnativehelper.so 0x0" 20503 431
+Debug "2015-07-07 01:38:06.158641" 20503 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20503 432
+Debug "2015-07-07 01:38:06.178641" 20503 dalvikvm "Extra Options: not specified" 20503 433
+Debug "2015-07-07 01:38:06.198641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 434
+Debug "2015-07-07 01:38:06.198641" 497 WifiStateMachine "processMsg: ConnectedState" 562 435
+Debug "2015-07-07 01:38:06.198641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 436
+Info "2015-07-07 01:38:06.198641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 437
+Debug "2015-07-07 01:38:06.208641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 438
+Debug "2015-07-07 01:38:06.208641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 439
+Debug "2015-07-07 01:38:06.208641" 20503 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20503 440
+Debug "2015-07-07 01:38:06.218641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 441
+Info "2015-07-07 01:38:06.218641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 442
+Info "2015-07-07 01:38:06.218641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 443
+Info "2015-07-07 01:38:06.218641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 444
+Info "2015-07-07 01:38:06.218641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 445
+Debug "2015-07-07 01:38:06.218641" 497 WifiStateMachine "handleMessage: X" 562 446
+Error "2015-07-07 01:38:06.318641" 20503 memtrack "Couldn't load memtrack module (No such file or directory)" 20503 447
+Error "2015-07-07 01:38:06.318641" 20503 android.os.Debug "failed to load memtrack module: -2" 20503 448
+Debug "2015-07-07 01:38:06.368641" 20503 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 20503 449
+Info "2015-07-07 01:38:06.388641" 20503 dalvikvm "Total arena pages for JIT: 11" 20511 450
+Info "2015-07-07 01:38:06.388641" 20503 dalvikvm "Total arena pages for JIT: 12" 20511 451
+Debug "2015-07-07 01:38:06.428641" 20503 AndroidRuntime "Shutting down VM" 20503 452
+Debug "2015-07-07 01:38:06.428641" 20503 dalvikvm "GC_CONCURRENT freed 269K, 31% free 648K/936K, paused 0ms+0ms, total 2ms" 20508 453
+Debug "2015-07-07 01:38:06.798641" 497 AccelerometerSimpleCalibration "data z positive" 509 454
+Debug "2015-07-07 01:38:06.798641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 455
+Debug "2015-07-07 01:38:06.828641" 20514 AndroidRuntime  20514 456
+Debug "2015-07-07 01:38:06.828641" 20514 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20514 457
+Debug "2015-07-07 01:38:06.828641" 20514 AndroidRuntime "CheckJNI is OFF" 20514 458
+Info "2015-07-07 01:38:06.828641" 20514 AndroidRuntime "Kernel Release Version: 3.10.20" 20514 459
+Info "2015-07-07 01:38:06.828641" 20514 dalvikvm "No library specified. The standard exception handler will be used" 20514 460
+Debug "2015-07-07 01:38:06.838641" 20514 dalvikvm "Trying to load lib libjavacore.so 0x0" 20514 461
+Debug "2015-07-07 01:38:06.838641" 20514 dalvikvm "Added shared lib libjavacore.so 0x0" 20514 462
+Debug "2015-07-07 01:38:06.838641" 20514 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20514 463
+Debug "2015-07-07 01:38:06.838641" 20514 dalvikvm "Added shared lib libnativehelper.so 0x0" 20514 464
+Debug "2015-07-07 01:38:06.838641" 20514 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20514 465
+Debug "2015-07-07 01:38:06.848641" 20514 dalvikvm "Extra Options: not specified" 20514 466
+Debug "2015-07-07 01:38:06.868641" 20514 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20514 467
+Error "2015-07-07 01:38:06.978641" 20514 memtrack "Couldn't load memtrack module (No such file or directory)" 20514 468
+Error "2015-07-07 01:38:06.978641" 20514 android.os.Debug "failed to load memtrack module: -2" 20514 469
+Debug "2015-07-07 01:38:07.038641" 20514 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 20514 470
+Info "2015-07-07 01:38:07.038641" 20514 dalvikvm "Total arena pages for JIT: 11" 20522 471
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 12" 20522 472
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 13" 20522 473
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 14" 20522 474
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 15" 20522 475
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 16" 20522 476
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 17" 20522 477
+Info "2015-07-07 01:38:07.048641" 20514 dalvikvm "Total arena pages for JIT: 18" 20522 478
+Warning "2015-07-07 01:38:07.048641" 497 PackageManager "Package named 'com.appthwack.gltest' doesn't exist." 521 479
+Info "2015-07-07 01:38:07.058641" 20514 dalvikvm "Total arena pages for JIT: 19" 20522 480
+Info "2015-07-07 01:38:07.058641" 20514 dalvikvm "Total arena pages for JIT: 20" 20522 481
+Debug "2015-07-07 01:38:07.108641" 497 dalvikvm "GC_EXPLICIT freed 1140K, 30% free 15939K/22532K, paused 2ms+5ms, total 61ms" 521 482
+Debug "2015-07-07 01:38:07.108641" 20514 AndroidRuntime "Shutting down VM" 20514 483
+Debug "2015-07-07 01:38:07.108641" 20514 dalvikvm "GC_CONCURRENT freed 97K, 16% free 633K/748K, paused 1ms+0ms, total 3ms" 20519 484
+Debug "2015-07-07 01:38:07.778641" 20528 AndroidRuntime  20528 485
+Debug "2015-07-07 01:38:07.778641" 20528 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20528 486
+Debug "2015-07-07 01:38:07.778641" 20528 AndroidRuntime "CheckJNI is OFF" 20528 487
+Info "2015-07-07 01:38:07.778641" 20528 AndroidRuntime "Kernel Release Version: 3.10.20" 20528 488
+Info "2015-07-07 01:38:07.778641" 20528 dalvikvm "No library specified. The standard exception handler will be used" 20528 489
+Debug "2015-07-07 01:38:07.788641" 20528 dalvikvm "Trying to load lib libjavacore.so 0x0" 20528 490
+Debug "2015-07-07 01:38:07.788641" 20528 dalvikvm "Added shared lib libjavacore.so 0x0" 20528 491
+Debug "2015-07-07 01:38:07.788641" 20528 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20528 492
+Debug "2015-07-07 01:38:07.788641" 20528 dalvikvm "Added shared lib libnativehelper.so 0x0" 20528 493
+Debug "2015-07-07 01:38:07.788641" 20528 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20528 494
+Debug "2015-07-07 01:38:07.798641" 20528 dalvikvm "Extra Options: not specified" 20528 495
+Debug "2015-07-07 01:38:07.818641" 20528 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20528 496
+Error "2015-07-07 01:38:07.928641" 20528 memtrack "Couldn't load memtrack module (No such file or directory)" 20528 497
+Error "2015-07-07 01:38:07.928641" 20528 android.os.Debug "failed to load memtrack module: -2" 20528 498
+Debug "2015-07-07 01:38:07.988641" 20528 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 20528 499
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 11" 20536 500
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 12" 20536 501
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 13" 20536 502
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 14" 20536 503
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 15" 20536 504
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 16" 20536 505
+Info "2015-07-07 01:38:07.988641" 20528 dalvikvm "Total arena pages for JIT: 17" 20536 506
+Info "2015-07-07 01:38:07.998641" 20528 dalvikvm "Total arena pages for JIT: 18" 20536 507
+Info "2015-07-07 01:38:07.998641" 20528 dalvikvm "Total arena pages for JIT: 19" 20536 508
+Info "2015-07-07 01:38:07.998641" 20528 dalvikvm "Total arena pages for JIT: 20" 20536 509
+Warning "2015-07-07 01:38:07.998641" 497 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 521 510
+Warning "2015-07-07 01:38:08.008641" 497 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 521 511
+Info "2015-07-07 01:38:08.008641" 497 PackageManager "Copying native libraries to /data/app-lib/vmdl869183064" 521 512
+Info "2015-07-07 01:38:08.058641" 497 PackageManager "Running dexopt on: com.appthwack.gltest" 521 513
+Info "2015-07-07 01:38:08.098641" 20540 dalvikvm "No library specified. The standard exception handler will be used" 20540 514
+Debug "2015-07-07 01:38:08.158641" 20540 dalvikvm "DexOpt: load 10ms, verify+opt 43ms, 577892 bytes" 20540 515
+Info "2015-07-07 01:38:08.198641" 497 ActivityManager "Force stopping com.appthwack.gltest appid=10102 user=-1: update pkg" 511 516
+Info "2015-07-07 01:38:08.428641" 497 InputReader "Reconfiguring input devices.  changes=0x00000010" 552 517
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService "--- re-buildInputMethodList reset = false" 512 518
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService " ------" 512 519
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService com.android.server.InputMethodManagerService.buildInputMethodListLocked(InputMethodManagerService.java:2512) 512 520
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService com.android.server.InputMethodManagerService$MyPackageMonitor.onSomePackagesChanged(InputMethodManagerService.java:523) 512 521
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService com.android.internal.content.PackageMonitor.onReceive(PackageMonitor.java:397) 512 522
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:768) 512 523
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService android.os.Handler.handleCallback(Handler.java:733) 512 524
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService android.os.Handler.dispatchMessage(Handler.java:95) 512 525
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService android.os.Looper.loop(Looper.java:149) 512 526
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService android.os.HandlerThread.run(HandlerThread.java:61) 512 527
+Debug "2015-07-07 01:38:08.428641" 497 InputMethodManagerService "Checking ComponentInfo{com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME}" 512 528
+Debug "2015-07-07 01:38:08.448641" 20091 Documents "Used cached roots for com.android.providers.downloads.documents" 20103 529
+Debug "2015-07-07 01:38:08.448641" 20091 Documents "Used cached roots for com.android.externalstorage.documents" 20103 530
+Debug "2015-07-07 01:38:08.448641" 20091 Documents "Used cached roots for com.android.providers.media.documents" 20103 531
+Debug "2015-07-07 01:38:08.448641" 20091 Documents "Used cached roots for com.google.android.apps.docs.storage" 20103 532
+Debug "2015-07-07 01:38:08.448641" 20091 Documents "Update found 7 roots in 24ms" 20103 533
+Info "2015-07-07 01:38:08.478641" 497 ActivityManager "Delay finish: com.android.gallery3d/.app.PackagesMonitor" 687 534
+Debug "2015-07-07 01:38:08.498641" 497 BackupManagerService "Received broadcast Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.gltest flg=0x4000010 (has extras) }" 497 535
+Verbose "2015-07-07 01:38:08.498641" 497 BackupManagerService "addPackageParticipantsLocked: #1" 497 536
+Debug "2015-07-07 01:38:08.508641" 497 InputMethodManagerService "Found an input method InputMethodInfo{com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME, settings: com.android.inputmethod.latin.settings.SettingsActivity}" 512 537
+Debug "2015-07-07 01:38:08.508641" 497 InputMethodManagerService "Checking ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService}" 512 538
+Info "2015-07-07 01:38:08.508641" 497 ActivityManager "Resuming delayed broadcast" 571 539
+Debug "2015-07-07 01:38:08.518641" 497 InputMethodManagerService "Found an input method InputMethodInfo{com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService, settings: com.google.android.voicesearch.ime.ImePreferences}" 512 540
+Debug "2015-07-07 01:38:08.528641" 782 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_ADDED and uri=com.appthwack.gltest" 20545 541
+Debug "2015-07-07 01:38:08.528641" 782 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 782 542
+Debug "2015-07-07 01:38:08.528641" 782 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.receiver.PlaySystemBroadcastReceiver" 782 543
+Debug "2015-07-07 01:38:08.528641" 782 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 782 544
+Debug "2015-07-07 01:38:08.528641" 782 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 782 545
+Info "2015-07-07 01:38:08.558641" 497 ActivityManager "Delay finish: com.google.android.apps.plus/.service.PackagesMediaMonitor" 570 546
+Info "2015-07-07 01:38:08.568641" 821 ConfigService onCreate 821 547
+Info "2015-07-07 01:38:08.568641" 821 ConfigService "onBind for Intent { act=com.google.android.gms.config.UPDATE pkg=com.google.android.gms } action com.google.android.gms.config.UPDATE" 821 548
+Info "2015-07-07 01:38:08.568641" 497 ActivityManager "Delaying start of: ServiceRecord{21ed8790 u0 com.google.android.gms/.wearable.service.WearableControlService}" 750 549
+Info "2015-07-07 01:38:08.578641" 821 ConfigService "onBind returning update interface" 821 550
+Info "2015-07-07 01:38:08.578641" 782 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.gltest cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 782 551
+Info "2015-07-07 01:38:08.578641" 821 ConfigService "onBind for Intent { act=com.google.android.gms.config.START pkg=com.google.android.gms } action com.google.android.gms.config.START" 821 552
+Info "2015-07-07 01:38:08.578641" 821 ConfigService "onBind returning service broker" 821 553
+Debug "2015-07-07 01:38:08.588641" 497 dalvikvm "GC_EXPLICIT freed 1028K, 29% free 16002K/22532K, paused 2ms+9ms, total 169ms" 521 554
+Debug "2015-07-07 01:38:08.588641" 20528 AndroidRuntime "Shutting down VM" 20528 555
+Info "2015-07-07 01:38:08.588641" 782 ConfigFetchService launchTask 782 556
+Debug "2015-07-07 01:38:08.598641" 20528 dalvikvm "GC_CONCURRENT freed 98K, 16% free 635K/752K, paused 0ms+0ms, total 2ms" 20533 557
+Debug "2015-07-07 01:38:09.038641" 782 ChimeraSrvcProxy "Creating service proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy}" 782 558
+Debug "2015-07-07 01:38:09.038641" 782 ChimeraSrvcProxy "Proxying container service ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy} to Chimera service impl com.google.android.gms.games.service.PlayGamesAsyncService" 782 559
+Debug "2015-07-07 01:38:09.038641" 782 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 782 560
+Debug "2015-07-07 01:38:09.038641" 782 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 782 561
+Info "2015-07-07 01:38:09.068641" 782 ConfigFetchService "service connected" 782 562
+Debug "2015-07-07 01:38:09.078641" 782 ConfigFetchService "ConfigApi connection successful." 782 563
+Info "2015-07-07 01:38:09.098641" 497 ActivityManager "Resuming delayed broadcast" 3823 564
+Info "2015-07-07 01:38:09.118641" 497 ActivityManager "Delay finish: com.google.android.apps.plus/.service.PhotosAppTransitionMonitor" 726 565
+Info "2015-07-07 01:38:09.118641" 497 ActivityManager "Resuming delayed broadcast" 508 566
+Info "2015-07-07 01:38:09.148641" 1581 InternalIcingCorporaPro "Updating corpora: APPS=com.appthwack.gltest, CONTACTS=MAYBE" 20564 567
+Info "2015-07-07 01:38:09.148641" 497 ActivityManager "Delay finish: com.google.android.googlequicksearchbox/com.google.android.search.core.summons.icing.InternalIcingCorporaProvider$CorporaChangedReceiver" 768 568
+Debug "2015-07-07 01:38:09.168641" 20557 AndroidRuntime  20557 569
+Debug "2015-07-07 01:38:09.168641" 20557 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20557 570
+Debug "2015-07-07 01:38:09.168641" 20557 AndroidRuntime "CheckJNI is OFF" 20557 571
+Info "2015-07-07 01:38:09.168641" 20557 AndroidRuntime "Kernel Release Version: 3.10.20" 20557 572
+Info "2015-07-07 01:38:09.168641" 20557 dalvikvm "No library specified. The standard exception handler will be used" 20557 573
+Info "2015-07-07 01:38:09.178641" 1581 InternalIcingCorporaPro "UpdateCorporaTask done [took 23 ms] updated apps [took 23 ms]" 20564 574
+Info "2015-07-07 01:38:09.178641" 497 ActivityManager "Resuming delayed broadcast" 3823 575
+Debug "2015-07-07 01:38:09.188641" 20557 dalvikvm "Trying to load lib libjavacore.so 0x0" 20557 576
+Debug "2015-07-07 01:38:09.188641" 20557 dalvikvm "Added shared lib libjavacore.so 0x0" 20557 577
+Debug "2015-07-07 01:38:09.188641" 20557 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20557 578
+Debug "2015-07-07 01:38:09.188641" 20557 dalvikvm "Added shared lib libnativehelper.so 0x0" 20557 579
+Debug "2015-07-07 01:38:09.188641" 20557 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20557 580
+Debug "2015-07-07 01:38:09.198641" 20557 dalvikvm "Extra Options: not specified" 20557 581
+Debug "2015-07-07 01:38:09.218641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 582
+Debug "2015-07-07 01:38:09.218641" 497 WifiStateMachine "processMsg: ConnectedState" 562 583
+Debug "2015-07-07 01:38:09.218641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 584
+Info "2015-07-07 01:38:09.218641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 585
+Debug "2015-07-07 01:38:09.218641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 586
+Debug "2015-07-07 01:38:09.218641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 587
+Debug "2015-07-07 01:38:09.218641" 20557 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20557 588
+Debug "2015-07-07 01:38:09.238641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 589
+Info "2015-07-07 01:38:09.238641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 590
+Info "2015-07-07 01:38:09.238641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 591
+Info "2015-07-07 01:38:09.238641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 592
+Info "2015-07-07 01:38:09.238641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 593
+Debug "2015-07-07 01:38:09.238641" 497 WifiStateMachine "handleMessage: X" 562 594
+Error "2015-07-07 01:38:09.328641" 20557 memtrack "Couldn't load memtrack module (No such file or directory)" 20557 595
+Error "2015-07-07 01:38:09.328641" 20557 android.os.Debug "failed to load memtrack module: -2" 20557 596
+Debug "2015-07-07 01:38:09.388641" 20557 AndroidRuntime "Calling main entry com.android.commands.am.Am" 20557 597
+Info "2015-07-07 01:38:09.388641" 20557 dalvikvm "Total arena pages for JIT: 11" 20573 598
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 12" 20573 599
+Debug "2015-07-07 01:38:09.398641" 497 AccelerometerSimpleCalibration "data z positive" 509 600
+Debug "2015-07-07 01:38:09.398641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 601
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 13" 20573 602
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 14" 20573 603
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 15" 20573 604
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 16" 20573 605
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 17" 20573 606
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 18" 20573 607
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 19" 20573 608
+Info "2015-07-07 01:38:09.398641" 20557 dalvikvm "Total arena pages for JIT: 20" 20573 609
+Info "2015-07-07 01:38:09.448641" 497 ActivityManager "Force stopping com.nihk.github.musictheoryromannumeralanalysisquiz appid=10101 user=0: start instr" 687 610
+Debug "2015-07-07 01:38:09.458641" 20576 dalvikvm "Late-enabling CheckJNI" 20576 611
+Debug "2015-07-07 01:38:09.458641" 20576 dalvikvm "Try to disable coredump for pid 20576" 20576 612
+Debug "2015-07-07 01:38:09.458641" 20576 dalvikvm "Process 20576 nice name: com.nihk.github.musictheoryromannumeralanalysisquiz" 20576 613
+Debug "2015-07-07 01:38:09.458641" 20576 dalvikvm "Extra Options: not specified" 20576 614
+Info "2015-07-07 01:38:09.458641" 497 ActivityManager "Start proc com.nihk.github.musictheoryromannumeralanalysisquiz for added application com.nihk.github.musictheoryromannumeralanalysisquiz: pid=20576 uid=10101 gids={50101}" 687 615
+Info "2015-07-07 01:38:09.498641" 20576 TestRunner "started: testApp(com.appthwack.gltest.GlFpsTest)" 20589 616
+Debug "2015-07-07 01:38:09.508641" 20576 APPTHWACK "Test setup" 20589 617
+Info "2015-07-07 01:38:09.508641" 497 ActivityManager "START u0 {act=android.intent.action.MAIN flg=0x10000000 cmp=com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity} from pid 20576" 725 618
+Error "2015-07-07 01:38:09.548641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 56" 2469 619
+    "07-06 21:38:09.402   158   158 I dpstmrg:: waiting for message from kernel."  620
+    "07-06 21:38:09.402   158   158 I dpstmrg:: message from kernel received."  621
+    "07-06 21:38:09.402   158   158 E dpstmrg:: executing DPST command"  622
+    "07-06 21:38:09.412   158   158 E dpstmrg:: sent command: cmd = 5"  623
+    "07-06 21:38:09.412   158   158 E dpstmrg:: sent command: cmd = 6"  624
+    "07-06 21:38:09.412   158   158 E dpstmrg:: sent command: cmd = 3"  625
+    "07-06 21:38:09.472   158   158 I dpstmrg:: waiting for message from kernel."  626
+    "07-06 21:38:09.472   158   158 I dpstmrg:: message from kernel received."  627
+    "07-06 21:38:09.472   158   158 E dpstmrg:: executing DPST command"  628
+    "07-06 21:38:09.472   158   158 E dpstmrg:: sent command: cmd = 5"  629
+    "07-06 21:38:09.472   158   158 E dpstmrg:: sent command: cmd = 6"  630
+    "07-06 21:38:09.472   158   158 E dpstmrg:: sent command: cmd = 3"  631
+Info "2015-07-07 01:38:09.808641" 20576 dalvikvm "Could not find method android.content.res.TypedArray.getChangingConfigurations, referenced from method android.support.v7.internal.widget.TintTypedArray.getChangingConfigurations" 20576 632
+Warning "2015-07-07 01:38:09.808641" 20576 dalvikvm "VFY: unable to resolve virtual method 409: Landroid/content/res/TypedArray;.getChangingConfigurations ()I" 20576 633
+Debug "2015-07-07 01:38:09.808641" 20576 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 20576 634
+Info "2015-07-07 01:38:09.808641" 20576 dalvikvm "Could not find method android.content.res.TypedArray.getType, referenced from method android.support.v7.internal.widget.TintTypedArray.getType" 20576 635
+Warning "2015-07-07 01:38:09.808641" 20576 dalvikvm "VFY: unable to resolve virtual method 431: Landroid/content/res/TypedArray;.getType (I)I" 20576 636
+Debug "2015-07-07 01:38:09.808641" 20576 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 20576 637
+    "07-06 21:38:09.542   158   158 I dpstmrg:: waiting for message from kernel."  638
+    "07-06 21:38:09.542   158   158 I dpstmrg:: message from kernel received."  639
+    "07-06 21:38:09.542   158   158 E dpstmrg:: executing DPST command"  640
+    "07-06 21:38:09.542   158   158 E dpstmrg:: sent command: cmd = 3"  641
+    "07-06 21:38:09.572   158   163 E dpstmrg:: sent command: cmd = 5"  642
+    "07-06 21:38:09.572   158   163 E dpstmrg:: sent command: cmd = 6"  643
+Debug "2015-07-07 01:38:09.848641" 20576 HardwareRenderer "Profiling hardware renderer" 20576 644
+Debug "2015-07-07 01:38:09.848641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 1000 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 497com.android.server.wm.WindowManagerService.openSession(WindowManagerService.java:7584)" 725 645
+    "07-06 21:38:09.642   158   158 I dpstmrg:: waiting for message from kernel."  646
+    "07-06 21:38:09.642   158   158 I dpstmrg:: message from kernel received."  647
+    "07-06 21:38:09.642   158   158 E dpstmrg:: executing DPST command"  648
+    "07-06 21:38:09.642   158   158 E dpstmrg:: sent command: cmd = 3"  649
+    "07-06 21:38:09.672   158   163 E dpstmrg:: sent command: cmd = 5"  650
+    "07-06 21:38:09.672   158   163 E dpstmrg:: sent command: cmd = 6"  651
+Error "2015-07-07 01:38:09.978641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 55" 20576 652
+Error "2015-07-07 01:38:09.978641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 58" 20576 653
+Error "2015-07-07 01:38:09.978641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 59" 20576 654
+Error "2015-07-07 01:38:09.978641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 59" 20576 655
+Error "2015-07-07 01:38:09.978641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 59" 20576 656
+Error "2015-07-07 01:38:09.988641" 20576 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 61" 20576 657
+Error "2015-07-07 01:38:10.008641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 51" 2469 658
+Debug "2015-07-07 01:38:10.018641" 20576 OpenGLRenderer "Enabling debug mode 0" 20576 659
+Debug "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 10101 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 20576com.android.server.InputMethodManagerService.windowGainedFocus(InputMethodManagerService.java:1882)" 20080 660
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "windowGainedFocus: android.os.BinderProxy@21affb20 controlFlags=#105 softInputMode=#120 windowFlags=#1810100" 20080 661
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "Unspecified window will hide input" 20080 662
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "unbindCurrentInputLocked: client = android.os.BinderProxy@21eed3f8" 20080 663
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "Hide switching menu" 20080 664
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "switching to client: client = android.os.BinderProxy@21affb20 keyguard=false" 20080 665
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "Creating new session for client ClientState{21c19d38 uid 10101 pid 20576}" 20080 666
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "Disabling: SessionState{uid 10034 pid 732 method 21c8fdf8 session 21e46bf8 channel ClientState{21d92810 uid 10034 pid 732} (server)}" 687 667
+Verbose "2015-07-07 01:38:10.028641" 497 InputMethodManagerService "Enabling: SessionState{uid 10101 pid 20576 method 21c8fdf8 session 21de15e8 channel ClientState{21c19d38 uid 10101 pid 20576} (server)}" 687 668
+Info "2015-07-07 01:38:10.038641" 661 Keyboard.Facilitator onFinishInput() 661 669
+    "07-06 21:38:09.772   158   163 E dpstmrg:: sent command: cmd = 5"  670
+    "07-06 21:38:09.772   158   163 E dpstmrg:: sent command: cmd = 6"  671
+Debug "2015-07-07 01:38:10.148641" 20576 APPTHWACK "Start activity: com.nihk.github.musictheoryromannumeralanalysisquiz.MTRNAQuizActivity@21b08b98" 20589 672
+Info "2015-07-07 01:38:10.148641" 20576 APPTHWACK "Starting GL profiler" 20589 673
+    "07-06 21:38:09.872   158   163 E dpstmrg:: sent command: cmd = 5"  674
+    "07-06 21:38:09.872   158   163 E dpstmrg:: sent command: cmd = 6"  675
+Info "2015-07-07 01:38:10.158641" 20576 APPTHWACK "Creating dir" 20589 676
+Info "2015-07-07 01:38:10.168641" 497 ActivityManager "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: +648ms" 510 677
+    "07-06 21:38:09.972   158   163 E dpstmrg:: sent command: cmd = 5"  678
+    "07-06 21:38:09.982   158   163 E dpstmrg:: sent command: cmd = 6"  679
+    "07-06 21:38:10.012   158   158 I dpstmrg:: waiting for message from kernel."  680
+    "07-06 21:38:10.012   158   158 I dpstmrg:: message from kernel received."  681
+    "07-06 21:38:10.012   158   158 E dpstmrg:: executing DPST command"  682
+    "07-06 21:38:10.022   158   158 E dpstmrg:: sent command: cmd = 5"  683
+    "07-06 21:38:10.022   158   158 E dpstmrg:: sent command: cmd = 6"  684
+    "07-06 21:38:10.022   158   158 E dpstmrg:: sent command: cmd = 3"  685
+    "07-06 21:38:10.082   158   158 I dpstmrg:: waiting for message from kernel."  686
+    "07-06 21:38:10.082   158   158 I dpstmrg:: message from kernel received."  687
+    "07-06 21:38:10.082   158   158 E dpstmrg:: executing DPST command"  688
+    "07-06 21:38:10.082   158   158 E dpstmrg:: sent command: cmd = 5"  689
+    "07-06 21:38:10.082   158   158 E dpstmrg:: sent command: cmd = 6"  690
+    "07-06 21:38:10.082   158   158 E dpstmrg:: sent command: cmd = 3"  691
+    "07-06 21:38:10.152   158   158 I dpstmrg:: waiting for message from kernel."  692
+    "07-06 21:38:10.152   158   158 I dpstmrg:: message from kernel received."  693
+    "07-06 21:38:10.152   158   158 E dpstmrg:: executing DPST command"  694
+    "07-06 21:38:10.152   158   158 E dpstmrg:: sent command: cmd = 5"  695
+    "07-06 21:38:10.152   158   158 E dpstmrg:: sent command: cmd = 6"  696
+    "07-06 21:38:10.152   158   158 E dpstmrg:: sent command: cmd = 3"  697
+    "07-06 21:38:10.252   158   163 E dpstmrg:: sent command: cmd = 5"  698
+Debug "2015-07-07 01:38:10.598641" 20600 AndroidRuntime  20600 699
+Debug "2015-07-07 01:38:10.598641" 20600 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 20600 700
+Debug "2015-07-07 01:38:10.598641" 20600 AndroidRuntime "CheckJNI is OFF" 20600 701
+Info "2015-07-07 01:38:10.598641" 20600 AndroidRuntime "Kernel Release Version: 3.10.20" 20600 702
+Info "2015-07-07 01:38:10.598641" 20600 dalvikvm "No library specified. The standard exception handler will be used" 20600 703
+Debug "2015-07-07 01:38:10.608641" 20600 dalvikvm "Trying to load lib libjavacore.so 0x0" 20600 704
+Debug "2015-07-07 01:38:10.618641" 20600 dalvikvm "Added shared lib libjavacore.so 0x0" 20600 705
+Debug "2015-07-07 01:38:10.618641" 20600 dalvikvm "Trying to load lib libnativehelper.so 0x0" 20600 706
+Debug "2015-07-07 01:38:10.618641" 20600 dalvikvm "Added shared lib libnativehelper.so 0x0" 20600 707
+Debug "2015-07-07 01:38:10.618641" 20600 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 20600 708
+Debug "2015-07-07 01:38:10.628641" 20600 dalvikvm "Extra Options: not specified" 20600 709
+Debug "2015-07-07 01:38:10.648641" 20600 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 179 unimplemented (abstract) methods" 20600 710
+Error "2015-07-07 01:38:10.748641" 20600 memtrack "Couldn't load memtrack module (No such file or directory)" 20600 711
+Error "2015-07-07 01:38:10.748641" 20600 android.os.Debug "failed to load memtrack module: -2" 20600 712
+Debug "2015-07-07 01:38:10.788641" 20600 AndroidRuntime "Calling main entry com.android.commands.monkey.Monkey" 20600 713
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 11" 20607 714
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 12" 20607 715
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 13" 20607 716
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 14" 20607 717
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 15" 20607 718
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 16" 20607 719
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 17" 20607 720
+Info "2015-07-07 01:38:10.798641" 20600 dalvikvm "Total arena pages for JIT: 18" 20607 721
+Info "2015-07-07 01:38:10.808641" 20600 dalvikvm "Total arena pages for JIT: 19" 20607 722
+Info "2015-07-07 01:38:10.808641" 20600 dalvikvm "Total arena pages for JIT: 20" 20607 723
+Warning "2015-07-07 01:38:10.838641" 497 BroadcastQueue "Skipping deliver [background] BroadcastRecord{220af240 u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{21d988f0 20600 (unknown name)/2000/u-1 remote:21d99558}: process crashing" 511 724
+Info "2015-07-07 01:38:10.888641" 497 ActivityManager "START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity} from pid 20600" 20078 725
+Verbose "2015-07-07 01:38:10.918641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=0.0)" 578 726
+Debug "2015-07-07 01:38:10.978641" 497 Vibrator "switchOff : Turn OFF vibrator request" 3823 727
+Debug "2015-07-07 01:38:10.978641" 497 EVENT_THREAD "void CEventThread::cancelAlarm()" 543 728
+Debug "2015-07-07 01:38:10.988641" 497 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 543 729
+Info "2015-07-07 01:38:11.008641" 497 InputDispatcher "Dropping event because there is no touchable window at (228, 764)." 551 730
+Info "2015-07-07 01:38:11.008641" 20576 dalvikvm "Total arena pages for JIT: 11" 20583 731
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 750 732
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 507 733
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 12928 734
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 20078 735
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 726 736
+Warning "2015-07-07 01:38:11.008641" 497 InputManager "Input event injection from pid 20600 failed." 571 737
+Error "2015-07-07 01:38:11.018641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 39" 300 738
+Info "2015-07-07 01:38:11.018641" 20576 dalvikvm "Total arena pages for JIT: 12" 20583 739
+Info "2015-07-07 01:38:11.018641" 20576 dalvikvm "Total arena pages for JIT: 13" 20583 740
+Warning "2015-07-07 01:38:11.018641" 497 InputManager "Input event injection from pid 20600 failed." 508 741
+Warning "2015-07-07 01:38:11.018641" 497 InputManager "Input event injection from pid 20600 failed." 687 742
+Warning "2015-07-07 01:38:11.018641" 497 InputManager "Input event injection from pid 20600 failed." 20080 743
+Warning "2015-07-07 01:38:11.018641" 497 InputManager "Input event injection from pid 20600 failed." 3823 744
+Warning "2015-07-07 01:38:11.018641" 497 InputManager "Input event injection from pid 20600 failed." 768 745
+Debug "2015-07-07 01:38:11.028641" 153 hwcomposer "int IntelDisplayPlaneManager::setZOrderConfig(int, int): set zorder: 3" 153 746
+Error "2015-07-07 01:38:11.028641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 42" 153 747
+Error "2015-07-07 01:38:11.028641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 57" 300 748
+Info "2015-07-07 01:38:11.028641" 497 InputDispatcher "Dropping event because there is no touchable window at (50, 318)." 551 749
+Warning "2015-07-07 01:38:11.028641" 497 InputManager "Input event injection from pid 20600 failed." 12928 750
+Warning "2015-07-07 01:38:11.038641" 497 InputManager "Input event injection from pid 20600 failed." 20078 751
+Error "2015-07-07 01:38:11.038641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 46" 153 752
+Info "2015-07-07 01:38:11.048641" 497 InputDispatcher "Dropping event because there is no touchable window at (62, 833)." 551 753
+Warning "2015-07-07 01:38:11.048641" 497 InputManager "Input event injection from pid 20600 failed." 571 754
+Warning "2015-07-07 01:38:11.048641" 497 InputManager "Input event injection from pid 20600 failed." 687 755
+Warning "2015-07-07 01:38:11.048641" 497 InputManager "Input event injection from pid 20600 failed." 508 756
+Warning "2015-07-07 01:38:11.048641" 497 InputManager "Input event injection from pid 20600 failed." 20080 757
+Warning "2015-07-07 01:38:11.048641" 497 InputManager "Input event injection from pid 20600 failed." 3823 758
+Warning "2015-07-07 01:38:11.058641" 497 InputManager "Input event injection from pid 20600 failed." 768 759
+Warning "2015-07-07 01:38:11.058641" 497 InputManager "Input event injection from pid 20600 failed." 570 760
+Warning "2015-07-07 01:38:11.058641" 497 InputManager "Input event injection from pid 20600 failed." 750 761
+Warning "2015-07-07 01:38:11.058641" 497 InputManager "Input event injection from pid 20600 failed." 750 762
+Warning "2015-07-07 01:38:11.058641" 497 InputManager "Input event injection from pid 20600 failed." 20078 763
+Info "2015-07-07 01:38:11.068641" 497 InputDispatcher "Dropping event because there is no touchable window at (497, 128)." 551 764
+Warning "2015-07-07 01:38:11.068641" 497 InputManager "Input event injection from pid 20600 failed." 571 765
+Warning "2015-07-07 01:38:11.068641" 497 InputManager "Input event injection from pid 20600 failed." 687 766
+Warning "2015-07-07 01:38:11.068641" 497 InputManager "Input event injection from pid 20600 failed." 508 767
+Warning "2015-07-07 01:38:11.078641" 497 InputManager "Input event injection from pid 20600 failed." 20080 768
+Warning "2015-07-07 01:38:11.078641" 497 InputManager "Input event injection from pid 20600 failed." 3823 769
+Warning "2015-07-07 01:38:11.078641" 497 InputManager "Input event injection from pid 20600 failed." 768 770
+Warning "2015-07-07 01:38:11.078641" 497 InputManager "Input event injection from pid 20600 failed." 570 771
+Warning "2015-07-07 01:38:11.078641" 497 InputManager "Input event injection from pid 20600 failed." 507 772
+Info "2015-07-07 01:38:11.088641" 20576 dalvikvm "Total arena pages for JIT: 14" 20583 773
+Info "2015-07-07 01:38:11.088641" 20576 dalvikvm "Total arena pages for JIT: 15" 20583 774
+Info "2015-07-07 01:38:11.088641" 20576 dalvikvm "Total arena pages for JIT: 16" 20583 775
+Info "2015-07-07 01:38:11.088641" 497 InputDispatcher "Dropping event because there is no touchable window at (334, 748)." 551 776
+Warning "2015-07-07 01:38:11.088641" 497 InputManager "Input event injection from pid 20600 failed." 20078 777
+Warning "2015-07-07 01:38:11.088641" 497 InputManager "Input event injection from pid 20600 failed." 725 778
+Warning "2015-07-07 01:38:11.098641" 497 InputManager "Input event injection from pid 20600 failed." 726 779
+Info "2015-07-07 01:38:11.108641" 497 InputDispatcher "Dropping event because there is no touchable window at (82, 91)." 551 780
+Warning "2015-07-07 01:38:11.108641" 497 InputManager "Input event injection from pid 20600 failed." 508 781
+Warning "2015-07-07 01:38:11.108641" 497 InputManager "Input event injection from pid 20600 failed." 20080 782
+Warning "2015-07-07 01:38:11.108641" 497 InputManager "Input event injection from pid 20600 failed." 3823 783
+Warning "2015-07-07 01:38:11.108641" 497 InputManager "Input event injection from pid 20600 failed." 768 784
+Warning "2015-07-07 01:38:11.108641" 497 InputManager "Input event injection from pid 20600 failed." 570 785
+Warning "2015-07-07 01:38:11.118641" 497 InputManager "Input event injection from pid 20600 failed." 507 786
+Warning "2015-07-07 01:38:11.118641" 497 InputManager "Input event injection from pid 20600 failed." 12928 787
+Info "2015-07-07 01:38:11.128641" 497 InputDispatcher "Dropping event because there is no touchable window at (38, 1129)." 551 788
+Warning "2015-07-07 01:38:11.128641" 497 InputManager "Input event injection from pid 20600 failed." 725 789
+Warning "2015-07-07 01:38:11.128641" 497 InputManager "Input event injection from pid 20600 failed." 726 790
+Warning "2015-07-07 01:38:11.128641" 497 InputManager "Input event injection from pid 20600 failed." 571 791
+Warning "2015-07-07 01:38:11.128641" 497 InputManager "Input event injection from pid 20600 failed." 687 792
+Warning "2015-07-07 01:38:11.128641" 497 InputManager "Input event injection from pid 20600 failed." 508 793
+Info "2015-07-07 01:38:11.148641" 497 InputDispatcher "Dropping event because there is no touchable window at (138, 301)." 551 794
+Warning "2015-07-07 01:38:11.148641" 497 InputManager "Input event injection from pid 20600 failed." 768 795
+Warning "2015-07-07 01:38:11.148641" 497 InputManager "Input event injection from pid 20600 failed." 570 796
+Warning "2015-07-07 01:38:11.148641" 497 InputManager "Input event injection from pid 20600 failed." 507 797
+Info "2015-07-07 01:38:11.158641" 497 InputDispatcher "Dropping event because there is no touchable window at (763, 349)." 551 798
+Warning "2015-07-07 01:38:11.158641" 497 InputManager "Input event injection from pid 20600 failed." 20078 799
+Warning "2015-07-07 01:38:11.158641" 497 InputManager "Input event injection from pid 20600 failed." 725 800
+Info "2015-07-07 01:38:11.178641" 497 InputDispatcher "Dropping event because there is no touchable window at (238, 814)." 551 801
+Warning "2015-07-07 01:38:11.178641" 497 InputManager "Input event injection from pid 20600 failed." 687 802
+Warning "2015-07-07 01:38:11.178641" 497 InputManager "Input event injection from pid 20600 failed." 687 803
+Info "2015-07-07 01:38:11.188641" 497 InputDispatcher "Dropping event because there is no touchable window at (377, 881)." 551 804
+Warning "2015-07-07 01:38:11.188641" 497 InputManager "Input event injection from pid 20600 failed." 570 805
+Warning "2015-07-07 01:38:11.188641" 497 InputManager "Input event injection from pid 20600 failed." 507 806
+Info "2015-07-07 01:38:11.208641" 497 InputDispatcher "Dropping event because there is no touchable window at (718, 59)." 551 807
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 20078 808
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 725 809
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 571 810
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 726 811
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 508 812
+Warning "2015-07-07 01:38:11.208641" 497 InputManager "Input event injection from pid 20600 failed." 687 813
+Warning "2015-07-07 01:38:11.218641" 497 InputManager "Input event injection from pid 20600 failed." 3823 814
+Warning "2015-07-07 01:38:11.218641" 497 InputManager "Input event injection from pid 20600 failed." 768 815
+Info "2015-07-07 01:38:11.228641" 497 InputDispatcher "Dropping event because there is no touchable window at (69, 748)." 551 816
+Warning "2015-07-07 01:38:11.228641" 497 InputManager "Input event injection from pid 20600 failed." 750 817
+Warning "2015-07-07 01:38:11.228641" 497 InputManager "Input event injection from pid 20600 failed." 12928 818
+Warning "2015-07-07 01:38:11.228641" 497 InputManager "Input event injection from pid 20600 failed." 20078 819
+Warning "2015-07-07 01:38:11.228641" 497 InputManager "Input event injection from pid 20600 failed." 725 820
+Warning "2015-07-07 01:38:11.228641" 497 InputManager "Input event injection from pid 20600 failed." 571 821
+Warning "2015-07-07 01:38:11.238641" 497 InputManager "Input event injection from pid 20600 failed." 20080 822
+Warning "2015-07-07 01:38:11.238641" 497 InputManager "Input event injection from pid 20600 failed." 726 823
+Info "2015-07-07 01:38:11.248641" 497 InputDispatcher "Dropping event because there is no touchable window at (509, 509)." 551 824
+Warning "2015-07-07 01:38:11.248641" 497 InputManager "Input event injection from pid 20600 failed." 3823 825
+Warning "2015-07-07 01:38:11.248641" 497 InputManager "Input event injection from pid 20600 failed." 768 826
+Warning "2015-07-07 01:38:11.248641" 497 InputManager "Input event injection from pid 20600 failed." 570 827
+Warning "2015-07-07 01:38:11.248641" 497 InputManager "Input event injection from pid 20600 failed." 507 828
+Warning "2015-07-07 01:38:11.248641" 497 InputManager "Input event injection from pid 20600 failed." 750 829
+Warning "2015-07-07 01:38:11.258641" 497 InputManager "Input event injection from pid 20600 failed." 12928 830
+Warning "2015-07-07 01:38:11.258641" 497 InputManager "Input event injection from pid 20600 failed." 20078 831
+Warning "2015-07-07 01:38:11.318641" 497 InputManager "Input event injection from pid 20600 failed." 571 832
+Warning "2015-07-07 01:38:11.318641" 497 InputManager "Input event injection from pid 20600 failed." 20080 833
+Warning "2015-07-07 01:38:11.318641" 497 InputManager "Input event injection from pid 20600 failed." 726 834
+Warning "2015-07-07 01:38:11.318641" 497 InputManager "Input event injection from pid 20600 failed." 508 835
+Debug "2015-07-07 01:38:11.328641" 20576 HardwareRenderer "Profiling hardware renderer" 20576 836
+Error "2015-07-07 01:38:11.328641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 59" 806 837
+Verbose "2015-07-07 01:38:11.338641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=-0.0)" 578 838
+Info "2015-07-07 01:38:11.348641" 497 InputDispatcher "Dropping event because there is no touchable window at (723, 1097)." 551 839
+Warning "2015-07-07 01:38:11.348641" 497 InputManager "Input event injection from pid 20600 failed." 20080 840
+Warning "2015-07-07 01:38:11.358641" 497 InputManager "Input event injection from pid 20600 failed." 726 841
+Info "2015-07-07 01:38:11.368641" 497 InputDispatcher "Dropping event because there is no touchable window at (33, 838)." 551 842
+Warning "2015-07-07 01:38:11.368641" 497 InputManager "Input event injection from pid 20600 failed." 3823 843
+Warning "2015-07-07 01:38:11.368641" 497 InputManager "Input event injection from pid 20600 failed." 768 844
+Warning "2015-07-07 01:38:11.368641" 497 InputManager "Input event injection from pid 20600 failed." 570 845
+Warning "2015-07-07 01:38:11.368641" 497 InputManager "Input event injection from pid 20600 failed." 507 846
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 750 847
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 12928 848
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 20078 849
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 571 850
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 20080 851
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 726 852
+Warning "2015-07-07 01:38:11.378641" 497 InputManager "Input event injection from pid 20600 failed." 508 853
+Info "2015-07-07 01:38:11.398641" 497 InputDispatcher "Dropping event because there is no touchable window at (520, 1200)." 551 854
+Warning "2015-07-07 01:38:11.398641" 497 InputManager "Input event injection from pid 20600 failed." 768 855
+Warning "2015-07-07 01:38:11.398641" 497 InputManager "Input event injection from pid 20600 failed." 570 856
+Warning "2015-07-07 01:38:11.398641" 497 InputManager "Input event injection from pid 20600 failed." 507 857
+Info "2015-07-07 01:38:11.408641" 497 InputDispatcher "Dropping event because there is no touchable window at (436, 920)." 551 858
+Warning "2015-07-07 01:38:11.408641" 497 InputManager "Input event injection from pid 20600 failed." 20078 859
+Warning "2015-07-07 01:38:11.408641" 497 InputManager "Input event injection from pid 20600 failed." 571 860
+Info "2015-07-07 01:38:11.428641" 497 InputDispatcher "Dropping event because there is no touchable window at (693, 325)." 551 861
+Warning "2015-07-07 01:38:11.428641" 497 InputManager "Input event injection from pid 20600 failed." 20080 862
+Warning "2015-07-07 01:38:11.428641" 497 InputManager "Input event injection from pid 20600 failed." 687 863
+Info "2015-07-07 01:38:11.438641" 497 InputDispatcher "Dropping event because there is no touchable window at (680, 1190)." 551 864
+Warning "2015-07-07 01:38:11.438641" 497 InputManager "Input event injection from pid 20600 failed." 570 865
+Warning "2015-07-07 01:38:11.438641" 497 InputManager "Input event injection from pid 20600 failed." 507 866
+Warning "2015-07-07 01:38:11.448641" 497 InputManager "Input event injection from pid 20600 failed." 750 867
+Warning "2015-07-07 01:38:11.448641" 497 InputManager "Input event injection from pid 20600 failed." 12928 868
+Warning "2015-07-07 01:38:11.448641" 497 InputManager "Input event injection from pid 20600 failed." 20078 869
+Warning "2015-07-07 01:38:11.448641" 497 InputManager "Input event injection from pid 20600 failed." 571 870
+Info "2015-07-07 01:38:11.458641" 497 InputDispatcher "Dropping event because there is no touchable window at (57, 211)." 551 871
+Warning "2015-07-07 01:38:11.458641" 497 InputManager "Input event injection from pid 20600 failed." 20080 872
+Warning "2015-07-07 01:38:11.458641" 497 InputManager "Input event injection from pid 20600 failed." 687 873
+Info "2015-07-07 01:38:11.478641" 497 InputDispatcher "Dropping event because there is no touchable window at (521, 49)." 551 874
+Warning "2015-07-07 01:38:11.478641" 497 InputManager "Input event injection from pid 20600 failed." 507 875
+Warning "2015-07-07 01:38:11.478641" 497 InputManager "Input event injection from pid 20600 failed." 750 876
+Warning "2015-07-07 01:38:11.478641" 497 InputManager "Input event injection from pid 20600 failed." 12928 877
+Info "2015-07-07 01:38:11.488641" 497 InputDispatcher "Dropping event because there is no touchable window at (504, 996)." 551 878
+Warning "2015-07-07 01:38:11.488641" 497 InputManager "Input event injection from pid 20600 failed." 726 879
+Warning "2015-07-07 01:38:11.488641" 497 InputManager "Input event injection from pid 20600 failed." 508 880
+Warning "2015-07-07 01:38:11.498641" 497 InputManager "Input event injection from pid 20600 failed." 20080 881
+Warning "2015-07-07 01:38:11.498641" 497 InputManager "Input event injection from pid 20600 failed." 687 882
+Warning "2015-07-07 01:38:11.498641" 497 InputManager "Input event injection from pid 20600 failed." 570 883
+Warning "2015-07-07 01:38:11.498641" 497 InputManager "Input event injection from pid 20600 failed." 3823 884
+Info "2015-07-07 01:38:11.508641" 497 InputDispatcher "Dropping event because there is no touchable window at (749, 1008)." 551 885
+Warning "2015-07-07 01:38:11.508641" 497 InputManager "Input event injection from pid 20600 failed." 12928 886
+Warning "2015-07-07 01:38:11.508641" 497 InputManager "Input event injection from pid 20600 failed." 725 887
+Warning "2015-07-07 01:38:11.518641" 497 InputManager "Input event injection from pid 20600 failed." 20078 888
+Warning "2015-07-07 01:38:11.518641" 497 InputManager "Input event injection from pid 20600 failed." 571 889
+Info "2015-07-07 01:38:11.528641" 497 InputDispatcher "Dropping event because there is no touchable window at (212, 799)." 551 890
+Warning "2015-07-07 01:38:11.528641" 497 InputManager "Input event injection from pid 20600 failed." 20080 891
+Warning "2015-07-07 01:38:11.528641" 497 InputManager "Input event injection from pid 20600 failed." 687 892
+Info "2015-07-07 01:38:11.548641" 497 InputDispatcher "Dropping event because there is no touchable window at (443, 365)." 551 893
+Warning "2015-07-07 01:38:11.548641" 497 InputManager "Input event injection from pid 20600 failed." 507 894
+Warning "2015-07-07 01:38:11.548641" 497 InputManager "Input event injection from pid 20600 failed." 12928 895
+Info "2015-07-07 01:38:11.558641" 497 InputDispatcher "Dropping event because there is no touchable window at (637, 690)." 551 896
+Warning "2015-07-07 01:38:11.558641" 497 InputManager "Input event injection from pid 20600 failed." 571 897
+Warning "2015-07-07 01:38:11.558641" 497 InputManager "Input event injection from pid 20600 failed." 726 898
+Warning "2015-07-07 01:38:11.558641" 497 InputManager "Input event injection from pid 20600 failed." 726 899
+Debug "2015-07-07 01:38:11.598641" 497 Vibrator "switchOff : Turn OFF vibrator request" 3823 900
+Debug "2015-07-07 01:38:11.598641" 497 EVENT_THREAD "void CEventThread::cancelAlarm()" 543 901
+Debug "2015-07-07 01:38:11.598641" 497 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 543 902
+Verbose "2015-07-07 01:38:11.598641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=85.34479 v=3993.7502)" 578 903
+Info "2015-07-07 01:38:11.598641" 497 InputDispatcher "Dropping event because there is no touchable window at (734, 402)." 551 904
+Warning "2015-07-07 01:38:11.598641" 497 InputManager "Input event injection from pid 20600 failed." 725 905
+Warning "2015-07-07 01:38:11.608641" 497 InputManager "Input event injection from pid 20600 failed." 20078 906
+Error "2015-07-07 01:38:11.618641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 58" 299 907
+Debug "2015-07-07 01:38:11.628641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 10101 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 20576com.android.server.InputMethodManagerService.windowGainedFocus(InputMethodManagerService.java:1882)" 570 908
+Verbose "2015-07-07 01:38:11.628641" 497 InputMethodManagerService "windowGainedFocus: android.os.BinderProxy@21affb20 controlFlags=#104 softInputMode=#120 windowFlags=#1810100" 570 909
+Info "2015-07-07 01:38:11.628641" 661 Keyboard.Facilitator onFinishInput() 661 910
+Verbose "2015-07-07 01:38:11.628641" 497 InputMethodManagerService "Unspecified window will hide input" 570 911
+Error "2015-07-07 01:38:11.648641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 52" 300 912
+Debug "2015-07-07 01:38:11.668641" 153 hwcomposer "int IntelDisplayPlaneManager::setZOrderConfig(int, int): set zorder: 0" 153 913
+Verbose "2015-07-07 01:38:11.688641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 914
+Debug "2015-07-07 01:38:11.688641" 153 hwcomposer "bool IntelOverlayContext::disable(uint32_t): disable overlay..." 153 915
+Verbose "2015-07-07 01:38:11.688641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 916
+Verbose "2015-07-07 01:38:11.688641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 917
+Verbose "2015-07-07 01:38:11.688641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 918
+Debug "2015-07-07 01:38:11.688641" 578 PhoneStatusBar "disable: < expand ICONS* alerts TICKER* system_info back home recent CLOCK* search >" 578 919
+Verbose "2015-07-07 01:38:11.688641" 578 PanelView "animationTick called with dtms=-4; nothing to do (h=109.30729 v=-2662.5002)" 578 920
+Error "2015-07-07 01:38:11.698641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 39" 299 921
+Verbose "2015-07-07 01:38:11.708641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 922
+Verbose "2015-07-07 01:38:11.718641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 923
+Verbose "2015-07-07 01:38:11.718641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 924
+Verbose "2015-07-07 01:38:11.718641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=109.30729 v=-2662.5002)" 578 925
+Debug "2015-07-07 01:38:11.718641" 578 PhoneStatusBar "disable: < expand icons* alerts ticker* system_info back home recent clock* search >" 578 926
+Error "2015-07-07 01:38:11.738641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 42" 300 927
+    "07-06 21:38:11.472   158   158 I dpstmrg:: waiting for message from kernel."  928
+    "07-06 21:38:11.472   158   158 I dpstmrg:: message from kernel received."  929
+    "07-06 21:38:11.472   158   158 E dpstmrg:: executing DPST command"  930
+    "07-06 21:38:11.472   158   158 E dpstmrg:: sent command: cmd = 5"  931
+    "07-06 21:38:11.472   158   158 E dpstmrg:: sent command: cmd = 6"  932
+    "07-06 21:38:11.472   158   158 E dpstmrg:: sent command: cmd = 3"  933
+Verbose "2015-07-07 01:38:11.758641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 934
+Verbose "2015-07-07 01:38:11.758641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 935
+Verbose "2015-07-07 01:38:11.758641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 936
+Debug "2015-07-07 01:38:11.778641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 10101 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 20576com.android.server.InputMethodManagerService.windowGainedFocus(InputMethodManagerService.java:1882)" 570 937
+Verbose "2015-07-07 01:38:11.778641" 497 InputMethodManagerService "windowGainedFocus: android.os.BinderProxy@21affb20 controlFlags=#0 softInputMode=#20 windowFlags=#1810100" 570 938
+Info "2015-07-07 01:38:11.778641" 497 ActivityManager "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: +886ms" 510 939
+Warning "2015-07-07 01:38:11.778641" 497 InputMethodManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@21c3ddc0 attribute=null, token = android.os.BinderProxy@21e12948" 570 940
+Verbose "2015-07-07 01:38:11.788641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 941
+Error "2015-07-07 01:38:11.788641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 46" 300 942
+Verbose "2015-07-07 01:38:11.798641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 943
+Verbose "2015-07-07 01:38:11.798641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 944
+Verbose "2015-07-07 01:38:11.798641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 945
+Verbose "2015-07-07 01:38:11.808641" 578 PanelView "animationTick called with dtms=-10; nothing to do (h=103.97164 v=-2662.5002)" 578 946
+Error "2015-07-07 01:38:11.818641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 38" 299 947
+Verbose "2015-07-07 01:38:11.818641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 948
+Verbose "2015-07-07 01:38:11.828641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 949
+Verbose "2015-07-07 01:38:11.838641" 578 PanelView "animationTick called with dtms=-4; nothing to do (h=103.97164 v=-2662.5002)" 578 950
+    "07-06 21:38:11.572   158   163 E dpstmrg:: sent command: cmd = 5"  951
+Verbose "2015-07-07 01:38:11.858641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 952
+Verbose "2015-07-07 01:38:11.858641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 953
+Verbose "2015-07-07 01:38:11.858641" 578 PanelView "animationTick called with dtms=-2; nothing to do (h=103.97164 v=-2662.5002)" 578 954
+Verbose "2015-07-07 01:38:11.878641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 955
+Verbose "2015-07-07 01:38:11.878641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=103.97164 v=-2662.5002)" 578 956
+Verbose "2015-07-07 01:38:11.878641" 578 PanelView "animationTick called with dtms=-4; nothing to do (h=103.97164 v=-2662.5002)" 578 957
+Verbose "2015-07-07 01:38:11.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=57.939674 v=-2662.5002)" 578 958
+Verbose "2015-07-07 01:38:11.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=57.939674 v=-2662.5002)" 578 959
+    "07-06 21:38:11.622   158   158 I dpstmrg:: waiting for message from kernel."  960
+    "07-06 21:38:11.622   158   158 I dpstmrg:: message from kernel received."  961
+    "07-06 21:38:11.622   158   158 E dpstmrg:: executing DPST command"  962
+    "07-06 21:38:11.622   158   158 E dpstmrg:: sent command: cmd = 5"  963
+    "07-06 21:38:11.622   158   158 E dpstmrg:: sent command: cmd = 6"  964
+    "07-06 21:38:11.622   158   158 E dpstmrg:: sent command: cmd = 3"  965
+Verbose "2015-07-07 01:38:11.928641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 966
+Verbose "2015-07-07 01:38:11.928641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 967
+Verbose "2015-07-07 01:38:11.928641" 578 PanelView "animationTick called with dtms=-4; nothing to do (h=39.171707 v=-2662.5002)" 578 968
+Verbose "2015-07-07 01:38:11.948641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 969
+Verbose "2015-07-07 01:38:11.948641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 970
+Verbose "2015-07-07 01:38:11.948641" 578 PanelView "animationTick called with dtms=-4; nothing to do (h=39.171707 v=-2662.5002)" 578 971
+Verbose "2015-07-07 01:38:11.958641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 972
+Verbose "2015-07-07 01:38:11.958641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 973
+Verbose "2015-07-07 01:38:11.958641" 578 PanelView "animationTick called with dtms=-3; nothing to do (h=39.171707 v=-2662.5002)" 578 974
+    "07-06 21:38:11.692   158   158 I dpstmrg:: waiting for message from kernel."  975
+    "07-06 21:38:11.692   158   158 I dpstmrg:: message from kernel received."  976
+    "07-06 21:38:11.692   158   158 E dpstmrg:: executing DPST command"  977
+    "07-06 21:38:11.692   158   158 E dpstmrg:: sent command: cmd = 5"  978
+    "07-06 21:38:11.692   158   158 E dpstmrg:: sent command: cmd = 6"  979
+    "07-06 21:38:11.692   158   158 E dpstmrg:: sent command: cmd = 3"  980
+Verbose "2015-07-07 01:38:11.978641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 981
+Verbose "2015-07-07 01:38:11.978641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 982
+Verbose "2015-07-07 01:38:11.978641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 983
+Verbose "2015-07-07 01:38:11.988641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 984
+Verbose "2015-07-07 01:38:11.988641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=39.171707 v=-2662.5002)" 578 985
+Debug "2015-07-07 01:38:11.998641" 497 AccelerometerSimpleCalibration "data z positive" 509 986
+Debug "2015-07-07 01:38:11.998641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 987
+    "07-06 21:38:11.762   158   158 I dpstmrg:: waiting for message from kernel."  988
+    "07-06 21:38:11.762   158   158 I dpstmrg:: message from kernel received."  989
+    "07-06 21:38:11.762   158   158 E dpstmrg:: executing DPST command"  990
+    "07-06 21:38:11.762   158   158 E dpstmrg:: sent command: cmd = 5"  991
+    "07-06 21:38:11.762   158   158 E dpstmrg:: sent command: cmd = 6"  992
+    "07-06 21:38:11.762   158   158 E dpstmrg:: sent command: cmd = 3"  993
+Debug "2015-07-07 01:38:12.068641" 497 Vibrator "switchOff : Turn OFF vibrator request" 3823 994
+Debug "2015-07-07 01:38:12.068641" 497 EVENT_THREAD "void CEventThread::cancelAlarm()" 543 995
+Debug "2015-07-07 01:38:12.068641" 497 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 543 996
+    "07-06 21:38:11.842   158   158 I dpstmrg:: waiting for message from kernel."  997
+    "07-06 21:38:11.842   158   158 I dpstmrg:: message from kernel received."  998
+    "07-06 21:38:11.842   158   158 E dpstmrg:: executing DPST command"  999
+    "07-06 21:38:11.852   158   158 E dpstmrg:: sent command: cmd = 5"  1000
+    "07-06 21:38:11.852   158   158 E dpstmrg:: sent command: cmd = 3"  1001
+Warning "2015-07-07 01:38:12.128641" 153 SurfaceFlinger "couldn't log to binary event log: overflow." 153 1002
+Error "2015-07-07 01:38:12.138641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 39" 520 1003
+Debug "2015-07-07 01:38:12.158641" 153 hwcomposer "int IntelDisplayPlaneManager::setZOrderConfig(int, int): set zorder: 3" 153 1004
+Error "2015-07-07 01:38:12.158641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 48" 153 1005
+Error "2015-07-07 01:38:12.168641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 57" 299 1006
+Error "2015-07-07 01:38:12.178641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 38" 153 1007
+Error "2015-07-07 01:38:12.178641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 59" 2469 1008
+Info "2015-07-07 01:38:12.198641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1009
+Info "2015-07-07 01:38:12.198641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1010
+Info "2015-07-07 01:38:12.198641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1011
+Warning "2015-07-07 01:38:12.198641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 569 1012
+Debug "2015-07-07 01:38:12.208641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 18" 449 1013
+Debug "2015-07-07 01:38:12.208641" 161 AudioHardwareALSA "setStreamParameters: key value pair routing=2;stream_flags=2" 427 1014
+Debug "2015-07-07 01:38:12.208641" 161 RouteManager "setOutputFlags: output flags = 0x2 (Prev Flags=0x2)" 427 1015
+Debug "2015-07-07 01:38:12.208641" 161 RouteManager "setDevices: 0x2" 427 1016
+Debug "2015-07-07 01:38:12.208641" 161 RouteManager "setDevices: 0x2" 427 1017
+Debug "2015-07-07 01:38:12.208641" 161 RouteManager "setDevices: set device = IHF to output stream" 427 1018
+Debug "2015-07-07 01:38:12.208641" 161 RouteManager "setStreamParameters: identical Platform State, do not reconsider routing" 427 1019
+Debug "2015-07-07 01:38:12.218641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1020
+Debug "2015-07-07 01:38:12.218641" 161 PROPERTY "get media.dump_output.befconv: 0" 427 1021
+Debug "2015-07-07 01:38:12.218641" 161 PROPERTY "get media.dump_output.aftconv: 0" 427 1022
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "startStream: {+++ RECONSIDER ROUTING +++} due to output stream start event" 427 1023
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager reconsiderRouting 427 1024
+Debug "2015-07-07 01:38:12.218641" 161 EVENT_THREAD "void CEventThread::trig(uint16_t): in" 427 1025
+Debug "2015-07-07 01:38:12.218641" 161 EVENT_THREAD "void CEventThread::trig(uint16_t): out" 427 1026
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:       Platform State:" 396 1027
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Modem Alive = 0" 396 1028
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Modem Call Active = 0" 396 1029
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Is Shared I2S glitch free=1" 396 1030
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Android Telephony Mode = Normal" 396 1031
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -RTE MGR HW Mode = Normal" 396 1032
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -BT Enabled = 1" 396 1033
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -BT NREC = 0" 396 1034
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -BT Band = NB" 396 1035
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform output device = IHF" 396 1036
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform input device = <none>" 396 1037
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform input source = None" 396 1038
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Band type = NB" 396 1039
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Has Direct Stream = no" 396 1040
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform TTY direction = <none>" 396 1041
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform HAC Mode = Off" 396 1042
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Screen State = On" 396 1043
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Context Awareness = false" 396 1044
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Always Listening = false" 396 1045
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform FM State = Off" 396 1046
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Bypass Non Linear PP State = Off" 396 1047
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform Bypass Linear PP State = Off" 396 1048
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Platform MicMute = Off" 396 1049
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:      Route state:" 396 1050
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Previously Enabled Route in Input = <none>" 396 1051
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Previously Enabled Route in Output = VirtualASP" 396 1052
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Selected Route in Input = <none>" 396 1053
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Selected Route in Output = Media|HwCodecMedia|VirtualASP" 396 1054
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Route that need reconfiguration in Input = <none>" 396 1055
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "doReconsiderRouting:          -Route that need reconfiguration in Output = <none>" 396 1056
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "executeMuteStage: --------------- Routing Stage = Mute ---------------" 396 1057
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Flow" 396 1058
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1059
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1060
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1061
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1062
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "executeDisableStage: --------------- Routing Stage = Disable ---------------" 396 1063
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Path" 396 1064
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1065
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1066
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1067
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1068
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "executeConfigureStage: --------------- Routing Stage = Configure ---------------" 396 1069
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Configure" 396 1070
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: OpenedPlaybackRoutes, current state: Media|HwCodecMedia|VirtualASP" 396 1071
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1072
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1073
+Debug "2015-07-07 01:38:12.218641" 161 RouteManager "parameter-framework:         Applying configuration ""Activated"" from domain ""Routing.Configure.LPE_Mixer.IHF""" 396 1074
+Debug "2015-07-07 01:38:12.238641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1075
+Debug "2015-07-07 01:38:12.238641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1076
+Debug "2015-07-07 01:38:12.238641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1077
+Info "2015-07-07 01:38:12.238641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1078
+Debug "2015-07-07 01:38:12.238641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1079
+Debug "2015-07-07 01:38:12.238641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1080
+Info "2015-07-07 01:38:12.238641" 20576 dalvikvm "Could not compile trace for Ljava/util/Arrays;fill, offset 7" 20583 1081
+Info "2015-07-07 01:38:12.238641" 20576 dalvikvm ++++++++++++++++++++++++++++++++++++++++++++ 20583 1082
+Info "2015-07-07 01:38:12.238641" 20576 dalvikvm "JIT_INFO: ME Issues while compiling trace  Ljava/util/Arrays;fill, offset 7" 20583 1083
+Info "2015-07-07 01:38:12.238641" 20576 dalvikvm "	The trace provoked a spill." 20583 1084
+Info "2015-07-07 01:38:12.238641" 20576 dalvikvm "Trying less registerization from 1 to 0" 20583 1085
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1086
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1087
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "executeEnableStage: --------------- Routing Stage = Enable ---------------" 396 1088
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Path|Configure" 396 1089
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "doEnableRoutes: Routes to be enabled(routed) in Output = Media|HwCodecMedia" 396 1090
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1091
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1092
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1093
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1094
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "doEnableRoutes: Routes to be enabled(routed) in Output = Media|HwCodecMedia" 396 1095
+    "07-06 21:38:11.972   161   396 D RouteManager/StreamRoute: openPcmDevice called for card (cloverviewaudio,0)"  1096
+    "07-06 21:38:11.972   161   396 D RouteManager/StreamRoute: openPcmDevice		 config=rate(48000), format(0), channels(2))"  1097
+    "07-06 21:38:11.972   161   396 D RouteManager/StreamRoute: openPcmDevice		 period_size=1152, period_count=4"  1098
+    "07-06 21:38:11.972   161   396 D RouteManager/StreamRoute: openPcmDevice		 startTh=4607, stop Th=4608 silence Th=0"  1099
+Debug "2015-07-07 01:38:12.248641" 161 ALSAStreamOps "attachRouteL output stream" 396 1100
+Debug "2015-07-07 01:38:12.248641" 161 AudioConversion "configure: no convertion required" 396 1101
+Info "2015-07-07 01:38:12.248641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1102
+Info "2015-07-07 01:38:12.248641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1103
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "executeUnmuteStage: --------------- Routing Stage = Unmute ---------------" 396 1104
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Flow|Path|Configure" 396 1105
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1106
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1107
+Info "2015-07-07 01:38:12.248641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1108
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1109
+Debug "2015-07-07 01:38:12.248641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1110
+Debug "2015-07-07 01:38:12.248641" 161 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 396 1111
+Warning "2015-07-07 01:38:12.248641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 569 1112
+Debug "2015-07-07 01:38:12.258641" 161 RouteManager "reconsiderRouting: DONE" 427 1113
+Debug "2015-07-07 01:38:12.258641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 19" 449 1114
+Debug "2015-07-07 01:38:12.258641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1115
+Info "2015-07-07 01:38:12.258641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1116
+Info "2015-07-07 01:38:12.258641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1117
+Info "2015-07-07 01:38:12.258641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1118
+Info "2015-07-07 01:38:12.258641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1119
+Debug "2015-07-07 01:38:12.258641" 497 WifiStateMachine "handleMessage: X" 562 1120
+Info "2015-07-07 01:38:12.258641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1121
+Info "2015-07-07 01:38:12.258641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1122
+Info "2015-07-07 01:38:12.258641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1123
+Warning "2015-07-07 01:38:12.258641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 569 1124
+Info "2015-07-07 01:38:12.258641" 20576 dalvikvm "Could not compile trace for Landroid/util/SparseArray;clear, offset 8" 20583 1125
+Info "2015-07-07 01:38:12.258641" 20576 dalvikvm ++++++++++++++++++++++++++++++++++++++++++++ 20583 1126
+Debug "2015-07-07 01:38:12.258641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 20" 448 1127
+Info "2015-07-07 01:38:12.258641" 20576 dalvikvm "JIT_INFO: ME Issues while compiling trace  Landroid/util/SparseArray;clear, offset 8" 20583 1128
+Info "2015-07-07 01:38:12.258641" 20576 dalvikvm "	The trace provoked a spill." 20583 1129
+Info "2015-07-07 01:38:12.258641" 20576 dalvikvm "Trying less registerization from 1 to 0" 20583 1130
+Debug "2015-07-07 01:38:12.268641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1131
+Debug "2015-07-07 01:38:12.268641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1132
+Info "2015-07-07 01:38:12.268641" 20576 dalvikvm "Could not compile trace for Landroid/util/SparseArray;clear, offset 6" 20583 1133
+Info "2015-07-07 01:38:12.268641" 20576 dalvikvm ++++++++++++++++++++++++++++++++++++++++++++ 20583 1134
+Info "2015-07-07 01:38:12.268641" 20576 dalvikvm "JIT_INFO: ME Issues while compiling trace  Landroid/util/SparseArray;clear, offset 6" 20583 1135
+Info "2015-07-07 01:38:12.268641" 20576 dalvikvm "	The trace provoked a spill." 20583 1136
+Info "2015-07-07 01:38:12.268641" 20576 dalvikvm "Trying less registerization from 1 to 0" 20583 1137
+Verbose "2015-07-07 01:38:12.288641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=0.0)" 578 1138
+    "07-06 21:38:12.052   158   158 I dpstmrg:: waiting for message from kernel."  1139
+    "07-06 21:38:12.052   158   158 I dpstmrg:: message from kernel received."  1140
+    "07-06 21:38:12.052   158   158 E dpstmrg:: executing DPST command"  1141
+    "07-06 21:38:12.052   158   158 E dpstmrg:: sent command: cmd = 5"  1142
+    "07-06 21:38:12.052   158   158 E dpstmrg:: sent command: cmd = 6"  1143
+    "07-06 21:38:12.052   158   158 E dpstmrg:: sent command: cmd = 3"  1144
+Info "2015-07-07 01:38:12.368641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1145
+Info "2015-07-07 01:38:12.368641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1146
+Info "2015-07-07 01:38:12.368641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1147
+Warning "2015-07-07 01:38:12.368641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 569 1148
+Debug "2015-07-07 01:38:12.378641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 21" 6703 1149
+Debug "2015-07-07 01:38:12.388641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1150
+    "07-06 21:38:12.122   158   158 I dpstmrg:: waiting for message from kernel."  1151
+    "07-06 21:38:12.122   158   158 I dpstmrg:: message from kernel received."  1152
+    "07-06 21:38:12.122   158   158 E dpstmrg:: executing DPST command"  1153
+    "07-06 21:38:12.122   158   158 E dpstmrg:: sent command: cmd = 5"  1154
+    "07-06 21:38:12.122   158   158 E dpstmrg:: sent command: cmd = 6"  1155
+    "07-06 21:38:12.122   158   158 E dpstmrg:: sent command: cmd = 3"  1156
+Info "2015-07-07 01:38:12.408641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1157
+Info "2015-07-07 01:38:12.408641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1158
+Info "2015-07-07 01:38:12.408641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1159
+Warning "2015-07-07 01:38:12.408641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1160
+Debug "2015-07-07 01:38:12.418641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 22" 449 1161
+Debug "2015-07-07 01:38:12.418641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1162
+Info "2015-07-07 01:38:12.418641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1163
+Info "2015-07-07 01:38:12.418641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1164
+Info "2015-07-07 01:38:12.418641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1165
+Warning "2015-07-07 01:38:12.418641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1166
+Debug "2015-07-07 01:38:12.418641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 23" 6703 1167
+Debug "2015-07-07 01:38:12.438641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1168
+    "07-06 21:38:12.222   158   163 E dpstmrg:: sent command: cmd = 5"  1169
+    "07-06 21:38:12.222   158   163 E dpstmrg:: sent command: cmd = 6"  1170
+Info "2015-07-07 01:38:12.528641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1171
+Info "2015-07-07 01:38:12.528641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1172
+Info "2015-07-07 01:38:12.528641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1173
+Warning "2015-07-07 01:38:12.528641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1174
+Debug "2015-07-07 01:38:12.528641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 24" 449 1175
+Debug "2015-07-07 01:38:12.538641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1176
+Info "2015-07-07 01:38:12.578641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1177
+Info "2015-07-07 01:38:12.578641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1178
+Info "2015-07-07 01:38:12.578641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1179
+Warning "2015-07-07 01:38:12.578641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1180
+Debug "2015-07-07 01:38:12.578641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 25" 6703 1181
+Debug "2015-07-07 01:38:12.578641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1182
+    "07-06 21:38:12.322   158   163 E dpstmrg:: sent command: cmd = 5"  1183
+    "07-06 21:38:12.342   158   158 I dpstmrg:: waiting for message from kernel."  1184
+    "07-06 21:38:12.342   158   158 I dpstmrg:: message from kernel received."  1185
+    "07-06 21:38:12.342   158   158 E dpstmrg:: executing DPST command"  1186
+    "07-06 21:38:12.342   158   158 E dpstmrg:: sent command: cmd = 5"  1187
+    "07-06 21:38:12.342   158   158 E dpstmrg:: sent command: cmd = 6"  1188
+    "07-06 21:38:12.342   158   158 E dpstmrg:: sent command: cmd = 3"  1189
+Info "2015-07-07 01:38:12.618641" 20576 dalvikvm "Could not compile trace for Landroid/util/ArrayMap;freeArrays, offset 29" 20583 1190
+Info "2015-07-07 01:38:12.618641" 20576 dalvikvm ++++++++++++++++++++++++++++++++++++++++++++ 20583 1191
+Info "2015-07-07 01:38:12.618641" 20576 dalvikvm "JIT_INFO: ME Issues while compiling trace  Landroid/util/ArrayMap;freeArrays, offset 29" 20583 1192
+Info "2015-07-07 01:38:12.618641" 20576 dalvikvm "	The trace provoked a spill." 20583 1193
+Info "2015-07-07 01:38:12.618641" 20576 dalvikvm "Trying less registerization from 1 to 0" 20583 1194
+Info "2015-07-07 01:38:12.668641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1195
+Info "2015-07-07 01:38:12.668641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1196
+Info "2015-07-07 01:38:12.668641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1197
+Warning "2015-07-07 01:38:12.668641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1198
+Debug "2015-07-07 01:38:12.668641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 26" 449 1199
+Debug "2015-07-07 01:38:12.678641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1200
+    "07-06 21:38:12.402   158   158 I dpstmrg:: waiting for message from kernel."  1201
+    "07-06 21:38:12.402   158   158 I dpstmrg:: message from kernel received."  1202
+    "07-06 21:38:12.402   158   158 E dpstmrg:: executing DPST command"  1203
+    "07-06 21:38:12.402   158   158 E dpstmrg:: sent command: cmd = 5"  1204
+    "07-06 21:38:12.402   158   158 E dpstmrg:: sent command: cmd = 3"  1205
+Info "2015-07-07 01:38:12.698641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1206
+Info "2015-07-07 01:38:12.698641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1207
+Info "2015-07-07 01:38:12.698641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1208
+Warning "2015-07-07 01:38:12.698641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1209
+Debug "2015-07-07 01:38:12.698641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 27" 161 1210
+Debug "2015-07-07 01:38:12.698641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1211
+Info "2015-07-07 01:38:12.708641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1212
+Info "2015-07-07 01:38:12.708641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1213
+Info "2015-07-07 01:38:12.708641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1214
+Warning "2015-07-07 01:38:12.708641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1215
+Debug "2015-07-07 01:38:12.708641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 28" 161 1216
+Debug "2015-07-07 01:38:12.728641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1217
+Info "2015-07-07 01:38:12.748641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1218
+Info "2015-07-07 01:38:12.748641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1219
+Info "2015-07-07 01:38:12.748641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1220
+Warning "2015-07-07 01:38:12.748641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1221
+Debug "2015-07-07 01:38:12.748641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 29" 448 1222
+Debug "2015-07-07 01:38:12.748641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1223
+Verbose "2015-07-07 01:38:12.798641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=3736.4028)" 578 1224
+Verbose "2015-07-07 01:38:12.798641" 578 PanelView "animationTick called with dtms=-5; nothing to do (h=0.0 v=3736.4028)" 578 1225
+Info "2015-07-07 01:38:12.798641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1226
+Info "2015-07-07 01:38:12.798641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1227
+Info "2015-07-07 01:38:12.798641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1228
+Warning "2015-07-07 01:38:12.798641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1229
+Debug "2015-07-07 01:38:12.798641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 30" 6703 1230
+Debug "2015-07-07 01:38:12.808641" 497 Vibrator "switchOff : Turn OFF vibrator request" 508 1231
+Debug "2015-07-07 01:38:12.808641" 497 EVENT_THREAD "void CEventThread::cancelAlarm()" 543 1232
+Debug "2015-07-07 01:38:12.808641" 497 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 543 1233
+Debug "2015-07-07 01:38:12.828641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1234
+Error "2015-07-07 01:38:12.858641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 39" 2469 1235
+Verbose "2015-07-07 01:38:12.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1236
+Verbose "2015-07-07 01:38:12.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1237
+Verbose "2015-07-07 01:38:12.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1238
+Verbose "2015-07-07 01:38:12.898641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1239
+Verbose "2015-07-07 01:38:12.908641" 578 PanelView "animationTick called with dtms=-13; nothing to do (h=64.288315 v=-2662.5002)" 578 1240
+Debug "2015-07-07 01:38:12.908641" 153 hwcomposer "int IntelDisplayPlaneManager::setZOrderConfig(int, int): set zorder: 0" 153 1241
+Debug "2015-07-07 01:38:12.918641" 497 InputMethodManagerService "--- calledFromForegroundUserOrSystemProcess ? calling uid = 10101 system uid = 1000 calling userId = 0, foreground user id = 0, calling pid = 20576com.android.server.InputMethodManagerService.windowGainedFocus(InputMethodManagerService.java:1882)" 687 1242
+Verbose "2015-07-07 01:38:12.918641" 497 InputMethodManagerService "windowGainedFocus: android.os.BinderProxy@21affb20 controlFlags=#0 softInputMode=#20 windowFlags=#1810100" 687 1243
+Warning "2015-07-07 01:38:12.918641" 497 InputMethodManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@21fc1e78 attribute=null, token = android.os.BinderProxy@21e12948" 687 1244
+Error "2015-07-07 01:38:12.928641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 51" 806 1245
+Verbose "2015-07-07 01:38:12.938641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1246
+Verbose "2015-07-07 01:38:12.938641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1247
+Debug "2015-07-07 01:38:12.938641" 153 hwcomposer "bool IntelOverlayContext::disable(uint32_t): disable overlay..." 153 1248
+Verbose "2015-07-07 01:38:12.938641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1249
+Verbose "2015-07-07 01:38:12.938641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1250
+Verbose "2015-07-07 01:38:12.948641" 578 PanelView "animationTick called with dtms=-2; nothing to do (h=64.288315 v=-2662.5002)" 578 1251
+Error "2015-07-07 01:38:12.958641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 35" 300 1252
+Verbose "2015-07-07 01:38:12.968641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1253
+Verbose "2015-07-07 01:38:12.968641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1254
+Debug "2015-07-07 01:38:12.978641" 578 PhoneStatusBar "disable: < expand icons alerts ticker system_info back home recent clock search >" 578 1255
+Verbose "2015-07-07 01:38:12.978641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1256
+Verbose "2015-07-07 01:38:12.978641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=64.288315 v=-2662.5002)" 578 1257
+Verbose "2015-07-07 01:38:12.988641" 578 PanelView "animationTick called with dtms=-7; nothing to do (h=64.288315 v=-2662.5002)" 578 1258
+    "07-06 21:38:12.712   158   158 I dpstmrg:: waiting for message from kernel."  1259
+    "07-06 21:38:12.712   158   158 I dpstmrg:: message from kernel received."  1260
+    "07-06 21:38:12.712   158   158 E dpstmrg:: executing DPST command"  1261
+    "07-06 21:38:12.712   158   158 E dpstmrg:: sent command: cmd = 3"  1262
+Verbose "2015-07-07 01:38:12.998641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=18.256348 v=-2662.5002)" 578 1263
+Verbose "2015-07-07 01:38:13.008641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=18.256348 v=-2662.5002)" 578 1264
+Verbose "2015-07-07 01:38:13.018641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=2.1854954 v=-2662.5002)" 578 1265
+Verbose "2015-07-07 01:38:13.028641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=2.1854954 v=-2662.5002)" 578 1266
+Debug "2015-07-07 01:38:13.088641" 497 Vibrator "switchOff : Turn OFF vibrator request" 725 1267
+Debug "2015-07-07 01:38:13.088641" 497 EVENT_THREAD "void CEventThread::cancelAlarm()" 543 1268
+Debug "2015-07-07 01:38:13.088641" 497 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 543 1269
+    "07-06 21:38:12.812   158   158 I dpstmrg:: waiting for message from kernel."  1270
+    "07-06 21:38:12.812   158   158 I dpstmrg:: message from kernel received."  1271
+    "07-06 21:38:12.812   158   158 E dpstmrg:: executing DPST command"  1272
+    "07-06 21:38:12.812   158   158 E dpstmrg:: sent command: cmd = 3"  1273
+Error "2015-07-07 01:38:13.128641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 39" 300 1274
+Debug "2015-07-07 01:38:13.148641" 153 hwcomposer "int IntelDisplayPlaneManager::setZOrderConfig(int, int): set zorder: 3" 153 1275
+Error "2015-07-07 01:38:13.148641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 51" 153 1276
+Error "2015-07-07 01:38:13.148641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 61" 299 1277
+Error "2015-07-07 01:38:13.158641" 153 "IMGSRV  " ":0: PVRDRMOpen: TP3, ret = 48" 153 1278
+Info "2015-07-07 01:38:13.168641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1279
+Info "2015-07-07 01:38:13.168641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1280
+Info "2015-07-07 01:38:13.168641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1281
+Warning "2015-07-07 01:38:13.168641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1282
+Debug "2015-07-07 01:38:13.178641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 31" 448 1283
+Debug "2015-07-07 01:38:13.178641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1284
+Info "2015-07-07 01:38:13.268641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1285
+Info "2015-07-07 01:38:13.268641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1286
+Info "2015-07-07 01:38:13.268641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1287
+Warning "2015-07-07 01:38:13.268641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1288
+Debug "2015-07-07 01:38:13.278641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 32" 6703 1289
+Debug "2015-07-07 01:38:13.278641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1290
+Info "2015-07-07 01:38:13.368641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1291
+Info "2015-07-07 01:38:13.368641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1292
+Info "2015-07-07 01:38:13.368641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1293
+Warning "2015-07-07 01:38:13.368641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1294
+Debug "2015-07-07 01:38:13.368641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 33" 449 1295
+Debug "2015-07-07 01:38:13.378641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1296
+Verbose "2015-07-07 01:38:13.468641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=-0.0)" 578 1297
+Debug "2015-07-07 01:38:13.498641" 578 dalvikvm "GC_CONCURRENT freed 6561K, 42% free 16044K/27440K, paused 1ms+3ms, total 37ms" 582 1298
+Verbose "2015-07-07 01:38:13.508641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=-0.0)" 578 1299
+Info "2015-07-07 01:38:13.678641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1300
+Info "2015-07-07 01:38:13.678641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1301
+Info "2015-07-07 01:38:13.678641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1302
+Warning "2015-07-07 01:38:13.678641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1303
+Debug "2015-07-07 01:38:13.678641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 34" 448 1304
+Debug "2015-07-07 01:38:13.688641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1305
+Info "2015-07-07 01:38:13.738641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1306
+Info "2015-07-07 01:38:13.738641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1307
+Info "2015-07-07 01:38:13.738641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1308
+Warning "2015-07-07 01:38:13.738641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1309
+Debug "2015-07-07 01:38:13.738641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 35" 449 1310
+Debug "2015-07-07 01:38:13.758641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1311
+Info "2015-07-07 01:38:13.968641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1312
+Info "2015-07-07 01:38:13.968641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1313
+Info "2015-07-07 01:38:13.968641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1314
+Warning "2015-07-07 01:38:13.968641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1315
+Debug "2015-07-07 01:38:13.978641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 36" 449 1316
+Debug "2015-07-07 01:38:13.978641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1317
+    "07-06 21:38:13.782   158   158 I dpstmrg:: waiting for message from kernel."  1318
+    "07-06 21:38:13.782   158   158 I dpstmrg:: message from kernel received."  1319
+    "07-06 21:38:13.782   158   158 E dpstmrg:: executing DPST command"  1320
+    "07-06 21:38:13.782   158   158 E dpstmrg:: sent command: cmd = 5"  1321
+    "07-06 21:38:13.782   158   158 E dpstmrg:: sent command: cmd = 6"  1322
+    "07-06 21:38:13.782   158   158 E dpstmrg:: sent command: cmd = 3"  1323
+    "07-06 21:38:13.842   158   158 I dpstmrg:: waiting for message from kernel."  1324
+    "07-06 21:38:13.842   158   158 I dpstmrg:: message from kernel received."  1325
+    "07-06 21:38:13.842   158   158 E dpstmrg:: executing DPST command"  1326
+    "07-06 21:38:13.842   158   158 E dpstmrg:: sent command: cmd = 5"  1327
+    "07-06 21:38:13.842   158   158 E dpstmrg:: sent command: cmd = 3"  1328
+Info "2015-07-07 01:38:14.208641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1329
+Info "2015-07-07 01:38:14.208641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1330
+Info "2015-07-07 01:38:14.218641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1331
+Warning "2015-07-07 01:38:14.218641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1332
+Debug "2015-07-07 01:38:14.218641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 37" 161 1333
+Debug "2015-07-07 01:38:14.238641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1334
+Info "2015-07-07 01:38:14.288641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1335
+Info "2015-07-07 01:38:14.288641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1336
+Info "2015-07-07 01:38:14.288641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1337
+Warning "2015-07-07 01:38:14.288641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1338
+Debug "2015-07-07 01:38:14.288641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 38" 448 1339
+Debug "2015-07-07 01:38:14.308641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1340
+Info "2015-07-07 01:38:14.408641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1341
+Info "2015-07-07 01:38:14.408641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1342
+Info "2015-07-07 01:38:14.408641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1343
+Warning "2015-07-07 01:38:14.408641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1344
+Debug "2015-07-07 01:38:14.408641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 39" 449 1345
+Debug "2015-07-07 01:38:14.428641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1346
+Info "2015-07-07 01:38:14.498641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1347
+Info "2015-07-07 01:38:14.498641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1348
+Info "2015-07-07 01:38:14.498641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1349
+Warning "2015-07-07 01:38:14.498641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1350
+Debug "2015-07-07 01:38:14.498641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 40" 449 1351
+Debug "2015-07-07 01:38:14.508641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1352
+Info "2015-07-07 01:38:14.518641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1353
+Info "2015-07-07 01:38:14.518641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1354
+Info "2015-07-07 01:38:14.518641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1355
+Warning "2015-07-07 01:38:14.518641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1356
+Debug "2015-07-07 01:38:14.528641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 41" 449 1357
+Debug "2015-07-07 01:38:14.528641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1358
+Debug "2015-07-07 01:38:14.608641" 497 AccelerometerSimpleCalibration "data z positive" 509 1359
+Debug "2015-07-07 01:38:14.608641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1360
+Info "2015-07-07 01:38:14.608641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1361
+Info "2015-07-07 01:38:14.608641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1362
+Info "2015-07-07 01:38:14.608641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1363
+Warning "2015-07-07 01:38:14.608641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1364
+Debug "2015-07-07 01:38:14.618641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 42" 449 1365
+Debug "2015-07-07 01:38:14.618641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1366
+Info "2015-07-07 01:38:14.698641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1367
+Info "2015-07-07 01:38:14.698641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1368
+Info "2015-07-07 01:38:14.698641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1369
+Warning "2015-07-07 01:38:14.698641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1370
+Debug "2015-07-07 01:38:14.698641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 43" 448 1371
+Info "2015-07-07 01:38:14.708641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1372
+Info "2015-07-07 01:38:14.708641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1373
+Info "2015-07-07 01:38:14.708641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1374
+Warning "2015-07-07 01:38:14.708641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1375
+Debug "2015-07-07 01:38:14.718641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 44" 448 1376
+Debug "2015-07-07 01:38:14.718641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1377
+Debug "2015-07-07 01:38:14.718641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1378
+Info "2015-07-07 01:38:14.808641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1379
+Info "2015-07-07 01:38:14.808641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1380
+Info "2015-07-07 01:38:14.808641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1381
+Warning "2015-07-07 01:38:14.808641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1382
+Debug "2015-07-07 01:38:14.818641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 45" 161 1383
+Debug "2015-07-07 01:38:14.838641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1384
+Info "2015-07-07 01:38:14.868641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1385
+Info "2015-07-07 01:38:14.868641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1386
+Info "2015-07-07 01:38:14.868641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1387
+Warning "2015-07-07 01:38:14.868641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1388
+Debug "2015-07-07 01:38:14.878641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 46" 448 1389
+Debug "2015-07-07 01:38:14.888641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1390
+Info "2015-07-07 01:38:14.928641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1391
+Info "2015-07-07 01:38:14.928641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1392
+Info "2015-07-07 01:38:14.928641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1393
+Warning "2015-07-07 01:38:14.928641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1394
+Debug "2015-07-07 01:38:14.938641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 47" 448 1395
+Debug "2015-07-07 01:38:14.958641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1396
+Info "2015-07-07 01:38:15.048641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1397
+Info "2015-07-07 01:38:15.048641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1398
+Info "2015-07-07 01:38:15.048641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1399
+Warning "2015-07-07 01:38:15.048641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1400
+Debug "2015-07-07 01:38:15.048641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 48" 6703 1401
+Debug "2015-07-07 01:38:15.058641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1402
+Info "2015-07-07 01:38:15.158641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1403
+Info "2015-07-07 01:38:15.158641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1404
+Info "2015-07-07 01:38:15.158641" 161 AudioPolicyManagerBase "APM: getOutput" 161 1405
+Warning "2015-07-07 01:38:15.158641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1406
+Debug "2015-07-07 01:38:15.158641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 49" 448 1407
+Debug "2015-07-07 01:38:15.178641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1408
+Info "2015-07-07 01:38:15.198641" 161 AudioPolicyManagerBase "APM: getOutput" 449 1409
+Info "2015-07-07 01:38:15.198641" 161 AudioPolicyManagerBase "APM: getOutput" 6703 1410
+Info "2015-07-07 01:38:15.198641" 161 AudioPolicyManagerBase "APM: getOutput" 448 1411
+Warning "2015-07-07 01:38:15.198641" 497 AudioTrack "AUDIO_OUTPUT_FLAG_FAST denied by client" 1064 1412
+Debug "2015-07-07 01:38:15.198641" 161 AudioPolicyManagerALSA "startOutput() output 2, stream type 1, session 50" 449 1413
+Debug "2015-07-07 01:38:15.218641" 161 AudioResamplerIA "Create AudioResamplerIA Resampler: Input rate 44100, output rate 48000" 427 1414
+Debug "2015-07-07 01:38:15.258641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1415
+Debug "2015-07-07 01:38:15.258641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1416
+Debug "2015-07-07 01:38:15.258641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1417
+Info "2015-07-07 01:38:15.258641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1418
+Debug "2015-07-07 01:38:15.258641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1419
+Debug "2015-07-07 01:38:15.258641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1420
+Debug "2015-07-07 01:38:15.268641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1421
+Info "2015-07-07 01:38:15.268641" 497 "WifiHW  " "REPLY: RSSI=-46" 562 1422
+Info "2015-07-07 01:38:15.268641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1423
+Info "2015-07-07 01:38:15.268641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1424
+Info "2015-07-07 01:38:15.268641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1425
+Debug "2015-07-07 01:38:15.268641" 497 WifiStateMachine "handleMessage: X" 562 1426
+Verbose "2015-07-07 01:38:15.398641" 578 PanelView "animationTick called with dtms=0; nothing to do (h=0.0 v=0.0)" 578 1427
+Info "2015-07-07 01:38:15.528641" 497 "Sensors " "Sensor HAL: Open file /sys/bus/i2c/devices/i2c-5/5-0018/enable_device" 516 1428
+Info "2015-07-07 01:38:15.558641" 497 "Sensors " "Sensor HAL: Open file /sys/bus/i2c/devices/i2c-5/5-0018/enable_device" 516 1429
+Info "2015-07-07 01:38:15.558641" 497 "Sensors " "Sensor HAL: Open file /sys/bus/i2c/devices/i2c-5/5-0018/pollrate_ms" 516 1430
+Info "2015-07-07 01:38:15.568641" 20600 AndroidRuntime "VM exiting with result code 0." 20600 1431
+Debug "2015-07-07 01:38:17.358641" 497 AccelerometerSimpleCalibration "data z positive" 509 1432
+Debug "2015-07-07 01:38:17.358641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1433
+Debug "2015-07-07 01:38:18.268641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1434
+Debug "2015-07-07 01:38:18.268641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1435
+Debug "2015-07-07 01:38:18.268641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1436
+Info "2015-07-07 01:38:18.268641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1437
+Debug "2015-07-07 01:38:18.268641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1438
+Debug "2015-07-07 01:38:18.268641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1439
+Debug "2015-07-07 01:38:18.288641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1440
+Info "2015-07-07 01:38:18.288641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1441
+Info "2015-07-07 01:38:18.288641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1442
+Info "2015-07-07 01:38:18.288641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1443
+Info "2015-07-07 01:38:18.288641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1444
+Debug "2015-07-07 01:38:18.288641" 497 WifiStateMachine "handleMessage: X" 562 1445
+Verbose "2015-07-07 01:38:18.598641" 782 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1UBSy_y642KXGEx3_L2zMdC88_wmLwSuZupMgNv9s-umFuA42__7v22d4Ekg4NBd9Fjdosw3MqOsylvVYs5-EX5tA7trAWxWXE34_WUg83alCyDxvyTE0HSlyWCa2BRgY2S_USxAlBhjEaxiwyAVGXQBqq3PaWrxTVYOapOujrWoMgiBXvl9Ad0tdnVAM3UoN3cuhXL91wA6JmZ8GON9Ag9-_-0S3kyR08Ih2F_RPJMWxyEuoM" 20548 1446
+Info "2015-07-07 01:38:18.608641" 782 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 20548 1447
+Info "2015-07-07 01:38:18.798641" 782 ConfigFetchService "fetch service done; releasing wakelock" 782 1448
+Info "2015-07-07 01:38:18.798641" 782 ConfigFetchService "stopping self" 782 1449
+Debug "2015-07-07 01:38:19.178641" 161 PROPERTY "get media.dump_output.befconv: 0" 427 1450
+Debug "2015-07-07 01:38:19.178641" 161 PROPERTY "get media.dump_output.aftconv: 0" 427 1451
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "stopStream: {+++ RECONSIDER ROUTING +++} due to output stream stop event" 427 1452
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager reconsiderRouting 427 1453
+Debug "2015-07-07 01:38:19.178641" 161 EVENT_THREAD "void CEventThread::trig(uint16_t): in" 427 1454
+Debug "2015-07-07 01:38:19.178641" 161 EVENT_THREAD "void CEventThread::trig(uint16_t): out" 427 1455
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:       Platform State:" 396 1456
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Modem Alive = 0" 396 1457
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Modem Call Active = 0" 396 1458
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Is Shared I2S glitch free=1" 396 1459
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Android Telephony Mode = Normal" 396 1460
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -RTE MGR HW Mode = Normal" 396 1461
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -BT Enabled = 1" 396 1462
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -BT NREC = 0" 396 1463
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -BT Band = NB" 396 1464
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform output device = IHF" 396 1465
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform input device = <none>" 396 1466
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform input source = None" 396 1467
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Band type = NB" 396 1468
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Has Direct Stream = no" 396 1469
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform TTY direction = <none>" 396 1470
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform HAC Mode = Off" 396 1471
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Screen State = On" 396 1472
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Context Awareness = false" 396 1473
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Always Listening = false" 396 1474
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform FM State = Off" 396 1475
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Bypass Non Linear PP State = Off" 396 1476
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform Bypass Linear PP State = Off" 396 1477
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Platform MicMute = Off" 396 1478
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:      Route state:" 396 1479
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Previously Enabled Route in Input = <none>" 396 1480
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Previously Enabled Route in Output = Media|HwCodecMedia|VirtualASP" 396 1481
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Selected Route in Input = <none>" 396 1482
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Selected Route in Output = VirtualASP" 396 1483
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Route that need reconfiguration in Input = <none>" 396 1484
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "doReconsiderRouting:          -Route that need reconfiguration in Output = <none>" 396 1485
+Debug "2015-07-07 01:38:19.178641" 161 RouteManager "executeMuteStage: --------------- Routing Stage = Mute ---------------" 396 1486
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Flow" 396 1487
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "muteRoutes: Expected Routes to be muted in Output = Media|HwCodecMedia" 396 1488
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: ClosingPlaybackRoutes, current state: Media|HwCodecMedia" 396 1489
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: OpenedPlaybackRoutes, current state: VirtualASP" 396 1490
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1491
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1492
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1493
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1494
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "executeDisableStage: --------------- Routing Stage = Disable ---------------" 396 1495
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Path" 396 1496
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "prepareDisableRoutes: Routes to be disabled(unrouted) in Output = Media|HwCodecMedia" 396 1497
+Debug "2015-07-07 01:38:19.188641" 161 ALSAStreamOps "detachRouteL output stream" 396 1498
+    "07-06 21:38:18.912   161   396 D RouteManager/StreamRoute: closePcmDevice called for card (cloverviewaudio,0)"  1499
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1500
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1501
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1502
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1503
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "executeConfigureStage: --------------- Routing Stage = Configure ---------------" 396 1504
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Configure" 396 1505
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: ClosingPlaybackRoutes, current state: <none>" 396 1506
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1507
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1508
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:         Applying configuration ""Deactivated"" from domain ""Routing.Configure.LPE_Mixer.IHF""" 396 1509
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1510
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1511
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "executeEnableStage: --------------- Routing Stage = Enable ---------------" 396 1512
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Path|Configure" 396 1513
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1514
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1515
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1516
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1517
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "executeUnmuteStage: --------------- Routing Stage = Unmute ---------------" 396 1518
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Selection criterion changed event: Criterion name: RoutageState, current state: Flow|Path|Configure" 396 1519
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: Configuration application request {" 396 1520
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     Applying configurations {" 396 1521
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework:     } Applying configurations" 396 1522
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "parameter-framework: } Configuration application request" 396 1523
+Debug "2015-07-07 01:38:19.188641" 161 EVENT_THREAD "void CEventThread::run() Do poll with timeout: -1" 396 1524
+Debug "2015-07-07 01:38:19.188641" 161 RouteManager "reconsiderRouting: DONE" 427 1525
+Debug "2015-07-07 01:38:19.958641" 497 AccelerometerSimpleCalibration "data z positive" 509 1526
+Debug "2015-07-07 01:38:19.958641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1527
+Debug "2015-07-07 01:38:21.298641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1528
+Debug "2015-07-07 01:38:21.298641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1529
+Debug "2015-07-07 01:38:21.298641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1530
+Info "2015-07-07 01:38:21.298641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1531
+Debug "2015-07-07 01:38:21.298641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1532
+Debug "2015-07-07 01:38:21.298641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1533
+Debug "2015-07-07 01:38:21.308641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1534
+Info "2015-07-07 01:38:21.308641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 1535
+Info "2015-07-07 01:38:21.308641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1536
+Info "2015-07-07 01:38:21.308641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1537
+Info "2015-07-07 01:38:21.308641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1538
+Debug "2015-07-07 01:38:21.308641" 497 WifiStateMachine "handleMessage: X" 562 1539
+Debug "2015-07-07 01:38:22.568641" 497 AccelerometerSimpleCalibration "data z positive" 509 1540
+Debug "2015-07-07 01:38:22.568641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1541
+Info "2015-07-07 01:38:23.818641" 821 ConfigService onDestroy 821 1542
+Verbose "2015-07-07 01:38:24.138641" 497 AlarmManager "triggered: flg=0x4 cmp=com.android.vending/com.google.android.finsky.services.ContentSyncService" 497 1543
+Verbose "2015-07-07 01:38:24.138641" 497 AlarmManager "Pkg: com.android.vending" 497 1544
+Debug "2015-07-07 01:38:24.268641" 19796 "Finsky  " "[573] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 19827 1545
+Debug "2015-07-07 01:38:24.268641" 19796 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 19796 1546
+Debug "2015-07-07 01:38:24.308641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1547
+Debug "2015-07-07 01:38:24.308641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1548
+Debug "2015-07-07 01:38:24.308641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1549
+Info "2015-07-07 01:38:24.308641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1550
+Debug "2015-07-07 01:38:24.308641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1551
+Debug "2015-07-07 01:38:24.308641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1552
+Debug "2015-07-07 01:38:24.328641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1553
+Info "2015-07-07 01:38:24.328641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1554
+Info "2015-07-07 01:38:24.328641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1555
+Info "2015-07-07 01:38:24.328641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1556
+Info "2015-07-07 01:38:24.328641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1557
+Debug "2015-07-07 01:38:24.328641" 497 WifiStateMachine "handleMessage: X" 562 1558
+Debug "2015-07-07 01:38:25.168641" 497 AccelerometerSimpleCalibration "data z positive" 509 1559
+Debug "2015-07-07 01:38:25.168641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1560
+Debug "2015-07-07 01:38:26.688641" 20576 dalvikvm "GC_CONCURRENT freed 2996K, 29% free 6934K/9764K, paused 2ms+3ms, total 24ms" 20580 1561
+Debug "2015-07-07 01:38:27.328641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1562
+Debug "2015-07-07 01:38:27.328641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1563
+Debug "2015-07-07 01:38:27.328641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1564
+Info "2015-07-07 01:38:27.328641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1565
+Debug "2015-07-07 01:38:27.338641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1566
+Debug "2015-07-07 01:38:27.338641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1567
+Debug "2015-07-07 01:38:27.348641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1568
+Info "2015-07-07 01:38:27.348641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 1569
+Info "2015-07-07 01:38:27.348641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1570
+Info "2015-07-07 01:38:27.348641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1571
+Info "2015-07-07 01:38:27.348641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1572
+Debug "2015-07-07 01:38:27.348641" 497 WifiStateMachine "handleMessage: X" 562 1573
+Debug "2015-07-07 01:38:27.768641" 497 AccelerometerSimpleCalibration "data z positive" 509 1574
+Debug "2015-07-07 01:38:27.768641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1575
+Debug "2015-07-07 01:38:30.358641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1576
+Debug "2015-07-07 01:38:30.358641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1577
+Debug "2015-07-07 01:38:30.358641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1578
+Info "2015-07-07 01:38:30.358641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1579
+Debug "2015-07-07 01:38:30.358641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1580
+Debug "2015-07-07 01:38:30.358641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1581
+Debug "2015-07-07 01:38:30.368641" 497 AccelerometerSimpleCalibration "data z positive" 509 1582
+Debug "2015-07-07 01:38:30.368641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1583
+Debug "2015-07-07 01:38:30.368641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1584
+Info "2015-07-07 01:38:30.368641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1585
+Info "2015-07-07 01:38:30.368641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1586
+Info "2015-07-07 01:38:30.368641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1587
+Info "2015-07-07 01:38:30.368641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1588
+Debug "2015-07-07 01:38:30.368641" 497 WifiStateMachine "handleMessage: X" 562 1589
+Debug "2015-07-07 01:38:32.968641" 497 AccelerometerSimpleCalibration "data z positive" 509 1590
+Debug "2015-07-07 01:38:32.968641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1591
+Debug "2015-07-07 01:38:33.368641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1592
+Debug "2015-07-07 01:38:33.368641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1593
+Debug "2015-07-07 01:38:33.368641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1594
+Info "2015-07-07 01:38:33.368641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1595
+Debug "2015-07-07 01:38:33.368641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1596
+Debug "2015-07-07 01:38:33.368641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1597
+Debug "2015-07-07 01:38:33.388641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1598
+Info "2015-07-07 01:38:33.388641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 1599
+Info "2015-07-07 01:38:33.388641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1600
+Info "2015-07-07 01:38:33.388641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1601
+Info "2015-07-07 01:38:33.388641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1602
+Debug "2015-07-07 01:38:33.388641" 497 WifiStateMachine "handleMessage: X" 562 1603
+Debug "2015-07-07 01:38:35.568641" 497 AccelerometerSimpleCalibration "data z positive" 509 1604
+Debug "2015-07-07 01:38:35.568641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1605
+Debug "2015-07-07 01:38:36.388641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1606
+Debug "2015-07-07 01:38:36.388641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1607
+Debug "2015-07-07 01:38:36.388641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1608
+Info "2015-07-07 01:38:36.388641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1609
+Debug "2015-07-07 01:38:36.388641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1610
+Debug "2015-07-07 01:38:36.388641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1611
+Debug "2015-07-07 01:38:36.408641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1612
+Info "2015-07-07 01:38:36.408641" 497 "WifiHW  " "REPLY: RSSI=-48" 562 1613
+Info "2015-07-07 01:38:36.408641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1614
+Info "2015-07-07 01:38:36.408641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1615
+Info "2015-07-07 01:38:36.408641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1616
+Debug "2015-07-07 01:38:36.408641" 497 WifiStateMachine "handleMessage: X" 562 1617
+Debug "2015-07-07 01:38:38.178641" 497 AccelerometerSimpleCalibration "data z positive" 509 1618
+Debug "2015-07-07 01:38:38.178641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1619
+Debug "2015-07-07 01:38:39.408641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1620
+Debug "2015-07-07 01:38:39.408641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1621
+Debug "2015-07-07 01:38:39.408641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1622
+Info "2015-07-07 01:38:39.408641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1623
+Debug "2015-07-07 01:38:39.418641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1624
+Debug "2015-07-07 01:38:39.418641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1625
+Debug "2015-07-07 01:38:39.428641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1626
+Info "2015-07-07 01:38:39.428641" 497 "WifiHW  " "REPLY: RSSI=-46" 562 1627
+Info "2015-07-07 01:38:39.428641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1628
+Info "2015-07-07 01:38:39.428641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1629
+Info "2015-07-07 01:38:39.428641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1630
+Debug "2015-07-07 01:38:39.428641" 497 WifiStateMachine "handleMessage: X" 562 1631
+Debug "2015-07-07 01:38:40.778641" 497 AccelerometerSimpleCalibration "data z positive" 509 1632
+Debug "2015-07-07 01:38:40.778641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1633
+Debug "2015-07-07 01:38:42.428641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1634
+Debug "2015-07-07 01:38:42.428641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1635
+Debug "2015-07-07 01:38:42.428641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1636
+Info "2015-07-07 01:38:42.428641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1637
+Debug "2015-07-07 01:38:42.428641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1638
+Debug "2015-07-07 01:38:42.428641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1639
+Debug "2015-07-07 01:38:42.448641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1640
+Info "2015-07-07 01:38:42.448641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1641
+Info "2015-07-07 01:38:42.448641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1642
+Info "2015-07-07 01:38:42.448641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1643
+Info "2015-07-07 01:38:42.448641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1644
+Debug "2015-07-07 01:38:42.448641" 497 WifiStateMachine "handleMessage: X" 562 1645
+Debug "2015-07-07 01:38:43.378641" 497 AccelerometerSimpleCalibration "data z positive" 509 1646
+Debug "2015-07-07 01:38:43.378641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1647
+Debug "2015-07-07 01:38:45.448641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1648
+Debug "2015-07-07 01:38:45.448641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1649
+Debug "2015-07-07 01:38:45.448641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1650
+Info "2015-07-07 01:38:45.448641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1651
+Debug "2015-07-07 01:38:45.448641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1652
+Debug "2015-07-07 01:38:45.448641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1653
+Debug "2015-07-07 01:38:45.468641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1654
+Info "2015-07-07 01:38:45.468641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1655
+Info "2015-07-07 01:38:45.468641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1656
+Info "2015-07-07 01:38:45.468641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1657
+Info "2015-07-07 01:38:45.468641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1658
+Debug "2015-07-07 01:38:45.468641" 497 WifiStateMachine "handleMessage: X" 562 1659
+Debug "2015-07-07 01:38:45.978641" 497 AccelerometerSimpleCalibration "data z positive" 509 1660
+Debug "2015-07-07 01:38:45.978641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1661
+Debug "2015-07-07 01:38:48.468641" 497 WifiStateMachine "handleMessage: E msg.what=131155" 562 1662
+Debug "2015-07-07 01:38:48.468641" 497 WifiStateMachine "processMsg: ConnectedState" 562 1663
+Debug "2015-07-07 01:38:48.468641" 497 WifiStateMachine "processMsg: L2ConnectedState" 562 1664
+Info "2015-07-07 01:38:48.468641" 497 "WifiHW  " "CMD: IFNAME=wlan0 SIGNAL_POLL" 562 1665
+Debug "2015-07-07 01:38:48.468641" 19311 wpa_supplicant "RX ctrl_iface - hexdump(len=11): 53 49 47 4e 41 4c 5f 50 4f 4c 4c" 19311 1666
+Debug "2015-07-07 01:38:48.468641" 19311 wpa_supplicant "wlan0: Control interface command 'SIGNAL_POLL'" 19311 1667
+Debug "2015-07-07 01:38:48.478641" 19311 wpa_supplicant "nl80211: survey data missing!" 19311 1668
+Info "2015-07-07 01:38:48.478641" 497 "WifiHW  " "REPLY: RSSI=-47" 562 1669
+Info "2015-07-07 01:38:48.478641" 497 "WifiHW  " "REPLY: LINKSPEED=65" 562 1670
+Info "2015-07-07 01:38:48.478641" 497 "WifiHW  " "REPLY: NOISE=9999" 562 1671
+Info "2015-07-07 01:38:48.478641" 497 "WifiHW  " "REPLY: FREQUENCY=2462" 562 1672
+Debug "2015-07-07 01:38:48.478641" 497 WifiStateMachine "handleMessage: X" 562 1673
+Debug "2015-07-07 01:38:48.578641" 497 AccelerometerSimpleCalibration "data z positive" 509 1674
+Debug "2015-07-07 01:38:48.578641" 497 AccelerometerSimpleCalibration "data z positive had collected" 509 1675

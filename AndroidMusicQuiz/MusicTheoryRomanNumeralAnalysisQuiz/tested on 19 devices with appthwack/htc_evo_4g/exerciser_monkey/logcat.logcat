@@ -1,0 +1,1112 @@
+    "--------- beginning of /dev/log/main"  1
+Debug "2015-07-07 01:19:00.550014" 853 AppThwack /tz/ 3803 2
+Debug "2015-07-07 01:19:00.610014" 853 AppThwack "sha1: 7853acb4654e92b57b371c41c0f54d02c3e290eb" 3803 3
+Debug "2015-07-07 01:19:00.620014" 853 AppThwack /task/7853acb4654e92b57b371c41c0f54d02c3e290eb 3803 4
+    "--------- beginning of /dev/log/system"  5
+Debug "2015-07-07 01:19:00.630014" 259 StatusBarService "addNotification notification = StatusBarNotification(package=com.trellis.appthwackdevicemanager id=1096041570 tag=null notification=Notification(vibrate=null,sound=null,defaults=0x0,flags=0x62)), key = android.os.BinderProxy@406046d8, fullScreenIntent = null, contentIntent = PendingIntent{40604868: android.os.BinderProxy@405c8c10}" 259 6
+Info "2015-07-07 01:19:00.630014" 135 "LSState " EventReceiver:android.intent.action.NOTIFICATION_ADD 151 7
+Debug "2015-07-07 01:19:00.630014" 853 AppThwackDeviceManager "taskStatus update (7853acb4654e92b57b371c41c0f54d02c3e290eb: {""state"":1})" 853 8
+Debug "2015-07-07 01:19:00.640014" 853 AppThwackDeviceManager "taskStatus update (7853acb4654e92b57b371c41c0f54d02c3e290eb: {""result"":{""tz"":""America/Los_Angeles""},""state"":2})" 853 9
+Debug "2015-07-07 01:19:00.640014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 157 10
+Verbose "2015-07-07 01:19:00.640014" 135 NotificationService "Battery Full, Charging" 157 11
+Debug "2015-07-07 01:19:00.650014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 157 12
+Debug "2015-07-07 01:19:00.650014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 157 13
+Debug "2015-07-07 01:19:00.650014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 157 14
+Debug "2015-07-07 01:19:00.650014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 157 15
+Debug "2015-07-07 01:19:00.660014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 157 16
+Info "2015-07-07 01:19:00.660014" 135 "LSState " EventReceiver:android.intent.action.NOTIFICATION_REMOVE 151 17
+Debug "2015-07-07 01:19:00.660014" 135 NotificationService "cancelNotification, ACTION_NOTIFICATION_REMOVE,pkg=com.trellis.appthwackdevicemanager,id=1096041570" 157 18
+Debug "2015-07-07 01:19:00.720014" 853 dalvikvm "GC_CONCURRENT freed 496K, 46% free 3431K/6279K, external 0K/0K, paused 2ms+3ms" 856 19
+Debug "2015-07-07 01:19:00.800014" 853 AppThwack /task/7853acb4654e92b57b371c41c0f54d02c3e290eb/status 3807 20
+Debug "2015-07-07 01:19:00.881014" 853 AppThwack /task/7853acb4654e92b57b371c41c0f54d02c3e290eb/status 3808 21
+Debug "2015-07-07 01:19:00.941014" 853 AppThwack /task/7853acb4654e92b57b371c41c0f54d02c3e290eb/status 3809 22
+Debug "2015-07-07 01:19:01.071014" 853 AppThwack /task/7853acb4654e92b57b371c41c0f54d02c3e290eb/status 3810 23
+Debug "2015-07-07 01:19:01.081014" 853 dalvikvm "GC_CONCURRENT freed 437K, 45% free 3499K/6279K, external 0K/0K, paused 4ms+2ms" 856 24
+Debug "2015-07-07 01:19:01.561014" 3814 AndroidRuntime  3814 25
+Debug "2015-07-07 01:19:01.561014" 3814 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3814 26
+Debug "2015-07-07 01:19:01.561014" 3814 AndroidRuntime "CheckJNI is OFF" 3814 27
+Debug "2015-07-07 01:19:01.561014" 3814 dalvikvm "creating instr width table" 3814 28
+Debug "2015-07-07 01:19:01.741014" 3814 AndroidRuntime "Calling main entry com.android.commands.input.Input" 3814 29
+Info "2015-07-07 01:19:01.741014" 3814 SendKeyEvent 4 3814 30
+Debug "2015-07-07 01:19:01.741014" 135 "lights  " "set_light_buttons_func: on=1315860 brightness=20" 218 31
+Debug "2015-07-07 01:19:01.741014" 135 "lights  " "set_light_buttons_func: on=16777215 brightness=255" 218 32
+Debug "2015-07-07 01:19:01.751014" 3814 AndroidRuntime "Shutting down VM" 3814 33
+Debug "2015-07-07 01:19:01.751014" 3814 dalvikvm "GC_CONCURRENT freed 100K, 69% free 317K/1024K, external 0K/0K, paused 1ms+1ms" 3816 34
+Info "2015-07-07 01:19:01.751014" 3814 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3822 35
+Debug "2015-07-07 01:19:01.751014" 3814 "jdwp    " "adbd disconnected" 3818 36
+Debug "2015-07-07 01:19:02.042014" 3824 AndroidRuntime  3824 37
+Debug "2015-07-07 01:19:02.042014" 3824 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3824 38
+Debug "2015-07-07 01:19:02.042014" 3824 AndroidRuntime "CheckJNI is OFF" 3824 39
+Debug "2015-07-07 01:19:02.052014" 3824 dalvikvm "creating instr width table" 3824 40
+Debug "2015-07-07 01:19:02.322014" 3824 AndroidRuntime "Calling main entry com.android.commands.input.Input" 3824 41
+Info "2015-07-07 01:19:02.322014" 3824 SendKeyEvent 4 3824 42
+Debug "2015-07-07 01:19:02.332014" 3824 AndroidRuntime "Shutting down VM" 3824 43
+Debug "2015-07-07 01:19:02.332014" 3824 dalvikvm "GC_CONCURRENT freed 100K, 69% free 317K/1024K, external 0K/0K, paused 1ms+1ms" 3826 44
+Info "2015-07-07 01:19:02.342014" 3824 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3832 45
+Debug "2015-07-07 01:19:02.342014" 3824 "jdwp    " "adbd disconnected" 3828 46
+Debug "2015-07-07 01:19:02.582014" 3834 AndroidRuntime  3834 47
+Debug "2015-07-07 01:19:02.582014" 3834 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3834 48
+Debug "2015-07-07 01:19:02.582014" 3834 AndroidRuntime "CheckJNI is OFF" 3834 49
+Debug "2015-07-07 01:19:02.582014" 3834 dalvikvm "creating instr width table" 3834 50
+Debug "2015-07-07 01:19:02.742014" 3834 AndroidRuntime "Calling main entry com.android.commands.input.Input" 3834 51
+Info "2015-07-07 01:19:02.742014" 3834 SendKeyEvent 4 3834 52
+Debug "2015-07-07 01:19:02.752014" 3834 AndroidRuntime "Shutting down VM" 3834 53
+Debug "2015-07-07 01:19:02.752014" 3834 dalvikvm "GC_CONCURRENT freed 100K, 69% free 317K/1024K, external 0K/0K, paused 0ms+0ms" 3836 54
+Info "2015-07-07 01:19:02.752014" 3834 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3842 55
+Debug "2015-07-07 01:19:02.752014" 3834 "jdwp    " "adbd disconnected" 3838 56
+Debug "2015-07-07 01:19:03.003014" 3844 AndroidRuntime  3844 57
+Debug "2015-07-07 01:19:03.003014" 3844 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3844 58
+Debug "2015-07-07 01:19:03.003014" 3844 AndroidRuntime "CheckJNI is OFF" 3844 59
+Debug "2015-07-07 01:19:03.003014" 3844 dalvikvm "creating instr width table" 3844 60
+Debug "2015-07-07 01:19:03.173014" 3844 AndroidRuntime "Calling main entry com.android.commands.input.Input" 3844 61
+Info "2015-07-07 01:19:03.173014" 3844 SendKeyEvent 4 3844 62
+Debug "2015-07-07 01:19:03.173014" 3844 AndroidRuntime "Shutting down VM" 3844 63
+Debug "2015-07-07 01:19:03.183014" 3844 dalvikvm "GC_CONCURRENT freed 100K, 69% free 317K/1024K, external 0K/0K, paused 0ms+0ms" 3846 64
+Info "2015-07-07 01:19:03.183014" 3844 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3852 65
+Debug "2015-07-07 01:19:03.183014" 3844 "jdwp    " "adbd disconnected" 3848 66
+Debug "2015-07-07 01:19:03.413014" 3854 AndroidRuntime  3854 67
+Debug "2015-07-07 01:19:03.413014" 3854 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3854 68
+Debug "2015-07-07 01:19:03.413014" 3854 AndroidRuntime "CheckJNI is OFF" 3854 69
+Debug "2015-07-07 01:19:03.413014" 3854 dalvikvm "creating instr width table" 3854 70
+Verbose "2015-07-07 01:19:03.533014" 894 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1WPHDdFm93uaXmWD0_G4K7WFTw3OSgpwPbCIHZXlNTQpPjz6uavfMiw37cjvL3OzFriweq5vzp4XqLe_e9eTa01hiCgheokd19AvOHbdsW1CgDwDrFCGuQNhna3OzIIfx2xA2bttdQeZzdTxOhnbXjzf4rvgc3E2arkqkPlQc_wDM_s0hEFhV6brfGDAVawtg2lH2BowNNJJx3dtFte8hcbdGG83s3yCwS_WHXeymeB0_p05Ag" 992 71
+Debug "2015-07-07 01:19:03.603014" 3854 AndroidRuntime "Calling main entry com.android.commands.input.Input" 3854 72
+Info "2015-07-07 01:19:03.603014" 3854 SendKeyEvent 4 3854 73
+Debug "2015-07-07 01:19:03.613014" 3854 AndroidRuntime "Shutting down VM" 3854 74
+Debug "2015-07-07 01:19:03.613014" 3854 dalvikvm "GC_CONCURRENT freed 100K, 69% free 317K/1024K, external 0K/0K, paused 0ms+1ms" 3856 75
+Info "2015-07-07 01:19:03.613014" 3854 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3862 76
+Debug "2015-07-07 01:19:03.613014" 3854 "jdwp    " "adbd disconnected" 3858 77
+Info "2015-07-07 01:19:03.623014" 894 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 992 78
+Debug "2015-07-07 01:19:03.863014" 3864 AndroidRuntime  3864 79
+Debug "2015-07-07 01:19:03.863014" 3864 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3864 80
+Debug "2015-07-07 01:19:03.863014" 3864 AndroidRuntime "CheckJNI is OFF" 3864 81
+Debug "2015-07-07 01:19:03.863014" 3864 dalvikvm "creating instr width table" 3864 82
+Debug "2015-07-07 01:19:04.034014" 3864 AndroidRuntime "Calling main entry com.android.commands.am.Am" 3864 83
+Info "2015-07-07 01:19:04.044014" 135 ActivityManager "Starting activity: Intent { flg=0x10000000 cmp=com.trellis.appthwackdevicemanager/.RotatePortrait } from pid 3864" 353 84
+Info "2015-07-07 01:19:04.044014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$START@401223b0,-1,0,-1,0)" 323 85
+Info "2015-07-07 01:19:04.054014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$END@4013dce0,-1,0,-1,0)" 323 86
+Info "2015-07-07 01:19:04.054014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$START@401223b0,-1,0,-1,0)" 323 87
+Debug "2015-07-07 01:19:04.054014" 3864 AndroidRuntime "Shutting down VM" 3864 88
+Debug "2015-07-07 01:19:04.054014" 3864 dalvikvm "GC_CONCURRENT freed 102K, 66% free 351K/1024K, external 0K/0K, paused 1ms+0ms" 3866 89
+Info "2015-07-07 01:19:04.054014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$END@4013dce0,-1,0,-1,0)" 323 90
+Info "2015-07-07 01:19:04.064014" 3864 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3872 91
+Debug "2015-07-07 01:19:04.064014" 3864 "jdwp    " "adbd disconnected" 3868 92
+Debug "2015-07-07 01:19:04.124014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40b290b8" 433 93
+Debug "2015-07-07 01:19:04.234014" 894 dalvikvm "GC_CONCURRENT freed 779K, 35% free 5661K/8647K, external 0K/0K, paused 38ms+5ms" 896 94
+Error "2015-07-07 01:19:04.244014" 894 Database "close() was never explicitly called on database '/data/data/com.google.android.gms/databases/auto_complete_suggestions.db'" 895 95
+Error "2015-07-07 01:19:04.244014" 894 Database "android.database.sqlite.DatabaseObjectNotClosedException: Application did not close the cursor or database object that was opened here" 895 96
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.<init>(SQLiteDatabase.java:1954)" 895 97
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:902)" 895 98
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:936)" 895 99
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:929)" 895 100
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.app.ContextImpl.openOrCreateDatabase(ContextImpl.java:606)" 895 101
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.content.ContextWrapper.openOrCreateDatabase(ContextWrapper.java:203)" 895 102
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:118)" 895 103
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:198)" 895 104
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.search.b.a(SourceFile:42)" 895 105
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.c.a.b(SourceFile:52)" 895 106
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.search.b.e(SourceFile:102)" 895 107
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.service.ClearHelpHistoryIntentService.onHandleIntent(SourceFile:48)" 895 108
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.app.IntentService$ServiceHandler.handleMessage(IntentService.java:59)" 895 109
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.Handler.dispatchMessage(Handler.java:99)" 895 110
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.Looper.loop(Looper.java:150)" 895 111
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.HandlerThread.run(HandlerThread.java:60)" 895 112
+Debug "2015-07-07 01:19:04.244014" 894 Database "dbclose(): path = /data/data/com.google.android.gms/databases/auto_complete_suggestions.db, handle = 0x5163e8" 895 113
+Error "2015-07-07 01:19:04.244014" 894 Database "close() was never explicitly called on database '/data/data/com.google.android.gms/databases/help_responses.db'" 895 114
+Error "2015-07-07 01:19:04.244014" 894 Database "android.database.sqlite.DatabaseObjectNotClosedException: Application did not close the cursor or database object that was opened here" 895 115
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.<init>(SQLiteDatabase.java:1954)" 895 116
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:902)" 895 117
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:936)" 895 118
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:929)" 895 119
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.app.ContextImpl.openOrCreateDatabase(ContextImpl.java:606)" 895 120
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.content.ContextWrapper.openOrCreateDatabase(ContextWrapper.java:203)" 895 121
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:118)" 895 122
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:198)" 895 123
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.c.b.a(SourceFile:108)" 895 124
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.c.a.b(SourceFile:52)" 895 125
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.c.b.d(SourceFile:527)" 895 126
+Error "2015-07-07 01:19:04.244014" 894 Database "	at com.google.android.gms.googlehelp.service.ClearHelpHistoryIntentService.onHandleIntent(SourceFile:47)" 895 127
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.app.IntentService$ServiceHandler.handleMessage(IntentService.java:59)" 895 128
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.Handler.dispatchMessage(Handler.java:99)" 895 129
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.Looper.loop(Looper.java:150)" 895 130
+Error "2015-07-07 01:19:04.244014" 894 Database "	at android.os.HandlerThread.run(HandlerThread.java:60)" 895 131
+Debug "2015-07-07 01:19:04.244014" 894 Database "dbclose(): path = /data/data/com.google.android.gms/databases/help_responses.db, handle = 0x49d270" 895 132
+Error "2015-07-07 01:19:04.254014" 894 Database "close() was never explicitly called on database '/data/data/com.google.android.gms/databases/metrics.db'" 895 133
+Error "2015-07-07 01:19:04.254014" 894 Database "android.database.sqlite.DatabaseObjectNotClosedException: Application did not close the cursor or database object that was opened here" 895 134
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteDatabase.<init>(SQLiteDatabase.java:1954)" 895 135
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:902)" 895 136
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:936)" 895 137
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteDatabase.openOrCreateDatabase(SQLiteDatabase.java:929)" 895 138
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.app.ContextImpl.openOrCreateDatabase(ContextImpl.java:606)" 895 139
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.content.ContextWrapper.openOrCreateDatabase(ContextWrapper.java:203)" 895 140
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:118)" 895 141
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:198)" 895 142
+Error "2015-07-07 01:19:04.254014" 894 Database "	at com.google.android.gms.googlehelp.metrics.c.a(SourceFile:102)" 895 143
+Error "2015-07-07 01:19:04.254014" 894 Database "	at com.google.android.gms.googlehelp.c.a.b(SourceFile:52)" 895 144
+Error "2015-07-07 01:19:04.254014" 894 Database "	at com.google.android.gms.googlehelp.metrics.c.c(SourceFile:278)" 895 145
+Error "2015-07-07 01:19:04.254014" 894 Database "	at com.google.android.gms.googlehelp.service.ClearHelpHistoryIntentService.onHandleIntent(SourceFile:46)" 895 146
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.app.IntentService$ServiceHandler.handleMessage(IntentService.java:59)" 895 147
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.os.Handler.dispatchMessage(Handler.java:99)" 895 148
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.os.Looper.loop(Looper.java:150)" 895 149
+Error "2015-07-07 01:19:04.254014" 894 Database "	at android.os.HandlerThread.run(HandlerThread.java:60)" 895 150
+Debug "2015-07-07 01:19:04.254014" 894 Database "dbclose(): path = /data/data/com.google.android.gms/databases/metrics.db, handle = 0x490b68" 895 151
+Info "2015-07-07 01:19:04.564014" 894 ConfigFetchService "fetch service done; releasing wakelock" 894 152
+Info "2015-07-07 01:19:04.564014" 894 ConfigFetchService "stopping self" 894 153
+Debug "2015-07-07 01:19:07.297014" 3874 AndroidRuntime  3874 154
+Debug "2015-07-07 01:19:07.297014" 3874 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3874 155
+Debug "2015-07-07 01:19:07.297014" 3874 AndroidRuntime "CheckJNI is OFF" 3874 156
+Debug "2015-07-07 01:19:07.297014" 3874 dalvikvm "creating instr width table" 3874 157
+Debug "2015-07-07 01:19:07.457014" 3874 AndroidRuntime "Calling main entry com.android.commands.am.Am" 3874 158
+Debug "2015-07-07 01:19:07.467014" 3874 AndroidRuntime "Shutting down VM" 3874 159
+Info "2015-07-07 01:19:07.477014" 853 APPTHWACK "ORIENTATION: 0" 3882 160
+Info "2015-07-07 01:19:07.477014" 3874 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3883 161
+Debug "2015-07-07 01:19:07.477014" 3874 dalvikvm "GC_CONCURRENT freed 103K, 66% free 351K/1024K, external 0K/0K, paused 1ms+0ms" 3876 162
+Debug "2015-07-07 01:19:07.477014" 3874 "jdwp    " "adbd disconnected" 3878 163
+Debug "2015-07-07 01:19:08.598014" 3167 "Finsky  " "[25] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 3195 164
+Debug "2015-07-07 01:19:08.598014" 3167 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 3167 165
+Debug "2015-07-07 01:19:08.788014" 3887 AndroidRuntime  3887 166
+Debug "2015-07-07 01:19:08.788014" 3887 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3887 167
+Debug "2015-07-07 01:19:08.788014" 3887 AndroidRuntime "CheckJNI is OFF" 3887 168
+Debug "2015-07-07 01:19:08.788014" 3887 dalvikvm "creating instr width table" 3887 169
+Debug "2015-07-07 01:19:08.948014" 3887 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 3887 170
+Debug "2015-07-07 01:19:09.319014" 3887 AndroidRuntime "Shutting down VM" 3887 171
+Info "2015-07-07 01:19:09.319014" 3887 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3895 172
+Debug "2015-07-07 01:19:09.319014" 3887 dalvikvm "GC_CONCURRENT freed 352K, 69% free 325K/1024K, external 0K/0K, paused 0ms+1ms" 3889 173
+Debug "2015-07-07 01:19:09.329014" 3887 "jdwp    " "adbd disconnected" 3891 174
+Debug "2015-07-07 01:19:09.639014" 3897 AndroidRuntime  3897 175
+Debug "2015-07-07 01:19:09.639014" 3897 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3897 176
+Debug "2015-07-07 01:19:09.639014" 3897 AndroidRuntime "CheckJNI is OFF" 3897 177
+Debug "2015-07-07 01:19:09.639014" 3897 dalvikvm "creating instr width table" 3897 178
+Debug "2015-07-07 01:19:09.799014" 3897 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 3897 179
+Debug "2015-07-07 01:19:09.809014" 328 Database "dbclose(): path = /data/data/com.google.android.gms/databases/config.db, handle = 0x4c9418" 328 180
+Info "2015-07-07 01:19:09.809014" 328 ConfigService onDestroy 328 181
+Warning "2015-07-07 01:19:09.809014" 135 PackageManager "Package named 'com.appthwack.gltest' doesn't exist." 160 182
+Debug "2015-07-07 01:19:09.919014" 135 dalvikvm "GC_EXPLICIT freed 1115K, 36% free 8369K/13063K, external 2532K/3162K, paused 103ms" 160 183
+Debug "2015-07-07 01:19:09.929014" 3897 AndroidRuntime "Shutting down VM" 3897 184
+Debug "2015-07-07 01:19:09.929014" 3897 dalvikvm "GC_CONCURRENT freed 101K, 69% free 319K/1024K, external 0K/0K, paused 1ms+1ms" 3899 185
+Info "2015-07-07 01:19:09.929014" 3897 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3905 186
+Debug "2015-07-07 01:19:09.929014" 3897 "jdwp    " "adbd disconnected" 3901 187
+Debug "2015-07-07 01:19:09.939014" 666 dalvikvm "GC_EXPLICIT freed 19K, 45% free 3047K/5447K, external 0K/0K, paused 337ms" 666 188
+Debug "2015-07-07 01:19:10.510014" 3910 AndroidRuntime  3910 189
+Debug "2015-07-07 01:19:10.510014" 3910 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3910 190
+Debug "2015-07-07 01:19:10.510014" 3910 AndroidRuntime "CheckJNI is OFF" 3910 191
+Debug "2015-07-07 01:19:10.510014" 3910 dalvikvm "creating instr width table" 3910 192
+Debug "2015-07-07 01:19:10.680014" 3910 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 3910 193
+Debug "2015-07-07 01:19:10.730014" 3518 dalvikvm "GC_EXPLICIT freed 13K, 44% free 3023K/5379K, external 0K/0K, paused 29ms" 3525 194
+Warning "2015-07-07 01:19:10.730014" 135 ActivityManager "No content provider found for:" 160 195
+Warning "2015-07-07 01:19:10.750014" 135 ActivityManager "No content provider found for:" 160 196
+Debug "2015-07-07 01:19:10.760014" 135 PackageParser "Scanning package: /data/app/vmdl958086094.tmp" 160 197
+Warning "2015-07-07 01:19:10.800014" 135 PackageManager "clear PackageParser.PARSE_CHATTY" 160 198
+Info "2015-07-07 01:19:10.800014" 135 PackageManager "Unpacking native libraries for /data/app/com.appthwack.gltest-1.apk" 160 199
+Debug "2015-07-07 01:19:10.810014" 73 installd "DexInv: --- BEGIN '/data/app/com.appthwack.gltest-1.apk' ---" 73 200
+Debug "2015-07-07 01:19:10.850014" 3919 dalvikvm "creating instr width table" 3919 201
+Debug "2015-07-07 01:19:10.960014" 3919 dalvikvm "DexOpt: load 13ms, verify+opt 91ms" 3919 202
+Debug "2015-07-07 01:19:10.980014" 73 installd "DexInv: --- END '/data/app/com.appthwack.gltest-1.apk' (success) ---" 73 203
+Info "2015-07-07 01:19:11.080014" 73 installd "move /data/dalvik-cache/data@app@com.appthwack.gltest-1.apk@classes.dex -> /data/dalvik-cache/data@app@com.appthwack.gltest-1.apk@classes.dex" 73 204
+Debug "2015-07-07 01:19:11.080014" 135 PackageManager "New package installed in /data/app/com.appthwack.gltest-1.apk" 160 205
+Debug "2015-07-07 01:19:11.211014" 310 PhoneApp "-- PackageChangeBroadcastReceiver  action = android.intent.action.PACKAGE_ADDED" 310 206
+    "07-06 18:19:09.449  3508  3508 D SM:PackageReceiver: package added: package:com.appthwack.gltest"  207
+Debug "2015-07-07 01:19:11.251014" 323 HomeLoaders "get install or remove message so do change adapter" 3921 208
+    "07-06 18:19:09.549  3262  3262 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ check enable = true"  209
+Debug "2015-07-07 01:19:11.321014" 3262 HtcLinkifyDispatcherReceiver " @@@@@ action=android.intent.action.PACKAGE_ADDED" 3262 210
+Debug "2015-07-07 01:19:11.321014" 3262 HtcLinkifyDispatcherReceiver " @@@@@ package=com.appthwack.gltest" 3262 211
+Debug "2015-07-07 01:19:11.331014" 708 VoiceDialerReceiver "onReceive Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.gltest flg=0x10000000 cmp=com.android.voicedialer/.VoiceDialerReceiver (has extras) }" 708 212
+Verbose "2015-07-07 01:19:11.331014" 708 RecognizerEngine "deleteCachedGrammarFiles /data/data/com.android.voicedialer/files/openentries.txt" 708 213
+Debug "2015-07-07 01:19:11.341014" 3262 HtcLinkifyDispatcherIntentService " @@@@@ receive package action." 3924 214
+Info "2015-07-07 01:19:11.341014" 3262 HtcLinkifyDispatcherIntentService " @@@@@ action for package=android.intent.action.PACKAGE_ADDED" 3924 215
+Info "2015-07-07 01:19:11.341014" 3262 HtcLinkifyDispatcherIntentService " @@@@@ package name=com.appthwack.gltest" 3924 216
+    "07-06 18:19:09.569  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  217
+    "07-06 18:19:09.569  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Video category"  218
+    "07-06 18:19:09.569  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  219
+Debug "2015-07-07 01:19:11.351014" 328 GTalkService "handlePackageInstalled: re-initialize providers" 328 220
+Debug "2015-07-07 01:19:11.361014" 328 GTalkService "[RawStanzaProvidersMgr] ##### searchProvidersFromIntent" 328 221
+Debug "2015-07-07 01:19:11.361014" 328 GTalkService "[RawStanzaProvidersMgr] no intent receivers found" 328 222
+Info "2015-07-07 01:19:11.381014" 135 ActivityManager "Start proc com.smithmicro.mnd for broadcast com.smithmicro.mnd/.MNDPackageListener: pid=3925 uid=10093 gids={3003, 1007, 1015}" 135 223
+Debug "2015-07-07 01:19:11.431014" 135 "szipinf " "Initializing inflate state" 151 224
+Verbose "2015-07-07 01:19:11.511014" 3925 MNDLOG_JAVA_PACKAGE_LISTENER "Executing context.startService(serviceIntent)" 3925 225
+Verbose "2015-07-07 01:19:11.531014" 3925 MNDLOG_JAVA_SERVICE "Android Executing onCreate()" 3925 226
+Info "2015-07-07 01:19:11.551014" 3925 MNDLOG_JAVA_SERVICE "Received start id 1: Intent { act=com.smithmicro.mnd.MNDService }" 3925 227
+Verbose "2015-07-07 01:19:11.551014" 3925 MNDLOG_JAVA_SERVICE "Android Executing onStartCommand()" 3925 228
+Verbose "2015-07-07 01:19:11.551014" 3925 MNDLOG_JAVA_SERVICE "Sending SETTINGS_CHANGED intent: MND disabled" 3925 229
+Debug "2015-07-07 01:19:11.591014" 798 HtcWidgetScanner "action - android.intent.action.PACKAGE_ADDED" 3932 230
+Debug "2015-07-07 01:19:11.591014" 798 HtcWidgetScanner "packageUid - 10096" 3932 231
+Verbose "2015-07-07 01:19:11.601014" 3925 MNDLOG_JAVA_SERVICE "Android Executing onDestroy()" 3925 232
+Verbose "2015-07-07 01:19:11.601014" 3925 MNDLOG_JAVA_SERVICE "Android Calling onDestroy()" 3925 233
+Verbose "2015-07-07 01:19:11.611014" 3925 MNDLOG_JAVA_SERVICE "Skipping mnd_proxy.stop() as mnd_proxy == null .SMSI MND Service stopped (3)" 3925 234
+Verbose "2015-07-07 01:19:11.611014" 3925 MNDLOG_JAVA_SERVICE "SMSI MND Service Stopped" 3925 235
+Info "2015-07-07 01:19:11.611014" 3925 "Process " "Sending signal. PID: 3925 SIG: 9" 3925 236
+Info "2015-07-07 01:19:11.621014" 135 ActivityManager "Process com.smithmicro.mnd (pid 3925) has died." 135 237
+Debug "2015-07-07 01:19:11.661014" 894 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 894 238
+Debug "2015-07-07 01:19:11.661014" 894 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.GamesBroadcastReceiverStub" 894 239
+Debug "2015-07-07 01:19:11.661014" 894 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.gms" 894 240
+Debug "2015-07-07 01:19:11.821014" 894 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_ADDED and uri=com.appthwack.gltest" 3933 241
+Debug "2015-07-07 01:19:11.871014" 135 dalvikvm "GC_EXPLICIT freed 1417K, 36% free 8403K/13063K, external 2532K/3162K, paused 99ms" 160 242
+Debug "2015-07-07 01:19:12.001014" 3910 AndroidRuntime "Shutting down VM" 3910 243
+Debug "2015-07-07 01:19:12.011014" 3910 dalvikvm "GC_CONCURRENT freed 102K, 69% free 321K/1024K, external 0K/0K, paused 1ms+3ms" 3912 244
+Info "2015-07-07 01:19:12.011014" 3910 AndroidRuntime "NOTE: attach of thread 'Binder Thread #3' failed" 3934 245
+Debug "2015-07-07 01:19:12.011014" 3910 "jdwp    " "adbd disconnected" 3914 246
+Info "2015-07-07 01:19:12.041014" 328 ConfigService onCreate 328 247
+Debug "2015-07-07 01:19:12.051014" 328 Database "dbopen(): path = /data/data/com.google.android.gms/databases/config.db, flag = 6, file size = 14336" 3935 248
+Info "2015-07-07 01:19:12.051014" 328 ConfigService "onBind for Intent { act=com.google.android.gms.config.UPDATE pkg=com.google.android.gms } action com.google.android.gms.config.UPDATE" 328 249
+Debug "2015-07-07 01:19:12.061014" 323 AppWidgetHostView "updateAppWidget mInfo = AppWidgetProviderInfo(provider=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchWidgetProvider})" 323 250
+Info "2015-07-07 01:19:12.071014" 894 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.gltest cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 894 251
+Debug "2015-07-07 01:19:12.081014" 328 Database "dbopen(): path = /data/data/com.google.android.gms/databases/config.db, mode: delete, disk free size: 194 M, handle: 0x587a20" 3935 252
+Info "2015-07-07 01:19:12.111014" 328 ConfigService "onBind returning update interface" 328 253
+Info "2015-07-07 01:19:12.111014" 894 ConfigFetchService launchTask 894 254
+Info "2015-07-07 01:19:12.111014" 328 ConfigService "onBind for Intent { act=com.google.android.gms.config.START pkg=com.google.android.gms } action com.google.android.gms.config.START" 328 255
+Info "2015-07-07 01:19:12.121014" 328 ConfigService "onBind returning service broker" 328 256
+Info "2015-07-07 01:19:12.141014" 894 PeopleContactsSync "CP2 sync disabled" 3938 257
+Info "2015-07-07 01:19:12.152014" 894 ConfigFetchService "service connected" 894 258
+    "07-06 18:19:10.400  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  259
+Verbose "2015-07-07 01:19:12.192014" 894 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1WPHDdFm93uaXmWD0_G4K7WFTw3OSgpwPbCIHZXlNTQpPjz6uavfMiw37cjvL3OzFriweq5vzp4XqLe_e9eTa01hiCgheokd19AvOHbdsW1CgDwDrFCGuQNhna3OzIIfx2xA2bttdQeZzdTxOhnbXjzf4rvgc3E2arkqkPlQc_wDM_s0hEFhV6brfGDAVawtg2lH2BowNNJJx3dtFte8hcbdGG83s3yCwS_WHXeymeB0_p05Ag" 1477 260
+Debug "2015-07-07 01:19:12.192014" 894 ConfigFetchService "ConfigApi connection successful." 894 261
+Warning "2015-07-07 01:19:12.262014" 323 Addapter info.icon:2130837515 3921 262
+Warning "2015-07-07 01:19:12.272014" 323 Addapter info.icon:2130837504 3921 263
+Warning "2015-07-07 01:19:12.272014" 323 Addapter info.icon:2130837627 3921 264
+Warning "2015-07-07 01:19:12.272014" 323 Addapter info.icon:2130837511 3921 265
+Warning "2015-07-07 01:19:12.282014" 323 Addapter info.icon:2130837513 3921 266
+Warning "2015-07-07 01:19:12.322014" 323 Addapter info.icon:2130837504 3921 267
+Warning "2015-07-07 01:19:12.322014" 323 Addapter info.icon:2130837683 3921 268
+Warning "2015-07-07 01:19:12.322014" 323 Addapter info.icon:2130837559 3921 269
+Warning "2015-07-07 01:19:12.322014" 323 Addapter info.icon:2130837627 3921 270
+Info "2015-07-07 01:19:12.322014" 894 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 1477 271
+Warning "2015-07-07 01:19:12.322014" 323 Addapter info.icon:2130837527 3921 272
+Warning "2015-07-07 01:19:12.332014" 323 Addapter info.icon:2130838371 3921 273
+Warning "2015-07-07 01:19:12.332014" 323 Addapter info.icon:2130838100 3921 274
+Warning "2015-07-07 01:19:12.332014" 323 Addapter info.icon:2130837562 3921 275
+Warning "2015-07-07 01:19:12.342014" 323 Addapter info.icon:2130837508 3921 276
+Warning "2015-07-07 01:19:12.342014" 323 Addapter info.icon:2130903045 3921 277
+Debug "2015-07-07 01:19:12.362014" 323 Addapter "text : Get more HTC widgets" 3921 278
+Debug "2015-07-07 01:19:12.562014" 3945 AndroidRuntime  3945 279
+Debug "2015-07-07 01:19:12.562014" 3945 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 3945 280
+Debug "2015-07-07 01:19:12.562014" 3945 AndroidRuntime "CheckJNI is OFF" 3945 281
+Debug "2015-07-07 01:19:12.562014" 3945 dalvikvm "creating instr width table" 3945 282
+Debug "2015-07-07 01:19:12.682014" 3243 dalvikvm "GC_CONCURRENT freed 535K, 48% free 3074K/5895K, external 0K/0K, paused 5ms+164ms" 3245 283
+Debug "2015-07-07 01:19:12.762014" 3945 AndroidRuntime "Calling main entry com.android.commands.am.Am" 3945 284
+Info "2015-07-07 01:19:12.772014" 135 ActivityManager "Force stopping package com.nihk.github.musictheoryromannumeralanalysisquiz uid=10094" 1069 285
+Info "2015-07-07 01:19:12.782014" 135 ActivityManager "Start proc com.nihk.github.musictheoryromannumeralanalysisquiz for added application com.nihk.github.musictheoryromannumeralanalysisquiz: pid=3957 uid=10094 gids={}" 1069 286
+Info "2015-07-07 01:19:12.922014" 3957 TestRunner "started: testApp(com.appthwack.gltest.GlFpsTest)" 3965 287
+Debug "2015-07-07 01:19:12.922014" 3957 APPTHWACK "Test setup" 3965 288
+Info "2015-07-07 01:19:12.932014" 135 ActivityManager "Starting activity: Intent { act=android.intent.action.MAIN flg=0x10000000 cmp=com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity } from pid 3957" 355 289
+Info "2015-07-07 01:19:12.952014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$START@401223b0,-1,0,-1,0)" 323 290
+Info "2015-07-07 01:19:12.952014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$END@4013dce0,-1,0,-1,0)" 323 291
+Info "2015-07-07 01:19:12.952014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$START@401223b0,-1,0,-1,0)" 323 292
+Info "2015-07-07 01:19:12.962014" 323 [POST_RESELECT] "[spanChange] (o, oldStart, newStart, oldEnd, newEnd)=(android.text.Selection$END@4013dce0,-1,0,-1,0)" 323 293
+Info "2015-07-07 01:19:13.002014" 3957 dalvikvm "Could not find method android.view.Window$Callback.dispatchGenericMotionEvent, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.dispatchGenericMotionEvent" 3957 294
+Warning "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: unable to resolve interface method 13416: Landroid/view/Window$Callback;.dispatchGenericMotionEvent (Landroid/view/MotionEvent;)Z" 3957 295
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: replacing opcode 0x72 at 0x0002" 3957 296
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: dead code 0x0005-0006 in Landroid/support/v7/internal/view/WindowCallbackWrapper;.dispatchGenericMotionEvent (Landroid/view/MotionEvent;)Z" 3957 297
+Info "2015-07-07 01:19:13.002014" 3957 dalvikvm "Could not find method android.view.Window$Callback.dispatchKeyShortcutEvent, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyShortcutEvent" 3957 298
+Warning "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: unable to resolve interface method 13418: Landroid/view/Window$Callback;.dispatchKeyShortcutEvent (Landroid/view/KeyEvent;)Z" 3957 299
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: replacing opcode 0x72 at 0x0002" 3957 300
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: dead code 0x0005-0006 in Landroid/support/v7/internal/view/WindowCallbackWrapper;.dispatchKeyShortcutEvent (Landroid/view/KeyEvent;)Z" 3957 301
+Warning "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: unable to find class referenced in signature (Landroid/view/ActionMode;)" 3957 302
+Info "2015-07-07 01:19:13.002014" 3957 dalvikvm "Could not find method android.view.Window$Callback.onActionModeFinished, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.onActionModeFinished" 3957 303
+Warning "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: unable to resolve interface method 13422: Landroid/view/Window$Callback;.onActionModeFinished (Landroid/view/ActionMode;)V" 3957 304
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: replacing opcode 0x72 at 0x0002" 3957 305
+Debug "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: dead code 0x0005-0005 in Landroid/support/v7/internal/view/WindowCallbackWrapper;.onActionModeFinished (Landroid/view/ActionMode;)V" 3957 306
+Warning "2015-07-07 01:19:13.002014" 3957 dalvikvm "VFY: unable to find class referenced in signature (Landroid/view/ActionMode;)" 3957 307
+Info "2015-07-07 01:19:13.012014" 3957 dalvikvm "Could not find method android.view.Window$Callback.onActionModeStarted, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.onActionModeStarted" 3957 308
+Warning "2015-07-07 01:19:13.012014" 3957 dalvikvm "VFY: unable to resolve interface method 13423: Landroid/view/Window$Callback;.onActionModeStarted (Landroid/view/ActionMode;)V" 3957 309
+Debug "2015-07-07 01:19:13.012014" 3957 dalvikvm "VFY: replacing opcode 0x72 at 0x0002" 3957 310
+Debug "2015-07-07 01:19:13.012014" 3957 dalvikvm "VFY: dead code 0x0005-0005 in Landroid/support/v7/internal/view/WindowCallbackWrapper;.onActionModeStarted (Landroid/view/ActionMode;)V" 3957 311
+Info "2015-07-07 01:19:13.012014" 3957 dalvikvm "Could not find method android.view.Window$Callback.onWindowStartingActionMode, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.onWindowStartingActionMode" 3957 312
+Warning "2015-07-07 01:19:13.022014" 3957 dalvikvm "VFY: unable to resolve interface method 13436: Landroid/view/Window$Callback;.onWindowStartingActionMode (Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;" 3957 313
+Debug "2015-07-07 01:19:13.022014" 3957 dalvikvm "VFY: replacing opcode 0x72 at 0x0002" 3957 314
+Debug "2015-07-07 01:19:13.022014" 3957 dalvikvm "VFY: dead code 0x0005-0006 in Landroid/support/v7/internal/view/WindowCallbackWrapper;.onWindowStartingActionMode (Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;" 3957 315
+Debug "2015-07-07 01:19:13.052014" 3957 "szipinf " "Initializing inflate state" 3957 316
+Debug "2015-07-07 01:19:13.062014" 3957 "szipinf " "Initializing inflate state" 3957 317
+Debug "2015-07-07 01:19:13.062014" 3957 "szipinf " "Initializing inflate state" 3957 318
+Debug "2015-07-07 01:19:13.072014" 3957 "szipinf " "Initializing inflate state" 3957 319
+Debug "2015-07-07 01:19:13.082014" 3957 "szipinf " "Initializing inflate state" 3957 320
+Debug "2015-07-07 01:19:13.092014" 3957 "szipinf " "Initializing inflate state" 3957 321
+Debug "2015-07-07 01:19:13.102014" 3957 "szipinf " "Initializing inflate state" 3957 322
+Debug "2015-07-07 01:19:13.102014" 3957 "szipinf " "Initializing inflate state" 3957 323
+Debug "2015-07-07 01:19:13.112014" 3957 "szipinf " "Initializing inflate state" 3957 324
+Debug "2015-07-07 01:19:13.122014" 3957 "szipinf " "Initializing inflate state" 3957 325
+Debug "2015-07-07 01:19:13.122014" 3957 "szipinf " "Initializing inflate state" 3957 326
+Debug "2015-07-07 01:19:13.132014" 3957 "szipinf " "Initializing inflate state" 3957 327
+Debug "2015-07-07 01:19:13.142014" 3957 "szipinf " "Initializing inflate state" 3957 328
+Debug "2015-07-07 01:19:13.142014" 3957 "szipinf " "Initializing inflate state" 3957 329
+Debug "2015-07-07 01:19:13.152014" 3957 "szipinf " "Initializing inflate state" 3957 330
+Debug "2015-07-07 01:19:13.162014" 3957 "szipinf " "Initializing inflate state" 3957 331
+Debug "2015-07-07 01:19:13.162014" 3957 "szipinf " "Initializing inflate state" 3957 332
+Debug "2015-07-07 01:19:13.172014" 3957 "szipinf " "Initializing inflate state" 3957 333
+Debug "2015-07-07 01:19:13.172014" 3957 "szipinf " "Initializing inflate state" 3957 334
+Debug "2015-07-07 01:19:13.183014" 3957 "szipinf " "Initializing inflate state" 3957 335
+Debug "2015-07-07 01:19:13.193014" 3957 "szipinf " "Initializing inflate state" 3957 336
+Debug "2015-07-07 01:19:13.203014" 3957 "szipinf " "Initializing inflate state" 3957 337
+Debug "2015-07-07 01:19:13.203014" 3957 "szipinf " "Initializing inflate state" 3957 338
+Debug "2015-07-07 01:19:13.223014" 3957 "szipinf " "Initializing inflate state" 3957 339
+Debug "2015-07-07 01:19:13.233014" 3957 "szipinf " "Initializing inflate state" 3957 340
+Debug "2015-07-07 01:19:13.243014" 3957 "szipinf " "Initializing inflate state" 3957 341
+Debug "2015-07-07 01:19:13.253014" 3957 "szipinf " "Initializing inflate state" 3957 342
+Debug "2015-07-07 01:19:13.253014" 310 PhoneApp EVENT_QUERY_MO_PACKAGES 436 343
+Debug "2015-07-07 01:19:13.253014" 3957 "szipinf " "Initializing inflate state" 3957 344
+Debug "2015-07-07 01:19:13.263014" 3957 "szipinf " "Initializing inflate state" 3957 345
+Debug "2015-07-07 01:19:13.273014" 3957 "szipinf " "Initializing inflate state" 3957 346
+Debug "2015-07-07 01:19:13.283014" 3957 "szipinf " "Initializing inflate state" 3957 347
+Debug "2015-07-07 01:19:13.293014" 3957 "szipinf " "Initializing inflate state" 3957 348
+Debug "2015-07-07 01:19:13.303014" 3957 "szipinf " "Initializing inflate state" 3957 349
+Debug "2015-07-07 01:19:13.313014" 3957 "szipinf " "Initializing inflate state" 3957 350
+Debug "2015-07-07 01:19:13.313014" 3957 "szipinf " "Initializing inflate state" 3957 351
+Debug "2015-07-07 01:19:13.323014" 3957 "szipinf " "Initializing inflate state" 3957 352
+Debug "2015-07-07 01:19:13.333014" 3957 "szipinf " "Initializing inflate state" 3957 353
+Debug "2015-07-07 01:19:13.343014" 3957 "szipinf " "Initializing inflate state" 3957 354
+Debug "2015-07-07 01:19:13.353014" 3957 "szipinf " "Initializing inflate state" 3957 355
+Debug "2015-07-07 01:19:13.353014" 3957 "szipinf " "Initializing inflate state" 3957 356
+Debug "2015-07-07 01:19:13.363014" 3957 "szipinf " "Initializing inflate state" 3957 357
+Debug "2015-07-07 01:19:13.363014" 3957 "szipinf " "Initializing inflate state" 3957 358
+Debug "2015-07-07 01:19:13.363014" 3957 "szipinf " "Initializing inflate state" 3957 359
+Debug "2015-07-07 01:19:13.373014" 3957 "szipinf " "Initializing inflate state" 3957 360
+Debug "2015-07-07 01:19:13.373014" 3957 "szipinf " "Initializing inflate state" 3957 361
+Debug "2015-07-07 01:19:13.383014" 3957 "szipinf " "Initializing inflate state" 3957 362
+Debug "2015-07-07 01:19:13.383014" 3957 "szipinf " "Initializing inflate state" 3957 363
+Debug "2015-07-07 01:19:13.393014" 3957 "szipinf " "Initializing inflate state" 3957 364
+Debug "2015-07-07 01:19:13.393014" 3957 "szipinf " "Initializing inflate state" 3957 365
+Debug "2015-07-07 01:19:13.403014" 3957 "szipinf " "Initializing inflate state" 3957 366
+Debug "2015-07-07 01:19:13.403014" 3957 "szipinf " "Initializing inflate state" 3957 367
+Debug "2015-07-07 01:19:13.413014" 3957 "szipinf " "Initializing inflate state" 3957 368
+Debug "2015-07-07 01:19:13.413014" 3957 "szipinf " "Initializing inflate state" 3957 369
+Debug "2015-07-07 01:19:13.423014" 3957 "szipinf " "Initializing inflate state" 3957 370
+Debug "2015-07-07 01:19:13.423014" 3957 "szipinf " "Initializing inflate state" 3957 371
+Debug "2015-07-07 01:19:13.433014" 3957 "szipinf " "Initializing inflate state" 3957 372
+Debug "2015-07-07 01:19:13.443014" 3957 "szipinf " "Initializing inflate state" 3957 373
+Debug "2015-07-07 01:19:13.443014" 3957 "szipinf " "Initializing inflate state" 3957 374
+Debug "2015-07-07 01:19:13.443014" 310 PhoneApp "-- N1 =0" 436 375
+Debug "2015-07-07 01:19:13.463014" 3957 "szipinf " "Initializing inflate state" 3957 376
+Debug "2015-07-07 01:19:13.473014" 3957 "szipinf " "Initializing inflate state" 3957 377
+Debug "2015-07-07 01:19:13.493014" 3957 "szipinf " "Initializing inflate state" 3957 378
+Debug "2015-07-07 01:19:13.493014" 3957 "szipinf " "Initializing inflate state" 3957 379
+Info "2015-07-07 01:19:13.543014" 135 ActivityManager "No longer want com.handson.h2o.nfl (pid 566): hidden #16" 433 380
+Info "2015-07-07 01:19:13.553014" 135 ActivityManager "No longer want com.android.updater (pid 813): hidden #16" 1118 381
+Debug "2015-07-07 01:19:13.583014" 310 PhoneApp "-- N2 =0" 436 382
+Debug "2015-07-07 01:19:13.603014" 3957 dalvikvm "GC_CONCURRENT freed 188K, 42% free 3271K/5639K, external 0K/0K, paused 2ms+6ms" 3959 383
+Debug "2015-07-07 01:19:13.603014" 3957 "szipinf " "Initializing inflate state" 3957 384
+Debug "2015-07-07 01:19:13.603014" 310 PhoneApp "-- N3 =0" 436 385
+Debug "2015-07-07 01:19:13.613014" 3957 "szipinf " "Initializing inflate state" 3957 386
+Debug "2015-07-07 01:19:13.613014" 3957 "szipinf " "Initializing inflate state" 3957 387
+Debug "2015-07-07 01:19:13.623014" 3957 "szipinf " "Initializing inflate state" 3957 388
+Debug "2015-07-07 01:19:13.623014" 3957 "szipinf " "Initializing inflate state" 3957 389
+Debug "2015-07-07 01:19:13.633014" 3957 "szipinf " "Initializing inflate state" 3957 390
+Debug "2015-07-07 01:19:13.633014" 3957 "szipinf " "Initializing inflate state" 3957 391
+Debug "2015-07-07 01:19:13.643014" 3957 "szipinf " "Initializing inflate state" 3957 392
+Debug "2015-07-07 01:19:13.653014" 3957 "szipinf " "Initializing inflate state" 3957 393
+Debug "2015-07-07 01:19:13.653014" 3957 "szipinf " "Initializing inflate state" 3957 394
+Debug "2015-07-07 01:19:13.663014" 3957 "szipinf " "Initializing inflate state" 3957 395
+Debug "2015-07-07 01:19:13.663014" 3957 "szipinf " "Initializing inflate state" 3957 396
+Debug "2015-07-07 01:19:13.673014" 3957 "szipinf " "Initializing inflate state" 3957 397
+Debug "2015-07-07 01:19:13.673014" 3957 "szipinf " "Initializing inflate state" 3957 398
+Debug "2015-07-07 01:19:13.683014" 3957 "szipinf " "Initializing inflate state" 3957 399
+Debug "2015-07-07 01:19:13.693014" 3957 "szipinf " "Initializing inflate state" 3957 400
+Debug "2015-07-07 01:19:13.693014" 3957 "szipinf " "Initializing inflate state" 3957 401
+Info "2015-07-07 01:19:13.703014" 3957 dalvikvm "Could not find method android.widget.Button.onInitializeAccessibilityEvent, referenced from method android.support.v7.widget.AppCompatButton.onInitializeAccessibilityEvent" 3957 402
+Warning "2015-07-07 01:19:13.703014" 3957 dalvikvm "VFY: unable to resolve virtual method 13699: Landroid/widget/Button;.onInitializeAccessibilityEvent (Landroid/view/accessibility/AccessibilityEvent;)V" 3957 403
+Debug "2015-07-07 01:19:13.703014" 3957 dalvikvm "VFY: replacing opcode 0x6f at 0x0000" 3957 404
+Debug "2015-07-07 01:19:13.703014" 3957 dalvikvm "VFY: dead code 0x0003-000c in Landroid/support/v7/widget/AppCompatButton;.onInitializeAccessibilityEvent (Landroid/view/accessibility/AccessibilityEvent;)V" 3957 405
+Warning "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: unable to find class referenced in signature (Landroid/view/accessibility/AccessibilityNodeInfo;)" 3957 406
+Info "2015-07-07 01:19:13.713014" 3957 dalvikvm "Could not find method android.widget.Button.onInitializeAccessibilityNodeInfo, referenced from method android.support.v7.widget.AppCompatButton.onInitializeAccessibilityNodeInfo" 3957 407
+Warning "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: unable to resolve virtual method 13700: Landroid/widget/Button;.onInitializeAccessibilityNodeInfo (Landroid/view/accessibility/AccessibilityNodeInfo;)V" 3957 408
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: replacing opcode 0x6f at 0x0000" 3957 409
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: dead code 0x0003-000c in Landroid/support/v7/widget/AppCompatButton;.onInitializeAccessibilityNodeInfo (Landroid/view/accessibility/AccessibilityNodeInfo;)V" 3957 410
+Info "2015-07-07 01:19:13.713014" 3957 dalvikvm "Could not find method android.content.res.TypedArray.getChangingConfigurations, referenced from method android.support.v7.internal.widget.TintTypedArray.getChangingConfigurations" 3957 411
+Warning "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: unable to resolve virtual method 409: Landroid/content/res/TypedArray;.getChangingConfigurations ()I" 3957 412
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 3957 413
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: dead code 0x0005-0006 in Landroid/support/v7/internal/widget/TintTypedArray;.getChangingConfigurations ()I" 3957 414
+Info "2015-07-07 01:19:13.713014" 3957 dalvikvm "Could not find method android.content.res.TypedArray.getType, referenced from method android.support.v7.internal.widget.TintTypedArray.getType" 3957 415
+Warning "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: unable to resolve virtual method 431: Landroid/content/res/TypedArray;.getType (I)I" 3957 416
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 3957 417
+Debug "2015-07-07 01:19:13.713014" 3957 dalvikvm "VFY: dead code 0x0005-0006 in Landroid/support/v7/internal/widget/TintTypedArray;.getType (I)I" 3957 418
+Debug "2015-07-07 01:19:13.783014" 3957 ATRecorder "com.htc.autotest.dlib.RecordEngine in loader dalvik.system.DexClassLoader@40585e10" 3957 419
+Debug "2015-07-07 01:19:13.943014" 135 InputManagerService "Got RemoteException sending setActive(false) notification to pid 3443 uid 10094" 433 420
+Warning "2015-07-07 01:19:13.943014" 135 InputManagerService "[startInputLocked] Enable input method client." 433 421
+Info "2015-07-07 01:19:14.023014" 135 ActivityManager "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: +1s42ms (total +38s414ms)" 216 422
+Info "2015-07-07 01:19:14.053014" 3957 dalvikvm "Could not find method android.app.Activity.getFragmentManager, referenced from method com.jayway.android.robotium.solo.Waiter.getFragment" 3965 423
+Warning "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: unable to resolve virtual method 3: Landroid/app/Activity;.getFragmentManager ()Landroid/app/FragmentManager;" 3965 424
+Debug "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: replacing opcode 0x6e at 0x0008" 3965 425
+Info "2015-07-07 01:19:14.053014" 3957 dalvikvm "Could not find method android.app.Activity.getFragmentManager, referenced from method com.jayway.android.robotium.solo.Waiter.getFragment" 3965 426
+Warning "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: unable to resolve virtual method 3: Landroid/app/Activity;.getFragmentManager ()Landroid/app/FragmentManager;" 3965 427
+Debug "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: replacing opcode 0x6e at 0x0017" 3965 428
+Warning "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: unable to find class referenced in signature (Landroid/app/Fragment;)" 3965 429
+Debug "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: dead code 0x000b-000f in Lcom/jayway/android/robotium/solo/Waiter;.getFragment (Ljava/lang/String;I)Landroid/app/Fragment;" 3965 430
+Debug "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: dead code 0x001a-001f in Lcom/jayway/android/robotium/solo/Waiter;.getFragment (Ljava/lang/String;I)Landroid/app/Fragment;" 3965 431
+Warning "2015-07-07 01:19:14.053014" 3957 dalvikvm "VFY: unable to find class referenced in signature (Landroid/app/Fragment;)" 3965 432
+Debug "2015-07-07 01:19:14.063014" 3957 APPTHWACK "Start activity: com.nihk.github.musictheoryromannumeralanalysisquiz.MTRNAQuizActivity@40555df8" 3965 433
+Info "2015-07-07 01:19:14.073014" 3957 APPTHWACK "Starting GL profiler" 3965 434
+Info "2015-07-07 01:19:14.073014" 3957 APPTHWACK "Creating dir" 3965 435
+Debug "2015-07-07 01:19:14.254014" 3286 dalvikvm "GC_EXPLICIT freed 143K, 43% free 3156K/5511K, external 0K/0K, paused 684ms" 3655 436
+Info "2015-07-07 01:19:14.284014" 135 ActivityManager "No longer want com.htc.widget.clockwidget (pid 1020): hidden #16" 355 437
+Info "2015-07-07 01:19:14.304014" 135 ActivityManager "No longer want com.htc.android.worldclock (pid 627): hidden #16" 353 438
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 439
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 440
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Scheme: ""http""" 340 441
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Type: ""video""" 340 442
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 340 443
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 444
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 445
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 140 446
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Scheme: ""http""" 140 447
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  Type: ""video""" 140 448
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 140 449
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 340 450
+Info "2015-07-07 01:19:14.364014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 140 451
+Info "2015-07-07 01:19:14.384014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1069 452
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1069 453
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 454
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Scheme: ""http""" 1069 455
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Type: ""audio""" 1069 456
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1069 457
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 433 458
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 433 459
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 433 460
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Scheme: ""http""" 433 461
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  Type: ""audio""" 433 462
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 433 463
+Info "2015-07-07 01:19:14.394014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 433 464
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 353 465
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 466
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Scheme: ""rtsp""" 353 467
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 135 468
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 135 469
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 135 470
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "  Scheme: ""rtsp""" 135 471
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 353 472
+Info "2015-07-07 01:19:14.414014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 135 473
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 141 474
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 141 475
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Scheme: ""http""" 141 476
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Type: ""video""" 141 477
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 141 478
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 353 479
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 480
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 353 481
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Scheme: ""http""" 353 482
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  Type: ""video""" 353 483
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 353 484
+    "07-06 18:19:12.672  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity"  485
+    "07-06 18:19:12.672  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  486
+    "07-06 18:19:12.672  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Audio category"  487
+    "07-06 18:19:12.672  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  488
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 141 489
+Info "2015-07-07 01:19:14.444014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 353 490
+    "07-06 18:19:12.702  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  491
+Debug "2015-07-07 01:19:14.534014" 3243 RegisterService "insert plugin size 1" 3922 492
+Debug "2015-07-07 01:19:14.624014" 3243 RegisterService "insert plugin size 3" 3922 493
+Info "2015-07-07 01:19:14.704014" 135 ActivityManager "No longer want com.htc.android.footprints (pid 1007): hidden #16" 140 494
+Debug "2015-07-07 01:19:14.784014" 3957 dalvikvm "GC_CONCURRENT freed 260K, 41% free 3503K/5895K, external 0K/0K, paused 2ms+2ms" 3959 495
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 135 496
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 135 497
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Scheme: ""http""" 135 498
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Type: ""video""" 135 499
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 135 500
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1069 501
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 502
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1069 503
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Scheme: ""http""" 1069 504
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  Type: ""video""" 1069 505
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1069 506
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 135 507
+Info "2015-07-07 01:19:14.814014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1069 508
+Debug "2015-07-07 01:19:14.894014" 3243 RegisterService "insert plugin size 1" 3922 509
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 510
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 511
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Scheme: ""http""" 355 512
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Type: ""audio""" 355 513
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 355 514
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 515
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 516
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 517
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Scheme: ""http""" 1118 518
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  Type: ""audio""" 1118 519
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1118 520
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 355 521
+Info "2015-07-07 01:19:14.914014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1118 522
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 523
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 524
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Scheme: ""rtsp""" 1118 525
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 526
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 527
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 140 528
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1118 529
+Info "2015-07-07 01:19:14.944014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 140 530
+Info "2015-07-07 01:19:14.954014" 135 PackageManager "  Scheme: ""rtsp""" 140 531
+Debug "2015-07-07 01:19:14.974014" 3243 RegisterService "insert plugin size 1" 3922 532
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 433 533
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 433 534
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Scheme: ""http""" 433 535
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Type: ""audio""" 433 536
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 433 537
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 538
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 539
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 340 540
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Scheme: ""http""" 340 541
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  Type: ""audio""" 340 542
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 340 543
+    "07-06 18:19:13.222  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity"  544
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 433 545
+Info "2015-07-07 01:19:14.994014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 340 546
+    "07-06 18:19:13.242  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  547
+    "07-06 18:19:13.242  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Stream category"  548
+    "07-06 18:19:13.242  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  549
+    "07-06 18:19:13.262  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  550
+Debug "2015-07-07 01:19:15.084014" 3243 RegisterService "insert plugin size 1" 3922 551
+Debug "2015-07-07 01:19:15.214014" 3243 RegisterService "insert plugin size 1" 3922 552
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1069 553
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 554
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "  Scheme: ""http""" 1069 555
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "  Type: ""video""" 1069 556
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1069 557
+Info "2015-07-07 01:19:15.224014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1069 558
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1069 559
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 560
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1069 561
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  Scheme: ""http""" 1069 562
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  Type: ""video""" 1069 563
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1069 564
+Info "2015-07-07 01:19:15.235014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1069 565
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1069 566
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 567
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "  Scheme: ""http""" 1069 568
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "  Type: ""audio""" 1069 569
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 1069 570
+Info "2015-07-07 01:19:15.285014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1069 571
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 353 572
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 573
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 353 574
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  Scheme: ""http""" 353 575
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  Type: ""audio""" 353 576
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "  mPriority=0, mHasPartialTypes=true" 353 577
+Info "2015-07-07 01:19:15.295014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 353 578
+Debug "2015-07-07 01:19:15.305014" 3262 dalvikvm "GC_CONCURRENT freed 464K, 47% free 3086K/5767K, external 0K/0K, paused 2ms+13ms" 3264 579
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 580
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 581
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Scheme: ""rtsp""" 355 582
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 583
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 584
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 585
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "  Scheme: ""rtsp""" 1118 586
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 355 587
+Info "2015-07-07 01:19:15.345014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 1118 588
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 589
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 590
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Scheme: ""rtsp""" 340 591
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 592
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 593
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 355 594
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "  Scheme: ""rtsp""" 355 595
+    "07-06 18:19:13.603  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity"  596
+    "07-06 18:19:13.603  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  597
+    "07-06 18:19:13.603  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Map category"  598
+    "07-06 18:19:13.603  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  599
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 340 600
+Info "2015-07-07 01:19:15.375014" 135 PackageManager "Adding preferred activity ComponentInfo{com.htc.streamplayer/com.htc.streamplayer.VideoPlayerActivity}:" 355 601
+    "07-06 18:19:13.663  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  602
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 603
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 604
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 1118 605
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 1118 606
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 1118 607
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 353 608
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 609
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 353 610
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 353 611
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 353 612
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 353 613
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 1118 614
+Info "2015-07-07 01:19:15.555014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 353 615
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 135 616
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 135 617
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 135 618
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "  Scheme: ""http""" 135 619
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "  Scheme: ""https""" 135 620
+Info "2015-07-07 01:19:15.585014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 135 621
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 622
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 623
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 140 624
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 140 625
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 140 626
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 627
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 628
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 629
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 1118 630
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 1118 631
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 1118 632
+    "07-06 18:19:13.843  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.android.browser/com.android.browser.BrowserActivity"  633
+    "07-06 18:19:13.843  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  634
+    "07-06 18:19:13.843  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Location category"  635
+    "07-06 18:19:13.843  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  636
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 140 637
+Info "2015-07-07 01:19:15.615014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 1118 638
+    "07-06 18:19:13.863  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  639
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 640
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 641
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Scheme: ""geo""" 355 642
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 643
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 644
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 140 645
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "  Scheme: ""geo""" 140 646
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}:" 355 647
+Info "2015-07-07 01:19:15.755014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}:" 140 648
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 649
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 650
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Scheme: ""geo""" 340 651
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 652
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 653
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 355 654
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "  Scheme: ""geo""" 355 655
+    "07-06 18:19:14.013  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.google.android.apps.maps/com.google.android.maps.MapsActivity"  656
+    "07-06 18:19:14.013  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  657
+    "07-06 18:19:14.013  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Phone category"  658
+    "07-06 18:19:14.013  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  659
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}:" 340 660
+Info "2015-07-07 01:19:15.785014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}:" 355 661
+    "07-06 18:19:14.033  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  662
+Debug "2015-07-07 01:19:15.865014" 3286 dalvikvm "GC_EXPLICIT freed 188K, 44% free 3132K/5511K, external 0K/0K, paused 36ms" 3655 663
+Info "2015-07-07 01:19:15.975014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 353 664
+Info "2015-07-07 01:19:15.975014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 665
+Info "2015-07-07 01:19:15.975014" 135 PackageManager "  Scheme: ""tel""" 353 666
+Info "2015-07-07 01:19:15.975014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 353 667
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 141 668
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 141 669
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 141 670
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Scheme: ""tel""" 141 671
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 433 672
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 433 673
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "  Scheme: ""tel""" 433 674
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 141 675
+Info "2015-07-07 01:19:15.985014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 433 676
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 355 677
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 678
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 355 679
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Scheme: ""tel""" 355 680
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 140 681
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 682
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 1118 683
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 684
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 685
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 355 686
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 140 687
+Info "2015-07-07 01:19:15.995014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 1118 688
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 689
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 690
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Scheme: ""tel""" 140 691
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 692
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 693
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 694
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Scheme: ""tel""" 1118 695
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 1069 696
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1069 697
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "  Scheme: ""tel""" 1069 698
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 140 699
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 1118 700
+Info "2015-07-07 01:19:16.025014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 1069 701
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 353 702
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 353 703
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 353 704
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Scheme: ""tel""" 353 705
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 353 706
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 346 707
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 346 708
+Info "2015-07-07 01:19:16.035014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 346 709
+Info "2015-07-07 01:19:16.045014" 135 PackageManager "  Action: ""android.intent.action.DIAL""" 433 710
+Info "2015-07-07 01:19:16.045014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 433 711
+Info "2015-07-07 01:19:16.045014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 433 712
+    "07-06 18:19:14.273  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.android.htcdialer/com.android.htcdialer.Dialer"  713
+    "07-06 18:19:14.273  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  714
+    "07-06 18:19:14.273  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Mail category"  715
+    "07-06 18:19:14.273  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  716
+Info "2015-07-07 01:19:16.045014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.htcdialer/com.android.htcdialer.Dialer}:" 433 717
+    "07-06 18:19:14.323  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  718
+Debug "2015-07-07 01:19:16.105014" 3262 dalvikvm "GC_CONCURRENT freed 443K, 47% free 3077K/5767K, external 0K/0K, paused 2ms+9ms" 3264 719
+Info "2015-07-07 01:19:16.225014" 894 ConfigFetchService "fetch service done; releasing wakelock" 894 720
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 721
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "  Action: ""android.intent.action.SENDTO""" 140 722
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 723
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "  Scheme: ""mailto""" 140 724
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 725
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.gm/com.google.android.gm.ComposeActivityGmail}:" 140 726
+Info "2015-07-07 01:19:16.235014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.gm/com.google.android.gm.ComposeActivityGmail}:" 1118 727
+Info "2015-07-07 01:19:16.245014" 135 PackageManager "  Action: ""android.intent.action.SENDTO""" 1118 728
+Info "2015-07-07 01:19:16.245014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 729
+Info "2015-07-07 01:19:16.245014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 730
+Info "2015-07-07 01:19:16.245014" 135 PackageManager "  Scheme: ""mailto""" 1118 731
+Info "2015-07-07 01:19:16.245014" 894 ConfigFetchService "stopping self" 894 732
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 140 733
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Action: ""android.intent.action.SENDTO""" 140 734
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 140 735
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Scheme: ""mailto""" 140 736
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 737
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Action: ""android.intent.action.SENDTO""" 340 738
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 739
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 340 740
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "  Scheme: ""mailto""" 340 741
+    "07-06 18:19:14.514  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.google.android.gm/com.google.android.gm.ComposeActivityGmail"  742
+    "07-06 18:19:14.514  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity(): Enter."  743
+    "07-06 18:19:14.514  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      category=Web category"  744
+    "07-06 18:19:14.514  3262  3924 I HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      add=true"  745
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.gm/com.google.android.gm.ComposeActivityGmail}:" 140 746
+Info "2015-07-07 01:19:16.286014" 135 PackageManager "Adding preferred activity ComponentInfo{com.google.android.gm/com.google.android.gm.ComposeActivityGmail}:" 340 747
+    "07-06 18:19:14.534  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      Go DB ------"  748
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 141 749
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 141 750
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 141 751
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 141 752
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 141 753
+Info "2015-07-07 01:19:16.406014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 141 754
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 1118 755
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1118 756
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 1118 757
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?f=q&geocode=&q=""" 1118 758
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?q=""" 1118 759
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "  Scheme: ""http://maps.google.com/maps?""" 1118 760
+Info "2015-07-07 01:19:16.416014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 1118 761
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 340 762
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 340 763
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 340 764
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "  Scheme: ""http""" 340 765
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "  Scheme: ""https""" 340 766
+Info "2015-07-07 01:19:16.456014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 340 767
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "  Action: ""android.intent.action.VIEW""" 355 768
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "  Category: ""android.intent.category.DEFAULT""" 355 769
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "  Category: ""android.intent.category.BROWSABLE""" 355 770
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "  Scheme: ""http""" 355 771
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "  Scheme: ""https""" 355 772
+    "07-06 18:19:14.734  3262  3924 D HtcAppAssociationsUtils (Dispatcher):  @@@@@ getPreferredActivity():      return package=com.android.browser/com.android.browser.BrowserActivity"  773
+Info "2015-07-07 01:19:16.506014" 135 PackageManager "Adding preferred activity ComponentInfo{com.android.browser/com.android.browser.BrowserActivity}:" 355 774
+Debug "2015-07-07 01:19:19.108014" 675 dalvikvm "GC_EXPLICIT freed 6K, 44% free 3017K/5379K, external 0K/0K, paused 58ms" 675 775
+Debug "2015-07-07 01:19:20.670014" 3957 dalvikvm "GC_CONCURRENT freed 468K, 44% free 3492K/6151K, external 0K/0K, paused 6ms+2ms" 3959 776
+Debug "2015-07-07 01:19:21.300014" 328 Database "dbclose(): path = /data/data/com.google.android.gms/databases/config.db, handle = 0x587a20" 328 777
+Info "2015-07-07 01:19:21.300014" 328 ConfigService onDestroy 328 778
+Debug "2015-07-07 01:19:23.082014" 323 "skia    " "purging 177K from font cache [22 entries]" 323 779
+Debug "2015-07-07 01:19:23.182014" 323 dalvikvm "GC_EXPLICIT freed 1209K, 49% free 4602K/8903K, external 22385K/24433K, paused 102ms" 323 780
+Debug "2015-07-07 01:19:24.854014" 3957 dalvikvm "GC_CONCURRENT freed 425K, 44% free 3493K/6151K, external 0K/0K, paused 2ms+2ms" 3959 781
+Debug "2015-07-07 01:19:26.185014" 135 "lights  " "set_light_buttons_func: on=1315860 brightness=20" 214 782
+Debug "2015-07-07 01:19:26.185014" 135 "lights  " "set_light_buttons_func: on=16777215 brightness=255" 214 783
+Debug "2015-07-07 01:19:26.435014" 894 dalvikvm "GC_EXPLICIT freed 760K, 36% free 5596K/8647K, external 0K/0K, paused 127ms" 894 784
+Debug "2015-07-07 01:19:27.026014" 135 dalvikvm "GC_CONCURRENT freed 1857K, 36% free 8424K/13063K, external 2532K/3162K, paused 4ms+8ms" 137 785
+Debug "2015-07-07 01:19:27.206014" 3167 dalvikvm "GC_CONCURRENT freed 1423K, 32% free 7765K/11335K, external 0K/0K, paused 3ms+5ms" 3171 786
+Debug "2015-07-07 01:19:27.416014" 3167 "Finsky  " "[25] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 3195 787
+Debug "2015-07-07 01:19:27.416014" 3167 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 3167 788
+Debug "2015-07-07 01:19:27.547014" 135 BatteryService "usb_cable_connect = 1" 212 789
+Debug "2015-07-07 01:19:27.557014" 259 StatusBarService "updateIcon slot=battery index=21 viewIndex=16 old=StatusBarIcon(pkg=com.android.systemui id=0x1080347 level=100 visible=true num=0 ) icon=StatusBarIcon(pkg=com.android.systemui id=0x1080347 level=100 visible=true num=0 )" 259 790
+Debug "2015-07-07 01:19:27.567014" 135 BatteryService "usb_cable_connect = 1" 212 791
+Debug "2015-07-07 01:19:27.567014" 135 BatteryService "isUsbConnected() = true" 212 792
+Debug "2015-07-07 01:19:27.567014" 135 BatteryService "mPlugType = 2" 212 793
+Debug "2015-07-07 01:19:27.567014" 310 HtcCdmaPhoneApp "level 100 scale 100" 310 794
+Debug "2015-07-07 01:19:27.577014" 135 WifiService "[smart wifi] mSmartWiFiStatus: 0 mBatteryLevel: 100 mWifiConnected: false" 151 795
+Debug "2015-07-07 01:19:27.577014" 135 WifiService "[smart wifi] ACTION_BATTERY_CHANGED pluggedType: 2" 151 796
+Debug "2015-07-07 01:19:27.587014" 135 BatteryService "usb_cable_connect = 1" 212 797
+Debug "2015-07-07 01:19:27.587014" 135 BatteryService "usb_cable_connect = 1" 212 798
+Debug "2015-07-07 01:19:27.587014" 135 BatteryService "isUsbConnected() = true" 212 799
+Debug "2015-07-07 01:19:27.587014" 135 BatteryService "mPlugType = 2" 212 800
+Debug "2015-07-07 01:19:27.587014" 394 UsbConnectedReceiver "action = psclient.intent.action.usb_status" 394 801
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver ACTION_BATTERY_CHANGED 394 802
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver "usbCurrentType = 2" 394 803
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver "Current type is same as previous, return!" 394 804
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver "action = psclient.intent.action.usb_status" 394 805
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver ACTION_BATTERY_CHANGED 394 806
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver "usbCurrentType = 2" 394 807
+Debug "2015-07-07 01:19:27.597014" 394 UsbConnectedReceiver "Current type is same as previous, return!" 394 808
+Debug "2015-07-07 01:19:30.680014" 3957 dalvikvm "GC_CONCURRENT freed 463K, 44% free 3485K/6151K, external 0K/0K, paused 5ms+2ms" 3959 809
+Debug "2015-07-07 01:19:32.672014" 645 dalvikvm "GC_EXPLICIT freed 55K, 43% free 3071K/5379K, external 0K/0K, paused 62ms" 645 810
+Debug "2015-07-07 01:19:34.854014" 3957 dalvikvm "GC_CONCURRENT freed 418K, 44% free 3493K/6151K, external 0K/0K, paused 2ms+2ms" 3959 811
+Debug "2015-07-07 01:19:37.686014" 394 dalvikvm "GC_EXPLICIT freed 142K, 43% free 3490K/6087K, external 0K/0K, paused 88ms" 394 812
+Debug "2015-07-07 01:19:37.787014" 4072 AndroidRuntime  4072 813
+Debug "2015-07-07 01:19:37.787014" 4072 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 4072 814
+Debug "2015-07-07 01:19:37.787014" 4072 AndroidRuntime "CheckJNI is OFF" 4072 815
+Debug "2015-07-07 01:19:37.787014" 4072 dalvikvm "creating instr width table" 4072 816
+Debug "2015-07-07 01:19:37.977014" 4072 AndroidRuntime "Calling main entry com.android.commands.monkey.Monkey" 4072 817
+Info "2015-07-07 01:19:38.297014" 135 ActivityManager "Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity } from pid 4072" 1118 818
+Debug "2015-07-07 01:19:38.337014" 3957 "szipinf " "Initializing inflate state" 3957 819
+Debug "2015-07-07 01:19:38.357014" 3957 "szipinf " "Initializing inflate state" 3957 820
+Debug "2015-07-07 01:19:38.367014" 3957 "szipinf " "Initializing inflate state" 3957 821
+Debug "2015-07-07 01:19:38.397014" 3957 "szipinf " "Initializing inflate state" 3957 822
+Debug "2015-07-07 01:19:38.397014" 3957 "szipinf " "Initializing inflate state" 3957 823
+Debug "2015-07-07 01:19:38.407014" 3957 "szipinf " "Initializing inflate state" 3957 824
+Debug "2015-07-07 01:19:38.407014" 3957 "szipinf " "Initializing inflate state" 3957 825
+Debug "2015-07-07 01:19:38.427014" 3957 "szipinf " "Initializing inflate state" 3957 826
+Debug "2015-07-07 01:19:38.437014" 3957 "szipinf " "Initializing inflate state" 3957 827
+Debug "2015-07-07 01:19:38.447014" 3957 "szipinf " "Initializing inflate state" 3957 828
+Debug "2015-07-07 01:19:38.457014" 3957 "szipinf " "Initializing inflate state" 3957 829
+Debug "2015-07-07 01:19:38.457014" 3957 "szipinf " "Initializing inflate state" 3957 830
+Debug "2015-07-07 01:19:38.467014" 3957 "szipinf " "Initializing inflate state" 3957 831
+Debug "2015-07-07 01:19:38.477014" 3957 "szipinf " "Initializing inflate state" 3957 832
+Debug "2015-07-07 01:19:38.487014" 3957 "szipinf " "Initializing inflate state" 3957 833
+Debug "2015-07-07 01:19:38.497014" 3957 "szipinf " "Initializing inflate state" 3957 834
+Debug "2015-07-07 01:19:38.507014" 3957 "szipinf " "Initializing inflate state" 3957 835
+Debug "2015-07-07 01:19:38.527014" 3957 "szipinf " "Initializing inflate state" 3957 836
+Debug "2015-07-07 01:19:38.547014" 3957 "szipinf " "Initializing inflate state" 3957 837
+Debug "2015-07-07 01:19:38.567014" 3957 "szipinf " "Initializing inflate state" 3957 838
+Debug "2015-07-07 01:19:38.587014" 3957 "szipinf " "Initializing inflate state" 3957 839
+Debug "2015-07-07 01:19:38.607014" 3957 "szipinf " "Initializing inflate state" 3957 840
+Debug "2015-07-07 01:19:38.627014" 3957 "szipinf " "Initializing inflate state" 3957 841
+Debug "2015-07-07 01:19:38.637014" 3957 "szipinf " "Initializing inflate state" 3957 842
+Debug "2015-07-07 01:19:38.637014" 3957 "szipinf " "Initializing inflate state" 3957 843
+Debug "2015-07-07 01:19:38.647014" 135 "lights  " "set_light_buttons_func: on=1315860 brightness=20" 218 844
+Debug "2015-07-07 01:19:38.647014" 135 "lights  " "set_light_buttons_func: on=16777215 brightness=255" 218 845
+Debug "2015-07-07 01:19:38.657014" 3957 "szipinf " "Initializing inflate state" 3957 846
+Debug "2015-07-07 01:19:38.657014" 3957 "szipinf " "Initializing inflate state" 3957 847
+Debug "2015-07-07 01:19:38.667014" 3957 "szipinf " "Initializing inflate state" 3957 848
+Debug "2015-07-07 01:19:38.667014" 3957 "szipinf " "Initializing inflate state" 3957 849
+Debug "2015-07-07 01:19:38.677014" 3957 "szipinf " "Initializing inflate state" 3957 850
+Debug "2015-07-07 01:19:38.677014" 3957 "szipinf " "Initializing inflate state" 3957 851
+Debug "2015-07-07 01:19:38.687014" 3957 "szipinf " "Initializing inflate state" 3957 852
+Debug "2015-07-07 01:19:38.687014" 3957 "szipinf " "Initializing inflate state" 3957 853
+Debug "2015-07-07 01:19:38.697014" 3957 "szipinf " "Initializing inflate state" 3957 854
+Debug "2015-07-07 01:19:38.707014" 3957 "szipinf " "Initializing inflate state" 3957 855
+Debug "2015-07-07 01:19:38.717014" 3957 "szipinf " "Initializing inflate state" 3957 856
+Debug "2015-07-07 01:19:38.717014" 3957 "szipinf " "Initializing inflate state" 3957 857
+Debug "2015-07-07 01:19:38.727014" 3957 "szipinf " "Initializing inflate state" 3957 858
+Debug "2015-07-07 01:19:38.727014" 3957 "szipinf " "Initializing inflate state" 3957 859
+Debug "2015-07-07 01:19:38.737014" 3957 "szipinf " "Initializing inflate state" 3957 860
+Debug "2015-07-07 01:19:38.737014" 3957 "szipinf " "Initializing inflate state" 3957 861
+Debug "2015-07-07 01:19:38.747014" 3957 "szipinf " "Initializing inflate state" 3957 862
+Debug "2015-07-07 01:19:38.747014" 3957 "szipinf " "Initializing inflate state" 3957 863
+Debug "2015-07-07 01:19:38.757014" 3957 "szipinf " "Initializing inflate state" 3957 864
+Debug "2015-07-07 01:19:38.757014" 3957 "szipinf " "Initializing inflate state" 3957 865
+Debug "2015-07-07 01:19:38.777014" 3957 "szipinf " "Initializing inflate state" 3957 866
+Debug "2015-07-07 01:19:38.777014" 3957 "szipinf " "Initializing inflate state" 3957 867
+Debug "2015-07-07 01:19:38.797014" 3957 "szipinf " "Initializing inflate state" 3957 868
+Debug "2015-07-07 01:19:38.818014" 3957 "szipinf " "Initializing inflate state" 3957 869
+Debug "2015-07-07 01:19:38.818014" 3957 "szipinf " "Initializing inflate state" 3957 870
+Debug "2015-07-07 01:19:38.828014" 3957 "szipinf " "Initializing inflate state" 3957 871
+Debug "2015-07-07 01:19:38.838014" 3957 "szipinf " "Initializing inflate state" 3957 872
+Debug "2015-07-07 01:19:38.848014" 3957 "szipinf " "Initializing inflate state" 3957 873
+Debug "2015-07-07 01:19:38.868014" 3957 "szipinf " "Initializing inflate state" 3957 874
+Debug "2015-07-07 01:19:38.868014" 3957 "szipinf " "Initializing inflate state" 3957 875
+Debug "2015-07-07 01:19:38.878014" 3957 "szipinf " "Initializing inflate state" 3957 876
+Debug "2015-07-07 01:19:38.898014" 3957 "szipinf " "Initializing inflate state" 3957 877
+Debug "2015-07-07 01:19:38.918014" 3957 "szipinf " "Initializing inflate state" 3957 878
+Debug "2015-07-07 01:19:38.928014" 3957 "szipinf " "Initializing inflate state" 3957 879
+Debug "2015-07-07 01:19:38.938014" 3957 "szipinf " "Initializing inflate state" 3957 880
+Debug "2015-07-07 01:19:38.948014" 3957 "szipinf " "Initializing inflate state" 3957 881
+Debug "2015-07-07 01:19:38.958014" 3957 "szipinf " "Initializing inflate state" 3957 882
+Debug "2015-07-07 01:19:38.968014" 3957 "szipinf " "Initializing inflate state" 3957 883
+Debug "2015-07-07 01:19:38.988014" 3957 "szipinf " "Initializing inflate state" 3957 884
+Debug "2015-07-07 01:19:38.998014" 3957 dalvikvm "GC_CONCURRENT freed 264K, 41% free 3651K/6151K, external 0K/0K, paused 2ms+12ms" 3959 885
+Debug "2015-07-07 01:19:38.998014" 3957 "szipinf " "Initializing inflate state" 3957 886
+Debug "2015-07-07 01:19:39.008014" 3957 "szipinf " "Initializing inflate state" 3957 887
+Debug "2015-07-07 01:19:39.008014" 3957 "szipinf " "Initializing inflate state" 3957 888
+Debug "2015-07-07 01:19:39.018014" 3957 "szipinf " "Initializing inflate state" 3957 889
+Debug "2015-07-07 01:19:39.028014" 3957 "szipinf " "Initializing inflate state" 3957 890
+Debug "2015-07-07 01:19:39.028014" 3957 "szipinf " "Initializing inflate state" 3957 891
+Debug "2015-07-07 01:19:39.038014" 3957 "szipinf " "Initializing inflate state" 3957 892
+Debug "2015-07-07 01:19:39.038014" 3957 "szipinf " "Initializing inflate state" 3957 893
+Debug "2015-07-07 01:19:39.048014" 3957 "szipinf " "Initializing inflate state" 3957 894
+Debug "2015-07-07 01:19:39.048014" 3957 "szipinf " "Initializing inflate state" 3957 895
+Debug "2015-07-07 01:19:39.058014" 3957 "szipinf " "Initializing inflate state" 3957 896
+Debug "2015-07-07 01:19:39.058014" 3957 "szipinf " "Initializing inflate state" 3957 897
+Debug "2015-07-07 01:19:39.068014" 3957 "szipinf " "Initializing inflate state" 3957 898
+Debug "2015-07-07 01:19:39.068014" 3957 "szipinf " "Initializing inflate state" 3957 899
+Debug "2015-07-07 01:19:39.078014" 3957 "szipinf " "Initializing inflate state" 3957 900
+Debug "2015-07-07 01:19:39.218014" 3957 "skia    " "purging 193K from font cache [29 entries]" 3957 901
+Debug "2015-07-07 01:19:39.268014" 3957 "skia    " "purging 192K from font cache [29 entries]" 3957 902
+Debug "2015-07-07 01:19:39.298014" 3957 "skia    " "purging 200K from font cache [24 entries]" 3957 903
+Debug "2015-07-07 01:19:39.488014" 3957 "skia    " "purging 196K from font cache [25 entries]" 3957 904
+Info "2015-07-07 01:19:39.668014" 135 ActivityManager "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: +1s355ms" 216 905
+Debug "2015-07-07 01:19:39.849014" 4072 dalvikvm "GC_FOR_MALLOC freed 1254K, 62% free 791K/2051K, external 0K/0K, paused 15ms" 4072 906
+Debug "2015-07-07 01:19:40.119014" 4072 dalvikvm "GC_CONCURRENT freed 672K, 59% free 842K/2051K, external 0K/0K, paused 0ms+1ms" 4074 907
+Debug "2015-07-07 01:19:40.269014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 1069 908
+Debug "2015-07-07 01:19:40.269014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 1069 909
+Verbose "2015-07-07 01:19:40.269014" 135 NotificationService "Battery Full, Charging" 1069 910
+Debug "2015-07-07 01:19:40.279014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 1069 911
+Debug "2015-07-07 01:19:40.279014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 1069 912
+Debug "2015-07-07 01:19:40.279014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 1069 913
+Debug "2015-07-07 01:19:40.279014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 1069 914
+Debug "2015-07-07 01:19:40.419014" 4072 dalvikvm "GC_CONCURRENT freed 785K, 61% free 808K/2051K, external 0K/0K, paused 1ms+2ms" 4074 915
+Verbose "2015-07-07 01:19:40.549014" 135 NotificationService "Battery Full, Charging" 340 916
+Debug "2015-07-07 01:19:40.559014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 340 917
+Debug "2015-07-07 01:19:40.559014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 340 918
+Debug "2015-07-07 01:19:40.569014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 340 919
+Debug "2015-07-07 01:19:40.569014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 340 920
+Debug "2015-07-07 01:19:40.569014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 340 921
+Debug "2015-07-07 01:19:40.569014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 340 922
+Debug "2015-07-07 01:19:40.779014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 433 923
+Verbose "2015-07-07 01:19:40.779014" 135 NotificationService "Battery Full, Charging" 433 924
+Debug "2015-07-07 01:19:40.789014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 433 925
+Debug "2015-07-07 01:19:40.789014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 433 926
+Debug "2015-07-07 01:19:40.789014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 433 927
+Debug "2015-07-07 01:19:40.789014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 433 928
+Debug "2015-07-07 01:19:40.799014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 433 929
+Debug "2015-07-07 01:19:40.870014" 3957 dalvikvm "GC_CONCURRENT freed 370K, 41% free 3784K/6343K, external 0K/0K, paused 3ms+25ms" 3959 930
+Debug "2015-07-07 01:19:40.900014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a898f8" 353 931
+Debug "2015-07-07 01:19:40.990014" 259 dalvikvm "GC_EXTERNAL_ALLOC freed 472K, 46% free 3664K/6663K, external 2133K/2268K, paused 105ms" 259 932
+Debug "2015-07-07 01:19:41.080014" 259 dalvikvm "GC_EXTERNAL_ALLOC freed 113K, 47% free 3553K/6663K, external 2839K/2864K, paused 49ms" 259 933
+Debug "2015-07-07 01:19:41.090014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 353 934
+Verbose "2015-07-07 01:19:41.090014" 135 NotificationService "Battery Full, Charging" 353 935
+Debug "2015-07-07 01:19:41.100014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 353 936
+Debug "2015-07-07 01:19:41.100014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 353 937
+Debug "2015-07-07 01:19:41.100014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 353 938
+Debug "2015-07-07 01:19:41.100014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 353 939
+Debug "2015-07-07 01:19:41.110014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 353 940
+Verbose "2015-07-07 01:19:41.120014" 135 NotificationService "Battery Full, Charging" 135 941
+Debug "2015-07-07 01:19:41.130014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 135 942
+Debug "2015-07-07 01:19:41.130014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 135 943
+Debug "2015-07-07 01:19:41.130014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 135 944
+Debug "2015-07-07 01:19:41.130014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 135 945
+Debug "2015-07-07 01:19:41.130014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 135 946
+Debug "2015-07-07 01:19:41.140014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 135 947
+Debug "2015-07-07 01:19:41.290014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 340 948
+Verbose "2015-07-07 01:19:41.290014" 135 NotificationService "Battery Full, Charging" 340 949
+Debug "2015-07-07 01:19:41.300014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 340 950
+Debug "2015-07-07 01:19:41.300014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 340 951
+Debug "2015-07-07 01:19:41.300014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 340 952
+Debug "2015-07-07 01:19:41.300014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 340 953
+Debug "2015-07-07 01:19:41.310014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 340 954
+Debug "2015-07-07 01:19:41.340014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a3ac28" 1118 955
+Debug "2015-07-07 01:19:41.400014" 4072 dalvikvm "GC_CONCURRENT freed 696K, 60% free 839K/2051K, external 0K/0K, paused 1ms+8ms" 4074 956
+Debug "2015-07-07 01:19:41.660014" 4072 dalvikvm "GC_CONCURRENT freed 773K, 59% free 847K/2051K, external 0K/0K, paused 2ms+7ms" 4074 957
+Debug "2015-07-07 01:19:41.901014" 4072 dalvikvm "GC_CONCURRENT freed 755K, 59% free 842K/2051K, external 0K/0K, paused 1ms+2ms" 4074 958
+Debug "2015-07-07 01:19:42.111014" 4072 dalvikvm "GC_CONCURRENT freed 777K, 61% free 816K/2051K, external 0K/0K, paused 2ms+2ms" 4074 959
+Debug "2015-07-07 01:19:42.371014" 4072 dalvikvm "GC_CONCURRENT freed 754K, 59% free 846K/2051K, external 0K/0K, paused 2ms+7ms" 4074 960
+Debug "2015-07-07 01:19:42.651014" 4072 dalvikvm "GC_CONCURRENT freed 760K, 61% free 807K/2051K, external 0K/0K, paused 1ms+1ms" 4074 961
+Debug "2015-07-07 01:19:42.932014" 4072 dalvikvm "GC_CONCURRENT freed 724K, 58% free 867K/2051K, external 0K/0K, paused 1ms+10ms" 4074 962
+Debug "2015-07-07 01:19:43.052014" 3957 "skia    " "purging 191K from font cache [23 entries]" 3957 963
+Debug "2015-07-07 01:19:43.252014" 4072 dalvikvm "GC_CONCURRENT freed 809K, 61% free 810K/2051K, external 0K/0K, paused 1ms+8ms" 4074 964
+Debug "2015-07-07 01:19:43.472014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 355 965
+Verbose "2015-07-07 01:19:43.472014" 135 NotificationService "Battery Full, Charging" 355 966
+Debug "2015-07-07 01:19:43.482014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 355 967
+Debug "2015-07-07 01:19:43.482014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 355 968
+Debug "2015-07-07 01:19:43.482014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 355 969
+Debug "2015-07-07 01:19:43.492014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 355 970
+Debug "2015-07-07 01:19:43.492014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 355 971
+Debug "2015-07-07 01:19:43.572014" 4072 dalvikvm "GC_CONCURRENT freed 701K, 61% free 809K/2051K, external 0K/0K, paused 2ms+9ms" 4074 972
+Debug "2015-07-07 01:19:43.712014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 1118 973
+Debug "2015-07-07 01:19:43.712014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 1118 974
+Verbose "2015-07-07 01:19:43.712014" 135 NotificationService "Battery Full, Charging" 1118 975
+Debug "2015-07-07 01:19:43.722014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 1118 976
+Debug "2015-07-07 01:19:43.722014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 1118 977
+Debug "2015-07-07 01:19:43.722014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 1118 978
+Debug "2015-07-07 01:19:43.722014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 1118 979
+Debug "2015-07-07 01:19:43.752014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a5af20" 1069 980
+Debug "2015-07-07 01:19:43.953014" 3957 dalvikvm "GC_CONCURRENT freed 480K, 42% free 3772K/6407K, external 0K/0K, paused 3ms+3ms" 3959 981
+Debug "2015-07-07 01:19:44.073014" 4072 dalvikvm "GC_CONCURRENT freed 779K, 60% free 837K/2051K, external 0K/0K, paused 1ms+3ms" 4074 982
+Debug "2015-07-07 01:19:44.323014" 4072 dalvikvm "GC_CONCURRENT freed 809K, 60% free 837K/2051K, external 0K/0K, paused 2ms+1ms" 4074 983
+Debug "2015-07-07 01:19:44.613014" 4072 dalvikvm "GC_CONCURRENT freed 753K, 60% free 839K/2051K, external 0K/0K, paused 0ms+1ms" 4074 984
+Debug "2015-07-07 01:19:44.813014" 135 dalvikvm "GC_FOR_MALLOC freed 1909K, 37% free 8317K/13063K, external 2532K/3162K, paused 80ms" 346 985
+Debug "2015-07-07 01:19:44.913014" 4072 dalvikvm "GC_CONCURRENT freed 756K, 58% free 864K/2051K, external 0K/0K, paused 1ms+7ms" 4074 986
+Debug "2015-07-07 01:19:45.094014" 4072 dalvikvm "GC_CONCURRENT freed 808K, 61% free 808K/2051K, external 0K/0K, paused 1ms+2ms" 4074 987
+Debug "2015-07-07 01:19:45.164014" 3957 "skia    " "purging 190K from font cache [22 entries]" 3957 988
+Debug "2015-07-07 01:19:45.194014" 3167 dalvikvm "GC_EXPLICIT freed 778K, 36% free 7363K/11335K, external 0K/0K, paused 360ms" 3167 989
+Debug "2015-07-07 01:19:45.254014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 340 990
+Debug "2015-07-07 01:19:45.254014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 340 991
+Debug "2015-07-07 01:19:45.254014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 340 992
+Verbose "2015-07-07 01:19:45.254014" 135 NotificationService "Battery Full, Charging" 340 993
+Debug "2015-07-07 01:19:45.264014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 340 994
+Debug "2015-07-07 01:19:45.264014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 340 995
+Debug "2015-07-07 01:19:45.274014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 340 996
+Debug "2015-07-07 01:19:45.334014" 4072 dalvikvm "GC_CONCURRENT freed 696K, 61% free 808K/2051K, external 0K/0K, paused 1ms+10ms" 4074 997
+Debug "2015-07-07 01:19:45.394014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 340 998
+Verbose "2015-07-07 01:19:45.394014" 135 NotificationService "Battery Full, Charging" 340 999
+Debug "2015-07-07 01:19:45.404014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 340 1000
+Debug "2015-07-07 01:19:45.404014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 340 1001
+Debug "2015-07-07 01:19:45.404014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 340 1002
+Debug "2015-07-07 01:19:45.404014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 340 1003
+Debug "2015-07-07 01:19:45.414014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 340 1004
+Debug "2015-07-07 01:19:45.444014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40af2700" 1118 1005
+Debug "2015-07-07 01:19:45.734014" 4072 dalvikvm "GC_CONCURRENT freed 780K, 61% free 808K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1006
+Debug "2015-07-07 01:19:45.784014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 433 1007
+Debug "2015-07-07 01:19:45.784014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 433 1008
+Debug "2015-07-07 01:19:45.784014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 433 1009
+Verbose "2015-07-07 01:19:45.784014" 135 NotificationService "Battery Full, Charging" 433 1010
+Debug "2015-07-07 01:19:45.794014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 433 1011
+Debug "2015-07-07 01:19:45.794014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 433 1012
+Debug "2015-07-07 01:19:45.794014" 3957 "skia    " "purging 195K from font cache [23 entries]" 3957 1013
+Debug "2015-07-07 01:19:45.794014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 433 1014
+Debug "2015-07-07 01:19:46.255014" 4072 dalvikvm "GC_CONCURRENT freed 726K, 60% free 835K/2051K, external 0K/0K, paused 1ms+11ms" 4074 1015
+Info "2015-07-07 01:19:46.285014" 135 ActivityManager "Starting activity: Intent { bnds=[0,204][480,300] } from pid -1" 1118 1016
+Info "2015-07-07 01:19:46.285014" 135 ActivityManager "Starting activity: Intent { bnds=[0,204][480,300] } from pid -1" 346 1017
+Info "2015-07-07 01:19:46.445014" 135 ActivityManager "Starting activity: Intent { bnds=[0,-108][480,-12] } from pid -1" 1118 1018
+Verbose "2015-07-07 01:19:46.515014" 135 NotificationService "Battery Full, Charging" 140 1019
+Debug "2015-07-07 01:19:46.525014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 140 1020
+Debug "2015-07-07 01:19:46.525014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 140 1021
+Debug "2015-07-07 01:19:46.525014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 140 1022
+Debug "2015-07-07 01:19:46.535014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 140 1023
+Debug "2015-07-07 01:19:46.535014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 140 1024
+Debug "2015-07-07 01:19:46.535014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 140 1025
+Debug "2015-07-07 01:19:46.575014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a1a470" 1118 1026
+Warning "2015-07-07 01:19:46.605014" 135 ProcessStats "Skipping unknown process pid 4112" 157 1027
+Warning "2015-07-07 01:19:46.605014" 135 ProcessStats "Skipping unknown process pid 4113" 157 1028
+Debug "2015-07-07 01:19:46.755014" 4072 dalvikvm "GC_CONCURRENT freed 751K, 58% free 865K/2051K, external 0K/0K, paused 1ms+31ms" 4074 1029
+Debug "2015-07-07 01:19:46.815014" 3957 dalvikvm "GC_CONCURRENT freed 501K, 42% free 3798K/6471K, external 0K/0K, paused 7ms+32ms" 3959 1030
+Debug "2015-07-07 01:19:46.985014" 3957 "skia    " "purging 196K from font cache [26 entries]" 3957 1031
+Debug "2015-07-07 01:19:47.166014" 3957 "skia    " "purging 197K from font cache [25 entries]" 3957 1032
+Debug "2015-07-07 01:19:47.176014" 4072 dalvikvm "GC_CONCURRENT freed 808K, 60% free 839K/2051K, external 0K/0K, paused 1ms+9ms" 4074 1033
+Debug "2015-07-07 01:19:47.456014" 4072 dalvikvm "GC_CONCURRENT freed 804K, 59% free 847K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1034
+Debug "2015-07-07 01:19:47.496014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 1069 1035
+Verbose "2015-07-07 01:19:47.496014" 135 NotificationService "Battery Full, Charging" 1069 1036
+Debug "2015-07-07 01:19:47.506014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 1069 1037
+Debug "2015-07-07 01:19:47.506014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 1069 1038
+Debug "2015-07-07 01:19:47.506014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 1069 1039
+Debug "2015-07-07 01:19:47.506014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 1069 1040
+Debug "2015-07-07 01:19:47.516014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 1069 1041
+Debug "2015-07-07 01:19:47.646014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 353 1042
+Verbose "2015-07-07 01:19:47.646014" 135 NotificationService "Battery Full, Charging" 353 1043
+Debug "2015-07-07 01:19:47.656014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 353 1044
+Debug "2015-07-07 01:19:47.656014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 353 1045
+Debug "2015-07-07 01:19:47.656014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 353 1046
+Debug "2015-07-07 01:19:47.656014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 353 1047
+Debug "2015-07-07 01:19:47.666014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 353 1048
+Debug "2015-07-07 01:19:47.686014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40998658" 135 1049
+Debug "2015-07-07 01:19:47.836014" 4072 dalvikvm "GC_CONCURRENT freed 861K, 62% free 795K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1050
+Debug "2015-07-07 01:19:48.047014" 4072 dalvikvm "GC_CONCURRENT freed 688K, 60% free 828K/2051K, external 0K/0K, paused 0ms+1ms" 4074 1051
+Debug "2015-07-07 01:19:48.067014" 3957 "skia    " "purging 200K from font cache [25 entries]" 3957 1052
+Debug "2015-07-07 01:19:48.257014" 4072 dalvikvm "GC_CONCURRENT freed 779K, 59% free 856K/2051K, external 0K/0K, paused 1ms+2ms" 4074 1053
+Debug "2015-07-07 01:19:48.437014" 4072 dalvikvm "GC_CONCURRENT freed 792K, 59% free 847K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1054
+Debug "2015-07-07 01:19:48.787014" 4072 dalvikvm "GC_CONCURRENT freed 791K, 60% free 839K/2051K, external 0K/0K, paused 0ms+10ms" 4074 1055
+Debug "2015-07-07 01:19:48.887014" 3957 "skia    " "purging 195K from font cache [27 entries]" 3957 1056
+Debug "2015-07-07 01:19:49.027014" 3957 dalvikvm "GC_CONCURRENT freed 433K, 42% free 3812K/6471K, external 0K/0K, paused 2ms+5ms" 3959 1057
+Debug "2015-07-07 01:19:49.068014" 4072 dalvikvm "GC_CONCURRENT freed 752K, 58% free 864K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1058
+Debug "2015-07-07 01:19:49.268014" 3957 "skia    " "purging 196K from font cache [26 entries]" 3957 1059
+Debug "2015-07-07 01:19:49.318014" 4072 dalvikvm "GC_CONCURRENT freed 809K, 60% free 837K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1060
+Debug "2015-07-07 01:19:49.568014" 4072 dalvikvm "GC_CONCURRENT freed 775K, 61% free 816K/2051K, external 0K/0K, paused 2ms+2ms" 4074 1061
+Debug "2015-07-07 01:19:49.818014" 4072 dalvikvm "GC_CONCURRENT freed 732K, 61% free 807K/2051K, external 0K/0K, paused 2ms+1ms" 4074 1062
+Debug "2015-07-07 01:19:49.928014" 3243 dalvikvm "GC_EXPLICIT freed 280K, 49% free 3041K/5895K, external 0K/0K, paused 70ms" 3243 1063
+Debug "2015-07-07 01:19:50.038014" 4072 dalvikvm "GC_CONCURRENT freed 715K, 58% free 875K/2051K, external 0K/0K, paused 0ms+2ms" 4074 1064
+Debug "2015-07-07 01:19:50.309014" 3957 "skia    " "purging 195K from font cache [26 entries]" 3957 1065
+Debug "2015-07-07 01:19:50.349014" 135 dalvikvm "GC_FOR_MALLOC freed 1700K, 37% free 8298K/13063K, external 2532K/3162K, paused 85ms" 353 1066
+Debug "2015-07-07 01:19:50.409014" 4072 dalvikvm "GC_CONCURRENT freed 818K, 58% free 868K/2051K, external 0K/0K, paused 1ms+3ms" 4074 1067
+Debug "2015-07-07 01:19:50.689014" 4072 dalvikvm "GC_CONCURRENT freed 803K, 59% free 845K/2051K, external 0K/0K, paused 1ms+1ms" 4074 1068
+Debug "2015-07-07 01:19:50.809014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 433 1069
+Debug "2015-07-07 01:19:50.809014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 433 1070
+Debug "2015-07-07 01:19:50.809014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 433 1071
+Verbose "2015-07-07 01:19:50.809014" 135 NotificationService "Battery Full, Charging" 433 1072
+Debug "2015-07-07 01:19:50.819014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 433 1073
+Debug "2015-07-07 01:19:50.819014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 433 1074
+Debug "2015-07-07 01:19:50.819014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 433 1075
+Debug "2015-07-07 01:19:50.899014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/brightness string=0,len=1" 135 1076
+Debug "2015-07-07 01:19:50.899014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/blink string=0,len=1" 135 1077
+Verbose "2015-07-07 01:19:50.899014" 135 NotificationService "Battery Full, Charging" 135 1078
+Debug "2015-07-07 01:19:50.909014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/amber/off_timer string=0 0,len=3" 135 1079
+Debug "2015-07-07 01:19:50.909014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/brightness string=1,len=1" 135 1080
+Debug "2015-07-07 01:19:50.909014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/blink string=0,len=1" 135 1081
+Debug "2015-07-07 01:19:50.909014" 135 "lights  " "[LedInfo] write attr ok name=/sys/class/leds/green/off_timer string=0 0,len=3" 135 1082
+Debug "2015-07-07 01:19:51.009014" 135 InputManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@40a783e0" 1069 1083
+Debug "2015-07-07 01:19:51.089014" 4072 dalvikvm "GC_CONCURRENT freed 847K, 61% free 811K/2051K, external 0K/0K, paused 1ms+5ms" 4074 1084
+Debug "2015-07-07 01:19:51.320014" 4072 dalvikvm "GC_CONCURRENT freed 772K, 61% free 818K/2051K, external 0K/0K, paused 1ms+2ms" 4074 1085
+Debug "2015-07-07 01:19:52.701014" 3957 dalvikvm "GC_CONCURRENT freed 505K, 42% free 3770K/6471K, external 0K/0K, paused 4ms+3ms" 3959 1086
+Debug "2015-07-07 01:19:54.873014" 3248 dalvikvm "GC_EXPLICIT freed 152K, 42% free 3442K/5895K, external 0K/0K, paused 49ms" 3248 1087
+Debug "2015-07-07 01:19:56.695014" 3957 dalvikvm "GC_CONCURRENT freed 468K, 42% free 3769K/6471K, external 0K/0K, paused 3ms+10ms" 3959 1088
+Debug "2015-07-07 01:19:57.556014" 259 StatusBarService "updateIcon slot=battery index=21 viewIndex=16 old=StatusBarIcon(pkg=com.android.systemui id=0x1080347 level=100 visible=true num=0 ) icon=StatusBarIcon(pkg=com.android.systemui id=0x1080347 level=100 visible=true num=0 )" 259 1089
+Debug "2015-07-07 01:19:57.566014" 135 BatteryService "usb_cable_connect = 1" 212 1090
+Debug "2015-07-07 01:19:57.566014" 135 BatteryService "usb_cable_connect = 1" 212 1091
+Debug "2015-07-07 01:19:57.576014" 135 BatteryService "isUsbConnected() = true" 212 1092
+Debug "2015-07-07 01:19:57.576014" 135 BatteryService "mPlugType = 2" 212 1093
+Debug "2015-07-07 01:19:57.576014" 310 HtcCdmaPhoneApp "level 100 scale 100" 310 1094
+Debug "2015-07-07 01:19:57.586014" 135 WifiService "[smart wifi] mSmartWiFiStatus: 0 mBatteryLevel: 100 mWifiConnected: false" 151 1095
+Debug "2015-07-07 01:19:57.586014" 135 WifiService "[smart wifi] ACTION_BATTERY_CHANGED pluggedType: 2" 151 1096
+Debug "2015-07-07 01:19:57.586014" 135 BatteryService "usb_cable_connect = 1" 212 1097
+Debug "2015-07-07 01:19:57.596014" 135 BatteryService "usb_cable_connect = 1" 212 1098
+Debug "2015-07-07 01:19:57.596014" 135 BatteryService "isUsbConnected() = true" 212 1099
+Debug "2015-07-07 01:19:57.596014" 135 BatteryService "mPlugType = 2" 212 1100
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "action = psclient.intent.action.usb_status" 394 1101
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver ACTION_BATTERY_CHANGED 394 1102
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "usbCurrentType = 2" 394 1103
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "Current type is same as previous, return!" 394 1104
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "action = psclient.intent.action.usb_status" 394 1105
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver ACTION_BATTERY_CHANGED 394 1106
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "usbCurrentType = 2" 394 1107
+Debug "2015-07-07 01:19:57.596014" 394 UsbConnectedReceiver "Current type is same as previous, return!" 394 1108
+Debug "2015-07-07 01:20:00.689014" 3957 dalvikvm "GC_CONCURRENT freed 465K, 42% free 3769K/6471K, external 0K/0K, paused 3ms+4ms" 3959 1109
+Debug "2015-07-07 01:20:04.693014" 3957 dalvikvm "GC_CONCURRENT freed 467K, 42% free 3769K/6471K, external 0K/0K, paused 3ms+4ms" 3959 1110
+Debug "2015-07-07 01:20:06.895014" 3262 dalvikvm "GC_EXPLICIT freed 264K, 48% free 3046K/5767K, external 0K/0K, paused 52ms" 3262 1111
+Debug "2015-07-07 01:20:08.687014" 3957 dalvikvm "GC_CONCURRENT freed 466K, 42% free 3770K/6471K, external 0K/0K, paused 3ms+2ms" 3959 1112

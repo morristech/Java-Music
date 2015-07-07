@@ -5,6 +5,848 @@
     android:padding="5dp"
     android:background="#f9f9f9">
 
+    <!-- clefs and staff lines -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/trebleClef"
+        android:text="@string/trebClef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/bFlatTreb"
+        android:layout_toStartOf="@+id/bFlatTreb"
+        android:layout_alignBottom="@+id/bFlatTreb"/>
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bassClef"
+        android:text="@string/bassClef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/bFlatTreb"
+        android:layout_alignLeft="@+id/trebleClef"
+        android:layout_alignStart="@+id/trebleClef" />
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/altoClef"
+        android:text="@string/altoClef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/bFlatTreb"
+        android:layout_alignLeft="@+id/trebleClef"
+        android:layout_alignStart="@+id/trebleClef" />
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/keySigLines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keySigBlank"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/trebleClef"
+        android:layout_toEndOf="@+id/trebleClef"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/keySigLinesBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keySigBlankSmall"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/bassClef"
+        android:layout_toEndOf="@+id/bassClef"
+        android:layout_alignBottom="@+id/bassClef"/>
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/keySigLinesAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keySigBlankSmall"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/altoClef"
+        android:layout_toEndOf="@+id/altoClef"
+        android:layout_alignBottom="@+id/altoClef"/>
+
+    <!-- key sig sharps for treble clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fs"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/trebleClef"
+        android:layout_toEndOf="@+id/trebleClef"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cs"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/fSharpTreb"
+        android:layout_toEndOf="@+id/fSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gs"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cSharpTreb"
+        android:layout_toEndOf="@+id/cSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ds"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gSharpTreb"
+        android:layout_toEndOf="@+id/gSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/as"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dSharpTreb"
+        android:layout_toEndOf="@+id/dSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/es"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/aSharpTreb"
+        android:layout_toEndOf="@+id/aSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bSharpTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bs"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/eSharpTreb"
+        android:layout_toEndOf="@+id/eSharpTreb"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <!-- key sig sharps for bass clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fsB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/trebleClef"
+        android:layout_toEndOf="@+id/trebleClef"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/csB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/fSharpBass"
+        android:layout_toEndOf="@+id/fSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gsB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cSharpBass"
+        android:layout_toEndOf="@+id/cSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dsB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gSharpBass"
+        android:layout_toEndOf="@+id/gSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/asB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dSharpBass"
+        android:layout_toEndOf="@+id/dSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/esB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/aSharpBass"
+        android:layout_toEndOf="@+id/aSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bSharpBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bsB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/eSharpBass"
+        android:layout_toEndOf="@+id/eSharpBass"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <!-- key sig sharps for alto clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fsA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/trebleClef"
+        android:layout_toEndOf="@+id/trebleClef"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/csA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/fSharpAlto"
+        android:layout_toEndOf="@+id/fSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gsA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cSharpAlto"
+        android:layout_toEndOf="@+id/cSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dsA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gSharpAlto"
+        android:layout_toEndOf="@+id/gSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/asA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dSharpAlto"
+        android:layout_toEndOf="@+id/dSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/esA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/aSharpAlto"
+        android:layout_toEndOf="@+id/aSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bSharpAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bsA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/eSharpAlto"
+        android:layout_toEndOf="@+id/eSharpAlto"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <!-- key sig flats for treble clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bb"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/eFlatTreb"
+        android:layout_toStartOf="@+id/eFlatTreb"
+        android:layout_alignBottom="@+id/eFlatTreb"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eb"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/aFlatTreb"
+        android:layout_toStartOf="@+id/aFlatTreb"
+        android:layout_alignBottom="@+id/aFlatTreb"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ab"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/dFlatTreb"
+        android:layout_toStartOf="@+id/dFlatTreb"
+        android:layout_alignBottom="@+id/dFlatTreb"/>
+    <!-- the rest of the staff is hinged to this textview: dFlatTreb -->
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/db"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/keyTextView"
+        android:layout_marginBottom="140dp"
+        android:layout_centerHorizontal="true"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gb"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dFlatTreb"
+        android:layout_toEndOf="@+id/dFlatTreb"
+        android:layout_alignBottom="@+id/dFlatTreb"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gFlatTreb"
+        android:layout_toEndOf="@+id/gFlatTreb"
+        android:layout_alignBottom="@+id/gFlatTreb"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fFlatTreb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fb"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cFlatTreb"
+        android:layout_toEndOf="@+id/cFlatTreb"
+        android:layout_alignBottom="@+id/cFlatTreb"/>
+
+    <!-- key sig flats for bass clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bbB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/eFlatBass"
+        android:layout_toStartOf="@+id/eFlatBass"
+        android:layout_alignBottom="@+id/eFlatBass"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ebB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/aFlatBass"
+        android:layout_toStartOf="@+id/aFlatBass"
+        android:layout_alignBottom="@+id/aFlatBass"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/abB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/dFlatBass"
+        android:layout_toStartOf="@+id/dFlatBass"
+        android:layout_alignBottom="@+id/dFlatBass"/>
+    <!-- the rest of the bass staff is hinged to this textview: dFlatBass -->
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dbB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/keyTextView"
+        android:layout_marginBottom="140dp"
+        android:layout_centerHorizontal="true"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gbB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dFlatBass"
+        android:layout_toEndOf="@+id/dFlatBass"
+        android:layout_alignBottom="@+id/dFlatBass"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gFlatBass"
+        android:layout_toEndOf="@+id/gFlatBass"
+        android:layout_alignBottom="@+id/gFlatBass"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fFlatBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fbB"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cFlatBass"
+        android:layout_toEndOf="@+id/cFlatBass"
+        android:layout_alignBottom="@+id/cFlatBass"/>
+
+    <!-- key sig flats for alto clef -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/bFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bbA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/eFlatAlto"
+        android:layout_toStartOf="@+id/eFlatAlto"
+        android:layout_alignBottom="@+id/eFlatAlto"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/eFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ebA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/aFlatAlto"
+        android:layout_toStartOf="@+id/aFlatAlto"
+        android:layout_alignBottom="@+id/aFlatAlto"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/aFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/abA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/dFlatAlto"
+        android:layout_toStartOf="@+id/dFlatAlto"
+        android:layout_alignBottom="@+id/dFlatAlto"/>
+    <!-- the rest of the alto staff is hinged to this textview: dFlatAlto -->
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/dFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dbA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/keyTextView"
+        android:layout_marginBottom="140dp"
+        android:layout_centerHorizontal="true"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/gFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gbA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/dFlatAlto"
+        android:layout_toEndOf="@+id/dFlatAlto"
+        android:layout_alignBottom="@+id/dFlatAlto"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/cFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/gFlatAlto"
+        android:layout_toEndOf="@+id/gFlatAlto"
+        android:layout_alignBottom="@+id/gFlatAlto"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/fFlatAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fbA"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/cFlatAlto"
+        android:layout_toEndOf="@+id/cFlatAlto"
+        android:layout_alignBottom="@+id/cFlatAlto"/>
+
+    <!-- noteheads -->
+
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a3"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadB3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b3"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadC4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadD4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadE4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadF4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadG4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/g4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadB4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadC5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadD5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadE5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadF5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadG5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/g5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/keySigLines"
+        android:layout_toEndOf="@+id/keySigLines"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <!-- supplementary noteheads for tightly packed chords -->
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA3r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a3"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadB3r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b3"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadC4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadD4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadE4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadF4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadG4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/g4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadB4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b4"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadC5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadD5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadE5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadF5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadG5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/g5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/noteheadA5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a5"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/endOfStafflines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/endOfStaff"
+        android:textSize="180sp"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/noteheadG5"
+        android:layout_toEndOf="@+id/noteheadG5"
+        android:layout_alignBottom="@+id/trebleClef"/>
+
     <!-- Widgets on bottom-half of screen -->
 
     <TextView
@@ -12,7 +854,7 @@
         android:layout_width="47dp"
         android:layout_height="wrap_content"
         android:textColor="#f2ac9c"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:layout_alignBaseline="@+id/answerButton1"
         android:layout_alignBottom="@+id/answerButton1"
         android:layout_alignParentLeft="true"
@@ -25,9 +867,9 @@
 
     <Button
         android:id="@+id/answerButton1"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:typeface="serif"
         android:textAllCaps="false"
         android:background="@drawable/green_buttons"
@@ -47,7 +889,7 @@
         android:layout_width="47dp"
         android:layout_height="wrap_content"
         android:textColor="#f2ac9c"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:layout_alignBaseline="@+id/answerButton2"
         android:layout_alignBottom="@+id/answerButton2"
         android:layout_toLeftOf="@+id/answerButton2"
@@ -58,9 +900,9 @@
 
     <Button
         android:id="@+id/answerButton2"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:typeface="serif"
         android:textAllCaps="false"
         android:background="@drawable/green_buttons"
@@ -82,7 +924,7 @@
         android:layout_width="47dp"
         android:layout_height="wrap_content"
         android:textColor="#f2ac9c"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:text="@string/placeHolderXText"
         android:layout_alignBaseline="@+id/answerButton3"
         android:layout_alignBottom="@+id/answerButton3"
@@ -95,9 +937,9 @@
 
     <Button
         android:id="@+id/answerButton3"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:typeface="serif"
         android:textAllCaps="false"
         android:background="@drawable/green_buttons"
@@ -117,7 +959,7 @@
         android:layout_width="47dp"
         android:layout_height="wrap_content"
         android:textColor="#f2ac9c"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:layout_alignBaseline="@+id/answerButton4"
         android:layout_alignBottom="@+id/answerButton4"
         android:layout_toLeftOf="@+id/answerButton4"
@@ -128,9 +970,9 @@
 
     <Button
         android:id="@+id/answerButton4"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:typeface="serif"
         android:textAllCaps="false"
         android:background="@drawable/green_buttons"
@@ -152,7 +994,7 @@
         android:text="New Chord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="60sp"
+        android:textSize="90sp"
         android:background="@drawable/pink_buttons"
         android:textColor="@drawable/pink_buttons_text"
         android:textStyle="bold"
@@ -165,9 +1007,9 @@
     <Button
         android:id="@+id/refreshButton"
         android:text="\u21BA"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:textSize="60sp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:textSize="90sp"
         android:background="@drawable/pink_buttons"
         android:textColor="@drawable/pink_buttons_text"
         android:textStyle="bold"
@@ -180,7 +1022,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:textColor="#f2ac9c"
         android:textStyle="bold"
         android:layout_alignTop="@+id/refreshButton"
@@ -194,7 +1036,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 / 0"
-        android:textSize="47sp"
+        android:textSize="60sp"
         android:textColor="#f2ac9c"
         android:textStyle="bold"
         android:layout_alignBottom="@+id/refreshButton"
@@ -206,7 +1048,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Number of\nkey signature\naccidentals"
-        android:textSize="35sp"
+        android:textSize="42sp"
         android:textColor="#f2ac9c"
         android:textStyle="bold"
         android:gravity="center_vertical|end"
@@ -230,7 +1072,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0 \u2013 3"
-            android:textSize="47sp"
+            android:textSize="60sp"
             android:textColor="#f2ac9c"
             android:button="@drawable/pink_radios"
             android:textStyle="bold" />
@@ -239,7 +1081,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="All"
-            android:textSize="47sp"
+            android:textSize="60sp"
             android:textColor="#f2ac9c"
             android:button="@drawable/pink_radios"
             android:textStyle="bold" />
@@ -250,853 +1092,11 @@
         android:text="Key area:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="47sp"
+        android:textSize="70sp"
         android:typeface="serif"
         android:textColor="@android:color/black"
         android:layout_above="@+id/answerButton2"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="60dp"
         android:layout_centerHorizontal="true"/>
-
-    <!-- clefs and staff lines -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/trebleClef"
-        android:text="@string/trebClef"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/bFlatTreb"
-        android:layout_toStartOf="@+id/bFlatTreb"
-        android:layout_alignBottom="@+id/bFlatTreb"/>
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bassClef"
-        android:text="@string/bassClef"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_alignTop="@+id/bFlatTreb"
-        android:layout_alignLeft="@+id/trebleClef"
-        android:layout_alignStart="@+id/trebleClef" />
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/altoClef"
-        android:text="@string/altoClef"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_alignTop="@+id/bFlatTreb"
-        android:layout_alignLeft="@+id/trebleClef"
-        android:layout_alignStart="@+id/trebleClef" />
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/keySigLines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/keySigBlank"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/trebleClef"
-        android:layout_toEndOf="@+id/trebleClef"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/keySigLinesBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/keySigBlankSmall"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/bassClef"
-        android:layout_toEndOf="@+id/bassClef"
-        android:layout_alignBottom="@+id/bassClef"/>
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/keySigLinesAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/keySigBlankSmall"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/altoClef"
-        android:layout_toEndOf="@+id/altoClef"
-        android:layout_alignBottom="@+id/altoClef"/>
-
-    <!-- key sig sharps for treble clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fs"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/trebleClef"
-        android:layout_toEndOf="@+id/trebleClef"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cs"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/fSharpTreb"
-        android:layout_toEndOf="@+id/fSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gs"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cSharpTreb"
-        android:layout_toEndOf="@+id/cSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ds"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gSharpTreb"
-        android:layout_toEndOf="@+id/gSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/as"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dSharpTreb"
-        android:layout_toEndOf="@+id/dSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/es"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/aSharpTreb"
-        android:layout_toEndOf="@+id/aSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bSharpTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bs"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/eSharpTreb"
-        android:layout_toEndOf="@+id/eSharpTreb"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <!-- key sig sharps for bass clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fsB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/trebleClef"
-        android:layout_toEndOf="@+id/trebleClef"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/csB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/fSharpBass"
-        android:layout_toEndOf="@+id/fSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gsB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cSharpBass"
-        android:layout_toEndOf="@+id/cSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dsB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gSharpBass"
-        android:layout_toEndOf="@+id/gSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/asB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dSharpBass"
-        android:layout_toEndOf="@+id/dSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/esB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/aSharpBass"
-        android:layout_toEndOf="@+id/aSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bSharpBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bsB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/eSharpBass"
-        android:layout_toEndOf="@+id/eSharpBass"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <!-- key sig sharps for alto clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fsA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/trebleClef"
-        android:layout_toEndOf="@+id/trebleClef"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/csA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/fSharpAlto"
-        android:layout_toEndOf="@+id/fSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gsA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cSharpAlto"
-        android:layout_toEndOf="@+id/cSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dsA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gSharpAlto"
-        android:layout_toEndOf="@+id/gSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/asA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dSharpAlto"
-        android:layout_toEndOf="@+id/dSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/esA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/aSharpAlto"
-        android:layout_toEndOf="@+id/aSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bSharpAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bsA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/eSharpAlto"
-        android:layout_toEndOf="@+id/eSharpAlto"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <!-- key sig flats for treble clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bb"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/eFlatTreb"
-        android:layout_toStartOf="@+id/eFlatTreb"
-        android:layout_alignBottom="@+id/eFlatTreb"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eb"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/aFlatTreb"
-        android:layout_toStartOf="@+id/aFlatTreb"
-        android:layout_alignBottom="@+id/aFlatTreb"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ab"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/dFlatTreb"
-        android:layout_toStartOf="@+id/dFlatTreb"
-        android:layout_alignBottom="@+id/dFlatTreb"/>
-    <!-- the rest of the staff is hinged to this textview: dFlatTreb -->
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/db"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/keyTextView"
-        android:layout_marginBottom="120dp"
-        android:layout_centerHorizontal="true"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gb"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dFlatTreb"
-        android:layout_toEndOf="@+id/dFlatTreb"
-        android:layout_alignBottom="@+id/dFlatTreb"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cb"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gFlatTreb"
-        android:layout_toEndOf="@+id/gFlatTreb"
-        android:layout_alignBottom="@+id/gFlatTreb"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fFlatTreb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fb"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cFlatTreb"
-        android:layout_toEndOf="@+id/cFlatTreb"
-        android:layout_alignBottom="@+id/cFlatTreb"/>
-
-    <!-- key sig flats for bass clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bbB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/eFlatBass"
-        android:layout_toStartOf="@+id/eFlatBass"
-        android:layout_alignBottom="@+id/eFlatBass"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ebB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/aFlatBass"
-        android:layout_toStartOf="@+id/aFlatBass"
-        android:layout_alignBottom="@+id/aFlatBass"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/abB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/dFlatBass"
-        android:layout_toStartOf="@+id/dFlatBass"
-        android:layout_alignBottom="@+id/dFlatBass"/>
-    <!-- the rest of the bass staff is hinged to this textview: dFlatBass -->
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dbB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/keyTextView"
-        android:layout_marginBottom="120dp"
-        android:layout_centerHorizontal="true"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gbB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dFlatBass"
-        android:layout_toEndOf="@+id/dFlatBass"
-        android:layout_alignBottom="@+id/dFlatBass"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cbB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gFlatBass"
-        android:layout_toEndOf="@+id/gFlatBass"
-        android:layout_alignBottom="@+id/gFlatBass"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fFlatBass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fbB"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cFlatBass"
-        android:layout_toEndOf="@+id/cFlatBass"
-        android:layout_alignBottom="@+id/cFlatBass"/>
-
-    <!-- key sig flats for alto clef -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/bFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bbA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/eFlatAlto"
-        android:layout_toStartOf="@+id/eFlatAlto"
-        android:layout_alignBottom="@+id/eFlatAlto"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/eFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ebA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/aFlatAlto"
-        android:layout_toStartOf="@+id/aFlatAlto"
-        android:layout_alignBottom="@+id/aFlatAlto"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/aFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/abA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toLeftOf="@+id/dFlatAlto"
-        android:layout_toStartOf="@+id/dFlatAlto"
-        android:layout_alignBottom="@+id/dFlatAlto"/>
-    <!-- the rest of the alto staff is hinged to this textview: dFlatAlto -->
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/dFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dbA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/keyTextView"
-        android:layout_marginBottom="120dp"
-        android:layout_centerHorizontal="true"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/gFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gbA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/dFlatAlto"
-        android:layout_toEndOf="@+id/dFlatAlto"
-        android:layout_alignBottom="@+id/dFlatAlto"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/cFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cbA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/gFlatAlto"
-        android:layout_toEndOf="@+id/gFlatAlto"
-        android:layout_alignBottom="@+id/gFlatAlto"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/fFlatAlto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fbA"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/cFlatAlto"
-        android:layout_toEndOf="@+id/cFlatAlto"
-        android:layout_alignBottom="@+id/cFlatAlto"/>
-
-    <!-- noteheads -->
-
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a3"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadB3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/b3"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadC4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadD4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/d4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadE4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/e4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadF4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/f4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadG4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/g4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadB4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/b4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadC5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadD5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/d5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadE5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/e5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadF5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/f5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadG5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/g5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/keySigLines"
-        android:layout_toEndOf="@+id/keySigLines"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <!-- supplementary noteheads for tightly packed chords -->
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA3r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a3"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadB3r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/b3"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadC4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadD4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/d4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadE4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/e4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadF4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/f4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadG4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/g4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadB4r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/b4"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadC5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadD5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/d5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadE5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/e5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadF5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/f5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadG5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/g5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/noteheadA5r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a5"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_marginLeft="-15dp"
-        android:layout_alignBottom="@+id/trebleClef"/>
-
-    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
-        android:id="@+id/endOfStafflines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/endOfStaff"
-        android:textSize="150sp"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/noteheadG5"
-        android:layout_toEndOf="@+id/noteheadG5"
-        android:layout_alignBottom="@+id/trebleClef"/>
 
 </RelativeLayout>

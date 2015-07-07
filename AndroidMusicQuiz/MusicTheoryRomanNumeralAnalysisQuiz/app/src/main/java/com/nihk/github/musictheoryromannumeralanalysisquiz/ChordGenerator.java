@@ -1,13 +1,13 @@
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
 public class ChordGenerator {
-    String[] pitchClassesArray, accidentalsArray,
+    protected String[] pitchClassesArray, accidentalsArray,
             modeArray, romanNumeralsMajorArray,
             romanNumeralsMinorArray, triadicInversions,
             seventhInversions;
-    String[][][] keyNames;
-    String[][][][] majorKeys, minorKeys;
-    String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
+    protected String[][][] keyNames;
+    protected String[][][][] majorKeys, minorKeys;
+    protected String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
     public static final int NUM_PITCH_CLASSES = 7, //the number of pitch classes in a diatonic collection
             THIRD_INTERVAL = 2, //though in music a third implies an interval of 3, it's actually 2
             START_C_MAJOR = 0, //to start looping through major keys built from pitchClassesArray starting on index 0

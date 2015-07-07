@@ -1,0 +1,1597 @@
+    "--------- beginning of /dev/log/main"  1
+Debug "2015-07-07 01:17:38.029532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 2
+Debug "2015-07-07 01:17:38.029532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 3
+Debug "2015-07-07 01:17:38.029532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 4
+Debug "2015-07-07 01:17:38.044532" 913 WifiStateMachine "handleMessage: X" 1000 5
+Debug "2015-07-07 01:17:38.044532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=90" 1007 6
+Debug "2015-07-07 01:17:38.088532" 2923 AppThwack /tz/ 24878 7
+Debug "2015-07-07 01:17:38.101532" 2923 AppThwack "sha1: 7215d8ffd6d1094a18456592c27dde35ba87e03b" 24878 8
+Debug "2015-07-07 01:17:38.121532" 2923 AppThwack /task/7215d8ffd6d1094a18456592c27dde35ba87e03b 24878 9
+Info "2015-07-07 01:17:38.132532" 1414 NotificationMonitorService "**********  onNotificationPosted *********" 1443 10
+Info "2015-07-07 01:17:38.134532" 1414 NotificationMonitorService "ID :1096041780	null	com.trellis.appthwackdevicemanager" 1443 11
+Debug "2015-07-07 01:17:38.148532" 2923 AppThwackDeviceManager "taskStatus update (7215d8ffd6d1094a18456592c27dde35ba87e03b: {""state"":1})" 2923 12
+Debug "2015-07-07 01:17:38.148532" 2923 AppThwackDeviceManager "taskStatus update (7215d8ffd6d1094a18456592c27dde35ba87e03b: {""result"":{""tz"":""America/Phoenix""},""state"":2})" 2923 13
+Info "2015-07-07 01:17:38.155532" 1414 NotificationMonitorService "********** onNotificationRemoved *********" 1441 14
+Info "2015-07-07 01:17:38.155532" 1414 NotificationMonitorService "ID :1096041780	null	com.trellis.appthwackdevicemanager" 1441 15
+Debug "2015-07-07 01:17:38.248532" 2923 AppThwack /task/7215d8ffd6d1094a18456592c27dde35ba87e03b/status 24885 16
+Debug "2015-07-07 01:17:38.260532" 2923 AppThwack /task/7215d8ffd6d1094a18456592c27dde35ba87e03b/status 24886 17
+Debug "2015-07-07 01:17:38.309532" 2923 AppThwack /task/7215d8ffd6d1094a18456592c27dde35ba87e03b/status 24887 18
+Debug "2015-07-07 01:17:38.392532" 2923 AppThwack /task/7215d8ffd6d1094a18456592c27dde35ba87e03b/status 24888 19
+    "--------- beginning of /dev/log/system"  20
+Info "2015-07-07 01:17:39.007532" 913 ActivityManager "Killing 23364:com.google.android.apps.magazines/u0a108 (adj 15): empty #17" 4611 21
+Warning "2015-07-07 01:17:39.010532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.sendTrigger:147 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.handleFrameworkEvent:164" 3230 22
+Debug "2015-07-07 01:17:39.032532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 23
+Debug "2015-07-07 01:17:39.033532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 24
+Debug "2015-07-07 01:17:39.033532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 25
+Debug "2015-07-07 01:17:39.044532" 913 WifiStateMachine "handleMessage: X" 1000 26
+Debug "2015-07-07 01:17:39.044532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=90" 1007 27
+Debug "2015-07-07 01:17:39.055532" 24893 AndroidRuntime  24893 28
+Debug "2015-07-07 01:17:39.055532" 24893 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24893 29
+Debug "2015-07-07 01:17:39.059532" 24893 AndroidRuntime "CheckJNI is OFF" 24893 30
+Info "2015-07-07 01:17:39.067532" 24893 dalvikvm "DexOpt: not all deps represented" 24893 31
+Error "2015-07-07 01:17:39.067532" 24893 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24893 32
+Info "2015-07-07 01:17:39.068532" 24893 dalvikvm "DexOpt: not all deps represented" 24893 33
+Error "2015-07-07 01:17:39.068532" 24893 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24893 34
+Debug "2015-07-07 01:17:39.074532" 24893 dalvikvm "Trying to load lib libjavacore.so 0x0" 24893 35
+Debug "2015-07-07 01:17:39.076532" 24893 dalvikvm "Added shared lib libjavacore.so 0x0" 24893 36
+Debug "2015-07-07 01:17:39.080532" 24893 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24893 37
+Debug "2015-07-07 01:17:39.080532" 24893 dalvikvm "Added shared lib libnativehelper.so 0x0" 24893 38
+Debug "2015-07-07 01:17:39.080532" 24893 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24893 39
+Info "2015-07-07 01:17:39.093532" 24893 dalvikvm "DexOpt: not all deps represented" 24893 40
+Error "2015-07-07 01:17:39.094532" 24893 dalvikvm "/system/framework/input.jar odex has stale dependencies" 24893 41
+Error "2015-07-07 01:17:39.104532" 24893 cutils-trace "Error opening trace file: Permission denied (13)" 24893 42
+Debug "2015-07-07 01:17:39.117532" 24893 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24893 43
+Debug "2015-07-07 01:17:39.156532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 44
+Debug "2015-07-07 01:17:39.156532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 45
+Debug "2015-07-07 01:17:39.156532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 46
+Debug "2015-07-07 01:17:39.164532" 913 WifiStateMachine "handleMessage: X" 1000 47
+Error "2015-07-07 01:17:39.261532" 24893 memtrack "Couldn't load memtrack module (No such file or directory)" 24893 48
+Error "2015-07-07 01:17:39.261532" 24893 android.os.Debug "failed to load memtrack module: -2" 24893 49
+Debug "2015-07-07 01:17:39.329532" 24893 AndroidRuntime "Calling main entry com.android.commands.input.Input" 24893 50
+Info "2015-07-07 01:17:39.331532" 24893 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16072257, downTime=16072257, deviceId=-1, source=0x101 }" 24893 51
+Info "2015-07-07 01:17:39.344532" 24893 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16072257, downTime=16072257, deviceId=-1, source=0x101 }" 24893 52
+Info "2015-07-07 01:17:39.346532" 1244 Launcher "onBackPressed: WORKSPACE_PREVIEW" 1244 53
+Info "2015-07-07 01:17:39.347532" 1244 Launcher "showWorkspace cl=null panel=1" 1244 54
+Info "2015-07-07 01:17:39.349532" 1244 Workspace "changeState:PREVIEW to:NORMAL[0/3] progess=0.0 duration:450 origCurrPage=0 layoutScale=1.0 pageWidth=720 pageSpacing:0.0 layoutOffsetX=0 scrollX=0 currScroll=0" 1244 55
+Debug "2015-07-07 01:17:39.351532" 24893 AndroidRuntime "Shutting down VM" 24893 56
+Debug "2015-07-07 01:17:39.355532" 24893 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 4ms" 24902 57
+Info "2015-07-07 01:17:39.813532" 1244 Launcher.Utilities " method=setChildrenLayersEnabled lookup failed" 1244 58
+Info "2015-07-07 01:17:39.813532" 1244 Launcher.Utilities " method=setChildrenLayersEnabled lookup failed" 1244 59
+Info "2015-07-07 01:17:39.813532" 1244 Launcher.Utilities " method=setChildrenLayersEnabled lookup failed" 1244 60
+Debug "2015-07-07 01:17:39.926532" 24909 AndroidRuntime  24909 61
+Debug "2015-07-07 01:17:39.926532" 24909 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24909 62
+Debug "2015-07-07 01:17:39.928532" 24909 AndroidRuntime "CheckJNI is OFF" 24909 63
+Info "2015-07-07 01:17:39.936532" 24909 dalvikvm "DexOpt: not all deps represented" 24909 64
+Error "2015-07-07 01:17:39.936532" 24909 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24909 65
+Info "2015-07-07 01:17:39.936532" 24909 dalvikvm "DexOpt: not all deps represented" 24909 66
+Error "2015-07-07 01:17:39.936532" 24909 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24909 67
+Debug "2015-07-07 01:17:39.942532" 24909 dalvikvm "Trying to load lib libjavacore.so 0x0" 24909 68
+Debug "2015-07-07 01:17:39.945532" 24909 dalvikvm "Added shared lib libjavacore.so 0x0" 24909 69
+Debug "2015-07-07 01:17:39.949532" 24909 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24909 70
+Debug "2015-07-07 01:17:39.949532" 24909 dalvikvm "Added shared lib libnativehelper.so 0x0" 24909 71
+Debug "2015-07-07 01:17:39.949532" 24909 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24909 72
+Info "2015-07-07 01:17:39.961532" 24909 dalvikvm "DexOpt: not all deps represented" 24909 73
+Error "2015-07-07 01:17:39.961532" 24909 dalvikvm "/system/framework/input.jar odex has stale dependencies" 24909 74
+Error "2015-07-07 01:17:39.964532" 24909 cutils-trace "Error opening trace file: Permission denied (13)" 24909 75
+Debug "2015-07-07 01:17:39.982532" 24909 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24909 76
+Debug "2015-07-07 01:17:40.034532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 77
+Debug "2015-07-07 01:17:40.034532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 78
+Debug "2015-07-07 01:17:40.034532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 79
+Debug "2015-07-07 01:17:40.050532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=90" 1007 80
+Debug "2015-07-07 01:17:40.051532" 913 WifiStateMachine "handleMessage: X" 1000 81
+Error "2015-07-07 01:17:40.125532" 24909 memtrack "Couldn't load memtrack module (No such file or directory)" 24909 82
+Error "2015-07-07 01:17:40.125532" 24909 android.os.Debug "failed to load memtrack module: -2" 24909 83
+Error "2015-07-07 01:17:40.136532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 84
+Error "2015-07-07 01:17:40.136532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 85
+Debug "2015-07-07 01:17:40.180532" 24909 AndroidRuntime "Calling main entry com.android.commands.input.Input" 24909 86
+Info "2015-07-07 01:17:40.181532" 24909 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16073107, downTime=16073107, deviceId=-1, source=0x101 }" 24909 87
+Info "2015-07-07 01:17:40.189532" 24909 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16073107, downTime=16073107, deviceId=-1, source=0x101 }" 24909 88
+Info "2015-07-07 01:17:40.191532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 89
+Info "2015-07-07 01:17:40.197532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 90
+Debug "2015-07-07 01:17:40.198532" 24909 AndroidRuntime "Shutting down VM" 24909 91
+Debug "2015-07-07 01:17:40.203532" 24909 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 4ms" 24914 92
+Info "2015-07-07 01:17:40.663532" 295 SFPerfTracer "     triggers: (rate: 28:1934) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12687 frames) (1:42227)" 295 93
+Debug "2015-07-07 01:17:40.663532" 295 SFPerfTracer "       layers: (4:7) (FocusedStackFrame: 0:660)* (StatusBar: 0:3299) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:206) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:665)" 295 94
+Debug "2015-07-07 01:17:40.770532" 24920 AndroidRuntime  24920 95
+Debug "2015-07-07 01:17:40.770532" 24920 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24920 96
+Debug "2015-07-07 01:17:40.772532" 24920 AndroidRuntime "CheckJNI is OFF" 24920 97
+Info "2015-07-07 01:17:40.782532" 24920 dalvikvm "DexOpt: not all deps represented" 24920 98
+Error "2015-07-07 01:17:40.782532" 24920 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24920 99
+Info "2015-07-07 01:17:40.783532" 24920 dalvikvm "DexOpt: not all deps represented" 24920 100
+Error "2015-07-07 01:17:40.783532" 24920 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24920 101
+Debug "2015-07-07 01:17:40.788532" 24920 dalvikvm "Trying to load lib libjavacore.so 0x0" 24920 102
+Debug "2015-07-07 01:17:40.791532" 24920 dalvikvm "Added shared lib libjavacore.so 0x0" 24920 103
+Debug "2015-07-07 01:17:40.794532" 24920 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24920 104
+Debug "2015-07-07 01:17:40.794532" 24920 dalvikvm "Added shared lib libnativehelper.so 0x0" 24920 105
+Debug "2015-07-07 01:17:40.795532" 24920 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24920 106
+Info "2015-07-07 01:17:40.808532" 24920 dalvikvm "DexOpt: not all deps represented" 24920 107
+Error "2015-07-07 01:17:40.808532" 24920 dalvikvm "/system/framework/input.jar odex has stale dependencies" 24920 108
+Error "2015-07-07 01:17:40.825532" 24920 cutils-trace "Error opening trace file: Permission denied (13)" 24920 109
+Debug "2015-07-07 01:17:40.832532" 24920 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24920 110
+Error "2015-07-07 01:17:40.990532" 24920 memtrack "Couldn't load memtrack module (No such file or directory)" 24920 111
+Error "2015-07-07 01:17:40.990532" 24920 android.os.Debug "failed to load memtrack module: -2" 24920 112
+Debug "2015-07-07 01:17:41.035532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 113
+Debug "2015-07-07 01:17:41.035532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 114
+Debug "2015-07-07 01:17:41.035532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 115
+Debug "2015-07-07 01:17:41.040532" 913 WifiStateMachine "handleMessage: X" 1000 116
+Debug "2015-07-07 01:17:41.040532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=91" 1007 117
+Debug "2015-07-07 01:17:41.041532" 913 WifiWatchdogStateMachine "Incremental loss=0/1 Current loss=0% volume=1.68" 1007 118
+Debug "2015-07-07 01:17:41.042532" 913 WifiWatchdogStateMachine "Cache updated: loss[-58]=0% volume=7.13" 1007 119
+Debug "2015-07-07 01:17:41.065532" 24920 AndroidRuntime "Calling main entry com.android.commands.input.Input" 24920 120
+Info "2015-07-07 01:17:41.067532" 24920 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16073992, downTime=16073992, deviceId=-1, source=0x101 }" 24920 121
+Info "2015-07-07 01:17:41.075532" 24920 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16073992, downTime=16073992, deviceId=-1, source=0x101 }" 24920 122
+Info "2015-07-07 01:17:41.077532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 123
+Info "2015-07-07 01:17:41.078532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 124
+Debug "2015-07-07 01:17:41.078532" 24920 AndroidRuntime "Shutting down VM" 24920 125
+Debug "2015-07-07 01:17:41.083532" 24920 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 4ms" 24925 126
+Verbose "2015-07-07 01:17:41.377532" 1689 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1Wl4t1QaeZSu8tz6ZA7LdhbTmG2hXZtDrKw1AcD4MaHsn_HE0vqg7ylrvVUukUFSTQfQod3wPSvDgft6V4fxHotVFkCoRMXaCkBfyzG_wKmV1UFpZRWT5RjguiApOxGATwkk15akDGsR5EyHTA-hTDvLUxqPUk5d7rN9whVRUe8XnVDzR6Eu_yrmwqOC49A-CZUgTMDKd5z0-fcNT5iWo3ccsKBBJ9yPCrHu20U2U4facDM5xELFJ82l8aPat2dOIadsGA_WPjpFxZgkc1xm6tmG0pasNRfSbOw5rMxgfm3OZhWltZSLZM2wKVdohRdqPhkBn1TBj4rs3U6ag2DE9b0MVCakpn2uzseyRdemBpidJrrXj0" 24813 127
+Info "2015-07-07 01:17:41.383532" 1689 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 24813 128
+Debug "2015-07-07 01:17:41.720532" 24931 AndroidRuntime  24931 129
+Debug "2015-07-07 01:17:41.720532" 24931 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24931 130
+Debug "2015-07-07 01:17:41.722532" 24931 AndroidRuntime "CheckJNI is OFF" 24931 131
+Info "2015-07-07 01:17:41.731532" 24931 dalvikvm "DexOpt: not all deps represented" 24931 132
+Error "2015-07-07 01:17:41.731532" 24931 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24931 133
+Info "2015-07-07 01:17:41.731532" 24931 dalvikvm "DexOpt: not all deps represented" 24931 134
+Error "2015-07-07 01:17:41.731532" 24931 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24931 135
+Debug "2015-07-07 01:17:41.737532" 24931 dalvikvm "Trying to load lib libjavacore.so 0x0" 24931 136
+Debug "2015-07-07 01:17:41.745532" 24931 dalvikvm "Added shared lib libjavacore.so 0x0" 24931 137
+Debug "2015-07-07 01:17:41.748532" 24931 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24931 138
+Debug "2015-07-07 01:17:41.748532" 24931 dalvikvm "Added shared lib libnativehelper.so 0x0" 24931 139
+Debug "2015-07-07 01:17:41.748532" 24931 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24931 140
+Info "2015-07-07 01:17:41.760532" 24931 dalvikvm "DexOpt: not all deps represented" 24931 141
+Error "2015-07-07 01:17:41.761532" 24931 dalvikvm "/system/framework/input.jar odex has stale dependencies" 24931 142
+Error "2015-07-07 01:17:41.774532" 24931 cutils-trace "Error opening trace file: Permission denied (13)" 24931 143
+Debug "2015-07-07 01:17:41.783532" 24931 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24931 144
+Debug "2015-07-07 01:17:41.829532" 1689 dalvikvm "GC_CONCURRENT freed 2085K, 29% free 12206K/17192K, paused 10ms+10ms, total 70ms" 1692 145
+Info "2015-07-07 01:17:41.892532" 1689 ConfigFetchService "fetch service done; releasing wakelock" 1689 146
+Info "2015-07-07 01:17:41.894532" 1689 ConfigFetchService "stopping self" 1689 147
+Error "2015-07-07 01:17:41.933532" 24931 memtrack "Couldn't load memtrack module (No such file or directory)" 24931 148
+Error "2015-07-07 01:17:41.933532" 24931 android.os.Debug "failed to load memtrack module: -2" 24931 149
+Debug "2015-07-07 01:17:42.000532" 24931 AndroidRuntime "Calling main entry com.android.commands.input.Input" 24931 150
+Info "2015-07-07 01:17:42.002532" 24931 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16074928, downTime=16074928, deviceId=-1, source=0x101 }" 24931 151
+Info "2015-07-07 01:17:42.010532" 24931 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16074928, downTime=16074928, deviceId=-1, source=0x101 }" 24931 152
+Info "2015-07-07 01:17:42.012532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 153
+Info "2015-07-07 01:17:42.012532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 154
+Debug "2015-07-07 01:17:42.013532" 24931 AndroidRuntime "Shutting down VM" 24931 155
+Debug "2015-07-07 01:17:42.017532" 24931 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 3ms" 24937 156
+Debug "2015-07-07 01:17:42.037532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 157
+Debug "2015-07-07 01:17:42.037532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 158
+Debug "2015-07-07 01:17:42.037532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 159
+Debug "2015-07-07 01:17:42.041532" 913 WifiStateMachine "handleMessage: X" 1000 160
+Debug "2015-07-07 01:17:42.042532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=98" 1007 161
+Debug "2015-07-07 01:17:42.042532" 913 WifiWatchdogStateMachine "Incremental loss=0/7 Current loss=0% volume=4.34" 1007 162
+Debug "2015-07-07 01:17:42.043532" 913 WifiWatchdogStateMachine "Cache updated: loss[-58]=0% volume=7.11" 1007 163
+Debug "2015-07-07 01:17:42.165532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 164
+Debug "2015-07-07 01:17:42.165532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 165
+Debug "2015-07-07 01:17:42.166532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 166
+Debug "2015-07-07 01:17:42.175532" 913 WifiStateMachine "handleMessage: X" 1000 167
+Info "2015-07-07 01:17:42.334532" 295 SFPerfTracer "     triggers: (rate: 28:1934) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12687 frames) (1:42327)" 295 168
+Debug "2015-07-07 01:17:42.334532" 295 SFPerfTracer "       layers: (4:7) (FocusedStackFrame: 0:660)* (StatusBar: 0:3301) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:206) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:765)" 295 169
+Debug "2015-07-07 01:17:42.598532" 24943 AndroidRuntime  24943 170
+Debug "2015-07-07 01:17:42.598532" 24943 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24943 171
+Debug "2015-07-07 01:17:42.601532" 24943 AndroidRuntime "CheckJNI is OFF" 24943 172
+Info "2015-07-07 01:17:42.610532" 24943 dalvikvm "DexOpt: not all deps represented" 24943 173
+Error "2015-07-07 01:17:42.610532" 24943 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24943 174
+Info "2015-07-07 01:17:42.610532" 24943 dalvikvm "DexOpt: not all deps represented" 24943 175
+Error "2015-07-07 01:17:42.611532" 24943 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24943 176
+Debug "2015-07-07 01:17:42.618532" 24943 dalvikvm "Trying to load lib libjavacore.so 0x0" 24943 177
+Debug "2015-07-07 01:17:42.620532" 24943 dalvikvm "Added shared lib libjavacore.so 0x0" 24943 178
+Debug "2015-07-07 01:17:42.624532" 24943 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24943 179
+Debug "2015-07-07 01:17:42.624532" 24943 dalvikvm "Added shared lib libnativehelper.so 0x0" 24943 180
+Debug "2015-07-07 01:17:42.625532" 24943 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24943 181
+Info "2015-07-07 01:17:42.637532" 24943 dalvikvm "DexOpt: not all deps represented" 24943 182
+Error "2015-07-07 01:17:42.637532" 24943 dalvikvm "/system/framework/input.jar odex has stale dependencies" 24943 183
+Error "2015-07-07 01:17:42.655532" 24943 cutils-trace "Error opening trace file: Permission denied (13)" 24943 184
+Debug "2015-07-07 01:17:42.664532" 24943 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24943 185
+Error "2015-07-07 01:17:42.816532" 24943 memtrack "Couldn't load memtrack module (No such file or directory)" 24943 186
+Error "2015-07-07 01:17:42.816532" 24943 android.os.Debug "failed to load memtrack module: -2" 24943 187
+Debug "2015-07-07 01:17:42.878532" 24943 AndroidRuntime "Calling main entry com.android.commands.input.Input" 24943 188
+Info "2015-07-07 01:17:42.879532" 24943 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16075805, downTime=16075805, deviceId=-1, source=0x101 }" 24943 189
+Info "2015-07-07 01:17:42.918532" 24943 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16075805, downTime=16075805, deviceId=-1, source=0x101 }" 24943 190
+Info "2015-07-07 01:17:42.953532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 191
+Info "2015-07-07 01:17:42.953532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 192
+Debug "2015-07-07 01:17:42.954532" 24943 AndroidRuntime "Shutting down VM" 24943 193
+Debug "2015-07-07 01:17:42.959532" 24943 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 1ms+1ms, total 4ms" 24948 194
+Debug "2015-07-07 01:17:43.038532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 195
+Debug "2015-07-07 01:17:43.038532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 196
+Debug "2015-07-07 01:17:43.038532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 197
+Debug "2015-07-07 01:17:43.048532" 913 WifiStateMachine "handleMessage: X" 1000 198
+Debug "2015-07-07 01:17:43.048532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 199
+Info "2015-07-07 01:17:43.318532" 295 SFPerfTracer "     triggers: (rate: 1:0) (0 sw vsyncs) (0 skipped) (183:41191 vsyncs) (185:47050)" 511 200
+Debug "2015-07-07 01:17:43.582532" 24954 AndroidRuntime  24954 201
+Debug "2015-07-07 01:17:43.582532" 24954 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24954 202
+Debug "2015-07-07 01:17:43.585532" 24954 AndroidRuntime "CheckJNI is OFF" 24954 203
+Info "2015-07-07 01:17:43.594532" 24954 dalvikvm "DexOpt: not all deps represented" 24954 204
+Error "2015-07-07 01:17:43.594532" 24954 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24954 205
+Info "2015-07-07 01:17:43.595532" 24954 dalvikvm "DexOpt: not all deps represented" 24954 206
+Error "2015-07-07 01:17:43.595532" 24954 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24954 207
+Debug "2015-07-07 01:17:43.601532" 24954 dalvikvm "Trying to load lib libjavacore.so 0x0" 24954 208
+Debug "2015-07-07 01:17:43.604532" 24954 dalvikvm "Added shared lib libjavacore.so 0x0" 24954 209
+Debug "2015-07-07 01:17:43.608532" 24954 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24954 210
+Debug "2015-07-07 01:17:43.608532" 24954 dalvikvm "Added shared lib libnativehelper.so 0x0" 24954 211
+Debug "2015-07-07 01:17:43.608532" 24954 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24954 212
+Info "2015-07-07 01:17:43.621532" 24954 dalvikvm "DexOpt: not all deps represented" 24954 213
+Error "2015-07-07 01:17:43.621532" 24954 dalvikvm "/system/framework/am.jar odex has stale dependencies" 24954 214
+Error "2015-07-07 01:17:43.634532" 24954 cutils-trace "Error opening trace file: Permission denied (13)" 24954 215
+Debug "2015-07-07 01:17:43.654532" 24954 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24954 216
+Error "2015-07-07 01:17:43.817532" 24954 memtrack "Couldn't load memtrack module (No such file or directory)" 24954 217
+Error "2015-07-07 01:17:43.817532" 24954 android.os.Debug "failed to load memtrack module: -2" 24954 218
+Debug "2015-07-07 01:17:43.887532" 24954 AndroidRuntime "Calling main entry com.android.commands.am.Am" 24954 219
+Info "2015-07-07 01:17:43.945532" 913 ActivityManager "START u0 {flg=0x10000000 cmp=com.trellis.appthwackdevicemanager/.RotatePortrait} from pid 24954" 1235 220
+Info "2015-07-07 01:17:43.945532" 913 LaunchCheckinHandler "cleanup(): cleared. Last call was 12517 ms ago" 1235 221
+Warning "2015-07-07 01:17:43.962532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 222
+Debug "2015-07-07 01:17:43.965532" 24954 AndroidRuntime "Shutting down VM" 24954 223
+Debug "2015-07-07 01:17:43.968532" 24954 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 1ms+0ms, total 3ms" 24959 224
+Info "2015-07-07 01:17:43.975532" 1244 Launcher onPause 1244 225
+Debug "2015-07-07 01:17:43.976532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 226
+Debug "2015-07-07 01:17:43.977532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 227
+Warning "2015-07-07 01:17:43.983532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 228
+Warning "2015-07-07 01:17:43.991532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 229
+Warning "2015-07-07 01:17:43.995532" 913 InputMethodManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@42cb77a0 attribute=null, token = android.os.BinderProxy@42a740c0" 923 230
+Info "2015-07-07 01:17:43.995532" 1244 Launcher onResume 1244 231
+Warning "2015-07-07 01:17:43.997532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 232
+Debug "2015-07-07 01:17:44.006532" 1244 LauncherAppWidgetHost "checkForConfig returning false: {1.0 311mcc480mnc en_US ldltr sw360dp w360dp h567dp 320dpi nrml port finger -keyb/v/h -nav/h s.18?spn}" 1244 233
+Debug "2015-07-07 01:17:44.015532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 234
+Debug "2015-07-07 01:17:44.015532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 235
+Debug "2015-07-07 01:17:44.017532" 1414 NotificationTutorialService "homeResumeCount: 12646 NotificationCount: 3" 1414 236
+Debug "2015-07-07 01:17:44.020532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 237
+Error "2015-07-07 01:17:44.020532" 1414 NotificationTutorialService " isScreenDisplayed(): false isHomeInForeground: false" 1414 238
+Debug "2015-07-07 01:17:44.021532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 239
+Debug "2015-07-07 01:17:44.038532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 240
+Debug "2015-07-07 01:17:44.038532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 241
+Debug "2015-07-07 01:17:44.038532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 242
+Debug "2015-07-07 01:17:44.048532" 913 WifiStateMachine "handleMessage: X" 1000 243
+Debug "2015-07-07 01:17:44.049532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 244
+Info "2015-07-07 01:17:44.053532" 295 SFPerfTracer "     triggers: (rate: 28:1934) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12687 frames) (1:42427)" 295 245
+Debug "2015-07-07 01:17:44.053532" 295 SFPerfTracer "       layers: (4:9) (FocusedStackFrame: 0:662)* (StatusBar: 0:3302) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:206) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:865)" 295 246
+Debug "2015-07-07 01:17:45.040532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 247
+Debug "2015-07-07 01:17:45.040532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 248
+Debug "2015-07-07 01:17:45.041532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 249
+Debug "2015-07-07 01:17:45.063532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 250
+Debug "2015-07-07 01:17:45.064532" 913 WifiStateMachine "handleMessage: X" 1000 251
+Error "2015-07-07 01:17:45.137532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 252
+Error "2015-07-07 01:17:45.138532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 253
+Debug "2015-07-07 01:17:45.176532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 254
+Debug "2015-07-07 01:17:45.176532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 255
+Debug "2015-07-07 01:17:45.177532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 256
+Debug "2015-07-07 01:17:45.188532" 913 WifiStateMachine "handleMessage: X" 1000 257
+Debug "2015-07-07 01:17:46.040532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 258
+Debug "2015-07-07 01:17:46.041532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 259
+Debug "2015-07-07 01:17:46.041532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 260
+Debug "2015-07-07 01:17:46.066532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 261
+Debug "2015-07-07 01:17:46.066532" 913 WifiStateMachine "handleMessage: X" 1000 262
+Verbose "2015-07-07 01:17:46.244532" 913 AlarmManager "sending alarm Alarm{42edc4d8 type 0 com.android.vending}" 986 263
+Info "2015-07-07 01:17:46.331532" 24650 dalvikvm "Total arena pages for JIT: 11" 24657 264
+Info "2015-07-07 01:17:46.331532" 24650 dalvikvm "Total arena pages for JIT: 12" 24657 265
+Info "2015-07-07 01:17:46.332532" 24650 dalvikvm "Total arena pages for JIT: 13" 24657 266
+Debug "2015-07-07 01:17:46.468532" 24650 "Finsky  " "[2490] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 24689 267
+Debug "2015-07-07 01:17:46.470532" 24650 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 24650 268
+Info "2015-07-07 01:17:46.906532" 1329 ConfigService onDestroy 1329 269
+Debug "2015-07-07 01:17:47.041532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 270
+Debug "2015-07-07 01:17:47.042532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 271
+Debug "2015-07-07 01:17:47.042532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 272
+Debug "2015-07-07 01:17:47.065532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 273
+Debug "2015-07-07 01:17:47.065532" 913 WifiStateMachine "handleMessage: X" 1000 274
+Debug "2015-07-07 01:17:47.532532" 24973 AndroidRuntime  24973 275
+Debug "2015-07-07 01:17:47.532532" 24973 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24973 276
+Debug "2015-07-07 01:17:47.535532" 24973 AndroidRuntime "CheckJNI is OFF" 24973 277
+Info "2015-07-07 01:17:47.543532" 24973 dalvikvm "DexOpt: not all deps represented" 24973 278
+Error "2015-07-07 01:17:47.543532" 24973 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24973 279
+Info "2015-07-07 01:17:47.543532" 24973 dalvikvm "DexOpt: not all deps represented" 24973 280
+Error "2015-07-07 01:17:47.543532" 24973 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24973 281
+Debug "2015-07-07 01:17:47.549532" 24973 dalvikvm "Trying to load lib libjavacore.so 0x0" 24973 282
+Debug "2015-07-07 01:17:47.552532" 24973 dalvikvm "Added shared lib libjavacore.so 0x0" 24973 283
+Debug "2015-07-07 01:17:47.555532" 24973 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24973 284
+Debug "2015-07-07 01:17:47.555532" 24973 dalvikvm "Added shared lib libnativehelper.so 0x0" 24973 285
+Debug "2015-07-07 01:17:47.555532" 24973 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24973 286
+Info "2015-07-07 01:17:47.567532" 24973 dalvikvm "DexOpt: not all deps represented" 24973 287
+Error "2015-07-07 01:17:47.567532" 24973 dalvikvm "/system/framework/am.jar odex has stale dependencies" 24973 288
+Error "2015-07-07 01:17:47.576532" 24973 cutils-trace "Error opening trace file: Permission denied (13)" 24973 289
+Debug "2015-07-07 01:17:47.591532" 24973 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24973 290
+Error "2015-07-07 01:17:47.732532" 24973 memtrack "Couldn't load memtrack module (No such file or directory)" 24973 291
+Error "2015-07-07 01:17:47.732532" 24973 android.os.Debug "failed to load memtrack module: -2" 24973 292
+Debug "2015-07-07 01:17:47.787532" 24973 AndroidRuntime "Calling main entry com.android.commands.am.Am" 24973 293
+Debug "2015-07-07 01:17:47.841532" 24973 AndroidRuntime "Shutting down VM" 24973 294
+Debug "2015-07-07 01:17:47.850532" 24973 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 1ms+1ms, total 8ms" 24982 295
+Info "2015-07-07 01:17:47.854532" 2923 APPTHWACK "ORIENTATION: 0" 24988 296
+Debug "2015-07-07 01:17:48.043532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 297
+Debug "2015-07-07 01:17:48.043532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 298
+Debug "2015-07-07 01:17:48.043532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 299
+Debug "2015-07-07 01:17:48.059532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 300
+Debug "2015-07-07 01:17:48.060532" 913 WifiStateMachine "handleMessage: X" 1000 301
+Debug "2015-07-07 01:17:48.188532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 302
+Debug "2015-07-07 01:17:48.188532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 303
+Debug "2015-07-07 01:17:48.188532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 304
+Debug "2015-07-07 01:17:48.197532" 913 WifiStateMachine "handleMessage: X" 1000 305
+Debug "2015-07-07 01:17:49.043532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 306
+Debug "2015-07-07 01:17:49.044532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 307
+Debug "2015-07-07 01:17:49.044532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 308
+Debug "2015-07-07 01:17:49.066532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 309
+Debug "2015-07-07 01:17:49.066532" 913 WifiStateMachine "handleMessage: X" 1000 310
+Debug "2015-07-07 01:17:49.700532" 24993 AndroidRuntime  24993 311
+Debug "2015-07-07 01:17:49.700532" 24993 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 24993 312
+Debug "2015-07-07 01:17:49.702532" 24993 AndroidRuntime "CheckJNI is OFF" 24993 313
+Info "2015-07-07 01:17:49.711532" 24993 dalvikvm "DexOpt: not all deps represented" 24993 314
+Error "2015-07-07 01:17:49.711532" 24993 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 24993 315
+Info "2015-07-07 01:17:49.712532" 24993 dalvikvm "DexOpt: not all deps represented" 24993 316
+Error "2015-07-07 01:17:49.712532" 24993 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 24993 317
+Debug "2015-07-07 01:17:49.718532" 24993 dalvikvm "Trying to load lib libjavacore.so 0x0" 24993 318
+Debug "2015-07-07 01:17:49.720532" 24993 dalvikvm "Added shared lib libjavacore.so 0x0" 24993 319
+Debug "2015-07-07 01:17:49.724532" 24993 dalvikvm "Trying to load lib libnativehelper.so 0x0" 24993 320
+Debug "2015-07-07 01:17:49.724532" 24993 dalvikvm "Added shared lib libnativehelper.so 0x0" 24993 321
+Debug "2015-07-07 01:17:49.724532" 24993 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 24993 322
+Info "2015-07-07 01:17:49.736532" 24993 dalvikvm "DexOpt: not all deps represented" 24993 323
+Error "2015-07-07 01:17:49.736532" 24993 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 24993 324
+Error "2015-07-07 01:17:49.745532" 24993 cutils-trace "Error opening trace file: Permission denied (13)" 24993 325
+Debug "2015-07-07 01:17:49.759532" 24993 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 24993 326
+Error "2015-07-07 01:17:49.903532" 24993 memtrack "Couldn't load memtrack module (No such file or directory)" 24993 327
+Error "2015-07-07 01:17:49.903532" 24993 android.os.Debug "failed to load memtrack module: -2" 24993 328
+Debug "2015-07-07 01:17:49.970532" 24993 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 24993 329
+Debug "2015-07-07 01:17:50.044532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 330
+Debug "2015-07-07 01:17:50.044532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 331
+Debug "2015-07-07 01:17:50.045532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 332
+Debug "2015-07-07 01:17:50.060532" 913 WifiStateMachine "handleMessage: X" 1000 333
+Debug "2015-07-07 01:17:50.061532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 334
+Debug "2015-07-07 01:17:50.102532" 24993 AndroidRuntime "Shutting down VM" 24993 335
+Debug "2015-07-07 01:17:50.107532" 24993 dalvikvm "GC_CONCURRENT freed 423K, 43% free 574K/1000K, paused 1ms+0ms, total 4ms" 25002 336
+Error "2015-07-07 01:17:50.139532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 337
+Error "2015-07-07 01:17:50.139532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 338
+Debug "2015-07-07 01:17:50.875532" 25010 AndroidRuntime  25010 339
+Debug "2015-07-07 01:17:50.875532" 25010 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25010 340
+Debug "2015-07-07 01:17:50.877532" 25010 AndroidRuntime "CheckJNI is OFF" 25010 341
+Info "2015-07-07 01:17:50.885532" 25010 dalvikvm "DexOpt: not all deps represented" 25010 342
+Error "2015-07-07 01:17:50.886532" 25010 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25010 343
+Info "2015-07-07 01:17:50.886532" 25010 dalvikvm "DexOpt: not all deps represented" 25010 344
+Error "2015-07-07 01:17:50.886532" 25010 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25010 345
+Debug "2015-07-07 01:17:50.892532" 25010 dalvikvm "Trying to load lib libjavacore.so 0x0" 25010 346
+Debug "2015-07-07 01:17:50.895532" 25010 dalvikvm "Added shared lib libjavacore.so 0x0" 25010 347
+Debug "2015-07-07 01:17:50.898532" 25010 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25010 348
+Debug "2015-07-07 01:17:50.898532" 25010 dalvikvm "Added shared lib libnativehelper.so 0x0" 25010 349
+Debug "2015-07-07 01:17:50.898532" 25010 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25010 350
+Info "2015-07-07 01:17:50.910532" 25010 dalvikvm "DexOpt: not all deps represented" 25010 351
+Error "2015-07-07 01:17:50.910532" 25010 dalvikvm "/system/framework/am.jar odex has stale dependencies" 25010 352
+Error "2015-07-07 01:17:50.918532" 25010 cutils-trace "Error opening trace file: Permission denied (13)" 25010 353
+Debug "2015-07-07 01:17:50.932532" 25010 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25010 354
+Debug "2015-07-07 01:17:51.046532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 355
+Debug "2015-07-07 01:17:51.046532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 356
+Debug "2015-07-07 01:17:51.046532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 357
+Debug "2015-07-07 01:17:51.062532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 358
+Debug "2015-07-07 01:17:51.062532" 913 WifiStateMachine "handleMessage: X" 1000 359
+Error "2015-07-07 01:17:51.074532" 25010 memtrack "Couldn't load memtrack module (No such file or directory)" 25010 360
+Error "2015-07-07 01:17:51.074532" 25010 android.os.Debug "failed to load memtrack module: -2" 25010 361
+Debug "2015-07-07 01:17:51.130532" 25010 AndroidRuntime "Calling main entry com.android.commands.am.Am" 25010 362
+Info "2015-07-07 01:17:51.182532" 913 ActivityManager "START u0 {flg=0x10000000 cmp=com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity} from pid 25010" 1161 363
+Debug "2015-07-07 01:17:51.197532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 364
+Warning "2015-07-07 01:17:51.197532" 913 ContextImpl "Unable to create files directory /data/data/com.nihk.github.musictheoryromannumeralanalysisquiz/files" 945 365
+Debug "2015-07-07 01:17:51.198532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 366
+Debug "2015-07-07 01:17:51.198532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 367
+Warning "2015-07-07 01:17:51.204532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 368
+Debug "2015-07-07 01:17:51.208532" 913 WifiStateMachine "handleMessage: X" 1000 369
+Info "2015-07-07 01:17:51.221532" 1244 Launcher onPause 1244 370
+Debug "2015-07-07 01:17:51.224532" 25010 AndroidRuntime "Shutting down VM" 25010 371
+Debug "2015-07-07 01:17:51.225532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 372
+Debug "2015-07-07 01:17:51.225532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 373
+Debug "2015-07-07 01:17:51.230532" 25010 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 1ms+1ms, total 5ms" 25019 374
+Info "2015-07-07 01:17:51.234532" 913 ActivityManager "Start proc com.nihk.github.musictheoryromannumeralanalysisquiz for activity com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: pid=25026 uid=11135 gids={51135}" 1257 375
+Debug "2015-07-07 01:17:51.239532" 25026 dalvikvm "Late-enabling CheckJNI" 25026 376
+Warning "2015-07-07 01:17:51.277532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 377
+Info "2015-07-07 01:17:51.625532" 25026 dalvikvm "Could not find method android.content.res.TypedArray.getChangingConfigurations, referenced from method android.support.v7.internal.widget.TintTypedArray.getChangingConfigurations" 25026 378
+Warning "2015-07-07 01:17:51.625532" 25026 dalvikvm "VFY: unable to resolve virtual method 409: Landroid/content/res/TypedArray;.getChangingConfigurations ()I" 25026 379
+Debug "2015-07-07 01:17:51.625532" 25026 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 25026 380
+Info "2015-07-07 01:17:51.626532" 25026 dalvikvm "Could not find method android.content.res.TypedArray.getType, referenced from method android.support.v7.internal.widget.TintTypedArray.getType" 25026 381
+Warning "2015-07-07 01:17:51.626532" 25026 dalvikvm "VFY: unable to resolve virtual method 431: Landroid/content/res/TypedArray;.getType (I)I" 25026 382
+Debug "2015-07-07 01:17:51.626532" 25026 dalvikvm "VFY: replacing opcode 0x6e at 0x0002" 25026 383
+Debug "2015-07-07 01:17:51.673532" 25026 HardwareRenderer "Profiling hardware renderer" 25026 384
+Warning "2015-07-07 01:17:51.892532" 25026 Adreno-GSL "<get_panel_settings:3805>: Android framework reported version 2. So, don't force ES30" 25026 385
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "<qeglDrvAPI_eglInitialize:381>: EGL 1.4 QUALCOMM build:  (CL3869936)" 25026 386
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "OpenGL ES Shader Compiler Version: 17.01.11.SPL" 25026 387
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "Build Date: 02/28/14 Fri" 25026 388
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "Local Branch:" 25026 389
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "Remote Branch:" 25026 390
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "Local Patches:" 25026 391
+Info "2015-07-07 01:17:51.893532" 25026 Adreno-EGL "Reconstruct Branch:" 25026 392
+Debug "2015-07-07 01:17:51.921532" 25026 OpenGLRenderer "Enabling debug mode 0" 25026 393
+Info "2015-07-07 01:17:52.038532" 913 LaunchCheckinHandler "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity,cp,ca,811" 945 394
+Info "2015-07-07 01:17:52.038532" 913 ActivityManager "Displayed com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity: +813ms" 945 395
+Debug "2015-07-07 01:17:52.047532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 396
+Debug "2015-07-07 01:17:52.047532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 397
+Debug "2015-07-07 01:17:52.048532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 398
+Debug "2015-07-07 01:17:52.058532" 913 WifiStateMachine "handleMessage: X" 1000 399
+Debug "2015-07-07 01:17:52.058532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=98" 1007 400
+Info "2015-07-07 01:17:52.321532" 294 "MDMCTBK " "NetlinkHandler, power_supply subsys" 485 401
+Info "2015-07-07 01:17:52.321532" 294 "MDMCTBK " "NetlinkHandler, usbChargerStateChanged" 485 402
+Info "2015-07-07 01:17:52.321532" 294 "MDMCTBK " "MdmCutbackHndler,readFromFile = /sys/class/power_supply/usb/online" 485 403
+Info "2015-07-07 01:17:52.321532" 294 "MDMCTBK " "MdmCutbackHndler,readFromFile = /sys/class/power_supply/ac/online" 485 404
+Debug "2015-07-07 01:17:52.366532" 913 BatteryTempPolicy "updateBatteryTemp temperature = 300, Threshhold = 3" 1235 405
+Error "2015-07-07 01:17:52.375532" 2153 MC_BatteryUtils "Coulomb counter file not found." 2171 406
+Info "2015-07-07 01:17:52.388532" 25188 RP-LowBatterySaver BatteryLevel=100 25044 407
+Debug "2015-07-07 01:17:53.048532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 408
+Debug "2015-07-07 01:17:53.048532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 409
+Debug "2015-07-07 01:17:53.049532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 410
+Debug "2015-07-07 01:17:53.069532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 411
+Debug "2015-07-07 01:17:53.070532" 913 WifiStateMachine "handleMessage: X" 1000 412
+Debug "2015-07-07 01:17:54.049532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 413
+Debug "2015-07-07 01:17:54.050532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 414
+Debug "2015-07-07 01:17:54.050532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 415
+Debug "2015-07-07 01:17:54.072532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 416
+Debug "2015-07-07 01:17:54.072532" 913 WifiStateMachine "handleMessage: X" 1000 417
+Debug "2015-07-07 01:17:54.215532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 418
+Debug "2015-07-07 01:17:54.216532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 419
+Debug "2015-07-07 01:17:54.216532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 420
+Debug "2015-07-07 01:17:54.226532" 913 WifiStateMachine "handleMessage: X" 1000 421
+Debug "2015-07-07 01:17:55.051532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 422
+Debug "2015-07-07 01:17:55.051532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 423
+Debug "2015-07-07 01:17:55.052532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 424
+Debug "2015-07-07 01:17:55.076532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 425
+Debug "2015-07-07 01:17:55.077532" 913 WifiStateMachine "handleMessage: X" 1000 426
+Error "2015-07-07 01:17:55.141532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 427
+Error "2015-07-07 01:17:55.141532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 428
+Debug "2015-07-07 01:17:56.052532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 429
+Debug "2015-07-07 01:17:56.052532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 430
+Debug "2015-07-07 01:17:56.053532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 431
+Debug "2015-07-07 01:17:56.076532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 432
+Debug "2015-07-07 01:17:56.076532" 913 WifiStateMachine "handleMessage: X" 1000 433
+Debug "2015-07-07 01:17:57.054532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 434
+Debug "2015-07-07 01:17:57.054532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 435
+Debug "2015-07-07 01:17:57.055532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 436
+Debug "2015-07-07 01:17:57.078532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 437
+Debug "2015-07-07 01:17:57.078532" 913 WifiStateMachine "handleMessage: X" 1000 438
+Debug "2015-07-07 01:17:57.226532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 439
+Debug "2015-07-07 01:17:57.227532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 440
+Debug "2015-07-07 01:17:57.228532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 441
+Debug "2015-07-07 01:17:57.238532" 913 WifiStateMachine "handleMessage: X" 1000 442
+Debug "2015-07-07 01:17:58.054532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 443
+Debug "2015-07-07 01:17:58.054532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 444
+Debug "2015-07-07 01:17:58.055532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 445
+Debug "2015-07-07 01:17:58.080532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 446
+Debug "2015-07-07 01:17:58.080532" 913 WifiStateMachine "handleMessage: X" 1000 447
+Debug "2015-07-07 01:17:59.056532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 448
+Debug "2015-07-07 01:17:59.056532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 449
+Debug "2015-07-07 01:17:59.057532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 450
+Debug "2015-07-07 01:17:59.076532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=98" 1007 451
+Debug "2015-07-07 01:17:59.076532" 913 WifiStateMachine "handleMessage: X" 1000 452
+Debug "2015-07-07 01:18:00.058532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 453
+Debug "2015-07-07 01:18:00.058532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 454
+Debug "2015-07-07 01:18:00.059532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 455
+Debug "2015-07-07 01:18:00.081532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 456
+Debug "2015-07-07 01:18:00.082532" 913 WifiStateMachine "handleMessage: X" 1000 457
+Error "2015-07-07 01:18:00.143532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 458
+Error "2015-07-07 01:18:00.143532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 459
+Debug "2015-07-07 01:18:00.239532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 460
+Debug "2015-07-07 01:18:00.239532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 461
+Debug "2015-07-07 01:18:00.240532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 462
+Debug "2015-07-07 01:18:00.250532" 913 WifiStateMachine "handleMessage: X" 1000 463
+Verbose "2015-07-07 01:18:00.344532" 913 AlarmManager "sending alarm Alarm{42c757d8 type 3 android}" 986 464
+Debug "2015-07-07 01:18:01.058532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 465
+Debug "2015-07-07 01:18:01.058532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 466
+Debug "2015-07-07 01:18:01.059532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 467
+Debug "2015-07-07 01:18:01.078532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 468
+Debug "2015-07-07 01:18:01.079532" 913 WifiStateMachine "handleMessage: X" 1000 469
+Debug "2015-07-07 01:18:02.059532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 470
+Debug "2015-07-07 01:18:02.060532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 471
+Debug "2015-07-07 01:18:02.060532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 472
+Debug "2015-07-07 01:18:02.083532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 473
+Debug "2015-07-07 01:18:02.084532" 913 WifiStateMachine "handleMessage: X" 1000 474
+Verbose "2015-07-07 01:18:02.124532" 913 AlarmManager "sending alarm Alarm{42c73e98 type 2 com.android.phone}" 986 475
+Debug "2015-07-07 01:18:03.061532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 476
+Debug "2015-07-07 01:18:03.061532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 477
+Debug "2015-07-07 01:18:03.062532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 478
+Debug "2015-07-07 01:18:03.086532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 479
+Debug "2015-07-07 01:18:03.087532" 913 WifiStateMachine "handleMessage: X" 1000 480
+Debug "2015-07-07 01:18:03.251532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 481
+Debug "2015-07-07 01:18:03.251532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 482
+Debug "2015-07-07 01:18:03.252532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 483
+Debug "2015-07-07 01:18:03.261532" 913 WifiStateMachine "handleMessage: X" 1000 484
+Debug "2015-07-07 01:18:04.063532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 485
+Debug "2015-07-07 01:18:04.063532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 486
+Debug "2015-07-07 01:18:04.064532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 487
+Debug "2015-07-07 01:18:04.086532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 488
+Debug "2015-07-07 01:18:04.086532" 913 WifiStateMachine "handleMessage: X" 1000 489
+Debug "2015-07-07 01:18:05.064532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 490
+Debug "2015-07-07 01:18:05.064532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 491
+Debug "2015-07-07 01:18:05.065532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 492
+Debug "2015-07-07 01:18:05.086532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 493
+Debug "2015-07-07 01:18:05.086532" 913 WifiStateMachine "handleMessage: X" 1000 494
+Error "2015-07-07 01:18:05.145532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 495
+Error "2015-07-07 01:18:05.145532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 496
+Debug "2015-07-07 01:18:06.066532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 497
+Debug "2015-07-07 01:18:06.066532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 498
+Debug "2015-07-07 01:18:06.067532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 499
+Debug "2015-07-07 01:18:06.089532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=98" 1007 500
+Debug "2015-07-07 01:18:06.090532" 913 WifiStateMachine "handleMessage: X" 1000 501
+Debug "2015-07-07 01:18:06.261532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 502
+Debug "2015-07-07 01:18:06.261532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 503
+Debug "2015-07-07 01:18:06.263532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 504
+Debug "2015-07-07 01:18:06.274532" 913 WifiStateMachine "handleMessage: X" 1000 505
+Error "2015-07-07 01:18:06.925532" 25055 cutils-trace "Error opening trace file: Permission denied (13)" 25055 506
+Debug "2015-07-07 01:18:07.067532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 507
+Debug "2015-07-07 01:18:07.067532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 508
+Debug "2015-07-07 01:18:07.067532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 509
+Debug "2015-07-07 01:18:07.078532" 913 WifiStateMachine "handleMessage: X" 1000 510
+Debug "2015-07-07 01:18:07.079532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 511
+Debug "2015-07-07 01:18:08.068532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 512
+Debug "2015-07-07 01:18:08.068532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 513
+Debug "2015-07-07 01:18:08.068532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 514
+Debug "2015-07-07 01:18:08.079532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 515
+Debug "2015-07-07 01:18:08.079532" 913 WifiStateMachine "handleMessage: X" 1000 516
+Debug "2015-07-07 01:18:08.236532" 25058 AndroidRuntime  25058 517
+Debug "2015-07-07 01:18:08.236532" 25058 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25058 518
+Debug "2015-07-07 01:18:08.238532" 25058 AndroidRuntime "CheckJNI is OFF" 25058 519
+Info "2015-07-07 01:18:08.246532" 25058 dalvikvm "DexOpt: not all deps represented" 25058 520
+Error "2015-07-07 01:18:08.246532" 25058 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25058 521
+Info "2015-07-07 01:18:08.246532" 25058 dalvikvm "DexOpt: not all deps represented" 25058 522
+Error "2015-07-07 01:18:08.246532" 25058 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25058 523
+Debug "2015-07-07 01:18:08.252532" 25058 dalvikvm "Trying to load lib libjavacore.so 0x0" 25058 524
+Debug "2015-07-07 01:18:08.255532" 25058 dalvikvm "Added shared lib libjavacore.so 0x0" 25058 525
+Debug "2015-07-07 01:18:08.259532" 25058 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25058 526
+Debug "2015-07-07 01:18:08.259532" 25058 dalvikvm "Added shared lib libnativehelper.so 0x0" 25058 527
+Debug "2015-07-07 01:18:08.259532" 25058 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25058 528
+Info "2015-07-07 01:18:08.271532" 25058 dalvikvm "DexOpt: not all deps represented" 25058 529
+Error "2015-07-07 01:18:08.271532" 25058 dalvikvm "/system/framework/am.jar odex has stale dependencies" 25058 530
+Error "2015-07-07 01:18:08.284532" 25058 cutils-trace "Error opening trace file: Permission denied (13)" 25058 531
+Debug "2015-07-07 01:18:08.292532" 25058 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25058 532
+Error "2015-07-07 01:18:08.436532" 25058 memtrack "Couldn't load memtrack module (No such file or directory)" 25058 533
+Error "2015-07-07 01:18:08.436532" 25058 android.os.Debug "failed to load memtrack module: -2" 25058 534
+Debug "2015-07-07 01:18:08.504532" 25058 AndroidRuntime "Calling main entry com.android.commands.am.Am" 25058 535
+Info "2015-07-07 01:18:08.564532" 2923 APPTHWACK "ORIENTATION: 0" 25073 536
+Debug "2015-07-07 01:18:08.565532" 25058 AndroidRuntime "Shutting down VM" 25058 537
+Debug "2015-07-07 01:18:08.569532" 25058 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 0ms+1ms, total 3ms" 25067 538
+Debug "2015-07-07 01:18:09.069532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 539
+Debug "2015-07-07 01:18:09.069532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 540
+Debug "2015-07-07 01:18:09.069532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 541
+Debug "2015-07-07 01:18:09.087532" 913 WifiStateMachine "handleMessage: X" 1000 542
+Debug "2015-07-07 01:18:09.087532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 543
+Debug "2015-07-07 01:18:09.274532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 544
+Debug "2015-07-07 01:18:09.274532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 545
+Debug "2015-07-07 01:18:09.275532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 546
+Debug "2015-07-07 01:18:09.286532" 913 WifiStateMachine "handleMessage: X" 1000 547
+Debug "2015-07-07 01:18:10.070532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 548
+Debug "2015-07-07 01:18:10.071532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 549
+Debug "2015-07-07 01:18:10.071532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 550
+Debug "2015-07-07 01:18:10.096532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 551
+Debug "2015-07-07 01:18:10.096532" 913 WifiStateMachine "handleMessage: X" 1000 552
+Error "2015-07-07 01:18:10.147532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 553
+Error "2015-07-07 01:18:10.147532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 554
+Debug "2015-07-07 01:18:11.071532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 555
+Debug "2015-07-07 01:18:11.071532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 556
+Debug "2015-07-07 01:18:11.072532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 557
+Debug "2015-07-07 01:18:11.086532" 913 WifiStateMachine "handleMessage: X" 1000 558
+Debug "2015-07-07 01:18:11.087532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 559
+Debug "2015-07-07 01:18:12.073532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 560
+Debug "2015-07-07 01:18:12.073532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 561
+Debug "2015-07-07 01:18:12.075532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 562
+Debug "2015-07-07 01:18:12.096532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 563
+Debug "2015-07-07 01:18:12.096532" 913 WifiStateMachine "handleMessage: X" 1000 564
+Debug "2015-07-07 01:18:12.286532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 565
+Debug "2015-07-07 01:18:12.286532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 566
+Debug "2015-07-07 01:18:12.286532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 567
+Debug "2015-07-07 01:18:12.295532" 913 WifiStateMachine "handleMessage: X" 1000 568
+Debug "2015-07-07 01:18:12.625532" 25079 AndroidRuntime  25079 569
+Debug "2015-07-07 01:18:12.625532" 25079 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25079 570
+Debug "2015-07-07 01:18:12.628532" 25079 AndroidRuntime "CheckJNI is OFF" 25079 571
+Info "2015-07-07 01:18:12.636532" 25079 dalvikvm "DexOpt: not all deps represented" 25079 572
+Error "2015-07-07 01:18:12.636532" 25079 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25079 573
+Info "2015-07-07 01:18:12.636532" 25079 dalvikvm "DexOpt: not all deps represented" 25079 574
+Error "2015-07-07 01:18:12.636532" 25079 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25079 575
+Debug "2015-07-07 01:18:12.642532" 25079 dalvikvm "Trying to load lib libjavacore.so 0x0" 25079 576
+Debug "2015-07-07 01:18:12.645532" 25079 dalvikvm "Added shared lib libjavacore.so 0x0" 25079 577
+Debug "2015-07-07 01:18:12.648532" 25079 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25079 578
+Debug "2015-07-07 01:18:12.648532" 25079 dalvikvm "Added shared lib libnativehelper.so 0x0" 25079 579
+Debug "2015-07-07 01:18:12.648532" 25079 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25079 580
+Info "2015-07-07 01:18:12.660532" 25079 dalvikvm "DexOpt: not all deps represented" 25079 581
+Error "2015-07-07 01:18:12.660532" 25079 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25079 582
+Error "2015-07-07 01:18:12.674532" 25079 cutils-trace "Error opening trace file: Permission denied (13)" 25079 583
+Debug "2015-07-07 01:18:12.682532" 25079 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25079 584
+Error "2015-07-07 01:18:12.826532" 25079 memtrack "Couldn't load memtrack module (No such file or directory)" 25079 585
+Error "2015-07-07 01:18:12.826532" 25079 android.os.Debug "failed to load memtrack module: -2" 25079 586
+Debug "2015-07-07 01:18:12.893532" 25079 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25079 587
+Debug "2015-07-07 01:18:12.899532" 913 MotDevicePolicyManager Version:02.00.00 957 588
+Info "2015-07-07 01:18:12.916532" 913 ActivityManager "Force stopping com.nihk.github.musictheoryromannumeralanalysisquiz appid=11135 user=-1: uninstall pkg" 946 589
+Info "2015-07-07 01:18:12.916532" 913 ActivityManager "Killing 25026:com.nihk.github.musictheoryromannumeralanalysisquiz/u0a1135 (adj 0): stop com.nihk.github.musictheoryromannumeralanalysisquiz" 946 590
+Warning "2015-07-07 01:18:12.916532" 913 ActivityManager "Force removing ActivityRecord{42bc5638 u0 com.nihk.github.musictheoryromannumeralanalysisquiz/.MTRNAQuizActivity t87}: app died, no saved state" 946 591
+Warning "2015-07-07 01:18:12.919532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.sendTrigger:147 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.handleFrameworkEvent:164" 3230 592
+Info "2015-07-07 01:18:12.937532" 913 WindowState "WIN DEATH: Window{42ca8280 u0 com.nihk.github.musictheoryromannumeralanalysisquiz/com.nihk.github.musictheoryromannumeralanalysisquiz.MTRNAQuizActivity}" 1012 593
+Info "2015-07-07 01:18:12.942532" 1244 Launcher onResume 1244 594
+Debug "2015-07-07 01:18:12.946532" 1244 LauncherAppWidgetHost "checkForConfig returning false: {1.0 311mcc480mnc en_US ldltr sw360dp w360dp h567dp 320dpi nrml port finger -keyb/v/h -nav/h s.18?spn}" 1244 595
+Warning "2015-07-07 01:18:12.949532" 913 PackageManager "Couldn't delete native library directory /data/app-lib/com.nihk.github.musictheoryromannumeralanalysisquiz" 957 596
+Warning "2015-07-07 01:18:12.950532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 597
+Debug "2015-07-07 01:18:13.035532" 301 keystore "calling clear_uid in state: 3" 301 598
+Debug "2015-07-07 01:18:13.042532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 599
+Debug "2015-07-07 01:18:13.043532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 600
+Info "2015-07-07 01:18:13.044532" 295 SFPerfTracer "     triggers: (rate: 1:0) (0 sw vsyncs) (0 skipped) (0:41278 vsyncs) (2:47152)" 511 601
+Debug "2015-07-07 01:18:13.048532" 1414 NotificationTutorialService "homeResumeCount: 12647 NotificationCount: 3" 1414 602
+Debug "2015-07-07 01:18:13.048532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 603
+Error "2015-07-07 01:18:13.049532" 1414 NotificationTutorialService " isScreenDisplayed(): false isHomeInForeground: false" 1414 604
+Debug "2015-07-07 01:18:13.050532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 605
+Info "2015-07-07 01:18:13.051532" 913 ActivityManager "Force stopping com.nihk.github.musictheoryromannumeralanalysisquiz appid=11135 user=0: pkg removed" 957 606
+Warning "2015-07-07 01:18:13.056532" 913 InputMethodManagerService "Got RemoteException sending setActive(false) notification to pid 25026 uid 11135" 1153 607
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " "Caught a RuntimeException from the binder stub implementation." 4690 608
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " java.lang.NullPointerException 4690 609
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " "	at android.inputmethodservice.IInputMethodWrapper.setSessionEnabled(IInputMethodWrapper.java:280)" 4690 610
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " "	at com.android.internal.view.IInputMethod$Stub.onTransact(IInputMethod.java:129)" 4690 611
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " "	at android.os.Binder.execTransact(Binder.java:404)" 4690 612
+Warning "2015-07-07 01:18:13.067532" 30018 "Binder  " "	at dalvik.system.NativeStart.run(Native Method)" 4690 613
+Debug "2015-07-07 01:18:13.073532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 614
+Debug "2015-07-07 01:18:13.073532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 615
+Debug "2015-07-07 01:18:13.073532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 616
+Debug "2015-07-07 01:18:13.087532" 913 WifiStateMachine "handleMessage: X" 1000 617
+Debug "2015-07-07 01:18:13.087532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 618
+Debug "2015-07-07 01:18:13.146532" 24585 dalvikvm "GC_EXPLICIT freed 1472K, 43% free 9847K/17192K, paused 3ms+3ms, total 49ms" 24585 619
+Warning "2015-07-07 01:18:13.204532" 1123 GeofencerStateMachine "Ignoring removeGeofence because network location is disabled." 1412 620
+Info "2015-07-07 01:18:13.210532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4615 621
+Info "2015-07-07 01:18:13.210532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4615 622
+Info "2015-07-07 01:18:13.210532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4615 623
+Info "2015-07-07 01:18:13.210532" 913 PackageManager "  Scheme: ""sms""" 4615 624
+Debug "2015-07-07 01:18:13.218532" 2153 dalvikvm "GC_EXPLICIT freed 1209K, 47% free 9270K/17192K, paused 3ms+3ms, total 62ms" 2153 625
+Info "2015-07-07 01:18:13.229532" 913 LaunchCheckinHandler "cleanup(): cleared. Last call was 21191 ms ago" 945 626
+Verbose "2015-07-07 01:18:13.230532" 24753 PackageMonitor "onReceive - android.intent.action.PACKAGE_REMOVED" 24753 627
+Info "2015-07-07 01:18:13.237532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1192 628
+Info "2015-07-07 01:18:13.237532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1192 629
+Info "2015-07-07 01:18:13.237532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1192 630
+Info "2015-07-07 01:18:13.237532" 913 PackageManager "  Scheme: ""smsto""" 1192 631
+Info "2015-07-07 01:18:13.238532" 913 InputReader "Reconfiguring input devices.  changes=0x00000010" 991 632
+Info "2015-07-07 01:18:13.250532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1219 633
+Info "2015-07-07 01:18:13.250532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1219 634
+Info "2015-07-07 01:18:13.250532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1219 635
+Info "2015-07-07 01:18:13.250532" 913 PackageManager "  Scheme: ""mms""" 1219 636
+Info "2015-07-07 01:18:13.275532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1155 637
+Info "2015-07-07 01:18:13.275532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1155 638
+Info "2015-07-07 01:18:13.276532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1155 639
+Info "2015-07-07 01:18:13.276532" 913 PackageManager "  Scheme: ""mmsto""" 1155 640
+    "07-06 18:18:12.931 30018 25097 I LatinIME:LogUtils: Dictionary info: dictionary = main:en ; version = 42 ; date = 1381226429"  641
+Info "2015-07-07 01:18:13.287532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1235 642
+Info "2015-07-07 01:18:13.287532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1235 643
+Info "2015-07-07 01:18:13.287532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1235 644
+Info "2015-07-07 01:18:13.287532" 913 PackageManager "  Scheme: ""sms""" 1235 645
+Debug "2015-07-07 01:18:13.308532" 1244 dalvikvm "GC_EXPLICIT freed 3732K, 35% free 20106K/30740K, paused 3ms+3ms, total 87ms" 1244 646
+Info "2015-07-07 01:18:13.313532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4612 647
+Info "2015-07-07 01:18:13.313532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4612 648
+Info "2015-07-07 01:18:13.313532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4612 649
+Info "2015-07-07 01:18:13.313532" 913 PackageManager "  Scheme: ""smsto""" 4612 650
+Verbose "2015-07-07 01:18:13.314532" 24753 QuestTrackerService "Service started with android.intent.action.PACKAGE_REMOVED" 25099 651
+Debug "2015-07-07 01:18:13.315532" 24753 QuestTrackerService "com.nihk.github.musictheoryromannumeralanalysisquizACTION_PACKAGE_REMOVEDIntent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz flg=0x4000010 cmp=com.motorola.genie/.model.QuestTrackerService (has extras) }" 25099 652
+Info "2015-07-07 01:18:13.323532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1161 653
+Info "2015-07-07 01:18:13.324532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1161 654
+Info "2015-07-07 01:18:13.324532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1161 655
+Info "2015-07-07 01:18:13.324532" 913 PackageManager "  Scheme: ""mms""" 1161 656
+Info "2015-07-07 01:18:13.333532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1257 657
+Info "2015-07-07 01:18:13.333532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1257 658
+Info "2015-07-07 01:18:13.333532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1257 659
+Info "2015-07-07 01:18:13.333532" 913 PackageManager "  Scheme: ""mmsto""" 1257 660
+Info "2015-07-07 01:18:13.401532" 24585 Icing.InternalIcingCorporaProvider "Updating corpora: A: com.nihk.github.musictheoryromannumeralanalysisquiz, C: MAYBE" 25102 661
+Info "2015-07-07 01:18:13.411532" 25188 PsfIntentHandler android.intent.action.PACKAGE_REMOVED 25103 662
+Debug "2015-07-07 01:18:13.447532" 24633 PackageChangeReceiver "onReceive(), action=android.intent.action.PACKAGE_REMOVED" 24633 663
+Debug "2015-07-07 01:18:13.447532" 24633 PackageChangeReceiver "ACTION_PACKAGE_REMOVED: com.nihk.github.musictheoryromannumeralanalysisquiz" 24633 664
+Debug "2015-07-07 01:18:13.447532" 24633 PackageChangeReceiver uninstallPackage 24633 665
+Debug "2015-07-07 01:18:13.451532" 913 dalvikvm "GC_EXPLICIT freed 2557K, 24% free 22894K/30036K, paused 8ms+16ms, total 277ms" 913 666
+Debug "2015-07-07 01:18:13.461532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 107ms" 957 667
+Debug "2015-07-07 01:18:13.463532" 24598 VoicemailCleanupService "Cleaning up data for package: com.nihk.github.musictheoryromannumeralanalysisquiz" 25106 668
+Debug "2015-07-07 01:18:13.478532" 24633 PackageChangeReceiver "Sending out UPDATE_UI intent" 24633 669
+Debug "2015-07-07 01:18:13.503532" 1244 ImageView3DMsgHandler "start onHandleMessage : 4" 1244 670
+Debug "2015-07-07 01:18:13.504532" 1244 ImageView3DMsgHandler "start  decodeStream" 1244 671
+Debug "2015-07-07 01:18:13.506532" 1244 ImageView3DMsgHandler "end  decodeStream" 1244 672
+Debug "2015-07-07 01:18:13.508532" 1244 ImageView3DMsgHandler "end onHandleMessage : 4" 1244 673
+Debug "2015-07-07 01:18:13.524532" 1244 ImageView3DMsgHandler "start onHandleMessage : 9" 1244 674
+Debug "2015-07-07 01:18:13.531532" 1244 ImageView3DMsgHandler "end onHandleMessage : 9" 1244 675
+Info "2015-07-07 01:18:13.544532" 24772 SlackerRadio ACTION_PACKAGE_REMOVED 24772 676
+Info "2015-07-07 01:18:13.565532" 913 ActivityManager "Start proc com.android.keychain for broadcast com.android.keychain/.KeyChainBroadcastReceiver: pid=25107 uid=1000 gids={41000, 1028, 1015, 3002, 3001, 3003, 3006, 1004, 2002}" 924 677
+Debug "2015-07-07 01:18:13.671532" 913 BackupManagerService "Received broadcast Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz flg=0x4000010 (has extras) }" 913 678
+Verbose "2015-07-07 01:18:13.672532" 913 BackupManagerService "removePackageParticipantsLocked: uid=11135 #1" 913 679
+Info "2015-07-07 01:18:13.684532" 25107 dalvikvm "DexOpt: not all deps represented" 25107 680
+Error "2015-07-07 01:18:13.684532" 25107 dalvikvm "/system/app/KeyChain.apk odex has stale dependencies" 25107 681
+Warning "2015-07-07 01:18:13.688532" 25107 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1652 android.content.ContextWrapper.startService:494 android.content.ContextWrapper.startService:494 com.android.keychain.KeyChainBroadcastReceiver.onReceive:12 android.app.ActivityThread.handleReceiver:2446" 25107 682
+Error "2015-07-07 01:18:13.705532" 1329 NetworkScheduler.SchedulerReceiver "Invalid parameter app" 1329 683
+Error "2015-07-07 01:18:13.705532" 1329 NetworkScheduler.SchedulerReceiver "Invalid package name : Perhaps you didn't include a PendingIntent in the extras?" 1329 684
+Debug "2015-07-07 01:18:13.738532" 913 MobileDataStateTracker "default: setPolicyDataEnable(enabled=true)" 1005 685
+Debug "2015-07-07 01:18:13.754532" 1689 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_REMOVED and uri=com.nihk.github.musictheoryromannumeralanalysisquiz" 25120 686
+Debug "2015-07-07 01:18:13.755532" 1689 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 1689 687
+Debug "2015-07-07 01:18:13.755532" 1689 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.receiver.PlaySystemBroadcastReceiver" 1689 688
+Debug "2015-07-07 01:18:13.755532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 689
+Debug "2015-07-07 01:18:13.755532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 690
+Debug "2015-07-07 01:18:13.761532" 1689 AccountUtils "Clearing selected account for com.nihk.github.musictheoryromannumeralanalysisquiz" 25120 691
+Debug "2015-07-07 01:18:13.775532" 1689 ChimeraSrvcProxy "Creating service proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy}" 1689 692
+Debug "2015-07-07 01:18:13.775532" 1689 ChimeraSrvcProxy "Proxying container service ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy} to Chimera service impl com.google.android.gms.games.service.PlayGamesAsyncService" 1689 693
+Debug "2015-07-07 01:18:13.775532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 694
+Debug "2015-07-07 01:18:13.775532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 695
+Info "2015-07-07 01:18:13.785532" 1689 LocationSettingsChecker "Removing dialog suppression flag for package com.nihk.github.musictheoryromannumeralanalysisquiz" 25120 696
+Info "2015-07-07 01:18:13.821532" 24650 dalvikvm "Could not find method android.app.admin.DevicePolicyManager.isUninstallBlocked, referenced from method com.google.android.finsky.activities.AppActionAnalyzer.isUninstallBlockedByAdmin" 24650 697
+Warning "2015-07-07 01:18:13.821532" 24650 dalvikvm "VFY: unable to resolve virtual method 310: Landroid/app/admin/DevicePolicyManager;.isUninstallBlocked (Landroid/content/ComponentName;Ljava/lang/String;)Z" 24650 698
+Debug "2015-07-07 01:18:13.821532" 24650 dalvikvm "VFY: replacing opcode 0x6e at 0x0013" 24650 699
+Info "2015-07-07 01:18:13.891532" 913 ActivityManager "Start proc com.android.documentsui for broadcast com.android.documentsui/.PackageReceiver: pid=25128 uid=10090 gids={50090}" 1257 700
+Debug "2015-07-07 01:18:13.921532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db, release reference: 1" 25125 701
+Debug "2015-07-07 01:18:13.921532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db: 2" 25125 702
+Debug "2015-07-07 01:18:13.928532" 1689 gH_MetricsDatabase "0 metrics were deleted when clearing package com.nihk.github.musictheoryromannumeralanalysisquiz." 25125 703
+Info "2015-07-07 01:18:13.938532" 1329 ConfigService onCreate 1329 704
+Info "2015-07-07 01:18:13.938532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.UPDATE pkg=com.google.android.gms } action com.google.android.gms.config.UPDATE" 1329 705
+Debug "2015-07-07 01:18:13.939532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db: 1" 25125 706
+Info "2015-07-07 01:18:13.953532" 25128 dalvikvm "DexOpt: not all deps represented" 25128 707
+Error "2015-07-07 01:18:13.953532" 25128 dalvikvm "/system/app/DocumentsUI.apk odex has stale dependencies" 25128 708
+Debug "2015-07-07 01:18:13.955532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db, release reference: 1" 25125 709
+Debug "2015-07-07 01:18:13.955532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db: 2" 25125 710
+Info "2015-07-07 01:18:13.956532" 1329 ConfigService "onBind returning update interface" 1329 711
+Debug "2015-07-07 01:18:13.957532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db: 1" 25125 712
+Info "2015-07-07 01:18:13.981532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.START pkg=com.google.android.gms } action com.google.android.gms.config.START" 1329 713
+Info "2015-07-07 01:18:13.981532" 1329 ConfigService "onBind returning service broker" 1329 714
+Info "2015-07-07 01:18:13.989532" 1689 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 1689 715
+Info "2015-07-07 01:18:14.003532" 1689 ConfigFetchService "service connected" 1689 716
+Debug "2015-07-07 01:18:14.010532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db, release reference: 1" 25125 717
+Debug "2015-07-07 01:18:14.010532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db: 2" 25125 718
+Debug "2015-07-07 01:18:14.011532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db: 1" 25125 719
+Debug "2015-07-07 01:18:14.038532" 25128 Documents "Loading roots for com.android.providers.media.documents" 25145 720
+Debug "2015-07-07 01:18:14.039532" 913 MotDevicePolicyManager Version:02.00.00 923 721
+Info "2015-07-07 01:18:14.049532" 913 ActivityManager "Killing 23140:com.google.android.talk/u0a100 (adj 15): empty #17" 1257 722
+Warning "2015-07-07 01:18:14.050532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.sendTrigger:147 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.handleFrameworkEvent:164" 3230 723
+Info "2015-07-07 01:18:14.051532" 913 ActivityManager "Killing 24254:com.android.settings/1000 (adj 15): empty #17" 1257 724
+Warning "2015-07-07 01:18:14.060532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.sendTrigger:147 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.handleFrameworkEvent:164" 3230 725
+Debug "2015-07-07 01:18:14.064532" 913 WifiService "Client connection lost with reason: 4" 1004 726
+Info "2015-07-07 01:18:14.073532" 1689 "Icing   " "doRemovePackageData com.nihk.github.musictheoryromannumeralanalysisquiz" 2590 727
+Debug "2015-07-07 01:18:14.074532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 728
+Debug "2015-07-07 01:18:14.074532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 729
+Debug "2015-07-07 01:18:14.074532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 730
+Warning "2015-07-07 01:18:14.090532" 913 ActivityManager "Service ServiceRecord{431bb538 u0 com.google.android.talk/com.google.android.libraries.hangouts.video.CallService} in process ProcessRecord{43277028 23140:com.google.android.talk/u0a100} not same as in map: null" 1219 731
+Debug "2015-07-07 01:18:14.092532" 913 WifiStateMachine "handleMessage: X" 1000 732
+Debug "2015-07-07 01:18:14.092532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 733
+Info "2015-07-07 01:18:14.093532" 25188 PsfIntentHandler com.motorola.contextual.smartrules.intent.action.PSR_INIT 25147 734
+Debug "2015-07-07 01:18:14.105532" 25128 Documents "Loading roots for com.android.providers.downloads.documents" 25145 735
+Debug "2015-07-07 01:18:14.110532" 25128 Documents "Loading roots for com.android.externalstorage.documents" 25145 736
+Info "2015-07-07 01:18:14.118532" 913 ActivityManager "Start proc com.android.externalstorage for content provider com.android.externalstorage/.ExternalStorageProvider: pid=25148 uid=10060 gids={50060, 1028, 1015, 1023}" 1219 737
+Info "2015-07-07 01:18:14.130532" 913 ActivityManager "Killing 23352:com.google.android.youtube/u0a148 (adj 15): empty #17" 4611 738
+Warning "2015-07-07 01:18:14.132532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.sendTrigger:147 com.motorola.motocare.internal.frameworkevents.ProcessKillTrigger.handleFrameworkEvent:164" 3230 739
+Info "2015-07-07 01:18:14.152532" 25148 dalvikvm "DexOpt: not all deps represented" 25148 740
+Error "2015-07-07 01:18:14.152532" 25148 dalvikvm "/system/priv-app/ExternalStorageProvider.apk odex has stale dependencies" 25148 741
+Warning "2015-07-07 01:18:14.154532" 913 ActivityManager "Service ServiceRecord{42fb1310 u0 com.google.android.youtube/com.google.android.apps.youtube.app.offline.transfer.OfflineTransferService} in process ProcessRecord{42b800b8 23352:com.google.android.youtube/u0a148} not same as in map: null" 1189 742
+Debug "2015-07-07 01:18:14.162532" 25148 ExternalStorage "After updating volumes, found 1 active roots" 25148 743
+Debug "2015-07-07 01:18:14.191532" 25128 Documents "Updating roots due to change at content://com.android.externalstorage.documents/root" 25128 744
+Debug "2015-07-07 01:18:14.192532" 913 dalvikvm "GC_EXPLICIT freed 2624K, 26% free 22487K/30036K, paused 57ms+19ms, total 731ms" 957 745
+Debug "2015-07-07 01:18:14.199532" 25128 Documents "Loading roots for com.google.android.apps.docs.storage" 25145 746
+Debug "2015-07-07 01:18:14.203532" 25079 AndroidRuntime "Shutting down VM" 25079 747
+Debug "2015-07-07 01:18:14.207532" 25079 dalvikvm "GC_CONCURRENT freed 94K, 15% free 565K/664K, paused 0ms+0ms, total 2ms" 25088 748
+Debug "2015-07-07 01:18:14.231532" 25128 Documents "Update found 7 roots in 207ms" 25145 749
+Debug "2015-07-07 01:18:14.235532" 25128 Documents "Used cached roots for com.android.providers.media.documents" 25161 750
+Debug "2015-07-07 01:18:14.235532" 25128 Documents "Used cached roots for com.android.providers.downloads.documents" 25161 751
+Debug "2015-07-07 01:18:14.235532" 25128 Documents "Loading roots for com.android.externalstorage.documents" 25161 752
+Debug "2015-07-07 01:18:14.239532" 25128 Documents "Used cached roots for com.google.android.apps.docs.storage" 25161 753
+Debug "2015-07-07 01:18:14.239532" 25128 Documents "Update found 7 roots in 7ms" 25161 754
+Debug "2015-07-07 01:18:15.075532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 755
+Debug "2015-07-07 01:18:15.076532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 756
+Debug "2015-07-07 01:18:15.076532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 757
+Info "2015-07-07 01:18:15.083532" 1689 "Icing   " "Indexing 9E54EF96C80F5696FD95811E40B150FB3895EB3F from com.google.android.googlequicksearchbox" 2590 758
+Debug "2015-07-07 01:18:15.092532" 913 WifiStateMachine "handleMessage: X" 1000 759
+Debug "2015-07-07 01:18:15.092532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=98" 1007 760
+Error "2015-07-07 01:18:15.148532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 761
+Error "2015-07-07 01:18:15.148532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 762
+Info "2015-07-07 01:18:15.191532" 1689 "Icing   " "Indexing done 9E54EF96C80F5696FD95811E40B150FB3895EB3F" 2590 763
+Debug "2015-07-07 01:18:15.296532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 764
+Debug "2015-07-07 01:18:15.296532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 765
+Debug "2015-07-07 01:18:15.296532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 766
+Debug "2015-07-07 01:18:15.303532" 913 WifiStateMachine "handleMessage: X" 1000 767
+Debug "2015-07-07 01:18:15.664532" 25171 AndroidRuntime  25171 768
+Debug "2015-07-07 01:18:15.664532" 25171 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25171 769
+Debug "2015-07-07 01:18:15.667532" 25171 AndroidRuntime "CheckJNI is OFF" 25171 770
+Info "2015-07-07 01:18:15.676532" 25171 dalvikvm "DexOpt: not all deps represented" 25171 771
+Error "2015-07-07 01:18:15.676532" 25171 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25171 772
+Info "2015-07-07 01:18:15.676532" 25171 dalvikvm "DexOpt: not all deps represented" 25171 773
+Error "2015-07-07 01:18:15.676532" 25171 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25171 774
+Debug "2015-07-07 01:18:15.682532" 25171 dalvikvm "Trying to load lib libjavacore.so 0x0" 25171 775
+Debug "2015-07-07 01:18:15.685532" 25171 dalvikvm "Added shared lib libjavacore.so 0x0" 25171 776
+Debug "2015-07-07 01:18:15.688532" 25171 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25171 777
+Debug "2015-07-07 01:18:15.688532" 25171 dalvikvm "Added shared lib libnativehelper.so 0x0" 25171 778
+Debug "2015-07-07 01:18:15.688532" 25171 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25171 779
+Info "2015-07-07 01:18:15.700532" 25171 dalvikvm "DexOpt: not all deps represented" 25171 780
+Error "2015-07-07 01:18:15.700532" 25171 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25171 781
+Error "2015-07-07 01:18:15.704532" 25171 cutils-trace "Error opening trace file: Permission denied (13)" 25171 782
+Debug "2015-07-07 01:18:15.723532" 25171 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25171 783
+Error "2015-07-07 01:18:15.865532" 25171 memtrack "Couldn't load memtrack module (No such file or directory)" 25171 784
+Error "2015-07-07 01:18:15.865532" 25171 android.os.Debug "failed to load memtrack module: -2" 25171 785
+Debug "2015-07-07 01:18:15.931532" 25171 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25171 786
+Info "2015-07-07 01:18:15.954532" 295 SFPerfTracer "     triggers: (rate: 28:1937) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12719 frames) (1:42527)" 295 787
+Debug "2015-07-07 01:18:15.954532" 295 SFPerfTracer "       layers: (4:14) (FocusedStackFrame: 0:668)* (StatusBar: 0:3304) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:208) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 0:877)* (Starting com.nihk.github.musictheoryromannumeralanalysisquiz: 0:34)* (com.nihk.github.musictheoryromannumeralanalysisquiz/com.nihk.github.musictheoryromannumeralanalysisquiz.MTRNAQuizActivity: 0:4)* (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:40)" 295 788
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "Unable to read AndroidManifest.xml of /sdcard/temp.apk" 24746 789
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "java.io.FileNotFoundException: AndroidManifest.xml" 24746 790
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at android.content.res.AssetManager.openXmlAssetNative(Native Method)" 24746 791
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at android.content.res.AssetManager.openXmlBlockAsset(AssetManager.java:488)" 24746 792
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at android.content.res.AssetManager.openXmlResourceParser(AssetManager.java:456)" 24746 793
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at android.content.pm.PackageParser.parsePackageLite(PackageParser.java:780)" 24746 794
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at com.android.defcontainer.DefaultContainerService$1.getMinimalPackageInfo(DefaultContainerService.java:175)" 24746 795
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at com.android.internal.app.IMediaContainerService$Stub.onTransact(IMediaContainerService.java:110)" 24746 796
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at android.os.Binder.execTransact(Binder.java:404)" 24746 797
+Warning "2015-07-07 01:18:15.964532" 24736 PackageParser "	at dalvik.system.NativeStart.run(Native Method)" 24746 798
+Warning "2015-07-07 01:18:15.964532" 24736 DefContainer "Failed to parse package" 24746 799
+Warning "2015-07-07 01:18:15.965532" 913 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 957 800
+Debug "2015-07-07 01:18:16.077532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 801
+Debug "2015-07-07 01:18:16.077532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 802
+Debug "2015-07-07 01:18:16.077532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 803
+Debug "2015-07-07 01:18:16.096532" 913 dalvikvm "GC_EXPLICIT freed 242K, 26% free 22314K/30036K, paused 5ms+10ms, total 130ms" 957 804
+Debug "2015-07-07 01:18:16.102532" 913 WifiStateMachine "handleMessage: X" 1000 805
+Debug "2015-07-07 01:18:16.102532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 806
+Debug "2015-07-07 01:18:16.104532" 25171 AndroidRuntime "Shutting down VM" 25171 807
+Debug "2015-07-07 01:18:16.111532" 25171 dalvikvm "GC_CONCURRENT freed 124K, 19% free 575K/704K, paused 1ms+0ms, total 4ms" 25176 808
+Debug "2015-07-07 01:18:16.921532" 25187 AndroidRuntime  25187 809
+Debug "2015-07-07 01:18:16.921532" 25187 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25187 810
+Debug "2015-07-07 01:18:16.924532" 25187 AndroidRuntime "CheckJNI is OFF" 25187 811
+Info "2015-07-07 01:18:16.933532" 25187 dalvikvm "DexOpt: not all deps represented" 25187 812
+Error "2015-07-07 01:18:16.933532" 25187 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25187 813
+Info "2015-07-07 01:18:16.933532" 25187 dalvikvm "DexOpt: not all deps represented" 25187 814
+Error "2015-07-07 01:18:16.933532" 25187 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25187 815
+Debug "2015-07-07 01:18:16.940532" 25187 dalvikvm "Trying to load lib libjavacore.so 0x0" 25187 816
+Debug "2015-07-07 01:18:16.942532" 25187 dalvikvm "Added shared lib libjavacore.so 0x0" 25187 817
+Debug "2015-07-07 01:18:16.946532" 25187 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25187 818
+Debug "2015-07-07 01:18:16.946532" 25187 dalvikvm "Added shared lib libnativehelper.so 0x0" 25187 819
+Debug "2015-07-07 01:18:16.946532" 25187 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25187 820
+Info "2015-07-07 01:18:16.959532" 25187 dalvikvm "DexOpt: not all deps represented" 25187 821
+Error "2015-07-07 01:18:16.959532" 25187 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25187 822
+Error "2015-07-07 01:18:16.967532" 25187 cutils-trace "Error opening trace file: Permission denied (13)" 25187 823
+Debug "2015-07-07 01:18:16.981532" 25187 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25187 824
+Debug "2015-07-07 01:18:17.079532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 825
+Debug "2015-07-07 01:18:17.079532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 826
+Debug "2015-07-07 01:18:17.079532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 827
+Debug "2015-07-07 01:18:17.102532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 828
+Debug "2015-07-07 01:18:17.102532" 913 WifiStateMachine "handleMessage: X" 1000 829
+Error "2015-07-07 01:18:17.139532" 25187 memtrack "Couldn't load memtrack module (No such file or directory)" 25187 830
+Error "2015-07-07 01:18:17.139532" 25187 android.os.Debug "failed to load memtrack module: -2" 25187 831
+Debug "2015-07-07 01:18:17.195532" 25187 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25187 832
+Debug "2015-07-07 01:18:17.317532" 25187 AndroidRuntime "Shutting down VM" 25187 833
+Debug "2015-07-07 01:18:17.321532" 25187 dalvikvm "GC_CONCURRENT freed 421K, 43% free 574K/1000K, paused 0ms+1ms, total 4ms" 25205 834
+Debug "2015-07-07 01:18:18.080532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 835
+Debug "2015-07-07 01:18:18.080532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 836
+Debug "2015-07-07 01:18:18.080532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 837
+Debug "2015-07-07 01:18:18.095532" 913 WifiStateMachine "handleMessage: X" 1000 838
+Debug "2015-07-07 01:18:18.096532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=98" 1007 839
+Debug "2015-07-07 01:18:18.303532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 840
+Debug "2015-07-07 01:18:18.303532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 841
+Debug "2015-07-07 01:18:18.303532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 842
+Debug "2015-07-07 01:18:18.308532" 25217 AndroidRuntime  25217 843
+Debug "2015-07-07 01:18:18.308532" 25217 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25217 844
+Debug "2015-07-07 01:18:18.310532" 25217 AndroidRuntime "CheckJNI is OFF" 25217 845
+Debug "2015-07-07 01:18:18.312532" 913 WifiStateMachine "handleMessage: X" 1000 846
+Info "2015-07-07 01:18:18.318532" 25217 dalvikvm "DexOpt: not all deps represented" 25217 847
+Error "2015-07-07 01:18:18.318532" 25217 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25217 848
+Info "2015-07-07 01:18:18.319532" 25217 dalvikvm "DexOpt: not all deps represented" 25217 849
+Error "2015-07-07 01:18:18.319532" 25217 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25217 850
+Debug "2015-07-07 01:18:18.325532" 25217 dalvikvm "Trying to load lib libjavacore.so 0x0" 25217 851
+Debug "2015-07-07 01:18:18.327532" 25217 dalvikvm "Added shared lib libjavacore.so 0x0" 25217 852
+Debug "2015-07-07 01:18:18.331532" 25217 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25217 853
+Debug "2015-07-07 01:18:18.331532" 25217 dalvikvm "Added shared lib libnativehelper.so 0x0" 25217 854
+Debug "2015-07-07 01:18:18.331532" 25217 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25217 855
+Info "2015-07-07 01:18:18.343532" 25217 dalvikvm "DexOpt: not all deps represented" 25217 856
+Error "2015-07-07 01:18:18.343532" 25217 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25217 857
+Error "2015-07-07 01:18:18.355532" 25217 cutils-trace "Error opening trace file: Permission denied (13)" 25217 858
+Debug "2015-07-07 01:18:18.365532" 25217 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25217 859
+Error "2015-07-07 01:18:18.506532" 25217 memtrack "Couldn't load memtrack module (No such file or directory)" 25217 860
+Error "2015-07-07 01:18:18.507532" 25217 android.os.Debug "failed to load memtrack module: -2" 25217 861
+Debug "2015-07-07 01:18:18.562532" 25217 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25217 862
+Warning "2015-07-07 01:18:18.570532" 913 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 957 863
+Warning "2015-07-07 01:18:18.575532" 913 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 957 864
+Info "2015-07-07 01:18:18.575532" 913 PackageManager "Copying native libraries to /data/app-lib/vmdl371393817" 957 865
+Info "2015-07-07 01:18:18.622532" 913 PackageManager "Running dexopt on: com.appthwack.test" 957 866
+Info "2015-07-07 01:18:18.665532" 25238 dalvikvm "DexOpt: not all deps represented" 25238 867
+Error "2015-07-07 01:18:18.665532" 25238 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25238 868
+Info "2015-07-07 01:18:18.665532" 25238 dalvikvm "DexOpt: not all deps represented" 25238 869
+Error "2015-07-07 01:18:18.666532" 25238 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25238 870
+Debug "2015-07-07 01:18:18.674532" 25238 dalvikvm "DexOpt: 'Landroid/annotation/SuppressLint;' has an earlier definition; blocking out" 25238 871
+Debug "2015-07-07 01:18:18.674532" 25238 dalvikvm "DexOpt: 'Landroid/annotation/TargetApi;' has an earlier definition; blocking out" 25238 872
+Debug "2015-07-07 01:18:18.690532" 25238 dalvikvm "DexOpt: not verifying/optimizing 'Landroid/annotation/SuppressLint;': multiple definitions" 25238 873
+Debug "2015-07-07 01:18:18.690532" 25238 dalvikvm "DexOpt: not verifying/optimizing 'Landroid/annotation/TargetApi;': multiple definitions" 25238 874
+Debug "2015-07-07 01:18:18.769532" 25238 dalvikvm "DexOpt: load 19ms, verify+opt 79ms, 620012 bytes" 25238 875
+Info "2015-07-07 01:18:18.793532" 913 ActivityManager "Force stopping com.appthwack.test appid=11136 user=-1: update pkg" 946 876
+Info "2015-07-07 01:18:19.016532" 913 InputReader "Reconfiguring input devices.  changes=0x00000010" 991 877
+Info "2015-07-07 01:18:19.025532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1012 878
+Info "2015-07-07 01:18:19.025532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1012 879
+Info "2015-07-07 01:18:19.026532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1012 880
+Info "2015-07-07 01:18:19.026532" 913 PackageManager "  Scheme: ""sms""" 1012 881
+Info "2015-07-07 01:18:19.036532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1155 882
+Info "2015-07-07 01:18:19.036532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1155 883
+Info "2015-07-07 01:18:19.036532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1155 884
+Info "2015-07-07 01:18:19.037532" 913 PackageManager "  Scheme: ""smsto""" 1155 885
+Debug "2015-07-07 01:18:19.081532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 886
+Debug "2015-07-07 01:18:19.081532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 887
+Debug "2015-07-07 01:18:19.081532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 888
+Debug "2015-07-07 01:18:19.091532" 913 WifiStateMachine "handleMessage: X" 1000 889
+Debug "2015-07-07 01:18:19.091532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=98" 1007 890
+Info "2015-07-07 01:18:19.138532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4611 891
+Info "2015-07-07 01:18:19.139532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4611 892
+Info "2015-07-07 01:18:19.139532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4611 893
+Info "2015-07-07 01:18:19.139532" 913 PackageManager "  Scheme: ""mms""" 4611 894
+Debug "2015-07-07 01:18:19.140532" 25128 Documents "Used cached roots for com.android.providers.media.documents" 25239 895
+Debug "2015-07-07 01:18:19.140532" 25128 Documents "Used cached roots for com.android.providers.downloads.documents" 25239 896
+Debug "2015-07-07 01:18:19.140532" 25128 Documents "Used cached roots for com.android.externalstorage.documents" 25239 897
+Debug "2015-07-07 01:18:19.140532" 25128 Documents "Used cached roots for com.google.android.apps.docs.storage" 25239 898
+Debug "2015-07-07 01:18:19.140532" 25128 Documents "Update found 7 roots in 98ms" 25239 899
+Info "2015-07-07 01:18:19.167532" 1329 ConfigService onDestroy 1329 900
+Info "2015-07-07 01:18:19.171532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1257 901
+Info "2015-07-07 01:18:19.171532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1257 902
+Info "2015-07-07 01:18:19.171532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1257 903
+Info "2015-07-07 01:18:19.171532" 913 PackageManager "  Scheme: ""mmsto""" 1257 904
+Info "2015-07-07 01:18:19.184532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4612 905
+Info "2015-07-07 01:18:19.184532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4612 906
+Info "2015-07-07 01:18:19.184532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4612 907
+Info "2015-07-07 01:18:19.184532" 913 PackageManager "  Scheme: ""sms""" 4612 908
+Info "2015-07-07 01:18:19.194532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4611 909
+Info "2015-07-07 01:18:19.194532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4611 910
+Info "2015-07-07 01:18:19.194532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4611 911
+Info "2015-07-07 01:18:19.194532" 913 PackageManager "  Scheme: ""smsto""" 4611 912
+Debug "2015-07-07 01:18:19.199532" 913 BackupManagerService "Received broadcast Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.test flg=0x4000010 (has extras) }" 913 913
+Verbose "2015-07-07 01:18:19.203532" 913 BackupManagerService "addPackageParticipantsLocked: #1" 913 914
+Info "2015-07-07 01:18:19.204532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1235 915
+Info "2015-07-07 01:18:19.204532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1235 916
+Info "2015-07-07 01:18:19.205532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1235 917
+Info "2015-07-07 01:18:19.205532" 913 PackageManager "  Scheme: ""mms""" 1235 918
+Verbose "2015-07-07 01:18:19.210532" 24753 PackageMonitor "onReceive - android.intent.action.PACKAGE_ADDED" 24753 919
+    "07-06 18:18:18.866   913  1947 D PackageController.doInBackground(): : Package com.appthwack.test, package state=0, action=android.intent.action.PACKAGE_ADDED"  920
+Debug "2015-07-07 01:18:19.212532" 913 MotorolaPolicy "BrowserPolicy.isAllowed(): true" 1947 921
+Debug "2015-07-07 01:18:19.212532" 913 MotorolaPolicy "TextMessagingPolicy.isAllowed(): true" 1947 922
+Debug "2015-07-07 01:18:19.213532" 913 MotorolaPolicy "ConsumerEmailPolicy.isAllowed(): true" 1947 923
+    "07-06 18:18:18.868   913  1947 D PackageController.doInBackground(): : Package com.appthwack.test does NOT conflict with any policy."  924
+Info "2015-07-07 01:18:19.213532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1257 925
+Info "2015-07-07 01:18:19.213532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1257 926
+Info "2015-07-07 01:18:19.213532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1257 927
+Info "2015-07-07 01:18:19.213532" 913 PackageManager "  Scheme: ""mmsto""" 1257 928
+Verbose "2015-07-07 01:18:19.220532" 24753 QuestTrackerService "Service started with android.intent.action.PACKAGE_ADDED" 25242 929
+Verbose "2015-07-07 01:18:19.224532" 24753 AppQuestParser parse() 25242 930
+Debug "2015-07-07 01:18:19.224532" 24753 QuestTrackerService "com.appthwack.testACTION_PACKAGE_ADDEDIntent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.test flg=0x4000010 cmp=com.motorola.genie/.model.QuestTrackerService (has extras) }" 25242 931
+Info "2015-07-07 01:18:19.246532" 24585 Icing.InternalIcingCorporaProvider "Updating corpora: A: com.appthwack.test, C: MAYBE" 25244 932
+Debug "2015-07-07 01:18:19.255532" 24633 PackageChangeReceiver "onReceive(), action=android.intent.action.PACKAGE_ADDED" 24633 933
+Info "2015-07-07 01:18:19.261532" 24772 SlackerRadio ACTION_PACKAGE_ADDED 24772 934
+Info "2015-07-07 01:18:19.268532" 25188 PsfIntentHandler android.intent.action.PACKAGE_ADDED 25245 935
+Debug "2015-07-07 01:18:19.289532" 913 dalvikvm "GC_EXPLICIT freed 1641K, 25% free 22561K/30036K, paused 3ms+18ms, total 287ms" 957 936
+Debug "2015-07-07 01:18:19.290532" 25217 AndroidRuntime "Shutting down VM" 25217 937
+Debug "2015-07-07 01:18:19.293532" 1689 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 1689 938
+Debug "2015-07-07 01:18:19.293532" 1689 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.receiver.PlaySystemBroadcastReceiver" 1689 939
+Debug "2015-07-07 01:18:19.293532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 940
+Debug "2015-07-07 01:18:19.293532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 941
+Debug "2015-07-07 01:18:19.293532" 25217 dalvikvm "GC_CONCURRENT freed 95K, 15% free 567K/664K, paused 0ms+0ms, total 2ms" 25230 942
+Debug "2015-07-07 01:18:19.296532" 1689 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_ADDED and uri=com.appthwack.test" 25246 943
+Debug "2015-07-07 01:18:19.306532" 1689 ChimeraSrvcProxy "Creating service proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy}" 1689 944
+Debug "2015-07-07 01:18:19.306532" 1689 ChimeraSrvcProxy "Proxying container service ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy} to Chimera service impl com.google.android.gms.games.service.PlayGamesAsyncService" 1689 945
+Debug "2015-07-07 01:18:19.306532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 946
+Debug "2015-07-07 01:18:19.306532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 947
+Info "2015-07-07 01:18:19.323532" 1329 ConfigService onCreate 1329 948
+Info "2015-07-07 01:18:19.334532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.UPDATE pkg=com.google.android.gms } action com.google.android.gms.config.UPDATE" 1329 949
+Info "2015-07-07 01:18:19.334532" 1329 ConfigService "onBind returning update interface" 1329 950
+Info "2015-07-07 01:18:19.342532" 1689 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.appthwack.test cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 1689 951
+Info "2015-07-07 01:18:19.343532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.START pkg=com.google.android.gms } action com.google.android.gms.config.START" 1329 952
+Info "2015-07-07 01:18:19.343532" 1329 ConfigService "onBind returning service broker" 1329 953
+Info "2015-07-07 01:18:19.350532" 1689 ConfigFetchService launchTask 1689 954
+Info "2015-07-07 01:18:19.366532" 1689 ConfigFetchService "service connected" 1689 955
+Verbose "2015-07-07 01:18:19.369532" 1689 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1Wl4t1QaeZSu8tz6ZA7LdhbTmG2hXZtDrKw1AcD4MaHsn_HE0vqg7ylrvVUukUFSTQfQod3wPSvDgft6V4fxHotVFkCoRMXaCkBfyzG_wKmV1UFpZRWT5RjguiApOxGATwkk15akDGsR5EyHTA-hTDvLUxqPUk5d7rN9whVRUe8XnVDzR6Eu_yrmwqOC49A-CZUgTMDKd5z0-fcNT5iWo3ccsKBBJ9yPCrHu20U2U4facDM5xELFJ82l8aPat2dOIadsGA_WPjpFxZgkc1xm6tmG0pasNRfSbOw5rMxgfm3OZhWltZSLZM2wKVdohRdqPhkBn1TBj4rs3U6ag2DE9b0MVCakpn2uzseyRdemBpidJrrXj0" 25250 956
+Debug "2015-07-07 01:18:19.379532" 1689 ConfigFetchService "ConfigApi connection successful." 1689 957
+Info "2015-07-07 01:18:19.389532" 1689 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 25250 958
+Debug "2015-07-07 01:18:19.398532" 913 MotDevicePolicyManager Version:02.00.00 4612 959
+Info "2015-07-07 01:18:19.413532" 25188 PsfIntentHandler com.motorola.contextual.smartrules.intent.action.PSR_INIT 25255 960
+Info "2015-07-07 01:18:19.555532" 1689 ConfigFetchService "fetch service done; releasing wakelock" 1689 961
+Info "2015-07-07 01:18:19.556532" 1689 ConfigFetchService "stopping self" 1689 962
+Debug "2015-07-07 01:18:20.030532" 25261 AndroidRuntime  25261 963
+Debug "2015-07-07 01:18:20.030532" 25261 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25261 964
+Debug "2015-07-07 01:18:20.032532" 25261 AndroidRuntime "CheckJNI is OFF" 25261 965
+Info "2015-07-07 01:18:20.041532" 25261 dalvikvm "DexOpt: not all deps represented" 25261 966
+Error "2015-07-07 01:18:20.041532" 25261 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25261 967
+Info "2015-07-07 01:18:20.041532" 25261 dalvikvm "DexOpt: not all deps represented" 25261 968
+Error "2015-07-07 01:18:20.041532" 25261 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25261 969
+Debug "2015-07-07 01:18:20.047532" 25261 dalvikvm "Trying to load lib libjavacore.so 0x0" 25261 970
+Debug "2015-07-07 01:18:20.050532" 25261 dalvikvm "Added shared lib libjavacore.so 0x0" 25261 971
+Debug "2015-07-07 01:18:20.053532" 25261 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25261 972
+Debug "2015-07-07 01:18:20.053532" 25261 dalvikvm "Added shared lib libnativehelper.so 0x0" 25261 973
+Debug "2015-07-07 01:18:20.053532" 25261 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25261 974
+Info "2015-07-07 01:18:20.065532" 25261 dalvikvm "DexOpt: not all deps represented" 25261 975
+Error "2015-07-07 01:18:20.065532" 25261 dalvikvm "/system/framework/input.jar odex has stale dependencies" 25261 976
+Error "2015-07-07 01:18:20.075532" 25261 cutils-trace "Error opening trace file: Permission denied (13)" 25261 977
+Debug "2015-07-07 01:18:20.082532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 978
+Debug "2015-07-07 01:18:20.082532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 979
+Debug "2015-07-07 01:18:20.082532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 980
+Debug "2015-07-07 01:18:20.087532" 25261 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25261 981
+Debug "2015-07-07 01:18:20.099532" 913 WifiStateMachine "handleMessage: X" 1000 982
+Debug "2015-07-07 01:18:20.099532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=105" 1007 983
+Debug "2015-07-07 01:18:20.100532" 913 WifiWatchdogStateMachine "Incremental loss=0/7 Current loss=0% volume=5.67" 1007 984
+Debug "2015-07-07 01:18:20.100532" 913 WifiWatchdogStateMachine "Cache updated: loss[-59]=0.35% volume=6.54" 1007 985
+Error "2015-07-07 01:18:20.149532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 986
+Error "2015-07-07 01:18:20.149532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 987
+Error "2015-07-07 01:18:20.229532" 25261 memtrack "Couldn't load memtrack module (No such file or directory)" 25261 988
+Error "2015-07-07 01:18:20.229532" 25261 android.os.Debug "failed to load memtrack module: -2" 25261 989
+Debug "2015-07-07 01:18:20.286532" 25261 AndroidRuntime "Calling main entry com.android.commands.input.Input" 25261 990
+Info "2015-07-07 01:18:20.287532" 25261 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16113213, downTime=16113213, deviceId=-1, source=0x101 }" 25261 991
+Info "2015-07-07 01:18:20.296532" 25261 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16113213, downTime=16113213, deviceId=-1, source=0x101 }" 25261 992
+Info "2015-07-07 01:18:20.298532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 993
+Info "2015-07-07 01:18:20.298532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 994
+Debug "2015-07-07 01:18:20.299532" 25261 AndroidRuntime "Shutting down VM" 25261 995
+Debug "2015-07-07 01:18:20.306532" 25261 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 1ms+2ms, total 6ms" 25270 996
+Debug "2015-07-07 01:18:20.910532" 25277 AndroidRuntime  25277 997
+Debug "2015-07-07 01:18:20.910532" 25277 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25277 998
+Debug "2015-07-07 01:18:20.912532" 25277 AndroidRuntime "CheckJNI is OFF" 25277 999
+Info "2015-07-07 01:18:20.921532" 25277 dalvikvm "DexOpt: not all deps represented" 25277 1000
+Error "2015-07-07 01:18:20.921532" 25277 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25277 1001
+Info "2015-07-07 01:18:20.922532" 25277 dalvikvm "DexOpt: not all deps represented" 25277 1002
+Error "2015-07-07 01:18:20.922532" 25277 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25277 1003
+Debug "2015-07-07 01:18:20.929532" 25277 dalvikvm "Trying to load lib libjavacore.so 0x0" 25277 1004
+Debug "2015-07-07 01:18:20.931532" 25277 dalvikvm "Added shared lib libjavacore.so 0x0" 25277 1005
+Debug "2015-07-07 01:18:20.935532" 25277 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25277 1006
+Debug "2015-07-07 01:18:20.936532" 25277 dalvikvm "Added shared lib libnativehelper.so 0x0" 25277 1007
+Debug "2015-07-07 01:18:20.936532" 25277 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25277 1008
+Info "2015-07-07 01:18:20.949532" 25277 dalvikvm "DexOpt: not all deps represented" 25277 1009
+Error "2015-07-07 01:18:20.949532" 25277 dalvikvm "/system/framework/input.jar odex has stale dependencies" 25277 1010
+Error "2015-07-07 01:18:20.966532" 25277 cutils-trace "Error opening trace file: Permission denied (13)" 25277 1011
+Debug "2015-07-07 01:18:20.984532" 25277 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25277 1012
+Debug "2015-07-07 01:18:21.083532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1013
+Debug "2015-07-07 01:18:21.083532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1014
+Debug "2015-07-07 01:18:21.083532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1015
+Debug "2015-07-07 01:18:21.094532" 913 WifiStateMachine "handleMessage: X" 1000 1016
+Debug "2015-07-07 01:18:21.094532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=105" 1007 1017
+Error "2015-07-07 01:18:21.150532" 25277 memtrack "Couldn't load memtrack module (No such file or directory)" 25277 1018
+Error "2015-07-07 01:18:21.150532" 25277 android.os.Debug "failed to load memtrack module: -2" 25277 1019
+Debug "2015-07-07 01:18:21.220532" 25277 AndroidRuntime "Calling main entry com.android.commands.input.Input" 25277 1020
+Info "2015-07-07 01:18:21.222532" 25277 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16114148, downTime=16114148, deviceId=-1, source=0x101 }" 25277 1021
+Info "2015-07-07 01:18:21.245532" 25277 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16114148, downTime=16114148, deviceId=-1, source=0x101 }" 25277 1022
+Info "2015-07-07 01:18:21.278532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 1023
+Info "2015-07-07 01:18:21.278532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 1024
+Debug "2015-07-07 01:18:21.279532" 25277 AndroidRuntime "Shutting down VM" 25277 1025
+Debug "2015-07-07 01:18:21.282532" 25277 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 1ms+0ms, total 3ms" 25284 1026
+Debug "2015-07-07 01:18:21.312532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1027
+Debug "2015-07-07 01:18:21.312532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1028
+Debug "2015-07-07 01:18:21.313532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1029
+Debug "2015-07-07 01:18:21.321532" 913 WifiStateMachine "handleMessage: X" 1000 1030
+Debug "2015-07-07 01:18:21.898532" 25290 AndroidRuntime  25290 1031
+Debug "2015-07-07 01:18:21.898532" 25290 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25290 1032
+Debug "2015-07-07 01:18:21.900532" 25290 AndroidRuntime "CheckJNI is OFF" 25290 1033
+Info "2015-07-07 01:18:21.909532" 25290 dalvikvm "DexOpt: not all deps represented" 25290 1034
+Error "2015-07-07 01:18:21.909532" 25290 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25290 1035
+Info "2015-07-07 01:18:21.909532" 25290 dalvikvm "DexOpt: not all deps represented" 25290 1036
+Error "2015-07-07 01:18:21.909532" 25290 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25290 1037
+Debug "2015-07-07 01:18:21.917532" 25290 dalvikvm "Trying to load lib libjavacore.so 0x0" 25290 1038
+Debug "2015-07-07 01:18:21.919532" 25290 dalvikvm "Added shared lib libjavacore.so 0x0" 25290 1039
+Debug "2015-07-07 01:18:21.923532" 25290 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25290 1040
+Debug "2015-07-07 01:18:21.923532" 25290 dalvikvm "Added shared lib libnativehelper.so 0x0" 25290 1041
+Debug "2015-07-07 01:18:21.923532" 25290 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25290 1042
+Info "2015-07-07 01:18:21.936532" 25290 dalvikvm "DexOpt: not all deps represented" 25290 1043
+Error "2015-07-07 01:18:21.936532" 25290 dalvikvm "/system/framework/input.jar odex has stale dependencies" 25290 1044
+Error "2015-07-07 01:18:21.950532" 25290 cutils-trace "Error opening trace file: Permission denied (13)" 25290 1045
+Debug "2015-07-07 01:18:21.966532" 25290 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25290 1046
+Info "2015-07-07 01:18:21.996532" 295 SFPerfTracer "     triggers: (rate: 28:1937) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12719 frames) (1:42627)" 295 1047
+Debug "2015-07-07 01:18:21.996532" 295 SFPerfTracer "       layers: (4:7) (FocusedStackFrame: 0:668)* (StatusBar: 0:3306) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:208) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:138)" 295 1048
+Debug "2015-07-07 01:18:22.084532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1049
+Debug "2015-07-07 01:18:22.085532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1050
+Debug "2015-07-07 01:18:22.085532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1051
+Debug "2015-07-07 01:18:22.100532" 913 WifiStateMachine "handleMessage: X" 1000 1052
+Debug "2015-07-07 01:18:22.100532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=105" 1007 1053
+Error "2015-07-07 01:18:22.116532" 25290 memtrack "Couldn't load memtrack module (No such file or directory)" 25290 1054
+Error "2015-07-07 01:18:22.116532" 25290 android.os.Debug "failed to load memtrack module: -2" 25290 1055
+Debug "2015-07-07 01:18:22.177532" 25290 AndroidRuntime "Calling main entry com.android.commands.input.Input" 25290 1056
+Info "2015-07-07 01:18:22.178532" 25290 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16115104, downTime=16115104, deviceId=-1, source=0x101 }" 25290 1057
+Info "2015-07-07 01:18:22.197532" 25290 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16115104, downTime=16115104, deviceId=-1, source=0x101 }" 25290 1058
+Info "2015-07-07 01:18:22.230532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 1059
+Info "2015-07-07 01:18:22.230532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 1060
+Debug "2015-07-07 01:18:22.231532" 25290 AndroidRuntime "Shutting down VM" 25290 1061
+Debug "2015-07-07 01:18:22.236532" 25290 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 4ms" 25295 1062
+Debug "2015-07-07 01:18:22.845532" 25301 AndroidRuntime  25301 1063
+Debug "2015-07-07 01:18:22.845532" 25301 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25301 1064
+Debug "2015-07-07 01:18:22.847532" 25301 AndroidRuntime "CheckJNI is OFF" 25301 1065
+Info "2015-07-07 01:18:22.857532" 25301 dalvikvm "DexOpt: not all deps represented" 25301 1066
+Error "2015-07-07 01:18:22.857532" 25301 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25301 1067
+Info "2015-07-07 01:18:22.857532" 25301 dalvikvm "DexOpt: not all deps represented" 25301 1068
+Error "2015-07-07 01:18:22.857532" 25301 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25301 1069
+Debug "2015-07-07 01:18:22.864532" 25301 dalvikvm "Trying to load lib libjavacore.so 0x0" 25301 1070
+Debug "2015-07-07 01:18:22.866532" 25301 dalvikvm "Added shared lib libjavacore.so 0x0" 25301 1071
+Debug "2015-07-07 01:18:22.870532" 25301 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25301 1072
+Debug "2015-07-07 01:18:22.870532" 25301 dalvikvm "Added shared lib libnativehelper.so 0x0" 25301 1073
+Debug "2015-07-07 01:18:22.870532" 25301 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25301 1074
+Info "2015-07-07 01:18:22.882532" 25301 dalvikvm "DexOpt: not all deps represented" 25301 1075
+Error "2015-07-07 01:18:22.882532" 25301 dalvikvm "/system/framework/input.jar odex has stale dependencies" 25301 1076
+Error "2015-07-07 01:18:22.891532" 25301 cutils-trace "Error opening trace file: Permission denied (13)" 25301 1077
+Debug "2015-07-07 01:18:22.906532" 25301 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25301 1078
+Error "2015-07-07 01:18:23.056532" 25301 memtrack "Couldn't load memtrack module (No such file or directory)" 25301 1079
+Error "2015-07-07 01:18:23.056532" 25301 android.os.Debug "failed to load memtrack module: -2" 25301 1080
+Debug "2015-07-07 01:18:23.085532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1081
+Debug "2015-07-07 01:18:23.085532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1082
+Debug "2015-07-07 01:18:23.085532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1083
+Debug "2015-07-07 01:18:23.095532" 913 WifiStateMachine "handleMessage: X" 1000 1084
+Debug "2015-07-07 01:18:23.095532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=105" 1007 1085
+Debug "2015-07-07 01:18:23.143532" 25301 AndroidRuntime "Calling main entry com.android.commands.input.Input" 25301 1086
+Info "2015-07-07 01:18:23.146532" 25301 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16116072, downTime=16116072, deviceId=-1, source=0x101 }" 25301 1087
+Info "2015-07-07 01:18:23.183532" 25301 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16116072, downTime=16116072, deviceId=-1, source=0x101 }" 25301 1088
+Info "2015-07-07 01:18:23.215532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 1089
+Info "2015-07-07 01:18:23.215532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 1090
+Debug "2015-07-07 01:18:23.216532" 25301 AndroidRuntime "Shutting down VM" 25301 1091
+Debug "2015-07-07 01:18:23.221532" 25301 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 0ms+0ms, total 3ms" 25306 1092
+Info "2015-07-07 01:18:23.666532" 295 SFPerfTracer "     triggers: (rate: 28:1937) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12719 frames) (1:42727)" 295 1093
+Debug "2015-07-07 01:18:23.666532" 295 SFPerfTracer "       layers: (4:7) (FocusedStackFrame: 0:668)* (StatusBar: 0:3306) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:208) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:238)" 295 1094
+Debug "2015-07-07 01:18:23.797532" 25312 AndroidRuntime  25312 1095
+Debug "2015-07-07 01:18:23.797532" 25312 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25312 1096
+Debug "2015-07-07 01:18:23.799532" 25312 AndroidRuntime "CheckJNI is OFF" 25312 1097
+Info "2015-07-07 01:18:23.808532" 25312 dalvikvm "DexOpt: not all deps represented" 25312 1098
+Error "2015-07-07 01:18:23.808532" 25312 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25312 1099
+Info "2015-07-07 01:18:23.809532" 25312 dalvikvm "DexOpt: not all deps represented" 25312 1100
+Error "2015-07-07 01:18:23.809532" 25312 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25312 1101
+Debug "2015-07-07 01:18:23.815532" 25312 dalvikvm "Trying to load lib libjavacore.so 0x0" 25312 1102
+Debug "2015-07-07 01:18:23.818532" 25312 dalvikvm "Added shared lib libjavacore.so 0x0" 25312 1103
+Debug "2015-07-07 01:18:23.821532" 25312 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25312 1104
+Debug "2015-07-07 01:18:23.821532" 25312 dalvikvm "Added shared lib libnativehelper.so 0x0" 25312 1105
+Debug "2015-07-07 01:18:23.821532" 25312 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25312 1106
+Info "2015-07-07 01:18:23.834532" 25312 dalvikvm "DexOpt: not all deps represented" 25312 1107
+Error "2015-07-07 01:18:23.834532" 25312 dalvikvm "/system/framework/input.jar odex has stale dependencies" 25312 1108
+Error "2015-07-07 01:18:23.842532" 25312 cutils-trace "Error opening trace file: Permission denied (13)" 25312 1109
+Debug "2015-07-07 01:18:23.857532" 25312 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25312 1110
+Error "2015-07-07 01:18:24.003532" 25312 memtrack "Couldn't load memtrack module (No such file or directory)" 25312 1111
+Error "2015-07-07 01:18:24.003532" 25312 android.os.Debug "failed to load memtrack module: -2" 25312 1112
+Debug "2015-07-07 01:18:24.066532" 25312 AndroidRuntime "Calling main entry com.android.commands.input.Input" 25312 1113
+Info "2015-07-07 01:18:24.067532" 25312 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16116993, downTime=16116993, deviceId=-1, source=0x101 }" 25312 1114
+Debug "2015-07-07 01:18:24.086532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1115
+Debug "2015-07-07 01:18:24.086532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1116
+Debug "2015-07-07 01:18:24.087532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1117
+Debug "2015-07-07 01:18:24.097532" 913 WifiStateMachine "handleMessage: X" 1000 1118
+Debug "2015-07-07 01:18:24.097532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=105" 1007 1119
+Info "2015-07-07 01:18:24.101532" 25312 "Input   " "injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=16116993, downTime=16116993, deviceId=-1, source=0x101 }" 25312 1120
+Info "2015-07-07 01:18:24.135532" 1244 Launcher "onBackPressed: WORKSPACE" 1244 1121
+Info "2015-07-07 01:18:24.135532" 1244 MotoWorkspace "Panel swipe duration: 550 currentPage=0 topage=0 delta=0 scrollX=0" 1244 1122
+Debug "2015-07-07 01:18:24.136532" 25312 AndroidRuntime "Shutting down VM" 25312 1123
+Debug "2015-07-07 01:18:24.139532" 25312 dalvikvm "GC_CONCURRENT freed 98K, 16% free 570K/672K, paused 1ms+0ms, total 3ms" 25317 1124
+Debug "2015-07-07 01:18:24.322532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1125
+Debug "2015-07-07 01:18:24.322532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1126
+Debug "2015-07-07 01:18:24.322532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1127
+Debug "2015-07-07 01:18:24.330532" 913 WifiStateMachine "handleMessage: X" 1000 1128
+Info "2015-07-07 01:18:24.569532" 1329 ConfigService onDestroy 1329 1129
+Debug "2015-07-07 01:18:24.732532" 25323 AndroidRuntime  25323 1130
+Debug "2015-07-07 01:18:24.732532" 25323 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25323 1131
+Debug "2015-07-07 01:18:24.735532" 25323 AndroidRuntime "CheckJNI is OFF" 25323 1132
+Info "2015-07-07 01:18:24.744532" 25323 dalvikvm "DexOpt: not all deps represented" 25323 1133
+Error "2015-07-07 01:18:24.744532" 25323 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25323 1134
+Info "2015-07-07 01:18:24.745532" 25323 dalvikvm "DexOpt: not all deps represented" 25323 1135
+Error "2015-07-07 01:18:24.745532" 25323 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25323 1136
+Debug "2015-07-07 01:18:24.751532" 25323 dalvikvm "Trying to load lib libjavacore.so 0x0" 25323 1137
+Debug "2015-07-07 01:18:24.754532" 25323 dalvikvm "Added shared lib libjavacore.so 0x0" 25323 1138
+Debug "2015-07-07 01:18:24.758532" 25323 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25323 1139
+Debug "2015-07-07 01:18:24.758532" 25323 dalvikvm "Added shared lib libnativehelper.so 0x0" 25323 1140
+Debug "2015-07-07 01:18:24.758532" 25323 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25323 1141
+Info "2015-07-07 01:18:24.771532" 25323 dalvikvm "DexOpt: not all deps represented" 25323 1142
+Error "2015-07-07 01:18:24.771532" 25323 dalvikvm "/system/framework/am.jar odex has stale dependencies" 25323 1143
+Error "2015-07-07 01:18:24.780532" 25323 cutils-trace "Error opening trace file: Permission denied (13)" 25323 1144
+Debug "2015-07-07 01:18:24.795532" 25323 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25323 1145
+Error "2015-07-07 01:18:24.945532" 25323 memtrack "Couldn't load memtrack module (No such file or directory)" 25323 1146
+Error "2015-07-07 01:18:24.945532" 25323 android.os.Debug "failed to load memtrack module: -2" 25323 1147
+Debug "2015-07-07 01:18:25.014532" 25323 AndroidRuntime "Calling main entry com.android.commands.am.Am" 25323 1148
+Info "2015-07-07 01:18:25.069532" 913 ActivityManager "START u0 {flg=0x10000000 cmp=com.trellis.appthwackdevicemanager/.RotatePortrait} from pid 25323" 1257 1149
+Warning "2015-07-07 01:18:25.075532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 1150
+Debug "2015-07-07 01:18:25.076532" 25323 AndroidRuntime "Shutting down VM" 25323 1151
+Debug "2015-07-07 01:18:25.080532" 25323 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 1ms+0ms, total 5ms" 25328 1152
+Debug "2015-07-07 01:18:25.087532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1153
+Debug "2015-07-07 01:18:25.087532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1154
+Debug "2015-07-07 01:18:25.087532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1155
+Info "2015-07-07 01:18:25.089532" 1244 Launcher onPause 1244 1156
+Debug "2015-07-07 01:18:25.091532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 1157
+Debug "2015-07-07 01:18:25.092532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 1158
+Warning "2015-07-07 01:18:25.094532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 1159
+Debug "2015-07-07 01:18:25.098532" 913 WifiStateMachine "handleMessage: X" 1000 1160
+Debug "2015-07-07 01:18:25.098532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1161
+Debug "2015-07-07 01:18:25.098532" 913 WifiWatchdogStateMachine "Incremental loss=0/1 Current loss=0% volume=3.33" 1007 1162
+Debug "2015-07-07 01:18:25.098532" 913 WifiWatchdogStateMachine "Cache updated: loss[-59]=0.35% volume=5.99" 1007 1163
+Warning "2015-07-07 01:18:25.107532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 1164
+Warning "2015-07-07 01:18:25.119532" 1156 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1296 android.content.ContextWrapper.sendBroadcast:365 com.motorola.motocare.util.TriggerHelper$TriggerBuilder.send:76 com.motorola.motocare.internal.frameworkevents.PauseResumeTrigger.handleFrameworkEvent:53 com.motorola.motocare.internal.frameworkevents.FwEventMonitor$FrameworkListener.processFrameworkEvent:114" 3230 1165
+Warning "2015-07-07 01:18:25.128532" 913 InputMethodManagerService "Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@42abc220 attribute=null, token = android.os.BinderProxy@42a740c0" 1012 1166
+Info "2015-07-07 01:18:25.128532" 1244 Launcher onResume 1244 1167
+Debug "2015-07-07 01:18:25.129532" 1244 LauncherAppWidgetHost "checkForConfig returning false: {1.0 311mcc480mnc en_US ldltr sw360dp w360dp h567dp 320dpi nrml port finger -keyb/v/h -nav/h s.18?spn}" 1244 1168
+Debug "2015-07-07 01:18:25.133532" 1414 NotificationTutorialReceiver "onReceive invoked" 1414 1169
+Debug "2015-07-07 01:18:25.133532" 1414 NotificationTutorialReceiver "isScreenDisplayed: false" 1414 1170
+Debug "2015-07-07 01:18:25.138532" 1414 NotificationTutorialService "homeResumeCount: 12648 NotificationCount: 3" 1414 1171
+Debug "2015-07-07 01:18:25.142532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 1172
+Error "2015-07-07 01:18:25.142532" 1414 NotificationTutorialService " isScreenDisplayed(): false isHomeInForeground: false" 1414 1173
+Debug "2015-07-07 01:18:25.144532" 1414 NotificationTutorialService " topActivityPackageName: com.motorola.homescreen" 1414 1174
+Error "2015-07-07 01:18:25.150532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 1175
+Error "2015-07-07 01:18:25.150532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 1176
+Info "2015-07-07 01:18:25.354532" 295 SFPerfTracer "     triggers: (rate: 28:1937) (compose: 1:248) (post: 0:40) (render: 1:63) (0:12719 frames) (1:42827)" 295 1177
+Debug "2015-07-07 01:18:25.354532" 295 SFPerfTracer "       layers: (4:9) (FocusedStackFrame: 0:669)* (StatusBar: 0:3306) (NavigationBar: 0:508) (com.android.systemui.ImageWallpaper: 0:208) (com.motorola.homescreen/com.motorola.homescreen.Launcher: 1:338)" 295 1178
+Debug "2015-07-07 01:18:26.088532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1179
+Debug "2015-07-07 01:18:26.089532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1180
+Debug "2015-07-07 01:18:26.089532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1181
+Debug "2015-07-07 01:18:26.110532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1182
+Debug "2015-07-07 01:18:26.110532" 913 WifiStateMachine "handleMessage: X" 1000 1183
+Debug "2015-07-07 01:18:27.090532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1184
+Debug "2015-07-07 01:18:27.090532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1185
+Debug "2015-07-07 01:18:27.091532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1186
+Debug "2015-07-07 01:18:27.116532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1187
+Debug "2015-07-07 01:18:27.117532" 913 WifiStateMachine "handleMessage: X" 1000 1188
+Debug "2015-07-07 01:18:27.330532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1189
+Debug "2015-07-07 01:18:27.330532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1190
+Debug "2015-07-07 01:18:27.330532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1191
+Debug "2015-07-07 01:18:27.339532" 913 WifiStateMachine "handleMessage: X" 1000 1192
+Debug "2015-07-07 01:18:28.091532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1193
+Debug "2015-07-07 01:18:28.092532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1194
+Debug "2015-07-07 01:18:28.092532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1195
+Debug "2015-07-07 01:18:28.114532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1196
+Debug "2015-07-07 01:18:28.115532" 913 WifiStateMachine "handleMessage: X" 1000 1197
+Debug "2015-07-07 01:18:28.690532" 25337 AndroidRuntime  25337 1198
+Debug "2015-07-07 01:18:28.690532" 25337 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25337 1199
+Debug "2015-07-07 01:18:28.692532" 25337 AndroidRuntime "CheckJNI is OFF" 25337 1200
+Info "2015-07-07 01:18:28.702532" 25337 dalvikvm "DexOpt: not all deps represented" 25337 1201
+Error "2015-07-07 01:18:28.702532" 25337 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25337 1202
+Info "2015-07-07 01:18:28.702532" 25337 dalvikvm "DexOpt: not all deps represented" 25337 1203
+Error "2015-07-07 01:18:28.702532" 25337 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25337 1204
+Debug "2015-07-07 01:18:28.709532" 25337 dalvikvm "Trying to load lib libjavacore.so 0x0" 25337 1205
+Debug "2015-07-07 01:18:28.711532" 25337 dalvikvm "Added shared lib libjavacore.so 0x0" 25337 1206
+Debug "2015-07-07 01:18:28.715532" 25337 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25337 1207
+Debug "2015-07-07 01:18:28.715532" 25337 dalvikvm "Added shared lib libnativehelper.so 0x0" 25337 1208
+Debug "2015-07-07 01:18:28.715532" 25337 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25337 1209
+Info "2015-07-07 01:18:28.727532" 25337 dalvikvm "DexOpt: not all deps represented" 25337 1210
+Error "2015-07-07 01:18:28.727532" 25337 dalvikvm "/system/framework/am.jar odex has stale dependencies" 25337 1211
+Debug "2015-07-07 01:18:28.748532" 25337 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25337 1212
+Error "2015-07-07 01:18:28.750532" 25337 cutils-trace "Error opening trace file: Permission denied (13)" 25337 1213
+Error "2015-07-07 01:18:28.894532" 25337 memtrack "Couldn't load memtrack module (No such file or directory)" 25337 1214
+Error "2015-07-07 01:18:28.894532" 25337 android.os.Debug "failed to load memtrack module: -2" 25337 1215
+Debug "2015-07-07 01:18:28.963532" 25337 AndroidRuntime "Calling main entry com.android.commands.am.Am" 25337 1216
+Info "2015-07-07 01:18:29.025532" 2923 APPTHWACK "ORIENTATION: 0" 25352 1217
+Debug "2015-07-07 01:18:29.028532" 25337 AndroidRuntime "Shutting down VM" 25337 1218
+Debug "2015-07-07 01:18:29.031532" 25337 dalvikvm "GC_CONCURRENT freed 96K, 15% free 603K/704K, paused 1ms+1ms, total 3ms" 25346 1219
+Debug "2015-07-07 01:18:29.093532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1220
+Debug "2015-07-07 01:18:29.093532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1221
+Debug "2015-07-07 01:18:29.093532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1222
+Debug "2015-07-07 01:18:29.109532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1223
+Debug "2015-07-07 01:18:29.109532" 913 WifiStateMachine "handleMessage: X" 1000 1224
+Debug "2015-07-07 01:18:30.095532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1225
+Debug "2015-07-07 01:18:30.095532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1226
+Debug "2015-07-07 01:18:30.096532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1227
+Debug "2015-07-07 01:18:30.116532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1228
+Debug "2015-07-07 01:18:30.116532" 913 WifiStateMachine "handleMessage: X" 1000 1229
+Error "2015-07-07 01:18:30.152532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 1230
+Error "2015-07-07 01:18:30.152532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 1231
+Debug "2015-07-07 01:18:30.340532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1232
+Debug "2015-07-07 01:18:30.340532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1233
+Debug "2015-07-07 01:18:30.340532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1234
+Debug "2015-07-07 01:18:30.349532" 913 WifiStateMachine "handleMessage: X" 1000 1235
+Debug "2015-07-07 01:18:31.096532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1236
+Debug "2015-07-07 01:18:31.096532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1237
+Debug "2015-07-07 01:18:31.096532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1238
+Debug "2015-07-07 01:18:31.111532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1239
+Debug "2015-07-07 01:18:31.111532" 913 WifiStateMachine "handleMessage: X" 1000 1240
+Warning "2015-07-07 01:18:31.228532" 913 ProcessCpuTracker "Skipping unknown process pid 25358" 946 1241
+Warning "2015-07-07 01:18:31.229532" 913 ProcessCpuTracker "Skipping unknown process pid 25360" 946 1242
+Warning "2015-07-07 01:18:31.230532" 913 ProcessCpuTracker "Skipping unknown process pid 25377" 946 1243
+Debug "2015-07-07 01:18:31.600532" 25385 AndroidRuntime  25385 1244
+Debug "2015-07-07 01:18:31.600532" 25385 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25385 1245
+Debug "2015-07-07 01:18:31.603532" 25385 AndroidRuntime "CheckJNI is OFF" 25385 1246
+Info "2015-07-07 01:18:31.611532" 25385 dalvikvm "DexOpt: not all deps represented" 25385 1247
+Error "2015-07-07 01:18:31.612532" 25385 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25385 1248
+Info "2015-07-07 01:18:31.612532" 25385 dalvikvm "DexOpt: not all deps represented" 25385 1249
+Error "2015-07-07 01:18:31.612532" 25385 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25385 1250
+Debug "2015-07-07 01:18:31.619532" 25385 dalvikvm "Trying to load lib libjavacore.so 0x0" 25385 1251
+Debug "2015-07-07 01:18:31.621532" 25385 dalvikvm "Added shared lib libjavacore.so 0x0" 25385 1252
+Debug "2015-07-07 01:18:31.625532" 25385 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25385 1253
+Debug "2015-07-07 01:18:31.626532" 25385 dalvikvm "Added shared lib libnativehelper.so 0x0" 25385 1254
+Debug "2015-07-07 01:18:31.626532" 25385 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25385 1255
+Info "2015-07-07 01:18:31.639532" 25385 dalvikvm "DexOpt: not all deps represented" 25385 1256
+Error "2015-07-07 01:18:31.639532" 25385 dalvikvm "/system/framework/am.jar odex has stale dependencies" 25385 1257
+Error "2015-07-07 01:18:31.647532" 25385 cutils-trace "Error opening trace file: Permission denied (13)" 25385 1258
+Debug "2015-07-07 01:18:31.661532" 25385 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25385 1259
+Error "2015-07-07 01:18:31.805532" 25385 memtrack "Couldn't load memtrack module (No such file or directory)" 25385 1260
+Error "2015-07-07 01:18:31.805532" 25385 android.os.Debug "failed to load memtrack module: -2" 25385 1261
+Debug "2015-07-07 01:18:31.865532" 25385 AndroidRuntime "Calling main entry com.android.commands.am.Am" 25385 1262
+Warning "2015-07-07 01:18:31.922532" 913 ActivityManager "Unable to find instrumentation target package: com.nihk.github.musictheoryromannumeralanalysisquiz" 1195 1263
+Info "2015-07-07 01:18:31.929532" 25385 AndroidRuntime "VM exiting with result code 1." 25385 1264
+Debug "2015-07-07 01:18:32.097532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1265
+Debug "2015-07-07 01:18:32.097532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1266
+Debug "2015-07-07 01:18:32.097532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1267
+Debug "2015-07-07 01:18:32.107532" 913 WifiStateMachine "handleMessage: X" 1000 1268
+Debug "2015-07-07 01:18:32.107532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1269
+Debug "2015-07-07 01:18:33.099532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1270
+Debug "2015-07-07 01:18:33.099532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1271
+Debug "2015-07-07 01:18:33.100532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1272
+Debug "2015-07-07 01:18:33.121532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1273
+Debug "2015-07-07 01:18:33.121532" 913 WifiStateMachine "handleMessage: X" 1000 1274
+Debug "2015-07-07 01:18:33.349532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1275
+Debug "2015-07-07 01:18:33.349532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1276
+Debug "2015-07-07 01:18:33.350532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1277
+Debug "2015-07-07 01:18:33.358532" 913 WifiStateMachine "handleMessage: X" 1000 1278
+Debug "2015-07-07 01:18:34.101532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1279
+Debug "2015-07-07 01:18:34.101532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1280
+Debug "2015-07-07 01:18:34.102532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1281
+Debug "2015-07-07 01:18:34.124532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1282
+Debug "2015-07-07 01:18:34.125532" 913 WifiStateMachine "handleMessage: X" 1000 1283
+Verbose "2015-07-07 01:18:34.312532" 913 AlarmManager "sending alarm Alarm{43202830 type 0 com.android.vending}" 986 1284
+Debug "2015-07-07 01:18:34.584532" 24650 "Finsky  " "[2490] AppStatesReplicator.handleContentSyncResponse: Completed 0 account content syncs with 0 successful." 24689 1285
+Debug "2015-07-07 01:18:34.584532" 24650 "Finsky  " "[1] 5.onFinished: Installation state replication succeeded." 24650 1286
+Debug "2015-07-07 01:18:35.101532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1287
+Debug "2015-07-07 01:18:35.101532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1288
+Debug "2015-07-07 01:18:35.101532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1289
+Debug "2015-07-07 01:18:35.121532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1290
+Debug "2015-07-07 01:18:35.122532" 913 WifiStateMachine "handleMessage: X" 1000 1291
+Error "2015-07-07 01:18:35.154532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 1292
+Error "2015-07-07 01:18:35.154532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 1293
+Debug "2015-07-07 01:18:35.344532" 25420 AndroidRuntime  25420 1294
+Debug "2015-07-07 01:18:35.344532" 25420 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25420 1295
+Debug "2015-07-07 01:18:35.348532" 25420 AndroidRuntime "CheckJNI is OFF" 25420 1296
+Info "2015-07-07 01:18:35.360532" 25420 dalvikvm "DexOpt: not all deps represented" 25420 1297
+Error "2015-07-07 01:18:35.360532" 25420 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25420 1298
+Info "2015-07-07 01:18:35.360532" 25420 dalvikvm "DexOpt: not all deps represented" 25420 1299
+Error "2015-07-07 01:18:35.360532" 25420 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25420 1300
+Debug "2015-07-07 01:18:35.369532" 25420 dalvikvm "Trying to load lib libjavacore.so 0x0" 25420 1301
+Debug "2015-07-07 01:18:35.372532" 25420 dalvikvm "Added shared lib libjavacore.so 0x0" 25420 1302
+Debug "2015-07-07 01:18:35.377532" 25420 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25420 1303
+Debug "2015-07-07 01:18:35.377532" 25420 dalvikvm "Added shared lib libnativehelper.so 0x0" 25420 1304
+Debug "2015-07-07 01:18:35.377532" 25420 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25420 1305
+Info "2015-07-07 01:18:35.391532" 25420 dalvikvm "DexOpt: not all deps represented" 25420 1306
+Error "2015-07-07 01:18:35.391532" 25420 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25420 1307
+Error "2015-07-07 01:18:35.404532" 25420 cutils-trace "Error opening trace file: Permission denied (13)" 25420 1308
+Debug "2015-07-07 01:18:35.412532" 25420 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25420 1309
+Error "2015-07-07 01:18:35.557532" 25420 memtrack "Couldn't load memtrack module (No such file or directory)" 25420 1310
+Error "2015-07-07 01:18:35.557532" 25420 android.os.Debug "failed to load memtrack module: -2" 25420 1311
+Debug "2015-07-07 01:18:35.625532" 25420 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25420 1312
+Debug "2015-07-07 01:18:35.629532" 913 MotDevicePolicyManager Version:02.00.00 957 1313
+Info "2015-07-07 01:18:35.647532" 913 ActivityManager "Force stopping com.appthwack.test appid=11136 user=-1: uninstall pkg" 946 1314
+Warning "2015-07-07 01:18:35.649532" 913 PackageManager "Couldn't delete native library directory /data/app-lib/com.appthwack.test" 957 1315
+Debug "2015-07-07 01:18:35.747532" 301 keystore "calling clear_uid in state: 3" 301 1316
+Info "2015-07-07 01:18:35.747532" 913 ActivityManager "Force stopping com.appthwack.test appid=11136 user=0: pkg removed" 957 1317
+Warning "2015-07-07 01:18:35.780532" 1123 GeofencerStateMachine "Ignoring removeGeofence because network location is disabled." 1412 1318
+Info "2015-07-07 01:18:35.782532" 913 InputReader "Reconfiguring input devices.  changes=0x00000010" 991 1319
+Debug "2015-07-07 01:18:35.795532" 2153 dalvikvm "GC_EXPLICIT freed 127K, 47% free 9207K/17192K, paused 2ms+3ms, total 41ms" 2153 1320
+Verbose "2015-07-07 01:18:35.796532" 24753 PackageMonitor "onReceive - android.intent.action.PACKAGE_REMOVED" 24753 1321
+Info "2015-07-07 01:18:35.798532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1161 1322
+Info "2015-07-07 01:18:35.798532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1161 1323
+Info "2015-07-07 01:18:35.798532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1161 1324
+Info "2015-07-07 01:18:35.798532" 913 PackageManager "  Scheme: ""sms""" 1161 1325
+    "07-06 18:18:35.458 30018 25431 I LatinIME:LogUtils: Dictionary info: dictionary = main:en ; version = 42 ; date = 1381226429"  1326
+Info "2015-07-07 01:18:35.808532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 924 1327
+Info "2015-07-07 01:18:35.808532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 924 1328
+Info "2015-07-07 01:18:35.808532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 924 1329
+Info "2015-07-07 01:18:35.808532" 913 PackageManager "  Scheme: ""smsto""" 924 1330
+Debug "2015-07-07 01:18:35.812532" 25128 Documents "Used cached roots for com.android.providers.media.documents" 25145 1331
+Debug "2015-07-07 01:18:35.813532" 25128 Documents "Used cached roots for com.android.providers.downloads.documents" 25145 1332
+Debug "2015-07-07 01:18:35.813532" 25128 Documents "Used cached roots for com.android.externalstorage.documents" 25145 1333
+Debug "2015-07-07 01:18:35.818532" 25128 Documents "Used cached roots for com.google.android.apps.docs.storage" 25145 1334
+Debug "2015-07-07 01:18:35.818532" 25128 Documents "Update found 7 roots in 22ms" 25145 1335
+Verbose "2015-07-07 01:18:35.818532" 24753 QuestTrackerService "Service started with android.intent.action.PACKAGE_REMOVED" 25433 1336
+Debug "2015-07-07 01:18:35.818532" 24753 QuestTrackerService "com.appthwack.testACTION_PACKAGE_REMOVEDIntent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.appthwack.test flg=0x4000010 cmp=com.motorola.genie/.model.QuestTrackerService (has extras) }" 25433 1337
+Info "2015-07-07 01:18:35.826532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 11754 1338
+Info "2015-07-07 01:18:35.826532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 11754 1339
+Info "2015-07-07 01:18:35.827532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 11754 1340
+Info "2015-07-07 01:18:35.827532" 913 PackageManager "  Scheme: ""mms""" 11754 1341
+Info "2015-07-07 01:18:35.845532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4611 1342
+Info "2015-07-07 01:18:35.845532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4611 1343
+Info "2015-07-07 01:18:35.845532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4611 1344
+Info "2015-07-07 01:18:35.845532" 913 PackageManager "  Scheme: ""mmsto""" 4611 1345
+Info "2015-07-07 01:18:35.861532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1195 1346
+Info "2015-07-07 01:18:35.862532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1195 1347
+Info "2015-07-07 01:18:35.862532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1195 1348
+Info "2015-07-07 01:18:35.862532" 913 PackageManager "  Scheme: ""sms""" 1195 1349
+Debug "2015-07-07 01:18:35.862532" 913 MobileDataStateTracker "default: setPolicyDataEnable(enabled=true)" 1005 1350
+Info "2015-07-07 01:18:35.877532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1219 1351
+Info "2015-07-07 01:18:35.877532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1219 1352
+Info "2015-07-07 01:18:35.877532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1219 1353
+Info "2015-07-07 01:18:35.877532" 913 PackageManager "  Scheme: ""smsto""" 1219 1354
+Debug "2015-07-07 01:18:35.884532" 913 BackupManagerService "Received broadcast Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.appthwack.test flg=0x4000010 (has extras) }" 913 1355
+Verbose "2015-07-07 01:18:35.884532" 913 BackupManagerService "removePackageParticipantsLocked: uid=11136 #1" 913 1356
+Info "2015-07-07 01:18:35.886532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 923 1357
+Info "2015-07-07 01:18:35.886532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 923 1358
+Info "2015-07-07 01:18:35.886532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 923 1359
+Info "2015-07-07 01:18:35.886532" 913 PackageManager "  Scheme: ""mms""" 923 1360
+Info "2015-07-07 01:18:35.925532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1153 1361
+Info "2015-07-07 01:18:35.925532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1153 1362
+Info "2015-07-07 01:18:35.925532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1153 1363
+Info "2015-07-07 01:18:35.925532" 913 PackageManager "  Scheme: ""mmsto""" 1153 1364
+Info "2015-07-07 01:18:35.953532" 24585 Icing.InternalIcingCorporaProvider "Updating corpora: A: com.appthwack.test, C: MAYBE" 25436 1365
+Debug "2015-07-07 01:18:35.956532" 1220 dalvikvm "GC_CONCURRENT freed 2149K, 46% free 9418K/17192K, paused 2ms+8ms, total 54ms" 1223 1366
+Debug "2015-07-07 01:18:35.984532" 24633 PackageChangeReceiver "onReceive(), action=android.intent.action.PACKAGE_REMOVED" 24633 1367
+Debug "2015-07-07 01:18:35.984532" 24633 PackageChangeReceiver "ACTION_PACKAGE_REMOVED: com.appthwack.test" 24633 1368
+Debug "2015-07-07 01:18:35.984532" 24633 PackageChangeReceiver uninstallPackage 24633 1369
+Debug "2015-07-07 01:18:35.984532" 24633 PackageChangeReceiver "Sending out UPDATE_UI intent" 24633 1370
+Info "2015-07-07 01:18:35.985532" 25188 PsfIntentHandler android.intent.action.PACKAGE_REMOVED 25437 1371
+Debug "2015-07-07 01:18:36.000532" 24598 VoicemailCleanupService "Cleaning up data for package: com.appthwack.test" 25438 1372
+Debug "2015-07-07 01:18:36.123532" 913 dalvikvm "GC_EXPLICIT freed 3285K, 25% free 22680K/30036K, paused 8ms+14ms, total 306ms" 957 1373
+Debug "2015-07-07 01:18:36.125532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 126ms" 997 1374
+Debug "2015-07-07 01:18:36.127532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 127ms" 1153 1375
+Debug "2015-07-07 01:18:36.127532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 125ms" 1161 1376
+Debug "2015-07-07 01:18:36.127532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 126ms" 1012 1377
+Debug "2015-07-07 01:18:36.127532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 105ms" 1235 1378
+Debug "2015-07-07 01:18:36.127532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 13ms" 1000 1379
+Debug "2015-07-07 01:18:36.127532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1380
+Debug "2015-07-07 01:18:36.127532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1381
+Debug "2015-07-07 01:18:36.128532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1382
+Debug "2015-07-07 01:18:36.128532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 126ms" 948 1383
+Debug "2015-07-07 01:18:36.129532" 25420 AndroidRuntime "Shutting down VM" 25420 1384
+Debug "2015-07-07 01:18:36.129532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 129ms" 1155 1385
+Debug "2015-07-07 01:18:36.130532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 131ms" 923 1386
+Debug "2015-07-07 01:18:36.132532" 25420 dalvikvm "GC_CONCURRENT freed 94K, 15% free 565K/664K, paused 0ms+0ms, total 2ms" 25425 1387
+Debug "2015-07-07 01:18:36.144532" 913 WifiStateMachine "handleMessage: X" 1000 1388
+Debug "2015-07-07 01:18:36.144532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1389
+Info "2015-07-07 01:18:36.188532" 24772 SlackerRadio ACTION_PACKAGE_REMOVED 24772 1390
+Warning "2015-07-07 01:18:36.191532" 25107 ContextImpl "Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1652 android.content.ContextWrapper.startService:494 android.content.ContextWrapper.startService:494 com.android.keychain.KeyChainBroadcastReceiver.onReceive:12 android.app.ActivityThread.handleReceiver:2446" 25107 1391
+Error "2015-07-07 01:18:36.201532" 1329 NetworkScheduler.SchedulerReceiver "Invalid parameter app" 1329 1392
+Error "2015-07-07 01:18:36.201532" 1329 NetworkScheduler.SchedulerReceiver "Invalid package name : Perhaps you didn't include a PendingIntent in the extras?" 1329 1393
+Debug "2015-07-07 01:18:36.219532" 1689 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_REMOVED and uri=com.appthwack.test" 25443 1394
+Debug "2015-07-07 01:18:36.220532" 1689 AccountUtils "Clearing selected account for com.appthwack.test" 25443 1395
+Debug "2015-07-07 01:18:36.221532" 1689 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 1689 1396
+Debug "2015-07-07 01:18:36.221532" 1689 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.receiver.PlaySystemBroadcastReceiver" 1689 1397
+Debug "2015-07-07 01:18:36.221532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 1398
+Debug "2015-07-07 01:18:36.221532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 1399
+Debug "2015-07-07 01:18:36.226532" 1689 ChimeraSrvcProxy "Creating service proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy}" 1689 1400
+Debug "2015-07-07 01:18:36.226532" 1689 ChimeraSrvcProxy "Proxying container service ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy} to Chimera service impl com.google.android.gms.games.service.PlayGamesAsyncService" 1689 1401
+Debug "2015-07-07 01:18:36.227532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 1402
+Debug "2015-07-07 01:18:36.227532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 1403
+Info "2015-07-07 01:18:36.236532" 1689 LocationSettingsChecker "Removing dialog suppression flag for package com.appthwack.test" 25443 1404
+Debug "2015-07-07 01:18:36.273532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db, release reference: 1" 25446 1405
+Debug "2015-07-07 01:18:36.274532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db: 2" 25446 1406
+Debug "2015-07-07 01:18:36.281532" 1689 gH_MetricsDatabase "0 metrics were deleted when clearing package com.appthwack.test." 25446 1407
+Debug "2015-07-07 01:18:36.281532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/metrics.db: 1" 25446 1408
+Debug "2015-07-07 01:18:36.284532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db, release reference: 1" 25446 1409
+Debug "2015-07-07 01:18:36.287532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db: 2" 25446 1410
+Debug "2015-07-07 01:18:36.288532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/help_responses.db: 1" 25446 1411
+Debug "2015-07-07 01:18:36.294532" 1689 GOOGLEHELP_CompatibleDatabase "Open SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db, release reference: 1" 25446 1412
+Debug "2015-07-07 01:18:36.294532" 1689 GOOGLEHELP_CompatibleDatabase "Acquire reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db: 2" 25446 1413
+Debug "2015-07-07 01:18:36.295532" 1689 GOOGLEHELP_CompatibleDatabase "Release reference of SQLiteDatabase: /data/data/com.google.android.gms/databases/auto_complete_suggestions.db: 1" 25446 1414
+Info "2015-07-07 01:18:36.304532" 1329 ConfigService onCreate 1329 1415
+Info "2015-07-07 01:18:36.306532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.UPDATE pkg=com.google.android.gms } action com.google.android.gms.config.UPDATE" 1329 1416
+Info "2015-07-07 01:18:36.317532" 1329 ConfigService "onBind returning update interface" 1329 1417
+Info "2015-07-07 01:18:36.322532" 1689 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.appthwack.test cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 1689 1418
+Info "2015-07-07 01:18:36.323532" 1329 ConfigService "onBind for Intent { act=com.google.android.gms.config.START pkg=com.google.android.gms } action com.google.android.gms.config.START" 1329 1419
+Info "2015-07-07 01:18:36.323532" 1329 ConfigService "onBind returning service broker" 1329 1420
+Info "2015-07-07 01:18:36.349532" 1689 "Icing   " "doRemovePackageData com.appthwack.test" 2590 1421
+Info "2015-07-07 01:18:36.349532" 25188 PsfIntentHandler com.motorola.contextual.smartrules.intent.action.PSR_INIT 25455 1422
+Info "2015-07-07 01:18:36.354532" 1689 ConfigFetchService "service connected" 1689 1423
+Debug "2015-07-07 01:18:36.358532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1424
+Debug "2015-07-07 01:18:36.358532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1425
+Debug "2015-07-07 01:18:36.358532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1426
+Debug "2015-07-07 01:18:36.365532" 913 MotDevicePolicyManager Version:02.00.00 1153 1427
+Debug "2015-07-07 01:18:36.368532" 913 WifiStateMachine "handleMessage: X" 1000 1428
+Debug "2015-07-07 01:18:36.770532" 25456 AndroidRuntime  25456 1429
+Debug "2015-07-07 01:18:36.770532" 25456 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25456 1430
+Debug "2015-07-07 01:18:36.772532" 25456 AndroidRuntime "CheckJNI is OFF" 25456 1431
+Info "2015-07-07 01:18:36.781532" 25456 dalvikvm "DexOpt: not all deps represented" 25456 1432
+Error "2015-07-07 01:18:36.781532" 25456 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25456 1433
+Info "2015-07-07 01:18:36.782532" 25456 dalvikvm "DexOpt: not all deps represented" 25456 1434
+Error "2015-07-07 01:18:36.782532" 25456 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25456 1435
+Debug "2015-07-07 01:18:36.788532" 25456 dalvikvm "Trying to load lib libjavacore.so 0x0" 25456 1436
+Debug "2015-07-07 01:18:36.791532" 25456 dalvikvm "Added shared lib libjavacore.so 0x0" 25456 1437
+Debug "2015-07-07 01:18:36.795532" 25456 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25456 1438
+Debug "2015-07-07 01:18:36.795532" 25456 dalvikvm "Added shared lib libnativehelper.so 0x0" 25456 1439
+Debug "2015-07-07 01:18:36.795532" 25456 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25456 1440
+Info "2015-07-07 01:18:36.807532" 25456 dalvikvm "DexOpt: not all deps represented" 25456 1441
+Error "2015-07-07 01:18:36.807532" 25456 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25456 1442
+Error "2015-07-07 01:18:36.815532" 25456 cutils-trace "Error opening trace file: Permission denied (13)" 25456 1443
+Debug "2015-07-07 01:18:36.829532" 25456 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25456 1444
+Error "2015-07-07 01:18:36.971532" 25456 memtrack "Couldn't load memtrack module (No such file or directory)" 25456 1445
+Error "2015-07-07 01:18:36.971532" 25456 android.os.Debug "failed to load memtrack module: -2" 25456 1446
+Debug "2015-07-07 01:18:37.026532" 25456 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25456 1447
+Debug "2015-07-07 01:18:37.030532" 913 MotDevicePolicyManager Version:02.00.00 957 1448
+Warning "2015-07-07 01:18:37.030532" 913 PackageManager "Package named 'com.nihk.github.musictheoryromannumeralanalysisquiz' doesn't exist." 957 1449
+Debug "2015-07-07 01:18:37.115532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1450
+Debug "2015-07-07 01:18:37.115532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1451
+Debug "2015-07-07 01:18:37.115532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1452
+Debug "2015-07-07 01:18:37.129532" 913 WifiStateMachine "handleMessage: X" 1000 1453
+Debug "2015-07-07 01:18:37.129532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1454
+Debug "2015-07-07 01:18:37.157532" 913 dalvikvm "GC_EXPLICIT freed 947K, 25% free 22529K/30036K, paused 4ms+11ms, total 127ms" 957 1455
+Debug "2015-07-07 01:18:37.161532" 25456 AndroidRuntime "Shutting down VM" 25456 1456
+Debug "2015-07-07 01:18:37.169532" 25456 dalvikvm "GC_CONCURRENT freed 94K, 15% free 565K/664K, paused 1ms+1ms, total 8ms" 25461 1457
+Info "2015-07-07 01:18:37.409532" 295 SFPerfTracer "     triggers: (rate: 1:0) (0 sw vsyncs) (0 skipped) (259:41615 vsyncs) (261:47510)" 511 1458
+Debug "2015-07-07 01:18:38.117532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1459
+Debug "2015-07-07 01:18:38.117532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1460
+Debug "2015-07-07 01:18:38.117532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1461
+Debug "2015-07-07 01:18:38.132532" 913 WifiStateMachine "handleMessage: X" 1000 1462
+Debug "2015-07-07 01:18:38.132532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=106" 1007 1463
+Debug "2015-07-07 01:18:38.533532" 25473 AndroidRuntime  25473 1464
+Debug "2015-07-07 01:18:38.533532" 25473 AndroidRuntime ">>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<" 25473 1465
+Debug "2015-07-07 01:18:38.536532" 25473 AndroidRuntime "CheckJNI is OFF" 25473 1466
+Info "2015-07-07 01:18:38.544532" 25473 dalvikvm "DexOpt: not all deps represented" 25473 1467
+Error "2015-07-07 01:18:38.544532" 25473 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25473 1468
+Info "2015-07-07 01:18:38.544532" 25473 dalvikvm "DexOpt: not all deps represented" 25473 1469
+Error "2015-07-07 01:18:38.545532" 25473 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25473 1470
+Debug "2015-07-07 01:18:38.550532" 25473 dalvikvm "Trying to load lib libjavacore.so 0x0" 25473 1471
+Debug "2015-07-07 01:18:38.553532" 25473 dalvikvm "Added shared lib libjavacore.so 0x0" 25473 1472
+Debug "2015-07-07 01:18:38.557532" 25473 dalvikvm "Trying to load lib libnativehelper.so 0x0" 25473 1473
+Debug "2015-07-07 01:18:38.557532" 25473 dalvikvm "Added shared lib libnativehelper.so 0x0" 25473 1474
+Debug "2015-07-07 01:18:38.557532" 25473 dalvikvm "No JNI_OnLoad found in libnativehelper.so 0x0, skipping init" 25473 1475
+Info "2015-07-07 01:18:38.569532" 25473 dalvikvm "DexOpt: not all deps represented" 25473 1476
+Error "2015-07-07 01:18:38.569532" 25473 dalvikvm "/system/framework/pm.jar odex has stale dependencies" 25473 1477
+Error "2015-07-07 01:18:38.578532" 25473 cutils-trace "Error opening trace file: Permission denied (13)" 25473 1478
+Debug "2015-07-07 01:18:38.592532" 25473 dalvikvm "Note: class Landroid/app/ActivityManagerNative; has 181 unimplemented (abstract) methods" 25473 1479
+Error "2015-07-07 01:18:38.733532" 25473 memtrack "Couldn't load memtrack module (No such file or directory)" 25473 1480
+Error "2015-07-07 01:18:38.733532" 25473 android.os.Debug "failed to load memtrack module: -2" 25473 1481
+Debug "2015-07-07 01:18:38.789532" 25473 AndroidRuntime "Calling main entry com.android.commands.pm.Pm" 25473 1482
+Warning "2015-07-07 01:18:38.806532" 913 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 957 1483
+Warning "2015-07-07 01:18:38.830532" 913 ActivityManager "No content provider found for permission revoke: file:///sdcard/temp.apk" 957 1484
+Info "2015-07-07 01:18:38.830532" 913 PackageManager "Copying native libraries to /data/app-lib/vmdl-81356628" 957 1485
+Debug "2015-07-07 01:18:39.131532" 913 dalvikvm "GC_CONCURRENT freed 3152K, 25% free 22773K/30036K, paused 4ms+8ms, total 121ms" 917 1486
+Debug "2015-07-07 01:18:39.131532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 7ms" 1000 1487
+Debug "2015-07-07 01:18:39.131532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1488
+Debug "2015-07-07 01:18:39.131532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1489
+Debug "2015-07-07 01:18:39.131532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1490
+Debug "2015-07-07 01:18:39.131532" 913 dalvikvm "WAIT_FOR_CONCURRENT_GC blocked 102ms" 957 1491
+Debug "2015-07-07 01:18:39.141532" 913 WifiStateMachine "handleMessage: X" 1000 1492
+Debug "2015-07-07 01:18:39.141532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-58 mrssi=-58 txbad=0 txgood=106" 1007 1493
+Info "2015-07-07 01:18:39.271532" 913 PackageManager "Running dexopt on: com.nihk.github.musictheoryromannumeralanalysisquiz" 957 1494
+Info "2015-07-07 01:18:39.342532" 25489 dalvikvm "DexOpt: not all deps represented" 25489 1495
+Error "2015-07-07 01:18:39.342532" 25489 dalvikvm "/system/framework/WfdCommon.jar odex has stale dependencies" 25489 1496
+Info "2015-07-07 01:18:39.343532" 25489 dalvikvm "DexOpt: not all deps represented" 25489 1497
+Error "2015-07-07 01:18:39.343532" 25489 dalvikvm "/system/framework/com.motorola.frameworks.core.addon.jar odex has stale dependencies" 25489 1498
+Debug "2015-07-07 01:18:39.368532" 913 WifiStateMachine "handleMessage: E msg.what=131155" 1000 1499
+Debug "2015-07-07 01:18:39.368532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1500
+Debug "2015-07-07 01:18:39.369532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1501
+Debug "2015-07-07 01:18:39.376532" 913 WifiStateMachine "handleMessage: X" 1000 1502
+Warning "2015-07-07 01:18:39.537532" 25489 dalvikvm "method Landroid/support/v7/internal/widget/ListViewCompat;.lookForSelectablePosition incorrectly overrides package-private method with same name in Landroid/widget/ListView;" 25489 1503
+Debug "2015-07-07 01:18:39.966532" 25489 dalvikvm "DexOpt: load 181ms, verify+opt 361ms, 1928916 bytes" 25489 1504
+Info "2015-07-07 01:18:40.028532" 1017 SBar.NetworkController "onSignalStrengthsChanged SignalStrength: 99 0 -51 -70 -120 -1 -1 99 2147483647 2147483647 2147483647 2147483647 2147483647 cdma 0 -108 -1 false 0 0 5 0 0 16 99 99 5 level=5" 1017 1505
+Debug "2015-07-07 01:18:40.125532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1506
+Debug "2015-07-07 01:18:40.125532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1507
+Debug "2015-07-07 01:18:40.125532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1508
+Debug "2015-07-07 01:18:40.135532" 913 WifiStateMachine "handleMessage: X" 1000 1509
+Debug "2015-07-07 01:18:40.135532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-58 txbad=0 txgood=106" 1007 1510
+Error "2015-07-07 01:18:40.155532" 353 ThermalDaemon "set temp 65000 to name /sys/class/hwmon/hwmon0/device/temp1_max" 395 1511
+Error "2015-07-07 01:18:40.155532" 353 ThermalDaemon "set temp -128000 to name /sys/class/hwmon/hwmon0/device/temp1_max_hyst" 395 1512
+Info "2015-07-07 01:18:40.182532" 913 ActivityManager "Force stopping com.nihk.github.musictheoryromannumeralanalysisquiz appid=11137 user=-1: update pkg" 946 1513
+Info "2015-07-07 01:18:40.365532" 913 InputReader "Reconfiguring input devices.  changes=0x00000010" 991 1514
+Info "2015-07-07 01:18:40.366532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1155 1515
+Info "2015-07-07 01:18:40.366532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1155 1516
+Info "2015-07-07 01:18:40.366532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1155 1517
+Info "2015-07-07 01:18:40.366532" 913 PackageManager "  Scheme: ""sms""" 1155 1518
+Debug "2015-07-07 01:18:40.438532" 25128 Documents "Used cached roots for com.android.providers.media.documents" 25161 1519
+Debug "2015-07-07 01:18:40.438532" 25128 Documents "Used cached roots for com.android.providers.downloads.documents" 25161 1520
+Debug "2015-07-07 01:18:40.438532" 25128 Documents "Used cached roots for com.android.externalstorage.documents" 25161 1521
+Debug "2015-07-07 01:18:40.438532" 25128 Documents "Used cached roots for com.google.android.apps.docs.storage" 25161 1522
+Debug "2015-07-07 01:18:40.438532" 25128 Documents "Update found 7 roots in 68ms" 25161 1523
+Info "2015-07-07 01:18:40.448532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1012 1524
+Info "2015-07-07 01:18:40.448532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1012 1525
+Info "2015-07-07 01:18:40.448532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1012 1526
+Info "2015-07-07 01:18:40.448532" 913 PackageManager "  Scheme: ""smsto""" 1012 1527
+Info "2015-07-07 01:18:40.462532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4612 1528
+Info "2015-07-07 01:18:40.462532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4612 1529
+Info "2015-07-07 01:18:40.462532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4612 1530
+Info "2015-07-07 01:18:40.463532" 913 PackageManager "  Scheme: ""mms""" 4612 1531
+Info "2015-07-07 01:18:40.473532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1235 1532
+Info "2015-07-07 01:18:40.474532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1235 1533
+Info "2015-07-07 01:18:40.474532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1235 1534
+Info "2015-07-07 01:18:40.474532" 913 PackageManager "  Scheme: ""mmsto""" 1235 1535
+Info "2015-07-07 01:18:40.485532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 923 1536
+Info "2015-07-07 01:18:40.485532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 923 1537
+Info "2015-07-07 01:18:40.485532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 923 1538
+Info "2015-07-07 01:18:40.485532" 913 PackageManager "  Scheme: ""sms""" 923 1539
+Info "2015-07-07 01:18:40.495532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 4612 1540
+Info "2015-07-07 01:18:40.495532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 4612 1541
+Info "2015-07-07 01:18:40.495532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 4612 1542
+Info "2015-07-07 01:18:40.495532" 913 PackageManager "  Scheme: ""smsto""" 4612 1543
+Verbose "2015-07-07 01:18:40.497532" 24753 PackageMonitor "onReceive - android.intent.action.PACKAGE_ADDED" 24753 1544
+Info "2015-07-07 01:18:40.507532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1192 1545
+Info "2015-07-07 01:18:40.507532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1192 1546
+Info "2015-07-07 01:18:40.507532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1192 1547
+Info "2015-07-07 01:18:40.507532" 913 PackageManager "  Scheme: ""mms""" 1192 1548
+Info "2015-07-07 01:18:40.515532" 913 PackageManager "Adding preferred activity ComponentInfo{com.android.mms/com.android.mms.ui.ComposeMessageActivity} for user 0 :" 1161 1549
+Info "2015-07-07 01:18:40.515532" 913 PackageManager "  Action: ""android.intent.action.SENDTO""" 1161 1550
+Info "2015-07-07 01:18:40.515532" 913 PackageManager "  Category: ""android.intent.category.DEFAULT""" 1161 1551
+Info "2015-07-07 01:18:40.515532" 913 PackageManager "  Scheme: ""mmsto""" 1161 1552
+Debug "2015-07-07 01:18:40.518532" 913 BackupManagerService "Received broadcast Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz flg=0x4000010 (has extras) }" 913 1553
+Verbose "2015-07-07 01:18:40.521532" 24753 QuestTrackerService "Service started with android.intent.action.PACKAGE_ADDED" 25492 1554
+Verbose "2015-07-07 01:18:40.525532" 913 BackupManagerService "addPackageParticipantsLocked: #1" 913 1555
+Verbose "2015-07-07 01:18:40.526532" 24753 AppQuestParser parse() 25492 1556
+Debug "2015-07-07 01:18:40.526532" 24753 QuestTrackerService "com.nihk.github.musictheoryromannumeralanalysisquizACTION_PACKAGE_ADDEDIntent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz flg=0x4000010 cmp=com.motorola.genie/.model.QuestTrackerService (has extras) }" 25492 1557
+    "07-06 18:18:40.184   913  1946 D PackageController.doInBackground(): : Package com.nihk.github.musictheoryromannumeralanalysisquiz, package state=0, action=android.intent.action.PACKAGE_ADDED"  1558
+Debug "2015-07-07 01:18:40.534532" 913 MotorolaPolicy "BrowserPolicy.isAllowed(): true" 1946 1559
+Debug "2015-07-07 01:18:40.534532" 913 MotorolaPolicy "TextMessagingPolicy.isAllowed(): true" 1946 1560
+Debug "2015-07-07 01:18:40.535532" 913 MotorolaPolicy "ConsumerEmailPolicy.isAllowed(): true" 1946 1561
+    "07-06 18:18:40.191   913  1946 D PackageController.doInBackground(): : Package com.nihk.github.musictheoryromannumeralanalysisquiz does NOT conflict with any policy."  1562
+Info "2015-07-07 01:18:40.555532" 24585 Icing.InternalIcingCorporaProvider "Updating corpora: A: com.nihk.github.musictheoryromannumeralanalysisquiz, C: MAYBE" 25494 1563
+Debug "2015-07-07 01:18:40.562532" 24633 PackageChangeReceiver "onReceive(), action=android.intent.action.PACKAGE_ADDED" 24633 1564
+Info "2015-07-07 01:18:40.574532" 24772 SlackerRadio ACTION_PACKAGE_ADDED 24772 1565
+Debug "2015-07-07 01:18:40.589532" 1689 ChimeraRcvrProxy "Creating receiver proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy}" 1689 1566
+Debug "2015-07-07 01:18:40.589532" 1689 PackageBroadcastService "Received broadcast action=android.intent.action.PACKAGE_ADDED and uri=com.nihk.github.musictheoryromannumeralanalysisquiz" 25496 1567
+Debug "2015-07-07 01:18:40.589532" 1689 ChimeraRcvrProxy "Proxying container receiver ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesSystemBroadcastReceiverProxy} to Chimera receiver impl com.google.android.gms.games.receiver.PlaySystemBroadcastReceiver" 1689 1568
+Debug "2015-07-07 01:18:40.589532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 1569
+Debug "2015-07-07 01:18:40.589532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 1570
+Info "2015-07-07 01:18:40.593532" 25188 PsfIntentHandler android.intent.action.PACKAGE_ADDED 25495 1571
+Debug "2015-07-07 01:18:40.594532" 1689 ChimeraSrvcProxy "Creating service proxy ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy}" 1689 1572
+Debug "2015-07-07 01:18:40.594532" 1689 ChimeraSrvcProxy "Proxying container service ComponentInfo{com.google.android.gms/com.google.android.gms.games.chimera.GamesAsyncServiceProxy} to Chimera service impl com.google.android.gms.games.service.PlayGamesAsyncService" 1689 1573
+Debug "2015-07-07 01:18:40.594532" 1689 ChimeraCfgMgr "Loading module com.google.android.gms.games from APK com.google.android.play.games" 1689 1574
+Debug "2015-07-07 01:18:40.594532" 1689 ChimeraModuleLdr "Module APK com.google.android.play.games already loaded" 1689 1575
+Info "2015-07-07 01:18:40.613532" 1689 ConfigFetchService "onStartCommand Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.nihk.github.musictheoryromannumeralanalysisquiz cmp=com.google.android.gms/.config.ConfigFetchService (has extras) }" 1689 1576
+Info "2015-07-07 01:18:40.634532" 1689 ConfigFetchService launchTask 1689 1577
+Info "2015-07-07 01:18:40.645532" 1689 ConfigFetchService "service connected" 1689 1578
+Verbose "2015-07-07 01:18:40.645532" 1689 ConfigFetchTask "ConfigFetchTask getDeviceDataVersionInfo(): ABFEt1Wl4t1QaeZSu8tz6ZA7LdhbTmG2hXZtDrKw1AcD4MaHsn_HE0vqg7ylrvVUukUFSTQfQod3wPSvDgft6V4fxHotVFkCoRMXaCkBfyzG_wKmV1UFpZRWT5RjguiApOxGATwkk15akDGsR5EyHTA-hTDvLUxqPUk5d7rN9whVRUe8XnVDzR6Eu_yrmwqOC49A-CZUgTMDKd5z0-fcNT5iWo3ccsKBBJ9yPCrHu20U2U4facDM5xELFJ82l8aPat2dOIadsGA_WPjpFxZgkc1xm6tmG0pasNRfSbOw5rMxgfm3OZhWltZSLZM2wKVdohRdqPhkBn1TBj4rs3U6ag2DE9b0MVCakpn2uzseyRdemBpidJrrXj0" 25500 1579
+Debug "2015-07-07 01:18:40.671532" 1689 ConfigFetchService "ConfigApi connection successful." 1689 1580
+Info "2015-07-07 01:18:40.673532" 1689 GoogleURLConnFactory "Using platform SSLCertificateSocketFactory" 25500 1581
+Debug "2015-07-07 01:18:40.686532" 913 MotDevicePolicyManager Version:02.00.00 4611 1582
+Info "2015-07-07 01:18:40.705532" 25188 PsfIntentHandler com.motorola.contextual.smartrules.intent.action.PSR_INIT 25504 1583
+Debug "2015-07-07 01:18:40.763532" 913 dalvikvm "GC_EXPLICIT freed 2651K, 24% free 23096K/30036K, paused 5ms+18ms, total 412ms" 957 1584
+Debug "2015-07-07 01:18:40.763532" 25473 AndroidRuntime "Shutting down VM" 25473 1585
+Debug "2015-07-07 01:18:40.767532" 25473 dalvikvm "GC_CONCURRENT freed 95K, 15% free 567K/664K, paused 0ms+0ms, total 2ms" 25482 1586
+Info "2015-07-07 01:18:41.069532" 1689 ConfigFetchService "fetch service done; releasing wakelock" 1689 1587
+Info "2015-07-07 01:18:41.071532" 1689 ConfigFetchService "stopping self" 1689 1588
+Debug "2015-07-07 01:18:41.126532" 913 WifiStateMachine "handleMessage: E msg.what=151572" 1000 1589
+Debug "2015-07-07 01:18:41.126532" 913 WifiStateMachine "processMsg: ConnectedState" 1000 1590
+Debug "2015-07-07 01:18:41.126532" 913 WifiStateMachine "processMsg: L2ConnectedState" 1000 1591
+Debug "2015-07-07 01:18:41.130532" 913 WifiStateMachine "handleMessage: X" 1000 1592
+Debug "2015-07-07 01:18:41.130532" 913 WifiWatchdogStateMachine "Fetch RSSI succeed, rssi=-59 mrssi=-59 txbad=0 txgood=113" 1007 1593
+Debug "2015-07-07 01:18:41.131532" 913 WifiWatchdogStateMachine "Incremental loss=0/7 Current loss=0% volume=5.17" 1007 1594
+Debug "2015-07-07 01:18:41.132532" 913 WifiWatchdogStateMachine "Cache updated: loss[-59]=0.31% volume=6.09" 1007 1595
+Info "2015-07-07 01:18:41.794532" 1689 "Icing   " "Indexing 9E54EF96C80F5696FD95811E40B150FB3895EB3F from com.google.android.googlequicksearchbox" 2590 1596
+Info "2015-07-07 01:18:41.876532" 1689 "Icing   " "Indexing done 9E54EF96C80F5696FD95811E40B150FB3895EB3F" 2590 1597
