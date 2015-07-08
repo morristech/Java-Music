@@ -5,13 +5,14 @@
     <string name="action_settings">Settings</string>
 
     <string name="placeholderButtonText">VII6/5</string>
-    <string name="placeHolderXText">\u2718</string>
-    <string name="placeHolderCheckText">\u2714</string>
+    <string name="XCharacter">\u2718</string>
+    <string name="CheckCharacter">\u2714</string>
     <string name="trebClef">\'&#38;</string>
     <string name="bassClef">\'¯</string>
     <string name="altoClef">\'ÿ</string>
     <string name="keySigBlank">========</string>
     <string name="keySigBlankSmall">=</string>
+    <string name="keySigBlankMedium">==</string>
     <string name="endOfStaff">=!</string>
 
     <!-- treble sharps and flats -->
@@ -85,5 +86,61 @@
     <string name="f5">|</string>
     <string name="g5">}</string>
     <string name="a5">~</string>
+
+    <!-- notehead accidentals -->
+
+    <!-- flats -->
+
+    <string name="a3Flat">à</string>
+    <string name="b3Flat">á</string>
+    <string name="c4Flat">â</string>
+    <string name="d4Flat">ã</string>
+    <string name="e4Flat">ä</string>
+    <string name="f4Flat">å</string>
+    <string name="g4Flat">æ</string>
+    <string name="a4Flat">ç</string>
+    <string name="b4Flat">è</string>
+    <string name="c5Flat">é</string>
+    <string name="d5Flat">ê</string>
+    <string name="e5Flat">ë</string>
+    <string name="f5Flat">ì</string>
+    <string name="g5Flat">í</string>
+    <string name="a5Flat">î</string>
+
+    <!-- sharps -->
+
+    <string name="a3Sharp">Ð</string>
+    <string name="b3Sharp">Ñ</string>
+    <string name="c4Sharp">Ò</string>
+    <string name="d4Sharp">Ó</string>
+    <string name="e4Sharp">Ô</string>
+    <string name="f4Sharp">Õ</string>
+    <string name="g4Sharp">Ö</string>
+    <string name="a4Sharp">×</string>
+    <string name="b4Sharp">Ø</string>
+    <string name="c5Sharp">Ù</string>
+    <string name="d5Sharp">Ú</string>
+    <string name="e5Sharp">Û</string>
+    <string name="f5Sharp">Ü</string>
+    <string name="g5Sharp">Ý</string>
+    <string name="a5Sharp">Þ</string>
+
+    <!-- naturals -->
+
+    <string name="a3Natural">ð</string>
+    <string name="b3Natural">ñ</string>
+    <string name="c4Natural">ò</string>
+    <string name="d4Natural">ó</string>
+    <string name="e4Natural">ô</string>
+    <string name="f4Natural">õ</string>
+    <string name="g4Natural">ö</string>
+    <string name="a4Natural">÷</string>
+    <string name="b4Natural">ø</string>
+    <string name="c5Natural">ù</string>
+    <string name="d5Natural">ú</string>
+    <string name="e5Natural">û</string>
+    <string name="f5Natural">ü</string>
+    <string name="g5Natural">ý</string>
+    <string name="a5Natural">þ</string>
 
 </resources>

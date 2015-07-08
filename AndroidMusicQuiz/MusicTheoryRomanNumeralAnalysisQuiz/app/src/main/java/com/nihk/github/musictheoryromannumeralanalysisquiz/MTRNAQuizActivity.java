@@ -53,8 +53,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         cTextView = (TextView)findViewById(R.id.cTextView);
         dTextView = (TextView)findViewById(R.id.dTextView);
 
-        checkMark = "\u2714";
-        xMark = "\u2718";
+        checkMark = getString(R.string.CheckCharacter);
+        xMark = getString(R.string.XCharacter);
         colonSpace = ": ";
 
         qTextViews = new TextView[] {
