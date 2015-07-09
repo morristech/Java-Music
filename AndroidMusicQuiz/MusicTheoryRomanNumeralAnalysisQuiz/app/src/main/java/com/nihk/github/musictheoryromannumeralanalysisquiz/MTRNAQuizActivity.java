@@ -5,6 +5,37 @@
 
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
+/*
+* TODO add applied chords and modal mixture, these should be 1/5 or 1/10 chance
+* use an applied chord boolean so the wrong answers can have applied RNs too
+*   slight problem: accidentals can have collisions when the noteheads are in some inversion
+*   where they get tightly packed together..seems to be okay so far
+*
+*   NOTE WELL BEFORE MAKING CHANGES:
+*   I've commented out the VII conversion and v --> V conversion
+*   also, in ChordGenerator it is still "v", i.e. not V
+*   all the layout files have a wider music notation because of the addition of accidentals
+*       this might cause problems for some screens, its untested
+*       if editing for a small update, use the files in the GitHub folder instead!!
+*       ALSO all answer boxes will need much wider text. do all layouts fit?
+*
+* make options pane
+* key sig accidentals, more options: 0-1, 0-3, 0-5, All (0-7)
+* applied chords checkbox //don't forget to include V7 / III on/off for this? think about this. applied chords off means VII7, do I want that?
+* modal mixture checkbox
+* what about ONLY modal mixture or ONLY applied chords?
+* make wrong answer RNs only ones in the same key as the right answer...or dont?
+* wrong answers need some chance of being applied/mixed at any rate
+*
+* reoorganize the appliedChordMethod to better take parameters. it can take right/wrongAnswer as params, but what about the index?
+*
+* applied chords, modal mixture, augmented/diminished V chords, augmented6th chords
+*
+* 3 modes easy (just chords in key)  or just everything
+* medium (applied chords, bII)
+* hard (modal mixture, augmented/dim chords, auggy6th)
+ */
+
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
@@ -23,12 +54,14 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     private TextView aTextView, bTextView, cTextView, dTextView,
             keyTextView, scorePointsTextView, trebleClef, bassClef, altoClef;
     private TextView[] qTextViews, noteheads, noteheadsR;
-    private TextView[][][] accidentals;
+    private TextView[][] noteheadsAccidentals;
+    private TextView[][][] keySigAccidentals;
     private RadioButton easyRadio, hardRadio;
     private boolean stopCounting, isTrebleClef, isBassClef;
-    private String rightAnswer, wrongAnswer, checkMark, xMark, dim, halfDim, colonSpace;
-    private String[] wrongAnswerArray;
+    private String rightAnswer, wrongAnswer, checkMark, xMark, dim, halfDim, colonSpace, bigV;
+    private String[] wrongAnswerArray, displayedRandomChord;
     private int rightAnswerIndex, correct, total, pink, green;
+    private int[] verticalIndices;
     //public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
     private ChordGenerator cg;
 
@@ -56,6 +89,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         checkMark = getString(R.string.CheckCharacter);
         xMark = getString(R.string.XCharacter);
         colonSpace = ": ";
+        bigV = "V";
 
         qTextViews = new TextView[] {
                 aTextView, bTextView, cTextView, dTextView
@@ -158,7 +192,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 sharpsAlto, flatsAlto
         };
 
-        accidentals = new TextView[][][] {
+        keySigAccidentals = new TextView[][][] {
                 accidentalsTreb, accidentalsBass, accidentalsAlto
         };
 
@@ -194,6 +228,54 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         TextView noteheadG5r = (TextView)findViewById(R.id.noteheadG5r);
         TextView noteheadA5r = (TextView)findViewById(R.id.noteheadA5r);
 
+        TextView noteheadA3Sharp = (TextView)findViewById(R.id.noteheadA3Sharp);
+        TextView noteheadB3Sharp = (TextView)findViewById(R.id.noteheadB3Sharp);
+        TextView noteheadC4Sharp = (TextView)findViewById(R.id.noteheadC4Sharp);
+        TextView noteheadD4Sharp = (TextView)findViewById(R.id.noteheadD4Sharp);
+        TextView noteheadE4Sharp = (TextView)findViewById(R.id.noteheadE4Sharp);
+        TextView noteheadF4Sharp = (TextView)findViewById(R.id.noteheadF4Sharp);
+        TextView noteheadG4Sharp = (TextView)findViewById(R.id.noteheadG4Sharp);
+        TextView noteheadA4Sharp = (TextView)findViewById(R.id.noteheadA4Sharp);
+        TextView noteheadB4Sharp = (TextView)findViewById(R.id.noteheadB4Sharp);
+        TextView noteheadC5Sharp = (TextView)findViewById(R.id.noteheadC5Sharp);
+        TextView noteheadD5Sharp = (TextView)findViewById(R.id.noteheadD5Sharp);
+        TextView noteheadE5Sharp = (TextView)findViewById(R.id.noteheadE5Sharp);
+        TextView noteheadF5Sharp = (TextView)findViewById(R.id.noteheadF5Sharp);
+        TextView noteheadG5Sharp = (TextView)findViewById(R.id.noteheadG5Sharp);
+        TextView noteheadA5Sharp = (TextView)findViewById(R.id.noteheadA5Sharp);
+
+        TextView noteheadA3Flat = (TextView)findViewById(R.id.noteheadA3Flat);
+        TextView noteheadB3Flat = (TextView)findViewById(R.id.noteheadB3Flat);
+        TextView noteheadC4Flat = (TextView)findViewById(R.id.noteheadC4Flat);
+        TextView noteheadD4Flat = (TextView)findViewById(R.id.noteheadD4Flat);
+        TextView noteheadE4Flat = (TextView)findViewById(R.id.noteheadE4Flat);
+        TextView noteheadF4Flat = (TextView)findViewById(R.id.noteheadF4Flat);
+        TextView noteheadG4Flat = (TextView)findViewById(R.id.noteheadG4Flat);
+        TextView noteheadA4Flat = (TextView)findViewById(R.id.noteheadA4Flat);
+        TextView noteheadB4Flat = (TextView)findViewById(R.id.noteheadB4Flat);
+        TextView noteheadC5Flat = (TextView)findViewById(R.id.noteheadC5Flat);
+        TextView noteheadD5Flat = (TextView)findViewById(R.id.noteheadD5Flat);
+        TextView noteheadE5Flat = (TextView)findViewById(R.id.noteheadE5Flat);
+        TextView noteheadF5Flat = (TextView)findViewById(R.id.noteheadF5Flat);
+        TextView noteheadG5Flat = (TextView)findViewById(R.id.noteheadG5Flat);
+        TextView noteheadA5Flat = (TextView)findViewById(R.id.noteheadA5Flat);
+
+        TextView noteheadA3Natural = (TextView)findViewById(R.id.noteheadA3Natural);
+        TextView noteheadB3Natural = (TextView)findViewById(R.id.noteheadB3Natural);
+        TextView noteheadC4Natural = (TextView)findViewById(R.id.noteheadC4Natural);
+        TextView noteheadD4Natural = (TextView)findViewById(R.id.noteheadD4Natural);
+        TextView noteheadE4Natural = (TextView)findViewById(R.id.noteheadE4Natural);
+        TextView noteheadF4Natural = (TextView)findViewById(R.id.noteheadF4Natural);
+        TextView noteheadG4Natural = (TextView)findViewById(R.id.noteheadG4Natural);
+        TextView noteheadA4Natural = (TextView)findViewById(R.id.noteheadA4Natural);
+        TextView noteheadB4Natural = (TextView)findViewById(R.id.noteheadB4Natural);
+        TextView noteheadC5Natural = (TextView)findViewById(R.id.noteheadC5Natural);
+        TextView noteheadD5Natural = (TextView)findViewById(R.id.noteheadD5Natural);
+        TextView noteheadE5Natural = (TextView)findViewById(R.id.noteheadE5Natural);
+        TextView noteheadF5Natural = (TextView)findViewById(R.id.noteheadF5Natural);
+        TextView noteheadG5Natural = (TextView)findViewById(R.id.noteheadG5Natural);
+        TextView noteheadA5Natural = (TextView)findViewById(R.id.noteheadA5Natural);
+
         noteheads = new TextView[] {
                 noteheadA3,
                 noteheadB3, noteheadC4, noteheadD4,
@@ -209,6 +291,33 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 noteheadA4r, noteheadB4r, noteheadC5r,
                 noteheadD5r, noteheadE5r, noteheadF5r,
                 noteheadG5r, noteheadA5r
+        };
+        TextView[] noteheadsSharps = new TextView[] {
+                noteheadA3Sharp,
+                noteheadB3Sharp, noteheadC4Sharp, noteheadD4Sharp,
+                noteheadE4Sharp, noteheadF4Sharp, noteheadG4Sharp,
+                noteheadA4Sharp, noteheadB4Sharp, noteheadC5Sharp,
+                noteheadD5Sharp, noteheadE5Sharp, noteheadF5Sharp,
+                noteheadG5Sharp, noteheadA5Sharp
+        };
+        TextView[] noteheadsFlats = new TextView[] {
+                noteheadA3Flat,
+                noteheadB3Flat, noteheadC4Flat, noteheadD4Flat,
+                noteheadE4Flat, noteheadF4Flat, noteheadG4Flat,
+                noteheadA4Flat, noteheadB4Flat, noteheadC5Flat,
+                noteheadD5Flat, noteheadE5Flat, noteheadF5Flat,
+                noteheadG5Flat, noteheadA5Flat
+        };
+        TextView[] noteheadsNaturals = new TextView[] {
+                noteheadA3Natural,
+                noteheadB3Natural, noteheadC4Natural, noteheadD4Natural,
+                noteheadE4Natural, noteheadF4Natural, noteheadG4Natural,
+                noteheadA4Natural, noteheadB4Natural, noteheadC5Natural,
+                noteheadD5Natural, noteheadE5Natural, noteheadF5Natural,
+                noteheadG5Natural, noteheadA5Natural
+        };
+        noteheadsAccidentals = new TextView[][] {
+                noteheadsNaturals, noteheadsSharps, noteheadsFlats
         };
 
         pink = Color.parseColor("#f2ac9c");
@@ -278,14 +387,14 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         hardRadio.setTypeface(neutonFont);
         keyTextView.setTypeface(neutonFont);
 
+        /* comment this out if I ever revisit using applied chords */
+        for (TextView[] accType: noteheadsAccidentals) {
+            for (TextView acc: accType) {
+                acc.setVisibility(View.INVISIBLE);
+            }
+        }
+
         getRandomChord(); //so when the app starts it will produce its first chord to be analysed
-    }
-    //cleans up the interface; a clean slate for the new chord
-    public void resetThings() {
-        stopCounting = false; //score can go again up with each Next Chord button click
-        isTrebleClef = false; //a reset so it can try for either treb, bass, or alto clef
-        isBassClef = false;
-        setNotationInvisible();
     }
     public void getRandomChord() {
         resetThings(); //in preparation for the new chord
@@ -298,26 +407,43 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 d = (int)(Math.random() * cg.chords[0][0][0].length); //chords[0][0][0].length == 7
         String[] aRandomChord = cg.chords[a][b][c][d],
                 aRandomChordShuffled = shuffleChord(aRandomChord);
-        String bassNote = aRandomChordShuffled[0];
-        int inversionIndex = Arrays.asList(aRandomChord).indexOf(bassNote);
-        rightAnswer = (a == 0
-                ? cg.romanNumeralsMajorArray[d]
-                : cg.romanNumeralsMinorArray[d]).concat(
-                b < 2 ? cg.triadicInversions[inversionIndex] //b < 2 because chords[][0] and chords[][1] are triads, chords[][2] and chords[][3] are 7th chords
-                        : cg.seventhInversions[inversionIndex]
+        String newBassNoteFromShuffling = aRandomChordShuffled[0];
+        int inversionIndex = Arrays.asList(aRandomChord).indexOf(newBassNoteFromShuffling);
+        rightAnswer = (a == 0 //is it a Major (==index 0) or Minor (==index 1) chord?
+                    ? cg.romanNumeralsMajorArray[d]
+                    : cg.romanNumeralsMinorArray[d]
+                ).concat(b < 2 //concat a potential inversion to the RN
+                    ? cg.triadicInversions[inversionIndex] //b < 2 because chords[][0] and chords[][1] are triads, chords[][2] and chords[][3] are 7th chords
+                    : cg.seventhInversions[inversionIndex]
         );
 
-        if (b >= 2 && rightAnswer.contains(dim)) { //if chord is a 7th chord (b==2 or b==3) and contains a degree, it's actually a half-diminished chord
-            rightAnswer = rightAnswer.replace(dim, halfDim); //so replace the degree with a O WITH STROKE
+        //if the chord is VII7 in minor, I'm pretty sure a smaller majority of the music theory population
+        //would instead analyze it as V7 / III. this changes that
+        if (a == 1 && b >= 2 && d == 6) { //1 means it is minor mode, >= 2 means a seventh chord, 6 is the VII RN in the minor roman numeral array.
+            rightAnswer = changeVII7Chords(rightAnswer);
+        }
+        //if chord is a 7th chord (b==2 or b==3) and contains a degree, it's actually a half-diminished chord
+        //so replace the degree with a O WITH STROKE
+        if (b >= 2 && rightAnswer.contains(dim)) {
+            rightAnswer = rightAnswer.replace(dim, halfDim);
         }
 
+        //write the keyname to the keyTextView
         keyTextView.setText(cg.keyNames[a][b % 2][c].concat(colonSpace)); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
+        //give the right answer to a random button.
         rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
 
         displayKeySignature(b, c);
-        displayPitches(aRandomChordShuffled, c, d);
+        displayPitches(aRandomChordShuffled, a, b, c, d);
         createWrongAnswers(aRandomChordShuffled.length, rightAnswerIndex);
+        makeModalMixtureOrAppliedChords(aRandomChord, a, b, c, d, rightAnswer);
+    }
+    //change VII 7th chords in minor into applieds. No extra accidentals needed!
+    public String changeVII7Chords(String answer) {
+        answer = answer.replace(cg.romanNumeralsMinorArray[6], bigV)
+                .concat(cg.appliedsMinor[0]); //replace VII with V and then add " / III"
+        return answer;
     }
     public void displayKeySignature(int sharpsOrFlats, int numAccidentals) {
         double bassOrTrebleOrAlto = Math.random(); //randomly choose between treble, bass, and alto clef
@@ -335,13 +461,127 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             randomClef = 1;
         }
         for (int i = 0; i < numAccidentals; i++) {
-            accidentals[randomClef][sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
+            keySigAccidentals[randomClef][sharpsOrFlats % 2][i].setVisibility(View.VISIBLE);
         }
     }
+    public void makeModalMixtureOrAppliedChords(String[] aRandomChord, int mode, int accidental, int key, int chord, String answer) { //somehow return String or something
+        //verticalIndices is a member array to use here.
+        //shuffledChordOrderOfIntervals keeps track of the new shuffled order of a random chord
+        //e.g. A-C-E-F will be [3, 0, 1, 2] because the root is in index 3, third in 0, fifth in 1, and seventh in 2. Don't get confused!
+        //e.g. A-D-F will be [1, 2, 0] because the root is in index 1, third in index 2, and fifth in index 0
+        //e.g. G-A-C-E will be [1, 2, 3, 0].
+        //therefore when relating to verticalIndices, if the chord was E-A-C [1, 2, 0] vi6/4 in C-major key and I wanted to make it
+        //bVI6/4 then I'd flatten verticalIndices[order[0]] and verticalIndices[order[2]] since 0 and 2 are root and fifth
+        // == verticalIndices[1] and verticalIndices[0] get flattened, the E and A.
+        //e.g. G-B-E [2, 0, 1] v6 in A-minor key I want to make it V6 (with G#), then verticalIndices[order[1]]
+        int[] shuffledChordOrderOfIntervals = new int[aRandomChord.length];
+        for (int i = 0; i < shuffledChordOrderOfIntervals.length; i++) { //length of aRandomChord, aRandomShuff, and this new array are all the
+            for (int j = 0; j < shuffledChordOrderOfIntervals.length; j++) { //same so I avoided writing many superfuluous conditions concerning .length
+                if (aRandomChord[i].substring(0, 1).equals(displayedRandomChord[j])) { //substring because of goofyness with how displayedRandomChord is created in displayPitches(); optimize later!
+                    shuffledChordOrderOfIntervals[i] = j;
+                    break; //to the i loop body
+                }
+            }
+        }
+       // System.out.println("shuff chord order of members: " + Arrays.toString(shuffledChordOrderOfIntervals));
+      //  System.out.println("verticalIndices: " + Arrays.toString(verticalIndices));
+
+        //make v into V for sharp keys, they all have raised third with a #
+        //if mode == minor and accidental == sharp triads or sharp seveths and keys from A-minor to C#-minor and chord == v
+        if (mode == 1 && chord == 4) {
+            if ((accidental % 2 == 0) && key <= 4) {
+                //1 in noteheadsAccidentals is a sharp
+                //1 in shuffledChordOrderOfIntervals is always the third, 0 root, 2 fifth, etc.
+                noteheadsAccidentals[1][verticalIndices[shuffledChordOrderOfIntervals[1]]].setVisibility(View.VISIBLE);
+                rightAnswer = rightAnswer.replace(cg.romanNumeralsMinorArray[4], bigV);
+                answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                //now make the RN say V not v. do i need to set text again? should this method come before displayPitches?
+            }
+
+            //make v into V for flat keys (all keys work, but take diff acc), they have either a raised third with # or natural sign
+            if (accidental % 2 == 1) {
+                //from A-minor to G-minor take sharps as leading tones
+                if (key <= 2) {
+                    noteheadsAccidentals[1][verticalIndices[shuffledChordOrderOfIntervals[1]]].setVisibility(View.VISIBLE);
+                    rightAnswer = rightAnswer.replace(cg.romanNumeralsMinorArray[4], bigV);
+                    answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                    //from C-minor to Ab-minor take naturals as leading tones
+                } else {
+                    noteheadsAccidentals[0][verticalIndices[shuffledChordOrderOfIntervals[1]]].setVisibility(View.VISIBLE);
+                    rightAnswer = rightAnswer.replace(cg.romanNumeralsMinorArray[4], bigV);
+                    answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                }
+            }
+        }
+
+        //make bVI in major keys
+        if (mode == 0 && chord == 5) {
+            if (accidental % 2 == 0) {
+                //from keys C-major to G-major need all flats to make bVI
+                if (key <= 1) {
+                    noteheadsAccidentals[2][verticalIndices[shuffledChordOrderOfIntervals[0]]].setVisibility(View.VISIBLE);
+                    noteheadsAccidentals[2][verticalIndices[shuffledChordOrderOfIntervals[2]]].setVisibility(View.VISIBLE);
+                    rightAnswer = rightAnswer.replace(cg.romanNumeralsMajorArray[5], cg.accidentalsArray[2].concat(cg.romanNumeralsMinorArray[5]));
+                    answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                    //D-major is a special case that needs a flat for root and natural for fifth
+                } else if (key == 2) {
+                    noteheadsAccidentals[2][verticalIndices[shuffledChordOrderOfIntervals[0]]].setVisibility(View.VISIBLE);
+                    noteheadsAccidentals[0][verticalIndices[shuffledChordOrderOfIntervals[2]]].setVisibility(View.VISIBLE);
+                    rightAnswer = rightAnswer.replace(cg.romanNumeralsMajorArray[5], cg.accidentalsArray[2].concat(cg.romanNumeralsMinorArray[5]));
+                    answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                    //the rest, from A-major to C#-major just use naturals for that
+                } else {
+                    noteheadsAccidentals[0][verticalIndices[shuffledChordOrderOfIntervals[0]]].setVisibility(View.VISIBLE);
+                    noteheadsAccidentals[0][verticalIndices[shuffledChordOrderOfIntervals[2]]].setVisibility(View.VISIBLE);
+                    rightAnswer = rightAnswer.replace(cg.romanNumeralsMajorArray[5], cg.accidentalsArray[2].concat(cg.romanNumeralsMinorArray[5]));
+                    answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+                }
+            }
+            //from keys C-major to Ab-major just use flats
+            if ((accidental % 2 == 1) && key <= 4) {
+                noteheadsAccidentals[2][verticalIndices[shuffledChordOrderOfIntervals[0]]].setVisibility(View.VISIBLE);
+                noteheadsAccidentals[2][verticalIndices[shuffledChordOrderOfIntervals[2]]].setVisibility(View.VISIBLE);
+                rightAnswer = rightAnswer.replace(cg.romanNumeralsMajorArray[5], cg.accidentalsArray[2].concat(cg.romanNumeralsMinorArray[5]));
+                answerButtonArray[rightAnswerIndex].setText(rightAnswer);
+            }
+        }
+
+        //make iv in major keys
+        //make bIII in major keys
+        //make bVII in major keys
+        //make iidim/halfDim7 (the RN will have to change its degree/o with stroke accordingly)
+
+        //make bII in minor (in major too?)
+        //make IV in minor
+
+        //make V+
+        //make Vdim
+
+        //make italian6th (triad)
+        //make fr6 (7th chord) //how to not confuse this with Vdim7 ?
+        //make ger6 (7th chord)
+
+
+        //7th chords only
+        //make V7 / ii in major
+        //make V7 / iii in major
+        //make V7 / IV in major
+        //make V7 / V in major
+        //make V7 / vi in major
+
+        //V7 / III already done
+        //make V7 / iv in minor
+        //make V7 / V in minor
+        //make V7 / VI in minor
+        //make V7 / VII in minor
+
+
+    }
     //this method too many lines?
-    public void displayPitches(String[] aRandomChordShuffled, int key, int chord) {
+    public void displayPitches(String[] aRandomChordShuffled, int mode, int accidental, int key, int chord) {
         int verticalIndex = 0;
         String[] everythingButBassNote = new String[aRandomChordShuffled.length - 1];
+        verticalIndices = new int[aRandomChordShuffled.length];
 
         //get every pitch from the shuffled chord except the bass note and sort them;
         //this is needed for a tightly packed chord input on the musical staff
@@ -349,6 +589,14 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             everythingButBassNote[i] = aRandomChordShuffled[i + 1].substring(0, 1);
         }
         Arrays.sort(everythingButBassNote);
+
+        //this combines the bass note of the random shuffled chord AND the everythingButBassNote
+        //array which I have to do because the latter array just did Arrays.sort();
+        displayedRandomChord = new String[aRandomChordShuffled.length];
+        displayedRandomChord[0] = aRandomChordShuffled[0].substring(0, 1);
+        for (int i = 1; i < displayedRandomChord.length; i++) {
+            displayedRandomChord[i] = everythingButBassNote[i - 1];
+        }
 
         //This is a fix for a bug that happens with a B-A-D-F chord in the bass clef only. The staff runs out of space
         //after filling in the first two pitches of that chord, because there is no low B available below the bass staff in this music font.
@@ -367,11 +615,10 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         for (int i = isTrebleClef ? 5 : (isBassClef ? 0 : 6), j = 0; //trebclef ? start on pitchclass A, else start on pitchclass C
                  j < cg.pitchClassesArray.length;
                  i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
-            if (cg.pitchClassesArray[i].equals(
-                    aRandomChordShuffled[0].substring(0, 1))
-                    ) {
+            if (cg.pitchClassesArray[i].equals(aRandomChordShuffled[0].substring(0, 1))) {
                 verticalIndex = j;
                 noteheads[verticalIndex].setVisibility(View.VISIBLE);  //move to the right by num_accidentals * a constant?
+                verticalIndices[0] = j;
                 break;
             }
         }
@@ -388,6 +635,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
             if (cg.pitchClassesArray[i].equals(everythingButBassNote[k])) {
                 noteheads[j].setVisibility(View.VISIBLE);
                 k++;
+                verticalIndices[k] = j; //after k++ since k starts at 0 and i already assigned verticalIndicies[0] beforehand.
+                                        //this is just a wacky workaround so I don't have to create another variable like x = 1 for example.
                 if (j > 0 && noteheads[j - 1].getVisibility() == View.VISIBLE) { //if the pitch added before this one is an interval of a 2nd below
                     noteheads[j].setVisibility(View.INVISIBLE); //it, then it must shift to the right a little to make space
                     noteheadsR[j].setVisibility(View.VISIBLE);
@@ -419,9 +668,14 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                                     ? cg.triadicInversions[randomInversionIndex] //arr len = 3
                                     : cg.seventhInversions[randomInversionIndex] //arr len = 4
                     );
-                    if (chordSize == 4
-                            && wrongAnswer.contains(dim)) { //randomly give a wrong answer a half-diminished symbol, otherwise
-                        if (Math.random() < 0.5) { //when a half-dim symbol appears, that'd always be the correct answer
+                    //I want my wrong VII7 answers to be V/IIIs like the rightAnswer does
+                    if (randomModeIndex == 1 && chordSize == 4 && randomRNIndex == 6) { //1 means it is minor mode, 4 means a seventh chord, 6 is the VII RN in the minor roman numeral array.
+                        wrongAnswer = changeVII7Chords(wrongAnswer);
+                    }
+                    //randomly give a wrong answer a half-diminished symbol, otherwise
+                    //when a half-dim symbol appears, that'd always be the correct answer
+                    if (chordSize == 4 && wrongAnswer.contains(dim)) {
+                        if (Math.random() < 0.5) {
                             wrongAnswer = wrongAnswer.replace(dim, halfDim);
                         }
                     }
@@ -440,12 +694,19 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
         return false;
     }
-    //"reset" the clef / key signature / noteheads /checkmarks to make a clean slate for the next random chord
+    //cleans up the interface; a clean slate for the new chord
+    public void resetThings() {
+        stopCounting = false; //score can go again up with each Next Chord button click
+        isTrebleClef = false; //a reset so it can try for either treb, bass, or alto clef
+        isBassClef = false;
+        setNotationInvisible();
+    }
+    //"reset" the clef / key signature / noteheads /checkmarks / accidentals to make a clean slate for the next random chord
     public void setNotationInvisible() {
         trebleClef.setVisibility(View.INVISIBLE);
         bassClef.setVisibility(View.INVISIBLE);
         altoClef.setVisibility(View.INVISIBLE);
-        for (TextView[][] clef: accidentals) {
+        for (TextView[][] clef: keySigAccidentals) {
             for (TextView[] mode: clef) {
                 for (TextView acc: mode) {
                     acc.setVisibility(View.INVISIBLE);
@@ -460,6 +721,11 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         }
         for (TextView tv: qTextViews) {
             tv.setVisibility(View.INVISIBLE);
+        }
+        for (TextView[] accType: noteheadsAccidentals) {
+            for (TextView acc: accType) {
+                acc.setVisibility(View.INVISIBLE);
+            }
         }
     }
     public void changeCounterAndCheckmarks(TextView tv, int clickedButton) {

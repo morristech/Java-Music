@@ -1,13 +1,19 @@
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
+/*
+* TODO add applied chords and modal mixture...somehow!
+* major: bVI, bVII, bIII, iv, iihalfdim7.  minor: IV (confused with V / [b]VII ?)
+* note: the major modal mixture should probably only be for triads, except iihalfdim7..start with just triads and avoid iihalfdim7 for now
+*/
+
 public class ChordGenerator {
     protected String[] pitchClassesArray, accidentalsArray,
             modeArray, romanNumeralsMajorArray,
             romanNumeralsMinorArray, triadicInversions,
-            seventhInversions;
+            seventhInversions, appliedsMajor, appliedsMinor;
     protected String[][][] keyNames;
     protected String[][][][] majorKeys, minorKeys;
-    protected String[][][][][] chords; //chords[mode][accidental type][key][chord size][pitch class]
+    protected String[][][][][] chords; //chords[mode][accidental type][key][chord (and its size)][pitch class], chords[2][4][8][7][3 or 4]
     public static final int NUM_PITCH_CLASSES = 7, //the number of pitch classes in a diatonic collection
             THIRD_INTERVAL = 2, //though in music a third implies an interval of 3, it's actually 2
             START_C_MAJOR = 0, //to start looping through major keys built from pitchClassesArray starting on index 0
@@ -25,9 +31,12 @@ public class ChordGenerator {
         accidentalsArray = new String[] {"", "#", "b"}; //empty in place of no accidental
         modeArray = new String[] {"-major", "-minor"};
         romanNumeralsMajorArray = new String[] {"I", "ii", "iii", "IV", "V", "vi", "vii\u00B0"};
-        romanNumeralsMinorArray = new String[] {"i", "ii\u00B0", "III", "iv", "v", "VI", "VII"}; //no modal mixture; will this be an issue?
+        romanNumeralsMinorArray = new String[] {"i", "ii\u00B0", "III", "iv", "v", "VI", "VII"}; //uppercase V currently not present
         triadicInversions = new String[] {"", "6", "6/4"}; //I used empty string for a 5/3 chord
         seventhInversions = new String[] {"7", "6/5", "4/3", "4/2"};
+        appliedsMajor = new String[] {" / ii", " / iii", " / IV", " / V", " / vi"}; //these major/minor applied arrays aren't
+        appliedsMinor = new String[] {" / III", " / iv", " / V", " / VI", " / VII"}; //in synch order; will that be an issue?
+            //all VII 7th chords in minor will be / III and require no accidentals
 
         //Initialize music quiz variables.
         //generate all possible keys (without double-accidentals)
