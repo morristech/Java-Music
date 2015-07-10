@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WrongAnswerGenerator {
-    protected List<String> wrongAnswerPoolSimpleChords, wrongAnswerPoolComplexChords;
+    protected List<String> wrongAnswerPoolSimpleChordsTriads, wrongAnswerPoolComplexChordsTriads,
+            wrongAnswerPoolSimpleChordsSevenths, wrongAnswerPoolComplexChordsSevenths;
     protected ChordGenerator cgWAG;
-    protected String[] modalMixtureChords;
+    protected String[] specialComplexChords;
     protected String dim, halfDim;
     public WrongAnswerGenerator() {
-        wrongAnswerPoolSimpleChords = new ArrayList<String>();
-        wrongAnswerPoolComplexChords = new ArrayList<String>();
+        wrongAnswerPoolSimpleChordsTriads = new ArrayList<String>();
+        wrongAnswerPoolComplexChordsTriads = new ArrayList<String>();
+        wrongAnswerPoolSimpleChordsSevenths = new ArrayList<String>();
+        wrongAnswerPoolComplexChordsSevenths = new ArrayList<String>();
         //only modally mixed chords that have alterations to the RN (i.e. adds an accidental to the RN)
-        modalMixtureChords = new String[] {"bII", "bIII", "bVI", "bVII"};
+        specialComplexChords = new String[] {"bII", "bIII", "bVI", "bVII", "V+", "V-"};
         dim = "\u00B0";
         halfDim = "\u00F8";
         cgWAG = new ChordGenerator();
@@ -22,24 +25,24 @@ public class WrongAnswerGenerator {
         //simple chords (i.e. no added accidentals, just chords in key)
         for (String majorRN: cgWAG.romanNumeralsMajorArray) {
             for (String triadInversion: cgWAG.triadicInversions) {
-                wrongAnswerPoolSimpleChords.add(majorRN.concat(triadInversion));
+                wrongAnswerPoolSimpleChordsTriads.add(majorRN.concat(triadInversion));
             }
             for (String seventhInversion: cgWAG.seventhInversions) {
                 if (majorRN.equals(cgWAG.romanNumeralsMajorArray[6])) {
                     majorRN = majorRN.replace(dim, halfDim);
                 }
-                wrongAnswerPoolSimpleChords.add(majorRN.concat(seventhInversion));
+                wrongAnswerPoolSimpleChordsSevenths.add(majorRN.concat(seventhInversion));
             }
         }
         for (String minorRN: cgWAG.romanNumeralsMinorArray) {
             for (String triadInversion: cgWAG.triadicInversions) {
-                wrongAnswerPoolSimpleChords.add(minorRN.concat(triadInversion));
+                wrongAnswerPoolSimpleChordsTriads.add(minorRN.concat(triadInversion));
             }
             for (String seventhInversion: cgWAG.seventhInversions) {
                 if (minorRN.equals(cgWAG.romanNumeralsMinorArray[1])) {
                     minorRN = minorRN.replace(dim, halfDim);
                 }
-                wrongAnswerPoolSimpleChords.add(minorRN.concat(seventhInversion));
+                wrongAnswerPoolSimpleChordsSevenths.add(minorRN.concat(seventhInversion));
             }
         }
 
@@ -48,37 +51,45 @@ public class WrongAnswerGenerator {
         //Applied chords. always V and always 7th chords
         for (String inversion: cgWAG.seventhInversions) {
             for (String applied: cgWAG.appliedsMinor) {
-                wrongAnswerPoolComplexChords.add(cgWAG.romanNumeralsMajorArray[4].concat(inversion).concat(applied));
+                wrongAnswerPoolComplexChordsSevenths.add(cgWAG.romanNumeralsMajorArray[4].concat(inversion).concat(applied));
             }
             for (String applied: cgWAG.appliedsMajor) {
-                wrongAnswerPoolComplexChords.add(cgWAG.romanNumeralsMajorArray[4].concat(inversion).concat(applied));
+                wrongAnswerPoolComplexChordsSevenths.add(cgWAG.romanNumeralsMajorArray[4].concat(inversion).concat(applied));
             }
         }
 
         //modally mixed chords
-        for (String modallyMixedChord: modalMixtureChords) {
+        for (String modallyMixedChord: specialComplexChords) {
             for (String triadInversion: cgWAG.triadicInversions) {
-                wrongAnswerPoolComplexChords.add(modallyMixedChord.concat(triadInversion));
+                wrongAnswerPoolComplexChordsTriads.add(modallyMixedChord.concat(triadInversion));
             }
             for (String seventhInversion: cgWAG.seventhInversions) {
-                wrongAnswerPoolComplexChords.add(modallyMixedChord.concat(seventhInversion));
+                wrongAnswerPoolComplexChordsSevenths.add(modallyMixedChord.concat(seventhInversion));
             }
         }
 
         //add later their inversions?
         /*
-        wrongAnswerPoolComplexChords.add("Ger6/5");
-        wrongAnswerPoolComplexChords.add("It6");
-        wrongAnswerPoolComplexChords.add("Fr4/3");
+        wrongAnswerPoolComplexChordsTriads.add("Ger6/5");
+        wrongAnswerPoolComplexChordsTriads.add("It6");
+        wrongAnswerPoolComplexChordsTriads.add("Fr4/3");
         */
 
     }
-    //1/5 chance of a complex chord; I want to emphasize simple chords
-    public String getRandomWrongAnswer() {
+    //1/5 chance of a complex chord; I want to emphasize simple chords. change this later to a boolean for the checkbox of applieds enabled
+    public String getRandomWrongAnswer(int triadOrSeventh) {
         if (Math.random() > 0.2) {
-            return wrongAnswerPoolSimpleChords.get((int)(Math.random() * wrongAnswerPoolSimpleChords.size()));
+            if (triadOrSeventh == 3) {
+                return wrongAnswerPoolSimpleChordsTriads.get((int) (Math.random() * wrongAnswerPoolSimpleChordsTriads.size()));
+            } else {
+                return wrongAnswerPoolSimpleChordsSevenths.get((int) (Math.random() * wrongAnswerPoolSimpleChordsSevenths.size()));
+            }
         } else {
-            return wrongAnswerPoolComplexChords.get((int)(Math.random() * wrongAnswerPoolComplexChords.size()));
+            if (triadOrSeventh == 3) {
+                return wrongAnswerPoolComplexChordsTriads.get((int) (Math.random() * wrongAnswerPoolComplexChordsTriads.size()));
+            } else {
+                return wrongAnswerPoolComplexChordsSevenths.get((int) (Math.random() * wrongAnswerPoolComplexChordsSevenths.size()));
+            }
         }
     }
 }
