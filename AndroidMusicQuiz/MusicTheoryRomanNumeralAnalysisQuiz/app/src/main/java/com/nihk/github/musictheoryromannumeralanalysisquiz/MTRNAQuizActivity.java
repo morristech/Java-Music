@@ -15,6 +15,8 @@ package com.nihk.github.musictheoryromannumeralanalysisquiz;
 * todo if either or both isAppliedChord isModalMixtureChords checked, need to have them work if only one check and still add occasional simple chords into the mix as right answers
 * todo and V7/III should still hit..think about that a bit more
 * todo add augmented 6th chords but only it one inversion using the displayedPitchCLasses array
+* *
+* todo should there be a 1/2 chance for modal/applied/altered chords? because right now its 100% and it needs to go into the method to change dim to half dim
 * currently modally mixed includes bII and altered dominants
 * use an applied chord boolean so the wrong answers can have applied RNs too
 
@@ -426,7 +428,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         displayKeySignature(accidentalAndChordSize, key);
         displayPitches(aRandomChordShuffled);
-        rightAnswer = makeModalMixtureOrAppliedChords(aRandomChord, inversionIndex, mode, accidentalAndChordSize, key, chord);
+        rightAnswer = getAndDisplayModalMixtureOrAppliedChords(aRandomChord, inversionIndex, mode, accidentalAndChordSize, key, chord);
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
         createWrongAnswers();
     }
@@ -479,545 +481,74 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         noteheadsAccidentals[secondAccidental][verticalIndices[shuffledChordOrderOfIntervals[secondChordMember]]].setVisibility(View.VISIBLE);
         noteheadsAccidentals[thirdAccidental][verticalIndices[shuffledChordOrderOfIntervals[thirdChordMember]]].setVisibility(View.VISIBLE);
     }
-    //make this its own class? it's very long
-    public String makeModalMixtureOrAppliedChords(String[] aRandomChord, int inversionIndex, int mode, int accidental, int key, int chord) {
-        //verticalIndices is a member array to use here.
-        //shuffledChordOrderOfIntervals keeps track of the new shuffled order of a random chord
-        //e.g. A-C-E-F will be [3, 0, 1, 2] because the root is in index 3, third in 0, fifth in 1, and seventh in 2. Don't get confused!
-        //e.g. A-D-F will be [1, 2, 0] because the root is in index 1, third in index 2, and fifth in index 0
-        //e.g. G-A-C-E will be [1, 2, 3, 0].
-        //therefore when relating to verticalIndices, if the chord was E-A-C [1, 2, 0] vi6/4 in C-major key and I wanted to make it
-        //bVI6/4 then I'd flatten verticalIndices[order[0]] and verticalIndices[order[2]] since 0 and 2 are root and fifth
-        // == verticalIndices[1] and verticalIndices[0] get flattened, the E and A.
-        //e.g. G-B-E [2, 0, 1] v6 in A-minor key I want to make it V6 (with G#), then verticalIndices[order[1]]
-        shuffledChordOrderOfIntervals = new int[aRandomChord.length];
-        for (int i = 0; i < shuffledChordOrderOfIntervals.length; i++) { //length of aRandomChord, aRandomShuff, and this new array are all the
-            for (int j = 0; j < shuffledChordOrderOfIntervals.length; j++) { //same so I avoided writing many superfuluous conditions concerning .length
-                if (aRandomChord[i].substring(0, 1).equals(displayedRandomChord[j])) { //substring because of goofyness with how displayedRandomChord is created in displayPitches(); optimize later!
-                    shuffledChordOrderOfIntervals[i] = j;
-                    break; //to the i loop body
+    public String getAndDisplayModalMixtureOrAppliedChords(String[] aRandomChord, int inversionIndex, int mode, int accidental, int key, int chord) {
+        if (rand.nextBoolean() && (isAlteredChords || isModalMixtureChords || isAppliedChords)) { //50% chance because I don't want it always applied/modal/altered chords
+            //verticalIndices is a member array to use here.
+            //shuffledChordOrderOfIntervals keeps track of the new shuffled order of a random chord
+            //e.g. A-C-E-F will be [3, 0, 1, 2] because the root is in index 3, third in 0, fifth in 1, and seventh in 2. Don't get confused!
+            //e.g. A-D-F will be [1, 2, 0] because the root is in index 1, third in index 2, and fifth in index 0
+            //e.g. G-A-C-E will be [1, 2, 3, 0].
+            //therefore when relating to verticalIndices, if the chord was E-A-C [1, 2, 0] vi6/4 in C-major key and I wanted to make it
+            //bVI6/4 then I'd flatten verticalIndices[order[0]] and verticalIndices[order[2]] since 0 and 2 are root and fifth
+            // == verticalIndices[1] and verticalIndices[0] get flattened, the E and A.
+            //e.g. G-B-E [2, 0, 1] v6 in A-minor key I want to make it V6 (with G#), then verticalIndices[order[1]]
+            shuffledChordOrderOfIntervals = new int[aRandomChord.length];
+            for (int i = 0; i < shuffledChordOrderOfIntervals.length; i++) { //length of aRandomChord, aRandomShuff, and this new array are all the
+                for (int j = 0; j < shuffledChordOrderOfIntervals.length; j++) { //same so I avoided writing many superfuluous conditions concerning .length
+                    if (aRandomChord[i].substring(0, 1).equals(displayedRandomChord[j])) { //substring because of goofyness with how displayedRandomChord is created in displayPitches(); optimize later!
+                        shuffledChordOrderOfIntervals[i] = j;
+                        break; //to the i loop body
+                    }
+                }
+            }
+            if (mode == ChordGenerator.MAJOR_MODE) {
+                switch (chord) {
+                    case 0:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_0(accidental, key, inversionIndex);
+                    case 1:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_1(accidental, key, inversionIndex);
+                    case 2:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_2(accidental, key, inversionIndex);
+                    case 3:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_3(accidental, key, inversionIndex);
+                    case 4:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_4(accidental, key, inversionIndex);
+                    case 5:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_5(accidental, key, inversionIndex);
+                    case 6:
+                        return getAndDisplayModalMixtureOrAppliedChords_Major_6(accidental, key, inversionIndex);
+                }
+            } else { //minor mode
+                switch (chord) {
+                    case 0:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_0(accidental, key, inversionIndex);
+                    case 1:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_1(accidental, key, inversionIndex);
+                    case 2:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_2(accidental, key, inversionIndex);
+                    case 3:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_3(accidental, key, inversionIndex);
+                    case 4:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_4(accidental, key, inversionIndex);
+                    case 5:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_5(accidental, key, inversionIndex);
+                    case 6:
+                        return getAndDisplayModalMixtureOrAppliedChords_Minor_6(accidental, key, inversionIndex);
                 }
             }
         }
-
-        //System.out.println("displayedRandomChord = " + Arrays.toString(displayedRandomChord));
-        //System.out.println("shuffledChordOrder.. = " + Arrays.toString(shuffledChordOrderOfIntervals));
-
-        //mode == 0 (ChordGenerator.MAJOR_MODE):
-            //accidental == 0 is C-major - C#major triads
-            //accidental == 1 is C-major - Cbmajor triads
-            //accidental == 2 is C-major - C#major sevenths
-            //accidental == 3 is C-major - Cbmajor sevenths
-        //mode == 1 (ChordGenerator.MINOR_MODE):
-            //accidental == 0 is A-minor - A#minor triads
-            //accidental == 1 is A-minor - Abminor triads
-            //accidental == 2 is A-minor - A#minor sevenths
-            //accidental == 3 is A-minor - Abminor sevenths
-
-
-        if (mode == ChordGenerator.MAJOR_MODE) {
-            //make V7/IV in major
-            if (isAppliedChords && chord == 0) {
-                if (accidental == 2) {
-                    //from key C-major
-                    if (key == 0) {
-                        showChordAccidentals(FLAT, SEVENTH);
-                        //the rest, from G-major to C#-major just use naturals for that
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, SEVENTH);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[2]);
-                }
-                //from C-major to Gb-major
-                if ((accidental == 3) && key <= 6) {
-                    showChordAccidentals(FLAT, SEVENTH);
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[2]);
-                }
-            }
-
-            //something needs to be done to the ii chord of the major mode. chance will determine whether
-            //it becomes iidim/halfdim7 or bII
-            if (chord == 1) {
-                if (isModalMixtureChords && rand.nextBoolean()) {
-                    //make iidim/halfDim7 (the RN will have to change its degree/o with stroke accordingly)
-                    if (accidental == 0) {
-                        //from keys C-major to D-major need all flats
-                        if (key <= 2) {
-                            showChordAccidentals(FLAT, FIFTH);
-                            //the rest, from A-major to C#-major just use naturals for that
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
-                        }
-                        return cg.romanNumeralsMinorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //seventh chords need to use the half dim symbol
-                    if (accidental == 2) {
-                        //from keys C-major to D-major need all flats
-                        if (key <= 2) {
-                            showChordAccidentals(FLAT, FIFTH);
-                            //the rest, from A-major to C#-major just use naturals for that
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
-                        }
-                        return cg.romanNumeralsMajorArray[chord].concat(halfDim).concat(cg.seventhInversions[inversionIndex]);
-                    }
-                    //from keys C-major to Ab-major just use flats
-                    if ((accidental == 1) && key <= 4) {
-                        showChordAccidentals(FLAT, FIFTH);
-                        return cg.romanNumeralsMinorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    if ((accidental == 3) && key <= 4) {
-                        showChordAccidentals(FLAT, FIFTH);
-                        return cg.romanNumeralsMajorArray[chord].concat(halfDim).concat(cg.seventhInversions[inversionIndex]);
-                    }
-                } else {
-                    //make bII in major keys. only as triads, or V7/V only as sevenths
-                    //bII
-                    if (isModalMixtureChords && accidental == 0) {
-                        //from keys C-major to D-major need all flats
-                        if (key <= 2) {
-                            showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                            //A-major is a special case that needs a flat for root and natural for fifth
-                        } else if (key == 3) {
-                            showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                            //the rest, from E-major to C#-major just use naturals for that
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                        }
-                        return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //for bII: from keys C-major to Eb-major just use flats.
-                    if (isModalMixtureChords && (accidental == 1) && key <= 3) {
-                        showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                        return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //V7/V
-                    if (isAppliedChords && accidental == 2) {
-                        //C-major to F#-major
-                        if (key <= 6) {
-                            showChordAccidentals(SHARP, THIRD);
-                            return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[3]);
-                        }
-                    }
-                    //for V7/V
-                    if (isAppliedChords && accidental == 3) {
-                        //for C-major only
-                        if (key == 0) {
-                            showChordAccidentals(SHARP, THIRD);
-                            //from F-major to the rest
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                        }
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[3]);
-                    }
-                }
-            }
-
-            //make bIII in major keys. only as triads. but V7/vi for the sevenths
-            if (chord == 2) {
-                //bIII
-                if (isModalMixtureChords && accidental == 0) {
-                    //from keys C-major
-                    if (key == 0) {
-                        showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                        //G-major is a special case that needs a flat for root and natural for fifth
-                    } else if (key == 1) {
-                        showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                        //the rest, from A-major to C#-major just use naturals for that
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                    }
-                    return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                }
-                //bIII: from keys C-major to Db-major just use flats.
-                if (isModalMixtureChords && (accidental == 1) && key <= 5) {
-                    showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                    return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                }
-                //V7/vi
-                if (isAppliedChords && accidental == 2) {
-                    //from keys C-major to Emajor
-                    if (key <= 4) {
-                        showChordAccidentals(SHARP, THIRD);
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[4]);
-                    }
-                }
-                //for V7/vi: from keys C-major to Eb-major
-                if (isAppliedChords && accidental == 3) {
-                    //for C-major to Bb-major
-                    if (key <= 2) {
-                        showChordAccidentals(SHARP, THIRD);
-                        //from Eb-major to the rest
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[4]);
-                }
-            }
-
-            //make iv in major keys. both as triads and sevenths (I feel sevenths are ok; there's no V7 / bVII
-            //in this program so the IV chord is only changed ever to "iv" through this method in major
-            if (isModalMixtureChords && chord == 3) {
-                if (accidental == 0) {
-                    //from keys C-major to D-major need all flats
-                    if (key <= 2) {
-                        showChordAccidentals(FLAT, THIRD);
-                        //the rest, from A-major to C#-major just use naturals for that
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMinorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                }
-                //special case for 7th chords, because the 7th of the chord needs to be altered if the randomly generate chord is a length of 4 (i.e.7th chord)
-                if (accidental == 2) {
-                    //C major and Gmajor have a flat 7th within iv7
-                    if (key <= 1) {
-                        showChordAccidentals(FLAT, FLAT, THIRD, SEVENTH);
-                        //G-major has both a flat and nat for iv7
-                    } else if (key == 2) {
-                        showChordAccidentals(FLAT, NATURAL_OR_NOTHING, THIRD, SEVENTH);
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, THIRD, SEVENTH);
-                    }
-                    return cg.romanNumeralsMinorArray[chord].concat(cg.seventhInversions[inversionIndex]);
-                }
-                //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
-                if ((accidental == 1) && key <= 4) {
-                    showChordAccidentals(FLAT, THIRD);
-                    return cg.romanNumeralsMinorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                }
-                if ((accidental == 3) && key <= 4) {
-                    showChordAccidentals(FLAT, FLAT, THIRD, SEVENTH);
-                    return cg.romanNumeralsMinorArray[chord].concat(cg.seventhInversions[inversionIndex]);
-                }
-            }
-
-            if (isAlteredChords && chord == 4) {
-                if (rand.nextBoolean()) {
-                    //make V+ in major, both as triads and sevenths
-                    if (accidental % 2 == 0) {
-                        //from keys C-major to A-major
-                        if (key <= 3) {
-                            showChordAccidentals(SHARP, FIFTH);
-                            return cg.romanNumeralsMajorArray[chord].concat(plusSign).concat(
-                                    accidental == 0 ? cg.triadicInversions[inversionIndex]
-                                                    : cg.seventhInversions[inversionIndex] //accidental == 2 therefore seventh chord
-                            );
-                        }
-                    }
-                    //from keys C-major to Db-major just use flats.
-                    if (accidental % 2 == 1) {
-                        if (key <= 3) {
-                            showChordAccidentals(SHARP, FIFTH);
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
-                        }
-                        return cg.romanNumeralsMajorArray[chord].concat(plusSign).concat(
-                                accidental == 1 ? cg.triadicInversions[inversionIndex]
-                                                : cg.seventhInversions[inversionIndex] //accidental == 3 therefore seventh chord
-                        );
-                    }
-                } else {
-                    //make Vdim in major, both as triads and sevenths
-                    if (accidental % 2 == 0) {
-                        //from keys C-major to A-major
-                        if (key <= 3) {
-                            showChordAccidentals(FLAT, FIFTH);
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
-                        }
-                        return cg.romanNumeralsMajorArray[chord].concat(minusSign).concat(
-                                accidental == 0 ? cg.triadicInversions[inversionIndex]
-                                                : cg.seventhInversions[inversionIndex] //accidental == 2 therefore seventh chord
-                        );
-                    }
-                    //from keys C-major to Eb-major just use flats.
-                    if ((accidental % 2 == 1) && key <= 3) {
-                        showChordAccidentals(FLAT, FIFTH);
-                        return cg.romanNumeralsMajorArray[chord].concat(minusSign).concat(
-                                accidental == 1 ? cg.triadicInversions[inversionIndex]
-                                                : cg.seventhInversions[inversionIndex] //accidental == 3 therefore seventh chord
-                        );
-                    }
-                }
-            }
-
-            //make bVI in major keys. just as triads
-            if (chord == 5) {
-                if (isModalMixtureChords && accidental == 0) {
-                    //from keys C-major to G-major need all flats
-                    if (key <= 1) {
-                        showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                        //D-major is a special case that needs a flat for root and natural for fifth
-                    } else if (key == 2) {
-                        showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                        //the rest, from A-major to C#-major just use naturals for that
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
-                    }
-                    return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                }
-                //from keys C-major to Ab-major just use flats
-                if (isModalMixtureChords && (accidental == 1) && key <= 4) {
-                    showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
-                    return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                }
-                //V7/ii
-                if (isAppliedChords && accidental == 2) {
-                    //from keys C-major to Bmajor
-                    if (key <= 5) {
-                        showChordAccidentals(SHARP, THIRD);
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[0]);
-                    }
-                }
-                //for V7/ii
-                if (isAppliedChords && accidental == 3) {
-                    //for C-major to F-major
-                    if (key <= 1) {
-                        showChordAccidentals(SHARP, THIRD);
-                        //from Bb-major to the rest
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[0]);
-                }
-            }
-
-            //I need this extra condition for now because seventh chords can't get changed to bVII,
-            //and it they fell inside this area they'd then just remain unchanged and never reach
-            //the "else" which gives viidim7 its proper title viihalfdim7
-            if (chord == 6) {
-                if (isModalMixtureChords && rand.nextBoolean() && accidental < 2) { //&& !(accidental == 1 && key == 7) (for when V7/iii is enabled)
-                    //make bVII in major keys, just as triads
-                    if (accidental == 0) {
-                        //the key of C-major needs all flats
-                        if (key == 0) {
-                            showChordAccidentals(FLAT, ROOT);
-                            //the rest, from G-major to C#-major just use naturals for that
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, ROOT);
-                        }
-                        return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //from keys C-major to Gb-major just use flats.
-                    if (isModalMixtureChords && (accidental == 1) && key <= 6) {
-                        showChordAccidentals(FLAT, ROOT);
-                        return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[chord]).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //for now, V7/iii is avoided because of accidental collision between sharpened thirds and fifths
-
-                } else { //this else should happen whether applied chords/modal mixture checked or not
-                    //just change the viio7 to viihalfdim7
-                    //so replace the degree with a O WITH STROKE
-                    if (accidental > 1) {
-                        noAccidentalsAdded = true;
-                        return replaceDimWithHalfDim();
-                    }
-                }
-            }
+        //If no chords were changed, I still need to change viio7 to viihalfdim7 in major and ii for minor
+        if (accidental > 1 && ((mode == ChordGenerator.MAJOR_MODE && chord == 6)
+            || mode == ChordGenerator.MINOR_MODE && chord == 1)) {
+            rightAnswer = replaceDimWithHalfDim();
+            noAccidentalsAdded = true;
         }
-
-        /////////////////////////////////////
-        //Minor mode applieds/modal mixture//
-        /////////////////////////////////////
-
-        if (mode == ChordGenerator.MINOR_MODE) {
-            //make V7/iv
-            if (isAppliedChords && chord == 0) {
-                if (accidental == 2) {
-                    //from key A-minor to G#-minor
-                    if (key <= 5) {
-                        showChordAccidentals(SHARP, THIRD);
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[1]);
-                    }
-                }
-                //from A-minor to D-minor
-                if (accidental == 3) {
-                    if (key <= 1) {
-                        showChordAccidentals(SHARP, THIRD);
-                        //G-minor onwards requires a natural
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[1]);
-                }
-            }
-
-            //I need this extra condition for now because seventh chords can't get changed to bII,
-            //and it they fell inside this area they'd then just remain unchanged and never reach
-            //the "else" which gives iidim7 its proper title iihalfdim7
-            if (chord == 1) {
-                if (isModalMixtureChords && rand.nextBoolean() && accidental < 2) {
-                    //make bII in minor, just as triads
-                    if (accidental == 0) {
-                        //A-minor only uses a flat
-                        if (key == 0) {
-                            showChordAccidentals(FLAT, ROOT);
-                            //The rest use a natural
-                        } else {
-                            showChordAccidentals(NATURAL_OR_NOTHING, ROOT);
-                        }
-                        return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                    //from keys A-minor to Eb-minor just use flats.
-                    if ((accidental == 1) && key <= 6) {
-                        showChordAccidentals(FLAT, ROOT);
-                        return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
-                    }
-                } else { //should happen whether applied chords checkbox checked or not
-                    //just change the iio7 to viihalfdim7
-                    //so replace the degree with a O WITH STROKE
-                    if (accidental > 1) { // > 1 means seventh chords only
-                        noAccidentalsAdded = true;
-                        return replaceDimWithHalfDim();
-                    }
-                }
-            }
-
-            //make V7/VI
-            if (isAppliedChords && chord == 2) {
-                if (accidental == 2) {
-                    //from key A-minor
-                    if (key == 0) {
-                        showChordAccidentals(FLAT, SEVENTH);
-                        //the rest take a natural
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, SEVENTH);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[3]);
-                }
-                //from A-minor to Eb-minor
-                if (accidental == 3) {
-                    if (key <= 6) {
-                        showChordAccidentals(FLAT, SEVENTH);
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[3]);
-                    }
-                }
-            }
-
-            //make IV in minor. just as triads. or V7/VII for sevenths
-            if (chord == 3) {
-                if (isModalMixtureChords && accidental == 0) {
-                    //A-minor to D#-minor
-                    if (key <= 6) {
-                        showChordAccidentals(SHARP, THIRD);
-                        return cg.romanNumeralsMajorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                    }
-                }
-                //from keys A-minor to Eb-minor just use flats.
-                if (isModalMixtureChords && accidental == 1) {
-                    if (key == 0) {
-                        showChordAccidentals(SHARP, THIRD);
-
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[chord].concat(cg.triadicInversions[inversionIndex]);
-                }
-                //make V7/VII
-                if (isAppliedChords && accidental == 2) {
-                    //from key A-minor to D#-minor
-                    if (key <= 6) {
-                        showChordAccidentals(SHARP, THIRD);
-                        return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[4]);
-                    }
-                }
-                //from A-minor
-                if (isAppliedChords && accidental == 3) {
-                    if (key == 0) {
-                        showChordAccidentals(SHARP, THIRD);
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[4]);
-                }
-            }
-
-            //make v into V for minor
-            if (isModalMixtureChords && chord == 4) {
-                if ((accidental % 2 == 0) && key <= 4) {
-                    showChordAccidentals(SHARP, THIRD);
-                    return cg.romanNumeralsMajorArray[chord].concat(
-                            accidental == 0 ? cg.triadicInversions[inversionIndex]
-                                            : cg.seventhInversions[inversionIndex]
-                    );
-                }
-                if (accidental % 2 == 1) {
-                    //from A-minor to G-minor take sharps as leading tones
-                    if (key <= 2) {
-                        showChordAccidentals(SHARP, THIRD);
-                        //from C-minor to Ab-minor take naturals as leading tones
-                    } else {
-                        showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
-                    }
-                    return cg.romanNumeralsMajorArray[chord].concat(
-                            accidental == 1 ? cg.triadicInversions[inversionIndex]
-                                            : cg.seventhInversions[inversionIndex]
-                    );
-                }
-            }
-            /*
-         this one's broken for two reasons. 1) the accidentals are sometimes a third apart and
-        collide with each other vertically. 2) v-->V above it already changes the chord to upper-case
-        V. Because this is the minor mode, however, it tries to replace lower-case v with V-, but such
-        lower-case v no longer exists due to the aforementioend v-->V
-        //make Vdim in minor. this adds on to what was already done above by making v-->V in minor
-        if (mode == ChordGenerator.MINOR_MODE && chord == 4) {
-            if (accidental % 2 == 0) {
-                //for A-minor
-                if (key == 0) {
-                    showChordAccidentals(mode, FLAT, FIFTH, chord,
-                            cg.romanNumeralsMajorArray[chord].concat(minusSign));
-                    //from D-minor to C#-minor
-                } else if (key <= 4) {
-                    showChordAccidentals(mode, NATURAL_OR_NOTHING, FIFTH, chord,
-                            cg.romanNumeralsMajorArray[chord].concat(minusSign));
-                }
-            }
-            //from A-minor to Eb-minor
-            if ((accidental % 2 == 1) && key <= 6) {
-                showChordAccidentals(mode, FLAT, FIFTH, chord,
-                        cg.romanNumeralsMajorArray[chord].concat(minusSign));
-            }
+        //and if Applied chords were checked but it didn't randomly decide to do it, it should still never
+        //say VII7 in minor if that boolean were true.
+        if (isAppliedChords && accidental > 1 && (mode == ChordGenerator.MINOR_MODE && chord == 6)) {
+            noAccidentalsAdded = false;
+            return getAndDisplayModalMixtureOrAppliedChords_Minor_6(accidental, key, inversionIndex);
         }
-*/
-
-            //no V+ in minor for the most part (they are enharmonic V13s)
-
-            //make V7/III. Just for seventh chords and no accidentals need to be added; the chord is already
-            //naturally an applied chord
-            //should always happen regardless of applied chords checkbox checked or not
-            if (isAppliedChords && chord == 6) {
-                if (accidental > 1) {
-                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[0]);
-                }
-            }
-        }
-
-        //these augmented chords will certainly have accidental collisions in MAJOR only. but how will I handle chord inversions for the auggy6ths?
-        //add only after having added another vertical column of naturals/sharps/flats as buffers
-        //make italian6th (triad)
-        //make fr6 (7th chord) //how to not confuse this with Vdim7? V+7 == FR6 / I. just leave it as V+7dim since there are only 4 options and never anything like FR6 / I as a wrong answer
-        //make ger6 (7th chord)
-
-        //7th chords only
-
-        //V7/iii in major requires extra accidental buffers
-        //make V7 / V in minor //won't work yet without a buffer row of accidentals
-
-        //will viio7s require a new method for accidentals visible? yes, viio4/2/ii in c-major is Bb-C#-E-G, clash of the augmented 2nd between Bb-C#
-
-        //make viio7 / ii in major
-        //make viio7 / iii in major
-        //make viio7 / IV in major
-        //make viio7 / V in major
-        //make viio7 / vi in major
-
-        //make viio7 / III in minor
-        //make viio7 / iv in minor
-        //make viio7 / V in minor
-        //make viio7 / VI in minor
-        //make viio7 / VII in minor
         noAccidentalsAdded = true;
         return rightAnswer; //when no criteria matched to add accidentals to the chord
     }
@@ -1057,8 +588,8 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         //get the bass note of the shuffled chord and display it
         for (int i = isTrebleClef ? 5 : (isBassClef ? 0 : 6), j = 0; //trebclef ? start on pitchclass A, else start on pitchclass C
-                 j < cg.pitchClassesArray.length;
-                 i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
+             j < cg.pitchClassesArray.length;
+             i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
             if (cg.pitchClassesArray[i].equals(aRandomChordShuffled[0].substring(0, 1))) {
                 verticalIndex = j;
                 noteheads[verticalIndex].setVisibility(View.VISIBLE);  //move to the right by num_accidentals * a constant?
@@ -1071,16 +602,16 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         //but it might be a negative so + 7 (==NUM_PITCH..) solves that, since I'm using modulus anyway (but modulus doesnt work on negative values). same logic applies to alto clef
         //but for verticalIndex - 1 instead of 2.
         for (int i = isTrebleClef ? ((verticalIndex - 2 + ChordGenerator.NUM_PITCH_CLASSES) % ChordGenerator.NUM_PITCH_CLASSES)
-                                  : (isBassClef ? verticalIndex
-                                               : (verticalIndex - 1 + ChordGenerator.NUM_PITCH_CLASSES) % ChordGenerator.NUM_PITCH_CLASSES),
-                    j = verticalIndex, k = 0;
-                j < noteheads.length && k < everythingButBassNote.length;
-                i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
+                : (isBassClef ? verticalIndex
+                : (verticalIndex - 1 + ChordGenerator.NUM_PITCH_CLASSES) % ChordGenerator.NUM_PITCH_CLASSES),
+             j = verticalIndex, k = 0;
+             j < noteheads.length && k < everythingButBassNote.length;
+             i = (i + 1) % ChordGenerator.NUM_PITCH_CLASSES, j++) {
             if (cg.pitchClassesArray[i].equals(everythingButBassNote[k])) {
                 noteheads[j].setVisibility(View.VISIBLE);
                 k++;
                 verticalIndices[k] = j; //after k++ since k starts at 0 and i already assigned verticalIndicies[0] beforehand.
-                                        //this is just a wacky workaround so I don't have to create another variable like x = 1 for example.
+                //this is just a wacky workaround so I don't have to create another variable like x = 1 for example.
                 if (j > 0 && noteheads[j - 1].getVisibility() == View.VISIBLE) { //if the pitch added before this one is an interval of a 2nd below
                     noteheads[j].setVisibility(View.INVISIBLE); //it, then it must shift to the right a little to make space
                     noteheadsR[j].setVisibility(View.VISIBLE);
@@ -1102,7 +633,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                     wrongAnswer = wag.getRandomWrongAnswer(displayedRandomChord.length, isModalMixtureChords, isAppliedChords, noAccidentalsAdded);
                 } while (wrongAnswer.equalsIgnoreCase(rightAnswer) //avoids a duplicate right answer
                         || containsCaseInsensitive(wrongAnswer, wrongAnswerArray)  //avoids duplicate wrong answers
-                );
+                        );
                 answerButtonArray[i].setText(wrongAnswer);
             }
         }
@@ -1177,4 +708,670 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         Collections.shuffle(arrList);
         return arrList.toArray(new String[arrList.size()]);
     }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_0(int accidental, int key, int inversionIndex) {
+        //make V7/IV in major
+        if (isAppliedChords) {
+            if (accidental == 2) {
+                //from key C-major
+                if (key == 0) {
+                    showChordAccidentals(FLAT, SEVENTH);
+                    //the rest, from G-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, SEVENTH);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[2]);
+            }
+            //from C-major to Gb-major
+            if ((accidental == 3) && key <= 6) {
+                showChordAccidentals(FLAT, SEVENTH);
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[2]);
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_1(int accidental, int key, int inversionIndex) {
+        //something needs to be done to the ii chord of the major mode. chance will determine whether
+        //it becomes iidim/halfdim7 or bII
+        if (rand.nextBoolean() && (isModalMixtureChords || isAlteredChords)) {
+            //make iidim/halfDim7 (the RN will have to change its degree/o with stroke accordingly)
+            if (isModalMixtureChords && accidental == 0) {
+                //from keys C-major to D-major need all flats
+                if (key <= 2) {
+                    showChordAccidentals(FLAT, FIFTH);
+                    //the rest, from A-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
+                }
+                return cg.romanNumeralsMinorArray[1].concat(cg.triadicInversions[inversionIndex]);
+            }
+            //from keys C-major to Ab-major just use flats
+            if (isModalMixtureChords && (accidental == 1) && key <= 4) {
+                showChordAccidentals(FLAT, FIFTH);
+                return cg.romanNumeralsMinorArray[1].concat(cg.triadicInversions[inversionIndex]);
+            }
+            //chance between Fr4/3 and ii halfdim7. I want to stack it in favour of Fr4/3 though, so no rand.nextBoolean()
+            if (isAlteredChords && shuffledChordOrderOfIntervals[2] == 0) { //the fifth of the chord is the bassnote
+                if (accidental == 2) { //French 6th
+                    //from keys C-major to D-major need all flats and sharps
+                    if (key <= 2) {
+                        showChordAccidentals(SHARP, FLAT, THIRD, FIFTH);
+                        return cg.augmentedSixths[1];
+                        //the rest, from A-major to F#-major
+                    } else if (key <= 6) {
+                        showChordAccidentals(SHARP, NATURAL_OR_NOTHING, THIRD, FIFTH);
+                        return cg.augmentedSixths[1];
+                    }
+                }
+                //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+                if (accidental == 3) {
+                    if (key == 0) {
+                        showChordAccidentals(SHARP, FLAT, THIRD, FIFTH);
+                        return cg.augmentedSixths[1];
+                    } else if (key <= 4) {
+                        showChordAccidentals(NATURAL_OR_NOTHING, FLAT, THIRD, FIFTH);
+                        return cg.augmentedSixths[1];
+                    }
+                }
+                //ii half dim seventh chords need to use the half dim symbol
+            } else if (isModalMixtureChords && accidental == 2) {
+                //from keys C-major to D-major need all flats
+                if (key <= 2) {
+                    showChordAccidentals(FLAT, FIFTH);
+                    //the rest, from A-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
+                }
+                return cg.romanNumeralsMajorArray[1].concat(halfDim).concat(cg.seventhInversions[inversionIndex]);
+            }
+
+            if (isModalMixtureChords && (accidental == 3) && key <= 4) {
+                showChordAccidentals(FLAT, FIFTH);
+                return cg.romanNumeralsMajorArray[1].concat(halfDim).concat(cg.seventhInversions[inversionIndex]);
+            }
+        } else {
+            //make bII in major keys. only as triads, or V7/V only as sevenths
+            //bII
+            if (isModalMixtureChords && accidental == 0) {
+                //from keys C-major to D-major need all flats
+                if (key <= 2) {
+                    showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+                    //A-major is a special case that needs a flat for root and natural for fifth
+                } else if (key == 3) {
+                    showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
+                    //the rest, from E-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
+                }
+                return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
+            }
+            //for bII: from keys C-major to Eb-major just use flats.
+            if (isModalMixtureChords && (accidental == 1) && key <= 3) {
+                showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+                return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
+            }
+            //V7/V
+            if (isAppliedChords && accidental == 2) {
+                //C-major to F#-major
+                if (key <= 6) {
+                    showChordAccidentals(SHARP, THIRD);
+                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[3]);
+                }
+            }
+            //for V7/V
+            if (isAppliedChords && accidental == 3) {
+                //for C-major only
+                if (key == 0) {
+                    showChordAccidentals(SHARP, THIRD);
+                    //from F-major to the rest
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[3]);
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_2(int accidental, int key, int inversionIndex) {
+        //make bIII in major keys. only as triads. but V7/vi for the sevenths
+        //bIII
+        if (isModalMixtureChords && accidental == 0) {
+            //from keys C-major
+            if (key == 0) {
+                showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+                //G-major is a special case that needs a flat for root and natural for fifth
+            } else if (key == 1) {
+                showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
+                //the rest, from A-major to C#-major just use naturals for that
+            } else {
+                showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
+            }
+            return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[2]).concat(cg.triadicInversions[inversionIndex]);
+        }
+        //bIII: from keys C-major to Db-major just use flats.
+        if (isModalMixtureChords && (accidental == 1) && key <= 5) {
+            showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+            return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[2]).concat(cg.triadicInversions[inversionIndex]);
+        }
+        //V7/vi
+        if (isAppliedChords && accidental == 2) {
+            //from keys C-major to Emajor
+            if (key <= 4) {
+                showChordAccidentals(SHARP, THIRD);
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[4]);
+            }
+        }
+        //for V7/vi: from keys C-major to Eb-major
+        if (isAppliedChords && accidental == 3) {
+            //for C-major to Bb-major
+            if (key <= 2) {
+                showChordAccidentals(SHARP, THIRD);
+                //from Eb-major to the rest
+            } else {
+                showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+            }
+            return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[4]);
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_3(int accidental, int key, int inversionIndex) {
+        //make augmented 6ths (it6 or ger6,5 see chord==1 for fr4/3)
+        //make iv in major keys. both as triads and sevenths (I feel sevenths are ok; there's no V7 / bVII
+        //in this program so the IV chord is only changed ever to "iv" through this method in major
+        if (isAlteredChords && shuffledChordOrderOfIntervals[1] == 0) { //[1] == 0 means the third of the chord is the bass note
+            if (accidental == 0) { //italian 6th
+                //from keys C-major to D-major need all flats and sharps
+                if (key <= 2) {
+                    showChordAccidentals(SHARP, FLAT, ROOT, THIRD);
+                    return cg.augmentedSixths[0];
+                    //the rest, from A-major to F#-major
+                } else if (key <= 6) {
+                    showChordAccidentals(SHARP, NATURAL_OR_NOTHING, ROOT, THIRD);
+                    return cg.augmentedSixths[0];
+                }
+            }
+            //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+            if (accidental == 1) {
+                if (key == 0) {
+                    showChordAccidentals(SHARP, FLAT, ROOT, THIRD);
+                    return cg.augmentedSixths[0];
+                } else if (key <= 4) {
+                    showChordAccidentals(NATURAL_OR_NOTHING, FLAT, ROOT, THIRD);
+                    return cg.augmentedSixths[0];
+                }
+            }
+        } else if (isModalMixtureChords) {
+            if (accidental == 0) {
+                //from keys C-major to D-major need all flats
+                if (key <= 2) {
+                    showChordAccidentals(FLAT, THIRD);
+                    //the rest, from A-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                return cg.romanNumeralsMinorArray[3].concat(cg.triadicInversions[inversionIndex]);
+            }
+            //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+            if ((accidental == 1) && key <= 4) {
+                showChordAccidentals(FLAT, THIRD);
+                return cg.romanNumeralsMinorArray[3].concat(cg.triadicInversions[inversionIndex]);
+            }
+        }
+        //sometimes have iv7, sometimes have ger6/5. Fr4/3 is found in the ii chords (chord == 1)
+        //Ger6/5 has clashes with intervals for major mode; commenting it out.
+            /*
+            if (isAlteredChords && shuffledChordOrderOfIntervals[1] == 0) {//Ger6/5
+                if (accidental == 2) {
+                    //from keys C-major to D-major need all flats and sharps
+                    if (key <= 1) {
+                        showChordAccidentals(SHARP, FLAT, FLAT, ROOT, THIRD, SEVENTH);
+                        return cg.augmentedSixths[2];
+                    } else if (key == 2) {
+                        showChordAccidentals(SHARP, FLAT, NATURAL_OR_NOTHING, ROOT, THIRD, SEVENTH);
+                        return cg.augmentedSixths[2];
+                    } else if (key <= 6) {
+                        showChordAccidentals(SHARP, NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, THIRD, SEVENTH);
+                        return cg.augmentedSixths[2];
+                    }
+                }
+                //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+                if (accidental == 3) {
+                    if (key == 0) {
+                        showChordAccidentals(SHARP, FLAT, FLAT, ROOT, THIRD, SEVENTH);
+                        return cg.augmentedSixths[2];
+                    } else if (key <= 4) {
+                        showChordAccidentals(NATURAL_OR_NOTHING, FLAT, FLAT, ROOT, THIRD, SEVENTH);
+                        return cg.augmentedSixths[2];
+                    }
+                }
+                //iv7
+            } else */ if (isModalMixtureChords) {
+            //special case for 7th chords, because the 7th of the chord needs to be altered if the randomly generate chord is a length of 4 (i.e.7th chord)
+            if (accidental == 2) {
+                //C major and Gmajor have a flat 7th within iv7
+                if (key <= 1) {
+                    showChordAccidentals(FLAT, FLAT, THIRD, SEVENTH);
+                    //G-major has both a flat and nat for iv7
+                } else if (key == 2) {
+                    showChordAccidentals(FLAT, NATURAL_OR_NOTHING, THIRD, SEVENTH);
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, THIRD, SEVENTH);
+                }
+                return cg.romanNumeralsMinorArray[3].concat(cg.seventhInversions[inversionIndex]);
+            }
+
+            if ((accidental == 3) && key <= 4) {
+                showChordAccidentals(FLAT, FLAT, THIRD, SEVENTH);
+                return cg.romanNumeralsMinorArray[3].concat(cg.seventhInversions[inversionIndex]);
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_4(int accidental, int key, int inversionIndex) {
+        if (rand.nextBoolean()) {
+            //make V+ in major, both as triads and sevenths
+            if (accidental % 2 == 0) {
+                //from keys C-major to A-major
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, FIFTH);
+                    return cg.romanNumeralsMajorArray[4].concat(plusSign).concat(
+                            accidental == 0 ? cg.triadicInversions[inversionIndex]
+                                    : cg.seventhInversions[inversionIndex] //accidental == 2 therefore seventh chord
+                    );
+                }
+            }
+            //from keys C-major to Db-major just use flats.
+            if (accidental % 2 == 1) {
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, FIFTH);
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(plusSign).concat(
+                        accidental == 1 ? cg.triadicInversions[inversionIndex]
+                                : cg.seventhInversions[inversionIndex] //accidental == 3 therefore seventh chord
+                );
+            }
+        } else {
+            //make Vdim in major, both as triads and sevenths
+            if (accidental % 2 == 0) {
+                //from keys C-major to A-major
+                if (key <= 3) {
+                    showChordAccidentals(FLAT, FIFTH);
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, FIFTH);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(minusSign).concat(
+                        accidental == 0 ? cg.triadicInversions[inversionIndex]
+                                : cg.seventhInversions[inversionIndex] //accidental == 2 therefore seventh chord
+                );
+            }
+            //from keys C-major to Eb-major just use flats.
+            if ((accidental % 2 == 1) && key <= 3) {
+                showChordAccidentals(FLAT, FIFTH);
+                return cg.romanNumeralsMajorArray[4].concat(minusSign).concat(
+                        accidental == 1 ? cg.triadicInversions[inversionIndex]
+                                : cg.seventhInversions[inversionIndex] //accidental == 3 therefore seventh chord
+                );
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_5(int accidental, int key, int inversionIndex) {
+        //make bVI in major keys. just as triads
+        if (isModalMixtureChords && accidental == 0) {
+            //from keys C-major to G-major need all flats
+            if (key <= 1) {
+                showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+                //D-major is a special case that needs a flat for root and natural for fifth
+            } else if (key == 2) {
+                showChordAccidentals(FLAT, NATURAL_OR_NOTHING, ROOT, FIFTH);
+                //the rest, from A-major to C#-major just use naturals for that
+            } else {
+                showChordAccidentals(NATURAL_OR_NOTHING, NATURAL_OR_NOTHING, ROOT, FIFTH);
+            }
+            return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[5]).concat(cg.triadicInversions[inversionIndex]);
+        }
+        //from keys C-major to Ab-major just use flats
+        if (isModalMixtureChords && (accidental == 1) && key <= 4) {
+            showChordAccidentals(FLAT, FLAT, ROOT, FIFTH);
+            return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[5]).concat(cg.triadicInversions[inversionIndex]);
+        }
+        //V7/ii
+        if (isAppliedChords && accidental == 2) {
+            //from keys C-major to Bmajor
+            if (key <= 5) {
+                showChordAccidentals(SHARP, THIRD);
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[0]);
+            }
+        }
+        //for V7/ii
+        if (isAppliedChords && accidental == 3) {
+            //for C-major to F-major
+            if (key <= 1) {
+                showChordAccidentals(SHARP, THIRD);
+                //from Bb-major to the rest
+            } else {
+                showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+            }
+            return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMajor[0]);
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Major_6(int accidental, int key, int inversionIndex) {
+        //I need this extra condition for now because seventh chords can't get changed to bVII,
+        //and it they fell inside this area they'd then just remain unchanged and never reach
+        //the "else" which gives viidim7 its proper title viihalfdim7
+        if (isModalMixtureChords && rand.nextBoolean() && accidental < 2) { //&& !(accidental == 1 && key == 7) (for when V7/iii is enabled)
+            //make bVII in major keys, just as triads
+            if (accidental == 0) {
+                //the key of C-major needs all flats
+                if (key == 0) {
+                    showChordAccidentals(FLAT, ROOT);
+                    //the rest, from G-major to C#-major just use naturals for that
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, ROOT);
+                }
+                return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[6]).concat(cg.triadicInversions[inversionIndex]);
+            }
+            //from keys C-major to Gb-major just use flats.
+            if (isModalMixtureChords && (accidental == 1) && key <= 6) {
+                showChordAccidentals(FLAT, ROOT);
+                return cg.accidentalsArray[FLAT].concat(cg.romanNumeralsMinorArray[6]).concat(cg.triadicInversions[inversionIndex]);
+            }
+            //for now, V7/iii is avoided because of accidental collision between sharpened thirds and fifths
+
+        } else { //this else should happen whether applied chords/modal mixture checked or not
+            //just change the viio7 to viihalfdim7
+            //so replace the degree with a O WITH STROKE
+            if (accidental > 1) {
+                noAccidentalsAdded = true;
+                return replaceDimWithHalfDim();
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_0(int accidental, int key, int inversionIndex) {
+        //make V7/iv
+        if (isAppliedChords) {
+            if (accidental == 2) {
+                //from key A-minor to G#-minor
+                if (key <= 5) {
+                    showChordAccidentals(SHARP, THIRD);
+                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[1]);
+                }
+            }
+            //from A-minor to D-minor
+            if (accidental == 3) {
+                if (key <= 1) {
+                    showChordAccidentals(SHARP, THIRD);
+                    //G-minor onwards requires a natural
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[1]);
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_1(int accidental, int key, int inversionIndex) {
+        //I need this extra condition for now because seventh chords can't get changed to bII,
+        //and it they fell inside this area they'd then just remain unchanged and never reach
+        //the "else" which gives iidim7 its proper title iihalfdim7
+        if (isModalMixtureChords && accidental < 2) {
+            //make bII in minor, just as triads
+            if (accidental == 0) {
+                //A-minor only uses a flat
+                if (key == 0) {
+                    showChordAccidentals(FLAT, ROOT);
+                    //The rest use a natural
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, ROOT);
+                }
+                return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
+            }
+            //from keys A-minor to Eb-minor just use flats.
+            if ((accidental == 1) && key <= 6) {
+                showChordAccidentals(FLAT, ROOT);
+                return cg.accidentalsArray[FLAT].concat(bigII).concat(cg.triadicInversions[inversionIndex]);
+            }
+        } else if (rand.nextBoolean() && isAlteredChords
+                && (shuffledChordOrderOfIntervals[1] == 0 || shuffledChordOrderOfIntervals[2] == 0)) {
+
+            if (accidental == 2) {
+                //from keys C-major to D-major need all flats and sharps
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, THIRD);
+                    //the same rules apply in minor for italin and german 6ths
+                    if (shuffledChordOrderOfIntervals[1] == 0) { //third was the bass note
+                        return cg.augmentedSixths[4];
+                    } else { //fifth was the bass note
+                        return cg.augmentedSixths[1];
+                    }
+                }
+            }
+            //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+            if (accidental == 3) {
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, THIRD);
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                //the same rules apply in minor for italin and german 6ths
+                if (shuffledChordOrderOfIntervals[1] == 0) { //third was the bass note
+                    return cg.augmentedSixths[4];
+                } else { //fifth was the bass note
+                    return cg.augmentedSixths[1];
+                }
+            }
+
+        } else {//should happen whether applied chords checkbox checked or not
+            //just change the iio7 to viihalfdim7
+            //so replace the degree with a O WITH STROKE
+            if (accidental > 1) { // > 1 means seventh chords only
+                noAccidentalsAdded = true;
+                return replaceDimWithHalfDim();
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_2(int accidental, int key, int inversionIndex) {
+        //make V7/VI
+        if (isAppliedChords) {
+            if (accidental == 2) {
+                //from key A-minor
+                if (key == 0) {
+                    showChordAccidentals(FLAT, SEVENTH);
+                    //the rest take a natural
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, SEVENTH);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[3]);
+            }
+            //from A-minor to Eb-minor
+            if (accidental == 3) {
+                if (key <= 6) {
+                    showChordAccidentals(FLAT, SEVENTH);
+                    return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[3]);
+                }
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_3(int accidental, int key, int inversionIndex) {
+        //make IV in minor. just as triads. or V7/VII for sevenths OR
+        //italian 6ths and German 6ths
+        if (isAlteredChords
+                && (shuffledChordOrderOfIntervals[0] == 0 || shuffledChordOrderOfIntervals[1] == 0)) { //[1] == 0 means the third of the chord is the bass note
+            if (accidental % 2 == 0) {
+                //from keys C-major to D-major need all flats and sharps
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, ROOT);
+                    //the same rules apply in minor for italin and german 6ths
+                    if (shuffledChordOrderOfIntervals[0] == 0) { //root was the bass note
+                        return accidental == 0 ? cg.augmentedSixths[3] : cg.augmentedSixths[5];
+                    } else { //third was the bass note
+                        return accidental == 0 ? cg.augmentedSixths[0] : cg.augmentedSixths[2];
+                    }
+                }
+            }
+            //from keys C-major to Ab-major just use flats for the 3rd and 7th of iv7
+            if (accidental % 2 == 1) {
+                if (key <= 3) {
+                    showChordAccidentals(SHARP, ROOT);
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, ROOT);
+                }
+                //the same rules apply in minor for italin and german 6ths
+                if (shuffledChordOrderOfIntervals[0] == 0) { //root was the bass note
+                    return accidental == 1 ? cg.augmentedSixths[3] : cg.augmentedSixths[5];
+                } else { //third was the bass note
+                    return accidental == 1 ? cg.augmentedSixths[0] : cg.augmentedSixths[2];
+                }
+            }
+        } else if (isModalMixtureChords) {
+            if (accidental == 0) {
+                //A-minor to D#-minor
+                if (key <= 6) {
+                    showChordAccidentals(SHARP, THIRD);
+                    return cg.romanNumeralsMajorArray[3].concat(cg.triadicInversions[inversionIndex]);
+                }
+            }
+            //from keys A-minor to Eb-minor just use flats.
+            if (accidental == 1) {
+                if (key == 0) {
+                    showChordAccidentals(SHARP, THIRD);
+
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                return cg.romanNumeralsMajorArray[3].concat(cg.triadicInversions[inversionIndex]);
+            }
+        }
+        //make V7/VII
+        if (isAppliedChords && accidental == 2) {
+            //from key A-minor to D#-minor
+            if (key <= 6) {
+                showChordAccidentals(SHARP, THIRD);
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[4]);
+            }
+        }
+        //from A-minor
+        if (isAppliedChords && accidental == 3) {
+            if (key == 0) {
+                showChordAccidentals(SHARP, THIRD);
+            } else {
+                showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+            }
+            return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[4]);
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_4(int accidental, int key, int inversionIndex) {
+
+        //make v into V for minor
+        if (isModalMixtureChords) {
+            if ((accidental % 2 == 0) && key <= 4) {
+                showChordAccidentals(SHARP, THIRD);
+                return cg.romanNumeralsMajorArray[4].concat(
+                        accidental == 0 ? cg.triadicInversions[inversionIndex]
+                                : cg.seventhInversions[inversionIndex]
+                );
+            }
+            if (accidental % 2 == 1) {
+                //from A-minor to G-minor take sharps as leading tones
+                if (key <= 2) {
+                    showChordAccidentals(SHARP, THIRD);
+                    //from C-minor to Ab-minor take naturals as leading tones
+                } else {
+                    showChordAccidentals(NATURAL_OR_NOTHING, THIRD);
+                }
+                return cg.romanNumeralsMajorArray[4].concat(
+                        accidental == 1 ? cg.triadicInversions[inversionIndex]
+                                : cg.seventhInversions[inversionIndex]
+                );
+            }
+        }
+            /*
+         this one's broken for two reasons. 1) the accidentals are sometimes a third apart and
+        collide with each other vertically. 2) v-->V above it already changes the chord to upper-case
+        V. Because this is the minor mode, however, it tries to replace lower-case v with V-, but such
+        lower-case v no longer exists due to the aforementioend v-->V
+        //make Vdim in minor. this adds on to what was already done above by making v-->V in minor
+        if (mode == ChordGenerator.MINOR_MODE && chord == 4) {
+            if (accidental % 2 == 0) {
+                //for A-minor
+                if (key == 0) {
+                    showChordAccidentals(mode, FLAT, FIFTH, chord,
+                            cg.romanNumeralsMajorArray[chord].concat(minusSign));
+                    //from D-minor to C#-minor
+                } else if (key <= 4) {
+                    showChordAccidentals(mode, NATURAL_OR_NOTHING, FIFTH, chord,
+                            cg.romanNumeralsMajorArray[chord].concat(minusSign));
+                }
+            }
+            //from A-minor to Eb-minor
+            if ((accidental % 2 == 1) && key <= 6) {
+                showChordAccidentals(mode, FLAT, FIFTH, chord,
+                        cg.romanNumeralsMajorArray[chord].concat(minusSign));
+            }
+        }
+*/
+        //no V+ in minor for the most part (they are enharmonic V13s)
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_5(int accidental, int key, int inversionIndex) {
+        //nothing yet
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+    public String getAndDisplayModalMixtureOrAppliedChords_Minor_6(int accidental, int key, int inversionIndex) {
+        //make V7/III. Just for seventh chords and no accidentals need to be added; the chord is already
+        //naturally an applied chord
+        //should always happen regardless of applied chords checkbox checked or not
+        if (isAppliedChords) {
+            if (accidental > 1) {
+                return cg.romanNumeralsMajorArray[4].concat(cg.seventhInversions[inversionIndex]).concat(cg.appliedsMinor[0]);
+            }
+        }
+        noAccidentalsAdded = true;
+        return rightAnswer;
+    }
+        //TODO for applied/modal/altered chords:
+        //these augmented chords will certainly have accidental collisions in MAJOR only. but how will I handle chord inversions for the auggy6ths?
+        //add only after having added another vertical column of naturals/sharps/flats as buffers
+        //make italian6th (triad)
+        //make fr6 (7th chord) //how to not confuse this with Vdim7? V+7 == FR6 / I. just leave it as V+7dim since there are only 4 options and never anything like FR6 / I as a wrong answer
+        //make ger6 (7th chord)
+
+        //7th chords only
+
+        //V7/iii in major requires extra accidental buffers
+        //make V7 / V in minor //won't work yet without a buffer row of accidentals
+
+        //will viio7s require a new method for accidentals visible? yes, viio4/2/ii in c-major is Bb-C#-E-G, clash of the augmented 2nd between Bb-C#
+
+        //make viio7 / ii in major
+        //make viio7 / iii in major
+        //make viio7 / IV in major
+        //make viio7 / V in major
+        //make viio7 / vi in major
+
+        //make viio7 / III in minor
+        //make viio7 / iv in minor
+        //make viio7 / V in minor
+        //make viio7 / VI in minor
+        //make viio7 / VII in minor
 }
