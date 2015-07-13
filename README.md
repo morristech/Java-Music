@@ -14,7 +14,7 @@ intention with writing this program was to assist students having difficulty wit
 <br><br>
 
 In the **AndroidMusicQuiz** folder is an Android version of ChordGenerator. Here's a look at it on a
-Samsung Galaxy S3 emulator (Genymotion). It is published on the Google Play store and can be found here:
+Google Nexus 5 emulator (Genymotion). It is published on the Google Play store and can be found here:
 https://play.google.com/store/apps/details?id=com.nihk.github.musictheoryromannumeralanalysisquiz
 
 <div align="center">
