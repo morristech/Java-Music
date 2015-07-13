@@ -72,7 +72,7 @@ public class WrongAnswerGenerator {
             wrongAnswerPoolModalMixtureTriads.add(cgWAG.romanNumeralsMajorArray[4].concat(triadicInversion));
         }
         for (String seventhInversion: cgWAG.seventhInversions) {
-            wrongAnswerPoolModalMixtureTriads.add(cgWAG.romanNumeralsMajorArray[4].concat(seventhInversion));
+            wrongAnswerPoolAppliedChordsSevenths.add(cgWAG.romanNumeralsMajorArray[4].concat(seventhInversion));
         }
         for (String extendedDominant: specialComplexChordsSevenths) {
             for (String seventhInversion: cgWAG.seventhInversions) {
@@ -85,12 +85,12 @@ public class WrongAnswerGenerator {
             wrongAnswerPoolAppliedChordsSevenths.add(aug);
         }
     }
-    //rand.nextBoolean() because I want there to be some simple chords. otherwise i'll miss out on chords like "iv" in major which isn't technically a
+    //Math.random() < 0.75 because I want there to be some simple chords. otherwise i'll miss out on chords like "iv" in major which isn't technically a
     //non-simple chord. modal mixture array doesn't have those covert non-simple chords.
     //noAccidentalsAdded because if modalmixture or appliedchords booleans are true but its a chord that didn't receive any accidentals because there
     //was no opportunity to, it'll be just a regular chord. I want the wrong answers to then be simple wrong answers to make the right answer less obvious
     public String getRandomWrongAnswer(int triadOrSeventh, boolean isModalMixture, boolean isAppliedChords, boolean noAccidentalsAdded) {
-        if (rand.nextBoolean() && !noAccidentalsAdded && (isModalMixture || isAppliedChords)) {
+        if (Math.random() < 0.75 && !noAccidentalsAdded && (isModalMixture || isAppliedChords)) {
             if (triadOrSeventh == 3 && isModalMixture) {
                 return wrongAnswerPoolModalMixtureTriads.get((int)(Math.random() * wrongAnswerPoolModalMixtureTriads.size()));
             } else {

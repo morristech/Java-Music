@@ -19,7 +19,8 @@ public class MusicFontTextView extends TextView {
         init();
     }
     private void init() {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/MusiQwik.ttf");
+        Typeface tf = Typefaces.get(getContext(), "MusiQwik");
         setTypeface(tf);
     }
 }
+

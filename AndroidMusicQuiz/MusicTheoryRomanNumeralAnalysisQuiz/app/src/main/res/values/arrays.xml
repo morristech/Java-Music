@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="listArray">
+        <item>0 \u2013 3</item>
+        <item>0 \u2013 5</item>
+        <item>0 \u2013 7 (All)</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+    </string-array>
+</resources>

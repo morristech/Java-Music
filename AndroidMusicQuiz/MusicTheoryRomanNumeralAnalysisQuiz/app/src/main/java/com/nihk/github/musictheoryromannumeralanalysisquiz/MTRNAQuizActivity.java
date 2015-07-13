@@ -377,8 +377,10 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         Typeface neutonFont = Typefaces.get(this, "Neuton-Bold"); //font doesn't have the check/X mark characters or superscripted + and -
         for (Button b: answerButtonArray) {
             b.setTypeface(neutonFont);
+            b.setTransformationMethod(null); //turns off all caps for API < 14
         }
         generateChordButton.setTypeface(neutonFont);
+        generateChordButton.setTransformationMethod(null);
         scorePointsTextView.setTypeface(neutonFont);
         keyTextView.setTypeface(neutonFont);
 
@@ -390,7 +392,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         isAppliedChords = SP.getBoolean("appliedChords", true);
         isModalMixtureChords = SP.getBoolean("modalMixture", true);
         isAlteredChords = SP.getBoolean("alteredChords", true);
-        numKeySigAccidentalsInt = Integer.parseInt(SP.getString("keySignatureRange", "7"));
+        numKeySigAccidentalsInt = Integer.parseInt(SP.getString("keySignatureRange", "8"));
 
         //lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
         //so I can just use lengths of the zeroth index of things like chords[0].length with confidence

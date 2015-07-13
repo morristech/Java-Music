@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Key signature" >
+        <ListPreference
+            android:title="Range of potential accidentals"
+            android:key="keySignatureRange"
+            android:defaultValue="8"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Types of chords you want to include" >
+        <CheckBoxPreference android:title="Applied chords"
+            android:defaultValue="true"
+            android:summary="e.g. V7 / V, V6/5 / vi, etc."
+            android:key="appliedChords" />
+        <CheckBoxPreference android:title="Modal mixture"
+            android:defaultValue="true"
+            android:summary="e.g. bVI, bIII, iv (in major), etc."
+            android:key="modalMixture" />
+        <CheckBoxPreference android:title="Altered chords"
+            android:defaultValue="true"
+            android:summary="Augmented/diminished dominants (V+, V-) and augmented sixth chords."
+            android:key="alteredChords" />
+    </PreferenceCategory>
+</PreferenceScreen>

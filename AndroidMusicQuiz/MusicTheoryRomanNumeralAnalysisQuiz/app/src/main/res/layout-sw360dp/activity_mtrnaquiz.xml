@@ -527,6 +527,17 @@
         android:layout_toEndOf="@+id/fFlatAlto"
         android:layout_alignBottom="@+id/altoClef"/>
 
+    <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
+        android:id="@+id/keySigLinesBeforeAccidentals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keySigBlankMedium"
+        android:textSize="75sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/noteheadA3Sharp"
+        android:layout_toStartOf="@+id/noteheadA3Sharp"
+        android:layout_alignBottom="@+id/altoClef"/>
+
     <!-- sharps -->
 
     <com.nihk.github.musictheoryromannumeralanalysisquiz.MusicFontTextView
@@ -1377,7 +1388,7 @@
 
     <Button
         android:id="@+id/answerButton1"
-        android:layout_width="105dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:typeface="serif"
@@ -1408,7 +1419,7 @@
 
     <Button
         android:id="@+id/answerButton2"
-        android:layout_width="105dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:typeface="serif"
@@ -1439,7 +1450,7 @@
 
     <Button
         android:id="@+id/answerButton3"
-        android:layout_width="105dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:typeface="serif"
@@ -1470,7 +1481,7 @@
 
     <Button
         android:id="@+id/answerButton4"
-        android:layout_width="105dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:typeface="serif"
@@ -1519,73 +1530,34 @@
         android:layout_marginBottom="15dp"/>
 
     <TextView
-        android:id="@+id/scoreTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Score"
-        android:textSize="20sp"
-        android:textColor="#f2ac9c"
-        android:textStyle="bold"
-        android:layout_alignTop="@+id/refreshButton"
-        android:layout_toRightOf="@+id/refreshButton"
-        android:layout_toEndOf="@+id/refreshButton"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="10dp"/>
-
-    <TextView
         android:id="@+id/scorePointsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 / 0"
-        android:textSize="20sp"
+        android:textSize="26sp"
         android:textColor="#f2ac9c"
         android:textStyle="bold"
         android:layout_alignBottom="@+id/refreshButton"
-        android:layout_alignLeft="@+id/scoreTextView"
-        android:layout_alignStart="@+id/scoreTextView" />
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toRightOf="@+id/refreshButton"
+        android:layout_toEndOf="@+id/refreshButton" />
 
-    <TextView
-        android:id="@+id/numAccidentalsTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Number of\nkey signature\naccidentals"
-        android:textSize="18sp"
-        android:textColor="#f2ac9c"
+    <Button
+        android:id="@+id/settingsButton"
+        android:text="\u25A1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:textSize="30sp"
+        android:background="@drawable/pink_buttons"
+        android:textColor="@drawable/pink_buttons_text"
         android:textStyle="bold"
-        android:gravity="center_vertical|end"
-        android:lineSpacingExtra="0dp"
-        android:layout_alignBottom="@+id/refreshButton"
-        android:layout_toLeftOf="@+id/radioGroup"
-        android:layout_toStartOf="@+id/radioGroup" />
-
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignBottom="@+id/refreshButton"
+        android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/generateChordButton"
         android:layout_alignEnd="@+id/generateChordButton"
-        android:id="@+id/radioGroup"
-        android:layout_marginTop="10dp">
-        <RadioButton
-            android:id="@+id/easyRadio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0 \u2013 3"
-            android:textSize="20sp"
-            android:textColor="#f2ac9c"
-            android:button="@drawable/pink_radios"
-            android:textStyle="bold" />
-        <RadioButton
-            android:id="@+id/hardRadio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All"
-            android:textSize="20sp"
-            android:textColor="#f2ac9c"
-            android:button="@drawable/pink_radios"
-            android:textStyle="bold" />
-    </RadioGroup>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"/>
 
     <TextView
         android:id="@+id/keyTextView"

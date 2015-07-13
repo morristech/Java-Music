@@ -4,7 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="placeholderButtonText">VII6/5</string>
+    <string name="placeholderButtonText">V6/5 / VII</string>
+    <string name="dim">\u00B0</string>
+    <string name="halfDim">\u00F8</string>
     <string name="XCharacter">\u2718</string>
     <string name="CheckCharacter">\u2714</string>
     <string name="trebClef">\'&#38;</string>
