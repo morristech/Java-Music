@@ -10,7 +10,7 @@ public class ChordGenerator {
     protected String[] pitchClassesArray, accidentalsArray,
             modeArray, romanNumeralsMajorArray,
             romanNumeralsMinorArray, triadicInversions,
-            seventhInversions, appliedsMajor, appliedsMinor;
+            seventhInversions, appliedsMajor, appliedsMinor, augmentedSixths;
     protected String[][][] keyNames;
     protected String[][][][] majorKeys, minorKeys;
     protected String[][][][][] chords; //chords[mode][accidental type][key][chord (and its size)][pitch class], chords[2][4][8][7][3 or 4]
@@ -24,7 +24,9 @@ public class ChordGenerator {
                             //than the previous. this also implies flat accidentals will accumulate. this is the same as
                             //descending fifths effectively.
             MAJOR_MODE = 0, //in modeArray index 0 means major mode
-            MINOR_MODE = 1; //in modeArray index 1 means minor mode
+            MINOR_MODE = 1, //in modeArray index 1 means minor mode
+            TRIAD = 3,
+            SEVENTH_CHORD = 4;
 
     public ChordGenerator() {
         pitchClassesArray = new String[] {"C", "D", "E", "F", "G", "A", "B"};
@@ -36,6 +38,7 @@ public class ChordGenerator {
         seventhInversions = new String[] {"7", "6/5", "4/3", "4/2"};
         appliedsMajor = new String[] {" / ii", " / iii", " / IV", " / V", " / vi"}; //these major/minor applied arrays aren't
         appliedsMinor = new String[] {" / III", " / iv", " / V", " / VI", " / VII"}; //in synch order; will that be an issue?
+        augmentedSixths = new String[] {"It6", "Fr4/3", "Ger6/5", "It\u00B03", "Fr\u00B03", "Ger\u00B03"};
             //all VII 7th chords in minor will be / III and require no accidentals
 
         //Initialize music quiz variables.

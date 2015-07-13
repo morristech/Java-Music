@@ -5,41 +5,22 @@
 package com.nihk.github.musictheoryromannumeralanalysisquiz;
 
 /*
-* TODO add applied chords, modal mixture, augmented/diminished V chords, augmented6th chords, these should be 1/2 chance.
 * TODO change main fonts into something more monospaced and all-caps. Find a font that supports the superscripted minus/plus unicode symbols
 * TODO also change the keysig font, it's ugly as sin with the unicode sharps/flats. basically eradicate neuton entirely
-* todo another vertical line of flats, naturals, and sharps; if j - 1 is visible and j > 0 then switch off notehead j-1 and turn on LeftNotehead j-1
-* todo why is my LG phone using the default layout and not 320dp?
-* todo reorganize method ordering
-* todo if a new music font doesnt work out, replace + and - with aug and dim ?
-* todo if either or both isAppliedChord isModalMixtureChords checked, need to have them work if only one check and still add occasional simple chords into the mix as right answers
-* todo and V7/III should still hit..think about that a bit more
-* todo add augmented 6th chords but only it one inversion using the displayedPitchCLasses array
-* *
-* todo should there be a 1/2 chance for modal/applied/altered chords? because right now its 100% and it needs to go into the method to change dim to half dim
-* currently modally mixed includes bII and altered dominants
-* use an applied chord boolean so the wrong answers can have applied RNs too
-
-*   all the layout files have a wider music notation because of the addition of accidentals
-*       this might cause problems for some screens, its untested
-*       if editing for a small update, use the files in the GitHub folder instead!!
-*       ALSO all answer boxes will need much wider text. do all layouts fit?
-*
-* make options pane in new activity. button in place of key signature radios. move to new activity with other settings
-* key sig accidentals, more options: 0-1, 0-3, 0-5, All (0-7)
-* applied chords checkbox //don't forget to include V7 / III on/off for this? think about this. applied chords off means VII7, do I want that?
-* modal mixture checkbox
-*
-*
+* TODO another vertical line of flats, naturals, and sharps; if j - 1 is visible and j > 0 then switch off notehead j-1 and turn on LeftNotehead j-1
+* TODO why is my LG phone using the default layout and not 320dp?
+* TODO if a new music font doesnt work out, replace + and - with aug and dim ?
  */
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
@@ -54,18 +35,18 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     private TextView[] qTextViews, noteheads, noteheadsR;
     private TextView[][] noteheadsAccidentals;
     private TextView[][][] keySigAccidentals;
-    private RadioButton easyRadio, hardRadio;
     private boolean stopCounting, isTrebleClef, isBassClef,
             isAppliedChords, isModalMixtureChords, isAlteredChords, noAccidentalsAdded;
     private String rightAnswer, wrongAnswer, checkMark, xMark,
             dim, halfDim, colonSpace, bigII, plusSign, minusSign;
     private String[] wrongAnswerArray, displayedRandomChord;
-    private int rightAnswerIndex, correct, total, pink, green;
+    private int rightAnswerIndex, correct, total, pink, green, numKeySigAccidentalsInt;
     public static final int ROOT = 0, THIRD = 1, FIFTH = 2, SEVENTH = 3,
         NATURAL_OR_NOTHING = 0, SHARP = 1, FLAT = 2;
     private int[] verticalIndices, shuffledChordOrderOfIntervals;
     private Random rand;
-    //public static final String TAG = MTRNAQuizActivity.class.getSimpleName(); //for Logging errors
+    private SharedPreferences SP;
+    private Intent settingsIntent;
     private ChordGenerator cg;
     private WrongAnswerGenerator wag;
 
@@ -73,6 +54,11 @@ public class MTRNAQuizActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mtrnaquiz);
+
+        settingsIntent = new Intent(this, MyPreferencesActivity.class);
+
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
         //declarations and/or initializations of member and non-member vars
         Button answerButton1 = (Button)findViewById(R.id.answerButton1);
@@ -106,13 +92,10 @@ public class MTRNAQuizActivity extends ActionBarActivity {
 
         Button generateChordButton = (Button)findViewById(R.id.generateChordButton);
         Button refreshButton = (Button)findViewById(R.id.refreshButton);
+        Button settingsButton = (Button)findViewById(R.id.settingsButton);
 
         keyTextView = (TextView)findViewById(R.id.keyTextView);
-        easyRadio = (RadioButton)findViewById(R.id.easyRadio);
-        hardRadio = (RadioButton)findViewById(R.id.hardRadio);
-        TextView scoreTextView = (TextView)findViewById(R.id.scoreTextView);
         scorePointsTextView = (TextView)findViewById(R.id.scorePointsTextView);
-        TextView numAccidentalsTextView = (TextView)findViewById(R.id.numAccidentalsTextView);
 
         trebleClef = (TextView)findViewById(R.id.trebleClef);
         bassClef = (TextView)findViewById(R.id.bassClef);
@@ -376,59 +359,60 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 scorePointsTextView.setText(correct + " / " + total);
             }
         };
+        View.OnClickListener settingsListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(settingsIntent);
+            }
+        };
         generateChordButton.setOnClickListener(gcListener);
         answerButton1.setOnClickListener(a1Listener);
         answerButton2.setOnClickListener(a2Listener);
         answerButton3.setOnClickListener(a3Listener);
         answerButton4.setOnClickListener(a4Listener);
         refreshButton.setOnClickListener(refreshListener);
+        settingsButton.setOnClickListener(settingsListener);
 
         //altering the xml layout with javacode
-        hardRadio.setChecked(true);
-        Typeface neutonFont = Typeface.createFromAsset(getAssets(), "fonts/Neuton-Bold.ttf"); //font doesn't have the check/X mark characters or superscripted + and -
+        Typeface neutonFont = Typefaces.get(this, "Neuton-Bold"); //font doesn't have the check/X mark characters or superscripted + and -
         for (Button b: answerButtonArray) {
             b.setTypeface(neutonFont);
         }
         generateChordButton.setTypeface(neutonFont);
-        scoreTextView.setTypeface(neutonFont);
         scorePointsTextView.setTypeface(neutonFont);
-        numAccidentalsTextView.setTypeface(neutonFont);
-        easyRadio.setTypeface(neutonFont);
-        hardRadio.setTypeface(neutonFont);
         keyTextView.setTypeface(neutonFont);
 
         getRandomChord(); //so when the app starts it will produce its first chord to be analysed
     }
     public void getRandomChord() {
         resetThings(); //in preparation for the new chord
-        isModalMixtureChords = true;
-        isAppliedChords = true;
-        isAlteredChords = true; //put these booleans in a view listener to switch on/off. put them in start before the listener once those are written
+
+        isAppliedChords = SP.getBoolean("appliedChords", true);
+        isModalMixtureChords = SP.getBoolean("modalMixture", true);
+        isAlteredChords = SP.getBoolean("alteredChords", true);
+        numKeySigAccidentalsInt = Integer.parseInt(SP.getString("keySignatureRange", "7"));
 
         //lengths of each dimension: chords[2][4][8][7]); all arrays meet those lengths, i.e. there are no ragged arrays,
         //so I can just use lengths of the zeroth index of things like chords[0].length with confidence
         int mode = (int)(Math.random() * cg.chords.length), //chords.length == 2
                 accidentalAndChordSize = (int)(Math.random() * cg.chords[0].length), //chords[0].length == 4
-                key = (int)(Math.random() * (easyRadio.isChecked() ? 4 : cg.chords[0][0].length)), //chords[0][0].length == 8
+                key = (int)(Math.random() * numKeySigAccidentalsInt), //chords[0][0].length == 8
                 chord = (int)(Math.random() * cg.chords[0][0][0].length); //chords[0][0][0].length == 7
         String[] aRandomChord = cg.chords[mode][accidentalAndChordSize][key][chord],
                 aRandomChordShuffled = shuffleChord(aRandomChord);
         String newBassNoteFromShuffling = aRandomChordShuffled[0];
         int inversionIndex = Arrays.asList(aRandomChord).indexOf(newBassNoteFromShuffling);
 
-        //how can I avoid calling so method so often. there's a rightAnswer.replace inside
-        //the makeModalMixtureOrAppliedChords method which will get a nullpointer exception
-        //if I don't initialize rightAnswer here.
         rightAnswer = getNoAccidentalChord(mode, chord, accidentalAndChordSize, inversionIndex);
 
         //write the keyname to the keyTextView
         keyTextView.setText(cg.keyNames[mode][accidentalAndChordSize % 2][key].concat(colonSpace)); //again, b % 2 because the size of that array in keyNames != the parallel one in "chords"
-        //give the right answer to a random button.
-        rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
 
         displayKeySignature(accidentalAndChordSize, key);
         displayPitches(aRandomChordShuffled);
         rightAnswer = getAndDisplayModalMixtureOrAppliedChords(aRandomChord, inversionIndex, mode, accidentalAndChordSize, key, chord);
+        //give the right answer to a random button.
+        rightAnswerIndex = (int)(Math.random() * answerButtonArray.length);
         answerButtonArray[rightAnswerIndex].setText(rightAnswer);
         createWrongAnswers();
     }
@@ -532,8 +516,9 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                         return getAndDisplayModalMixtureOrAppliedChords_Minor_4(accidental, key, inversionIndex);
                     case 5:
                         return getAndDisplayModalMixtureOrAppliedChords_Minor_5(accidental, key, inversionIndex);
-                    case 6:
-                        return getAndDisplayModalMixtureOrAppliedChords_Minor_6(accidental, key, inversionIndex);
+                    case 6: //commented out because it's redundant -- it already appears at the end of this method
+                        //return getAndDisplayModalMixtureOrAppliedChords_Minor_6(accidental, key, inversionIndex);
+                        break;
                 }
             }
         }
@@ -630,6 +615,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                 do {
                     //passing displayedRandomChord.length so I can get all triad wrong answers if
                     // rightAnswer is a triad, and all seventh wrong answers if rightAnswer is a seventh chord
+                    // and other booleans so wrongAnswers mimic the rightAnswer "type" of chord
                     wrongAnswer = wag.getRandomWrongAnswer(displayedRandomChord.length, isModalMixtureChords, isAppliedChords, noAccidentalsAdded);
                 } while (wrongAnswer.equalsIgnoreCase(rightAnswer) //avoids a duplicate right answer
                         || containsCaseInsensitive(wrongAnswer, wrongAnswerArray)  //avoids duplicate wrong answers
@@ -971,7 +957,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
         return rightAnswer;
     }
     public String getAndDisplayModalMixtureOrAppliedChords_Major_4(int accidental, int key, int inversionIndex) {
-        if (rand.nextBoolean()) {
+        if (rand.nextBoolean() && isAlteredChords) {
             //make V+ in major, both as triads and sevenths
             if (accidental % 2 == 0) {
                 //from keys C-major to A-major
@@ -995,7 +981,7 @@ public class MTRNAQuizActivity extends ActionBarActivity {
                                 : cg.seventhInversions[inversionIndex] //accidental == 3 therefore seventh chord
                 );
             }
-        } else {
+        } else if (isAlteredChords) {
             //make Vdim in major, both as triads and sevenths
             if (accidental % 2 == 0) {
                 //from keys C-major to A-major
