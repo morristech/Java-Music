@@ -3,7 +3,7 @@ Here resides a bunch of music related Java programs I'm making in my free time
 
 **MusicStuff** is a project which generates all possible diatonic major/minor triads and major/minor scales. 
 It outputs this to the console. The purpose of writing this project was to try and write something that is
-maintainable, extensible, and readable. 
+a bit more maintainable and readable than how I did it for the other projects in this repo.
 
 
 **ChordGenerator** uses the JavaFX toolkit to display a music quiz program. 
