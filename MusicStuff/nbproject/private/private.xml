@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicModel/ChordGenerator.java</file>
-            <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicUtility/Key.java</file>
+            <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicView/ShowAllTriads.java</file>
             <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicController/ChordBuilder.java</file>
+            <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicView/ShowAllScales.java</file>
             <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicUtility/Interval.java</file>
             <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicModel/Scale.java</file>
             <file>file:/C:/Users/Nick/Desktop/Sheridan/Java%203/Netbeans%20Projects/MusicStuff/src/musicController/ScaleBuilder.java</file>

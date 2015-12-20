@@ -15,21 +15,16 @@ public class ScaleBuilder {
     public static List<Scale> minorScalesNaturals = new ArrayList<>(); // Am
     
     public static void buildScales() {
-        // 6 means start on G and ascend by fifths
-        buildMajorScales(true, 6, majorScalesSharps);
-        // 5 means start on F and ascend by fourths
-        buildMajorScales(false, 5, majorScalesFlats);
+        buildMajorScales(Accidental.IS_SHARPS, PitchLetter.START_G, majorScalesSharps);
+        buildMajorScales(Accidental.IS_FLATS, PitchLetter.START_F, majorScalesFlats);
         
         buildMinorScales(majorScalesSharps, minorScalesSharps);  
         buildMinorScales(majorScalesFlats, minorScalesFlats);
         
-        // 2 means start on C
-        buildNaturalScales(2, majorScalesNaturals);
-        // 0 means start on A
-        buildNaturalScales(0, minorScalesNaturals);
+        buildNaturalScales(PitchLetter.START_C, majorScalesNaturals);
+        buildNaturalScales(PitchLetter.START_A, minorScalesNaturals);
     }     
 
-    //accidentalType: true == sharps, false == flats
     public static void buildMajorScales(boolean accidentalType, int tonic, List<Scale> scales) {
         // Scale.LENGTH is also the number of keys per mode/accidental combination
         for (int i = 0; i < Scale.LENGTH; 
@@ -84,7 +79,7 @@ public class ScaleBuilder {
     public static String findAccidental(int key, boolean accidentalType, int scaleDegree) {
         String accidental = Accidental.NATURAL;
         
-        switch(key) {
+        switch (key) {
             // Fall through intentional for every case
             case 6: if (accidentalType && scaleDegree == Scale.SUBDOMINANT_SD) accidental = Accidental.SHARP;
                 else if (!accidentalType && scaleDegree == Scale.LEADINGTONE_SD) accidental = Accidental.FLAT;
