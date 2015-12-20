@@ -31,7 +31,7 @@ public class ScaleBuilder {
 
     //accidentalType: true == sharps, false == flats
     public static void buildMajorScales(boolean accidentalType, int tonic, List<Scale> scales) {
-        // Scale.LENGTH is also the number of sharp keys
+        // Scale.LENGTH is also the number of keys per mode/accidental combination
         for (int i = 0; i < Scale.LENGTH; 
                 i++, tonic = (tonic + (accidentalType ? Interval.FIFTH : Interval.FOURTH)) % Scale.LENGTH) {
             
