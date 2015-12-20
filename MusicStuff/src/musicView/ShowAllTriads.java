@@ -2,19 +2,18 @@ package musicView;
 
 import musicController.*;
 import musicModel.*;
-import musicUtility.*;
 
 public class ShowAllTriads {
     public static void main(String[] args) {
-        ChordBuilder.buildChords();
+        ChordBuilder diatonicChords = new ChordBuilder();
         
-        for (Triad triad : ChordBuilder.majorTriads) {
+        System.out.println("Major triads:");
+        for (Triad triad : diatonicChords.getMajorTriads()) {
             System.out.println(triad);
         }
         
-        System.out.println();
-        
-        for (Triad triad : ChordBuilder.minorTriads) {
+        System.out.println("\nMinor triads:");
+        for (Triad triad : diatonicChords.getMinorTriads()) {
             System.out.println(triad);
         }        
     }

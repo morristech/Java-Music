@@ -8,26 +8,43 @@ import musicUtility.*;
 
 
 public class ChordBuilder {
-    public static List<Triad> majorTriads = new ArrayList<>();
-    public static List<Triad> minorTriads = new ArrayList<>();
+    private List<Triad> majorTriads = new ArrayList<>();
+    private List<Triad> minorTriads = new ArrayList<>();
+    private ScaleBuilder diatonicScales = new ScaleBuilder();
     
-    public static void buildChords() {
-        ScaleBuilder.buildScales();
+    public ChordBuilder() {  
+        buildChordsFromScales(majorTriads, diatonicScales.getMajorScalesNaturals());
+        buildChordsFromScales(majorTriads, diatonicScales.getMajorScalesSharps());
+        buildChordsFromScales(majorTriads, diatonicScales.getMajorScalesFlats());
         
-        buildChordsFromScales(majorTriads, ScaleBuilder.majorScalesNaturals);
-        buildChordsFromScales(majorTriads, ScaleBuilder.majorScalesSharps);
-        buildChordsFromScales(majorTriads, ScaleBuilder.majorScalesFlats);
-        
-        buildChordsFromScales(minorTriads, ScaleBuilder.minorScalesNaturals);
-        buildChordsFromScales(minorTriads, ScaleBuilder.minorScalesSharps);
-        buildChordsFromScales(minorTriads, ScaleBuilder.minorScalesFlats);
+        buildChordsFromScales(minorTriads, diatonicScales.getMinorScalesNaturals());
+        buildChordsFromScales(minorTriads, diatonicScales.getMinorScalesSharps());
+        buildChordsFromScales(minorTriads, diatonicScales.getMinorScalesFlats());
     }
     
-    public static void buildChordsFromScales(List<Triad> triads, List<Scale> scales) {
+    public void buildChordsFromScales(List<Triad> triads, List<Scale> scales) {
         for (Scale scale : scales) {
             triads.add(new Triad(
                 scale.getTonic(), scale.getMediant(), scale.getDominant()
             ));
         }        
+    }
+    public List<Triad> getMajorTriads() {
+        return majorTriads;
+    }
+    public void setMajorTriads(List<Triad> majorTriads) {
+        this.majorTriads = majorTriads;
+    }
+    public List<Triad> getMinorTriads() {
+        return minorTriads;
+    }
+    public void setMinorTriads(List<Triad> minorTriads) {
+        this.minorTriads = minorTriads;
+    }
+    public ScaleBuilder getDiatonicScales() {
+        return diatonicScales;
+    }
+    public void setDiatonicScales(ScaleBuilder diatonicScales) {
+        this.diatonicScales = diatonicScales;
     }
 }

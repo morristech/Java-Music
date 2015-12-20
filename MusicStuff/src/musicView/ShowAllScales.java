@@ -2,31 +2,30 @@ package musicView;
 
 import musicController.*;
 import musicModel.*;
-import musicUtility.*;
 
 public class ShowAllScales {
     public static void main(String[] args) {
-        ScaleBuilder.buildScales();
+        ScaleBuilder diatonicScales = new ScaleBuilder();
         
-        for (Scale s : ScaleBuilder.majorScalesNaturals) {
+        System.out.println("Major Scales:");
+        for (Scale s : diatonicScales.getMajorScalesNaturals()) {
             System.out.println(s);
         }        
-        for (Scale s : ScaleBuilder.majorScalesSharps) {
+        for (Scale s : diatonicScales.getMajorScalesSharps()) {
             System.out.println(s);
         }
-        for (Scale s : ScaleBuilder.majorScalesFlats) {
+        for (Scale s : diatonicScales.getMajorScalesFlats()) {
             System.out.println(s);
         }     
         
-        System.out.println();
-        
-        for (Scale s : ScaleBuilder.minorScalesNaturals) {
+        System.out.println("\nMinor Scales:");
+        for (Scale s : diatonicScales.getMinorScalesNaturals()) {
             System.out.println(s);
         }         
-        for (Scale s : ScaleBuilder.minorScalesSharps) {
+        for (Scale s : diatonicScales.getMinorScalesSharps()) {
             System.out.println(s);
         }            
-        for (Scale s : ScaleBuilder.minorScalesFlats) {
+        for (Scale s : diatonicScales.getMinorScalesFlats()) {
             System.out.println(s);
         }          
     }

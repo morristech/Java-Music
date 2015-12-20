@@ -7,14 +7,14 @@ import musicUtility.*;
 
 // Builds all standard diatonic scales in the tonal system
 public class ScaleBuilder {
-    public static List<Scale> majorScalesSharps = new ArrayList<>(); // G to C#
-    public static List<Scale> majorScalesFlats = new ArrayList<>(); // F to Cb
-    public static List<Scale> minorScalesSharps = new ArrayList<>(); // Em to A#m
-    public static List<Scale> minorScalesFlats = new ArrayList<>(); // Dm to Abm
-    public static List<Scale> majorScalesNaturals = new ArrayList<>(); // C
-    public static List<Scale> minorScalesNaturals = new ArrayList<>(); // Am
+    private List<Scale> majorScalesSharps = new ArrayList<>(); // G to C#
+    private List<Scale> majorScalesFlats = new ArrayList<>(); // F to Cb
+    private List<Scale> minorScalesSharps = new ArrayList<>(); // Em to A#m
+    private List<Scale> minorScalesFlats = new ArrayList<>(); // Dm to Abm
+    private List<Scale> majorScalesNaturals = new ArrayList<>(); // C
+    private List<Scale> minorScalesNaturals = new ArrayList<>(); // Am
     
-    public static void buildScales() {
+    public ScaleBuilder() {
         buildMajorScales(Accidental.IS_SHARPS, PitchLetter.START_G, majorScalesSharps);
         buildMajorScales(Accidental.IS_FLATS, PitchLetter.START_F, majorScalesFlats);
         
@@ -25,7 +25,7 @@ public class ScaleBuilder {
         buildNaturalScales(PitchLetter.START_A, minorScalesNaturals);
     }     
 
-    public static void buildMajorScales(boolean accidentalType, int tonic, List<Scale> scales) {
+    public void buildMajorScales(boolean accidentalType, int tonic, List<Scale> scales) {
         // Scale.LENGTH is also the number of keys per mode/accidental combination
         for (int i = 0; i < Scale.LENGTH; 
                 i++, tonic = (tonic + (accidentalType ? Interval.FIFTH : Interval.FOURTH)) % Scale.LENGTH) {
@@ -50,7 +50,7 @@ public class ScaleBuilder {
     }
     
     // Minor scales are based off already made major scales
-    public static void buildMinorScales(List<Scale> majorScales, List<Scale> minorScales) {
+    public void buildMinorScales(List<Scale> majorScales, List<Scale> minorScales) {
         for (Scale scale : majorScales) {
             minorScales.add(new Scale(
                 scale.getSubmediant(),
@@ -64,7 +64,7 @@ public class ScaleBuilder {
         }     
     }
 
-    public static void buildNaturalScales(int tonic, List<Scale> scales) {
+    public void buildNaturalScales(int tonic, List<Scale> scales) {
         majorScalesNaturals.add(new Scale(
             PitchLetter.NAMES[tonic],
             PitchLetter.NAMES[(tonic + Interval.SECOND) % Scale.LENGTH],
@@ -76,7 +76,7 @@ public class ScaleBuilder {
         ));       
     }
     
-    public static String findAccidental(int key, boolean accidentalType, int scaleDegree) {
+    public String findAccidental(int key, boolean accidentalType, int scaleDegree) {
         String accidental = Accidental.NATURAL;
         
         switch (key) {
@@ -98,7 +98,43 @@ public class ScaleBuilder {
         }
         
         return accidental;
-    }        
+    }
+    public List<Scale> getMajorScalesSharps() {
+        return majorScalesSharps;
+    }
+    public void setMajorScalesSharps(List<Scale> majorScalesSharps) {
+        this.majorScalesSharps = majorScalesSharps;
+    }
+    public List<Scale> getMajorScalesFlats() {
+        return majorScalesFlats;
+    }
+    public void setMajorScalesFlats(List<Scale> majorScalesFlats) {
+        this.majorScalesFlats = majorScalesFlats;
+    }
+    public List<Scale> getMinorScalesSharps() {
+        return minorScalesSharps;
+    }
+    public void setMinorScalesSharps(List<Scale> minorScalesSharps) {
+        this.minorScalesSharps = minorScalesSharps;
+    }
+    public List<Scale> getMinorScalesFlats() {
+        return minorScalesFlats;
+    }
+    public void setMinorScalesFlats(List<Scale> minorScalesFlats) {
+        this.minorScalesFlats = minorScalesFlats;
+    }
+    public List<Scale> getMajorScalesNaturals() {
+        return majorScalesNaturals;
+    }
+    public void setMajorScalesNaturals(List<Scale> majorScalesNaturals) {
+        this.majorScalesNaturals = majorScalesNaturals;
+    }
+    public List<Scale> getMinorScalesNaturals() {
+        return minorScalesNaturals;
+    }
+    public void setMinorScalesNaturals(List<Scale> minorScalesNaturals) {
+        this.minorScalesNaturals = minorScalesNaturals;
+    }
 }
 
 
