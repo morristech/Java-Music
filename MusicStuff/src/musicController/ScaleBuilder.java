@@ -5,7 +5,7 @@ import java.util.List;
 import musicModel.*;
 import musicUtility.*;
 
-// Builds all the natural diatonic scales in the tonal system
+// Builds all standard diatonic scales in the tonal system
 public class ScaleBuilder {
     public static List<Scale> majorScalesSharps = new ArrayList<>(); // G to C#
     public static List<Scale> majorScalesFlats = new ArrayList<>(); // F to Cb
@@ -19,10 +19,14 @@ public class ScaleBuilder {
         buildMajorScales(true, 6, majorScalesSharps);
         // 5 means start on F and ascend by fourths
         buildMajorScales(false, 5, majorScalesFlats);
-        // build the minor scales based off the already made major scales
+        
         buildMinorScales(majorScalesSharps, minorScalesSharps);  
         buildMinorScales(majorScalesFlats, minorScalesFlats);
-        buildNaturalScales();
+        
+        // 2 means start on C
+        buildNaturalScales(2, majorScalesNaturals);
+        // 0 means start on A
+        buildNaturalScales(0, minorScalesNaturals);
     }     
 
     //accidentalType: true == sharps, false == flats
@@ -50,6 +54,7 @@ public class ScaleBuilder {
         }      
     }
     
+    // Minor scales are based off already made major scales
     public static void buildMinorScales(List<Scale> majorScales, List<Scale> minorScales) {
         for (Scale scale : majorScales) {
             minorScales.add(new Scale(
@@ -63,28 +68,17 @@ public class ScaleBuilder {
             ));
         }     
     }
-    
-    // Hardcoded for simplicity's sake
-    public static void buildNaturalScales() {
+
+    public static void buildNaturalScales(int tonic, List<Scale> scales) {
         majorScalesNaturals.add(new Scale(
-            PitchLetter.NAMES[2],
-            PitchLetter.NAMES[3],
-            PitchLetter.NAMES[4],
-            PitchLetter.NAMES[5],
-            PitchLetter.NAMES[6],
-            PitchLetter.NAMES[0],
-            PitchLetter.NAMES[1]
-        ));
-        
-        minorScalesNaturals.add(new Scale(
-            PitchLetter.NAMES[0],
-            PitchLetter.NAMES[1],
-            PitchLetter.NAMES[2],
-            PitchLetter.NAMES[3],
-            PitchLetter.NAMES[4],
-            PitchLetter.NAMES[5],
-            PitchLetter.NAMES[6]
-        ));        
+            PitchLetter.NAMES[tonic],
+            PitchLetter.NAMES[(tonic + Interval.SECOND) % Scale.LENGTH],
+            PitchLetter.NAMES[(tonic + Interval.THIRD) % Scale.LENGTH],
+            PitchLetter.NAMES[(tonic + Interval.FOURTH) % Scale.LENGTH],
+            PitchLetter.NAMES[(tonic + Interval.FIFTH) % Scale.LENGTH],
+            PitchLetter.NAMES[(tonic + Interval.SIXTH) % Scale.LENGTH],
+            PitchLetter.NAMES[(tonic + Interval.SEVENTH) % Scale.LENGTH]
+        ));       
     }
     
     public static String findAccidental(int key, boolean accidentalType, int scaleDegree) {
