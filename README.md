@@ -1,6 +1,17 @@
 # Java-Music
 Here resides a bunch of music related Java programs I'm making in my free time
 
+**Diatonic API** is another music-generating project which lets the user build chords from Strings alone. The code parses the input and permits output of interesting data about the chords, such as it's type (e.g. seventh chord, ninth chord), it's quality (e.g. major, minor, augmented, diminished), and the frequencies of its individual pitches. It uses the builder pattern to make this simple, for example:
+
+        DiatonicChord diatonicChord = new DiatonicChord.Builder("C4")
+                .third("Eb4")
+                .fifth("Gb4")
+                .seventh("Bb4")
+                .ninth("D5")
+                .thirteenth("A5")
+                .inversion("first")
+                .build();
+
 **MusicStuff** is a project which generates all possible diatonic major/minor triads and major/minor scales. 
 It outputs this to the console. The purpose of writing this project was to try and write something that is
 a bit more maintainable and readable than how I did it for the other projects in this repo.
