@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import java.util.HashMap;
@@ -19,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView mBbLogoMarkers;
     private Bitmap mBbLogoBitMap;
+    private Animation mFadeOut;
     private Map<Integer, Integer> mColorToSound;
+    private Map<Integer, ImageView> mColorToImageView;
     private SoundPool mSoundPool;
     private static final int MAX_STREAMS = 7;
 
@@ -28,16 +32,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // http://stackoverflow.com/a/7807442/2997980
+//        // http://stackoverflow.com/a/6822116/2997980
+//        mFadeOut = new AlphaAnimation(1, 0);
+//        mFadeOut.setInterpolator(new AccelerateInterpolator());
+//        mFadeOut.setStartOffset(1000);
+//        mFadeOut.setDuration(1000);
+
+        mFadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out);
+
         mBbLogoMarkers = (ImageView) findViewById(R.id.bbLogoMarkers);
+
+        // http://stackoverflow.com/a/7807442/2997980
         mBbLogoBitMap = ((BitmapDrawable) mBbLogoMarkers.getDrawable()).getBitmap();
         mSoundPool = new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
 
         populateColorToSound();
+        populateColorToImageView();
 
         mBbLogoMarkers.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() != MotionEvent.ACTION_DOWN) return false;
+
                 // The bb logo image scales on the device; this compensates for that scaling
                 // http://android-er.blogspot.ca/2012/10/get-touched-pixel-color-of-scaled.html
                 float[] eventXY = { event.getX(), event.getY() };
@@ -57,9 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
                 int pixelColor = mBbLogoBitMap.getPixel(x, y);
 
+                // Play the respective sound
                 if (mColorToSound.containsKey(pixelColor)) {
                     playSound(mColorToSound.get(pixelColor));
                 }
+
+                // Animate the respective node
+//                if (mColorToImageView.containsKey(pixelColor)) {
+//                    fadeOut(pixelColor);
+//                }
 
                 return true;
             }
@@ -80,5 +102,17 @@ public class MainActivity extends AppCompatActivity {
         mColorToSound.put(Color.YELLOW, mSoundPool.load(this, R.raw.e, 1));
         mColorToSound.put(Color.CYAN, mSoundPool.load(this, R.raw.f, 1));
         mColorToSound.put(Color.MAGENTA, mSoundPool.load(this, R.raw.g, 1));
+    }
+
+    private void populateColorToImageView() {
+        mColorToImageView = new HashMap<>();
+        mColorToImageView.put(Color.DKGRAY, (ImageView) findViewById(R.id.bbLogoMarkerA));
+    }
+
+    private void fadeOut(int imageViewId) {
+        ImageView imageView = mColorToImageView.get(imageViewId);
+        imageView.setVisibility(ImageView.VISIBLE);
+        imageView.startAnimation(mFadeOut);
+        imageView.setVisibility(ImageView.INVISIBLE);
     }
 }
