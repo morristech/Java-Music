@@ -36,8 +36,7 @@ public class Pitch implements Comparable<Pitch> {
         if (addedPitchClass == null) return null;
         int addedOctave = this.octave;
 
-        if (PitchLetter.compare(this.pitchClass.getPitchLetter(), PitchLetter.C) < 0
-                && PitchLetter.compare(addedPitchClass.getPitchLetter(), PitchLetter.C) >= 0) {
+        if (PitchLetter.compare(addedPitchClass.getPitchLetter(), this.pitchClass.getPitchLetter()) < 0) {
             addedOctave++;
         }
 

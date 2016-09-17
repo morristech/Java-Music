@@ -1,6 +1,7 @@
 import chords.Chord;
 import chords.ChordSize;
 import chords.ChordType;
+import chords.PitchedChord;
 import collections.DiatonicCollection;
 import collections.CollectionMode;
 import collections.PentatonicCollection;
@@ -37,10 +38,11 @@ public class Driver {
                 + cSharpMajorPentatonic.getScaleDegree(ScaleDegree.FOURTH));
 
         PitchClass c = new PitchClass(PitchLetter.C, Accidental.NATURAL);
-        Chord cMajor7th = new Chord(c, ChordType.MINOR, ChordSize.NINTH);
-        System.out.println(cMajor7th);
+        Chord cMajor9th = new Chord(c, ChordType.MINOR, ChordSize.NINTH);
+        System.out.println(cMajor9th);
 
         Pitch db4 = new Pitch(new PitchClass(PitchLetter.D, Accidental.FLAT), Octave.FOURTH);
-
+        PitchedChord db4Major7th = new PitchedChord(db4, ChordType.MAJOR, ChordSize.SEVENTH);
+        System.out.println(db4Major7th);
     }
 }

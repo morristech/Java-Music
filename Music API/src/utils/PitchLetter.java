@@ -8,8 +8,8 @@ public enum PitchLetter {
 
     public static int compare(PitchLetter a, PitchLetter b) {
         // Since the octaves start at C rather than A, move them up a third for a simpler String comparison
-        PitchLetter first = PitchLetter.interval(a, Interval.PitchLetterSpanValue.THIRD);
-        PitchLetter second = PitchLetter.interval(b, Interval.PitchLetterSpanValue.THIRD);
+        PitchLetter first = PitchLetter.interval(a, Interval.PitchLetterSpanValue.SIXTH);
+        PitchLetter second = PitchLetter.interval(b, Interval.PitchLetterSpanValue.SIXTH);
 
         return first.toString().compareTo(second.toString());
     }

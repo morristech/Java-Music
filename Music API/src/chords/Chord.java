@@ -18,6 +18,10 @@ import java.util.List;
 public class Chord {
     private PitchClass[] chordMembers;
 
+    public PitchClass[] getChordMembers() {
+        return chordMembers;
+    }
+
     public Chord(PitchClass tonic, ChordType chordType, int chordSize) {
         if (chordSize < 3) throw new RuntimeException("Chord size must be at least 3");
 

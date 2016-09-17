@@ -25,6 +25,10 @@ public class PitchClass {
         return number;
     }
 
+    public PitchClass(PitchLetter pitchLetter) {
+        this(pitchLetter, Accidental.NATURAL);
+    }
+
     public PitchClass(PitchLetter pitchLetter, String accidental) {
         this.pitchLetter = pitchLetter;
         this.accidental = accidental;
