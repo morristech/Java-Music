@@ -21,7 +21,7 @@ public class PitchedChord {
 
         for (int i = 0; i < pitchedChordMembers.length; i++) {
             PitchLetter currPitchLetter = chordMembers[i].getPitchLetter();
-            if (PitchLetter.compare(currPitchLetter, tonicPc.getPitchLetter()) < 0) {
+            if (currPitchLetter.compareTo(tonicPc.getPitchLetter()) < 0) {
                 currOctave++;
             }
             pitchedChordMembers[i] = new Pitch(chordMembers[i], currOctave);

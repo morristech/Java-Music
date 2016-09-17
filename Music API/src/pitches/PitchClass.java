@@ -40,7 +40,9 @@ public class PitchClass {
                 + Accidental.getAccidentalNumber(accidental));
     }
 
-    public PitchClass add(Interval interval) {
+    // Uses the pitch class number value, expected PitchLetter, and a HashMap of possible pitch class
+    // number values to PitchClass to determine the correct intervallic output
+    public PitchClass transpose(Interval interval) {
         int addedPcNumber = modTwelve(this.number + interval.getNumberSpan());
         PitchLetter addedLetter = PitchLetter.interval(this.pitchLetter, interval.getLetterSpan());
 
@@ -51,7 +53,7 @@ public class PitchClass {
                 .orElse(null);
     }
 
-    public static int modTwelve(int n) {
+    private static int modTwelve(int n) {
         return (n + 12) % 12;
     }
 

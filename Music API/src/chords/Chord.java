@@ -1,14 +1,12 @@
 package chords;
 
 import collections.DiatonicCollection;
-import pitches.Pitch;
 import pitches.PitchClass;
 import collections.CollectionMode;
 import utils.Interval;
 import utils.ScaleDegree;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Nick on 2016-09-17.
@@ -31,6 +29,7 @@ public class Chord {
                         ? CollectionMode.MAJOR
                         : CollectionMode.MINOR);
 
+        // Cycle thru a diatonic collection to get the chord members
         for (int i = 0, currScaleDegree = 0;
                 i < chordMembers.length;
                 i++, currScaleDegree = (currScaleDegree + ScaleDegree.THIRD) % diatonicCollection.getCollectionSize()) {
@@ -39,9 +38,9 @@ public class Chord {
 
         if (chordType == ChordType.DIMINISHED || chordType == ChordType.AUGMENTED) {
             if (chordType == ChordType.DIMINISHED) {
-                chordMembers[ChordMember.FIFTH] = tonic.add(Interval.dim5);
+                chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.dim5);
             } else {
-                chordMembers[ChordMember.FIFTH] = tonic.add(Interval.aug5);
+                chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.aug5);
             }
         }
     }

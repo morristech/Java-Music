@@ -23,7 +23,7 @@ public abstract class PitchClassCollection {
 
     public abstract int getCollectionSize();
 
-    // NB 0-based
+    // NB zero-based indices
     public PitchClass getScaleDegree(int scaleDegreeNumber) {
         if (scaleDegreeNumber < 0 || scaleDegreeNumber >= getCollectionSize()) {
             throw new IndexOutOfBoundsException();

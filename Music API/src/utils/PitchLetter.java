@@ -6,14 +6,6 @@ package utils;
 public enum PitchLetter {
     C, D, E, F, G, A, B;
 
-    public static int compare(PitchLetter a, PitchLetter b) {
-        // Since the octaves start at C rather than A, move them up a third for a simpler String comparison
-        PitchLetter first = PitchLetter.interval(a, Interval.PitchLetterSpanValue.SIXTH);
-        PitchLetter second = PitchLetter.interval(b, Interval.PitchLetterSpanValue.SIXTH);
-
-        return first.toString().compareTo(second.toString());
-    }
-
     public static int calculatePitchLetterNumber(PitchLetter pitchLetter) {
         switch (pitchLetter) {
             case C: return 0;

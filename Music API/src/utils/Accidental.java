@@ -14,6 +14,7 @@ public class Accidental {
         // Prevent instantiation
     }
 
+    // Used in conjunction with PitchClass::calculateNumber
     public static int getAccidentalNumber(String accidental) {
         switch (accidental) {
             case Accidental.DOUBLE_FLAT: return -2;

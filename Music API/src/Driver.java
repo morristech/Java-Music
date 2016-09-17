@@ -15,7 +15,7 @@ import utils.*;
 public class Driver {
     public static void main(String[] args) {
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
-        System.out.printf("%s -> major 3rd -> %s%n", b3, b3.add(Interval.M3));
+        System.out.printf("%s -> major 3rd -> %s%n", b3, b3.transpose(Interval.M3));
 
         PitchClass g = new PitchClass(PitchLetter.G, Accidental.NATURAL);
         DiatonicCollection gMinor = new DiatonicCollection(g, CollectionMode.MINOR);

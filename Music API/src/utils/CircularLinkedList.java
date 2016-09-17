@@ -2,7 +2,7 @@ package utils;
 
 /**
  * Created by Nick on 2016-08-30.
- * A simplified generic circular linked list.
+ * A simplified generic circular linked list.  This is useful since a pitch class collection is cyclic.
  */
 public class CircularLinkedList<E> {
     private Node<E> head;

@@ -12,6 +12,7 @@ public class PitchFrequency {
 
     public static double calculateFrequency(Pitch pitch) {
         int pianoKeyNumber = getPianoKeyNumber(pitch);
+        // https://en.wikipedia.org/wiki/Piano_key_frequencies
         return Math.pow(2, (pianoKeyNumber - 49) / 12.0) * 440.0;
     }
 

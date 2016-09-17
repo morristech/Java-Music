@@ -1,6 +1,5 @@
 package pitches;
 
-import utils.Accidental;
 import utils.Interval;
 import utils.PitchFrequency;
 import utils.PitchLetter;
@@ -31,19 +30,19 @@ public class Pitch implements Comparable<Pitch> {
         this.pitchFrequency = PitchFrequency.calculateFrequency(this);
     }
 
-    public Pitch add(Interval interval) {
-        PitchClass addedPitchClass = pitchClass.add(interval);
+    public Pitch transpose(Interval interval) {
+        PitchClass addedPitchClass = pitchClass.transpose(interval);
         if (addedPitchClass == null) return null;
         int addedOctave = this.octave;
 
-        if (PitchLetter.compare(addedPitchClass.getPitchLetter(), this.pitchClass.getPitchLetter()) < 0) {
+        if (addedPitchClass.getPitchLetter().compareTo(this.pitchClass.getPitchLetter()) < 0) {
             addedOctave++;
         }
 
         return new Pitch(addedPitchClass, addedOctave);
     }
 
-    // TODO subtract interval
+    // TODO include transpose by negative interval
 
     @Override
     public String toString() {
