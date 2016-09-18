@@ -6,7 +6,7 @@ pitch[class] intervals easily.
 Here are a few examples.
 
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
-        System.out.println(b3.transpose(Interval.M3));  /* D#4 */
+        System.out.println(b3.transpose(Interval.M3).transpose(Interval.m3));  /* F#4 */
         
         PitchClass g = new PitchClass(PitchLetter.G, Accidental.NATURAL);
         DiatonicCollection gMinor = new DiatonicCollection(g, CollectionMode.MINOR);  /* [G, A, Bb, C, D, Eb, F] */
