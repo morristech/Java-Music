@@ -20,13 +20,9 @@ public enum PitchLetter {
     }
 
     public static CircularLinkedList<PitchLetter> diatonicCollection = new CircularLinkedList<PitchLetter>() {{
-        append(new Node<>(C));
-        append(new Node<>(D));
-        append(new Node<>(E));
-        append(new Node<>(F));
-        append(new Node<>(G));
-        append(new Node<>(A));
-        append(new Node<>(B));
+        for (PitchLetter pitchLetter : PitchLetter.values()) {
+            append(new Node<>(pitchLetter));
+        }
     }};
 
     public PitchLetter next() {

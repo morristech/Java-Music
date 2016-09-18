@@ -21,8 +21,7 @@ public class PitchedChord {
         int currOctave = tonic.getOctave();
 
         for (int i = 0; i < pitchedChordMembers.length; i++) {
-            PitchLetter currPitchLetter = chordMembers[i].getPitchLetter();
-            if (currPitchLetter.compareTo(tonicPc.getPitchLetter()) < 0) {
+            if (chordMembers[i].getPitchLetter().compareTo(tonicPc.getPitchLetter()) < 0) {
                 currOctave++;
             }
             pitchedChordMembers[i] = new Pitch(chordMembers[i], currOctave);

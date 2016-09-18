@@ -36,12 +36,10 @@ public class Chord {
             chordMembers[i] = diatonicCollection.getScaleDegree(currScaleDegree);
         }
 
-        if (chordType == ChordType.DIMINISHED || chordType == ChordType.AUGMENTED) {
-            if (chordType == ChordType.DIMINISHED) {
-                chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.dim5);
-            } else {
-                chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.aug5);
-            }
+        if (chordType == ChordType.DIMINISHED) {
+            chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.dim5);
+        } else if (chordType == ChordType.AUGMENTED){
+            chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.aug5);
         }
     }
 
