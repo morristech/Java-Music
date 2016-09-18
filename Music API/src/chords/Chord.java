@@ -29,7 +29,7 @@ public class Chord {
                         ? CollectionMode.MAJOR
                         : CollectionMode.MINOR);
 
-        // Cycle thru a diatonic collection to get the chord members
+        // Cycle thru a diatonic collection by thirds to get the chord members
         for (int i = 0, currScaleDegree = 0;
                 i < chordMembers.length;
                 i++, currScaleDegree = (currScaleDegree + ScaleDegree.THIRD) % diatonicCollection.getCollectionSize()) {

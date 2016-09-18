@@ -29,16 +29,16 @@ public enum PitchLetter {
         append(new Node<>(B));
     }};
 
-    public static PitchLetter next(PitchLetter current) {
-        return interval(current, 1);
+    public PitchLetter next() {
+        return transpose(1);
     }
 
-    public static PitchLetter interval(PitchLetter current, int interval) {
+    public PitchLetter transpose(int interval) {
         if (interval < Interval.PitchLetterSpanValue.UNISON || interval > Interval.PitchLetterSpanValue.OCTAVE) {
             throw new RuntimeException("Interval out of bounds of octave span");
         }
 
-        CircularLinkedList.Node<PitchLetter> node = getPitchLetterNode(current);
+        CircularLinkedList.Node<PitchLetter> node = getPitchLetterNode();
         int counter = 0;
 
         while (counter++ < interval) {
@@ -48,7 +48,7 @@ public enum PitchLetter {
         return node.getData();
     }
 
-    private static CircularLinkedList.Node<PitchLetter> getPitchLetterNode(PitchLetter current) {
-        return diatonicCollection.findNode(current);
+    private CircularLinkedList.Node<PitchLetter> getPitchLetterNode() {
+        return diatonicCollection.findNode(this);
     }
 }

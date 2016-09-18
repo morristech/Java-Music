@@ -44,7 +44,7 @@ public class PitchClass {
     // number values to PitchClass to determine the correct intervallic output
     public PitchClass transpose(Interval interval) {
         int addedPcNumber = modTwelve(this.number + interval.getNumberSpan());
-        PitchLetter addedLetter = PitchLetter.interval(this.pitchLetter, interval.getLetterSpan());
+        PitchLetter addedLetter = this.pitchLetter.transpose(interval.getLetterSpan());
 
         return NumberToPitchClasses.MAP.get(addedPcNumber)
                 .stream()

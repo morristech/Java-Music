@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 /**
  * Created by Nick on 2016-09-17.
+ * Like the Chord class but uses an array of Pitches rather than PitchClasses
  */
 public class PitchedChord {
     private Pitch[] pitchedChordMembers;
