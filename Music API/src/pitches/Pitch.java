@@ -1,9 +1,5 @@
 package pitches;
 
-import utils.Interval;
-import utils.PitchFrequency;
-import utils.PitchLetter;
-
 /**
  * Created by Nick on 2016-08-21.
  */

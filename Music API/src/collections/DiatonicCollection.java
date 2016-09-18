@@ -1,7 +1,7 @@
 package collections;
 
 import pitches.PitchClass;
-import utils.Interval;
+import pitches.Interval;
 
 /**
  * Created by Nick on 2016-09-17.

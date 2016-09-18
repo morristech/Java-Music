@@ -5,9 +5,8 @@ import chords.PitchedChord;
 import collections.DiatonicCollection;
 import collections.CollectionMode;
 import collections.PentatonicCollection;
-import pitches.Pitch;
-import pitches.PitchClass;
-import utils.*;
+import collections.ScaleDegree;
+import pitches.*;
 
 /**
  * Created by Nick on 2016-09-17.

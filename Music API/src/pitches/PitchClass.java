@@ -1,10 +1,5 @@
 package pitches;
 
-import utils.Accidental;
-import utils.Interval;
-import utils.NumberToPitchClasses;
-import utils.PitchLetter;
-
 /**
  * Created by Nick on 2016-08-24.
  */

@@ -1,7 +1,7 @@
 package collections;
 
 import pitches.PitchClass;
-import utils.Accidental;
+import pitches.Accidental;
 
 import java.util.Arrays;
 

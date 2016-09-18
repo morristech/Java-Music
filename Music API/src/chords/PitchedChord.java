@@ -2,7 +2,6 @@ package chords;
 
 import pitches.Pitch;
 import pitches.PitchClass;
-import utils.PitchLetter;
 
 import java.util.Arrays;
 

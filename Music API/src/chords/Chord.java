@@ -3,8 +3,8 @@ package chords;
 import collections.DiatonicCollection;
 import pitches.PitchClass;
 import collections.CollectionMode;
-import utils.Interval;
-import utils.ScaleDegree;
+import pitches.Interval;
+import collections.ScaleDegree;
 
 import java.util.Arrays;
 
