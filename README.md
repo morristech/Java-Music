@@ -13,7 +13,7 @@ Here are a few examples.
         MusicCollections.CHORDS.get("Dm9");  // [D, F, A, C, E]
         MusicCollections.PITCHED_CHORDS.get("A#4m9");  // [A#4, C#5, E#5, G#5, B#5]
         
-        // Create objects from scratch
+        // Create and manipulate objects from scratch
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
         System.out.println(b3.transpose(Interval.M3).transpose(Interval.m3));  // F#4 
         
