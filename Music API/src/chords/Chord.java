@@ -15,6 +15,8 @@ import java.util.Arrays;
 // TODO add constructor for Pitches, too
 public class Chord {
     private PitchClass[] chordMembers;
+    private ChordType chordType;
+    private int chordSize;
 
     public PitchClass[] getChordMembers() {
         return chordMembers;
@@ -23,7 +25,7 @@ public class Chord {
     public Chord(PitchClass tonic, ChordType chordType, int chordSize) {
         if (chordSize < 3) throw new RuntimeException("Chord size must be at least 3");
 
-        chordMembers = new PitchClass[chordSize];
+        this.chordMembers = new PitchClass[chordSize];
         DiatonicCollection diatonicCollection = new DiatonicCollection(tonic,
                 chordType == ChordType.MAJOR || chordType == ChordType.AUGMENTED
                         ? CollectionMode.MAJOR
@@ -41,6 +43,9 @@ public class Chord {
         } else if (chordType == ChordType.AUGMENTED){
             chordMembers[ChordMember.FIFTH] = tonic.transpose(Interval.aug5);
         }
+
+        this.chordType = chordType;
+        this.chordSize = chordSize;
     }
 
     // NB inputting an arg of n means requesting the nth chord member. See ChordMember.java's constants.
@@ -54,5 +59,10 @@ public class Chord {
     @Override
     public String toString() {
         return Arrays.toString(chordMembers);
+    }
+
+    public String getName() {
+        return String.format("%s%s%s", this.getChordMember(ChordMember.ROOT),
+                ChordType.getSimpleName(chordType), ChordSize.getNumericName(chordSize));
     }
 }

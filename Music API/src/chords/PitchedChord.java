@@ -12,6 +12,8 @@ import java.util.Arrays;
  */
 public class PitchedChord {
     private Pitch[] pitchedChordMembers;
+    private ChordType chordType;
+    private int chordSize;
 
     public PitchedChord(Pitch tonic, ChordType chordType, int chordSize) {
         PitchClass tonicPc = tonic.getPitchClass();
@@ -20,7 +22,8 @@ public class PitchedChord {
         pitchedChordMembers = new Pitch[chord.getChordMembers().length];
         int currOctave = tonic.getOctave();
 
-        //TODO rethink this logic
+        // TODO rethink this logic
+        // Use Pitch.java's transpose logic? Why is this dependent on the tonic?
         boolean flag = true;
         for (int i = 0; i < pitchedChordMembers.length; i++) {
             PitchLetter currPitchLetter = chordMembers[i].getPitchLetter();
@@ -30,6 +33,9 @@ public class PitchedChord {
             flag = currPitchLetter.compareTo(tonicPc.getPitchLetter()) >= 0;
             pitchedChordMembers[i] = new Pitch(chordMembers[i], currOctave);
         }
+
+        this.chordType = chordType;
+        this.chordSize = chordSize;
     }
 
     // NB inputting an arg of n means requesting the nth chord member. See ChordMember.java's constants.
@@ -43,5 +49,12 @@ public class PitchedChord {
     @Override
     public String toString() {
         return Arrays.toString(pitchedChordMembers);
+    }
+
+    public String getName() {
+        return String.format("%s%s%s",
+                getChordMember(ChordMember.ROOT),
+                ChordType.getSimpleName(chordType),
+                ChordSize.getNumericName(chordSize));
     }
 }

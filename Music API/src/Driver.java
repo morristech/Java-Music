@@ -3,13 +3,13 @@ import chords.ChordSize;
 import chords.ChordType;
 import chords.PitchedChord;
 import collections.*;
-import com.sun.org.apache.xpath.internal.SourceTree;
 import pitches.*;
 
 /**
  * Created by Nick on 2016-09-17.
  */
 public class Driver {
+    // TODO clean this up
     public static void main(String[] args) {
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
         System.out.printf("%s -> major 3rd -> %s%n", b3, b3.transpose(Interval.M3));
@@ -42,12 +42,10 @@ public class Driver {
         PitchedChord db4Major7th = new PitchedChord(db4, ChordType.MAJOR, ChordSize.SEVENTH);
         System.out.println(db4Major7th);
 
-        System.out.println(PitchClasses.MAP);
-        System.out.println(PitchClasses.LIST);
-        System.out.println(DiatonicCollections.MAP);
-        System.out.println(DiatonicCollections.LIST);
-        System.out.println(Pitches.MAP);
-        System.out.println(Pitches.LIST);
-        //Pitches.LIST.forEach(p -> System.out.println(p.getPitchFrequency()));
+        System.out.println(MusicCollections.PITCH_CLASSES.get("Abb"));
+        System.out.println(MusicCollections.PITCHES.get("Fx3"));
+        System.out.println(MusicCollections.DIATONIC_COLLECTIONS.get("C#m"));  // [C#, D#, E, F#, G#, A, B]
+        System.out.println(MusicCollections.CHORDS.get("Dm9"));  // [D, F, A, C, E]
+        System.out.println(MusicCollections.PITCHED_CHORDS.get("A#4m9"));  // [A#4, C#5, E#5, G#5, B#5]
     }
 }

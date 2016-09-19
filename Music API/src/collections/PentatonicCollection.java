@@ -14,6 +14,8 @@ public class PentatonicCollection extends PitchClassCollection {
         pitchClasses[2] = tonic.transpose(mode == CollectionMode.MAJOR ? Interval.M3 : Interval.P4);
         pitchClasses[3] = tonic.transpose(Interval.P5);
         pitchClasses[4] = tonic.transpose(mode == CollectionMode.MAJOR ? Interval.M6 : Interval.m7);
+
+        this.mode = mode;
     }
 
     @Override

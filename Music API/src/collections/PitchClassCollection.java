@@ -10,6 +10,11 @@ import java.util.Arrays;
  */
 public abstract class PitchClassCollection {
     /* package-private */ PitchClass[] pitchClasses;
+    /* package-private */ CollectionMode mode;
+
+    public CollectionMode getMode() {
+        return mode;
+    }
 
     /* package-private */ PitchClassCollection(PitchClass tonic) {
         if (tonic.getAccidental().equals(Accidental.DOUBLE_FLAT)
