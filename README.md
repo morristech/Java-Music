@@ -7,11 +7,11 @@ pitch[class] intervals easily. It also includes static collections of virtually 
 Here are a few examples.
 
         // Query the static collections for objects
-        MusicCollections.PITCH_CLASSES.get("Abb"));
-        MusicCollections.PITCHES.get("Fx3"));
-        MusicCollections.DIATONIC_COLLECTIONS.get("C#m"));  // [C#, D#, E, F#, G#, A, B]
-        MusicCollections.CHORDS.get("Dm9"));  // [D, F, A, C, E]
-        MusicCollections.PITCHED_CHORDS.get("A#7m9"));  // [A#7, C#8, E#8, G#8, B#8]
+        MusicCollections.PITCH_CLASSES.get("Abb");
+        MusicCollections.PITCHES.get("Fx3");
+        MusicCollections.DIATONIC_COLLECTIONS.get("C#m");  // [C#, D#, E, F#, G#, A, B]
+        MusicCollections.CHORDS.get("Dm9");  // [D, F, A, C, E]
+        MusicCollections.PITCHED_CHORDS.get("A#4m9");  // [A#4, C#5, E#5, G#5, B#5]
         
         // Create objects from scratch
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
