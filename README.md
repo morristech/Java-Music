@@ -2,7 +2,7 @@
 Here resides a bunch of music related Java programs I'm making in my free time
 
 **Music API** is another music-generating project which lets the user create music chord/collection objects and calculate
-pitch[class] intervals easily. It also includes static collections of virtually every reasonable diatonic collection, pitch class, and pitch.
+pitch[class] intervals easily. It also includes static collections of virtually every reasonable diatonic collection, pitch class, pitch, chord, and pitched chord (4455 unique pitched chords spread over about twelve octaves, to be exact!).
 
 Here are a few examples.
 
