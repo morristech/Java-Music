@@ -3,6 +3,7 @@ Here resides a bunch of music related Java programs I'm making in my free time
 
 **Music API** is another music-generating project which lets the user create music chord/collection objects and calculate
 pitch[class] intervals easily. It also includes static collections of virtually every diatonic collection, pitch classes, and pitch.
+
 Here are a few examples.
 
         Pitch b3 = new Pitch(new PitchClass(PitchLetter.B, Accidental.NATURAL), Octave.THIRD);
