@@ -43,6 +43,8 @@ public class Driver {
         System.out.println(db4Major7th);
 
         System.out.println(PitchClasses.MAP);
+        System.out.println(PitchClasses.LIST);
         System.out.println(DiatonicCollections.MAP);
+        System.out.println(DiatonicCollections.LIST);
     }
 }
