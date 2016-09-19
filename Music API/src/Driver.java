@@ -46,5 +46,8 @@ public class Driver {
         System.out.println(PitchClasses.LIST);
         System.out.println(DiatonicCollections.MAP);
         System.out.println(DiatonicCollections.LIST);
+        System.out.println(Pitches.MAP);
+        System.out.println(Pitches.LIST);
+        //Pitches.LIST.forEach(p -> System.out.println(p.getPitchFrequency()));
     }
 }
