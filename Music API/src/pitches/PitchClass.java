@@ -43,12 +43,7 @@ public class PitchClass {
     public PitchClass transpose(Interval interval) {
         int addedPcNumber = modTwelve(this.number + interval.getNumberSpan());
         PitchLetter addedLetter = this.pitchLetter.transpose(interval.getLetterSpan());
-
-        return NumberToPitchClasses.MAP.get(addedPcNumber)
-                .stream()
-                .filter(pc -> pc.getPitchLetter() == addedLetter)
-                .findFirst()
-                .orElse(null);
+        return NumberToPitchClasses.MAP.get(addedPcNumber).get(addedLetter);
     }
 
     // + 12 in case of negative values -12 < n < 0 which can occur with pitch class interval number subtraction.

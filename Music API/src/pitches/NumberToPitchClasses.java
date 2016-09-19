@@ -16,65 +16,66 @@ import java.util.Map;
  * due to enharmonicism).
  */
 public class NumberToPitchClasses {
-    public static final Map<Integer, List<PitchClass>> MAP = new HashMap<Integer, List<PitchClass>>() {{
-        put(0, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.B, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.C, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.D, Accidental.DOUBLE_FLAT));
+    public static final Map<Integer, HashMap<PitchLetter, PitchClass>> MAP =
+            new HashMap<Integer, HashMap<PitchLetter, PitchClass>>() {{
+        put(0, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.B, new PitchClass(PitchLetter.B, Accidental.SHARP));
+            put(PitchLetter.C, new PitchClass(PitchLetter.C, Accidental.NATURAL));
+            put(PitchLetter.D, new PitchClass(PitchLetter.D, Accidental.DOUBLE_FLAT));
         }});
-        put(1, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.B, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.C, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.D, Accidental.FLAT));
+        put(1, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.B, new PitchClass(PitchLetter.B, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.C, new PitchClass(PitchLetter.C, Accidental.SHARP));
+            put(PitchLetter.D, new PitchClass(PitchLetter.D, Accidental.FLAT));
         }});
-        put(2, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.C, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.D, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.E, Accidental.DOUBLE_FLAT));
+        put(2, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.C, new PitchClass(PitchLetter.C, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.D, new PitchClass(PitchLetter.D, Accidental.NATURAL));
+            put(PitchLetter.E, new PitchClass(PitchLetter.E, Accidental.DOUBLE_FLAT));
         }});
-        put(3, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.D, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.E, Accidental.FLAT));
-            add(new PitchClass(PitchLetter.F, Accidental.DOUBLE_FLAT));
+        put(3, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.D, new PitchClass(PitchLetter.D, Accidental.SHARP));
+            put(PitchLetter.E, new PitchClass(PitchLetter.E, Accidental.FLAT));
+            put(PitchLetter.F, new PitchClass(PitchLetter.F, Accidental.DOUBLE_FLAT));
         }});
-        put(4, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.D, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.E, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.F, Accidental.FLAT));
+        put(4, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.D, new PitchClass(PitchLetter.D, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.E, new PitchClass(PitchLetter.E, Accidental.NATURAL));
+            put(PitchLetter.F, new PitchClass(PitchLetter.F, Accidental.FLAT));
         }});
-        put(5, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.E, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.F, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.G, Accidental.DOUBLE_FLAT));
+        put(5, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.E, new PitchClass(PitchLetter.E, Accidental.SHARP));
+            put(PitchLetter.F, new PitchClass(PitchLetter.F, Accidental.NATURAL));
+            put(PitchLetter.G, new PitchClass(PitchLetter.G, Accidental.DOUBLE_FLAT));
         }});
-        put(6, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.E, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.F, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.G, Accidental.FLAT));
+        put(6, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.E, new PitchClass(PitchLetter.E, Accidental.SHARP));
+            put(PitchLetter.F, new PitchClass(PitchLetter.F, Accidental.SHARP));
+            put(PitchLetter.G, new PitchClass(PitchLetter.G, Accidental.FLAT));
         }});
-        put(7, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.F, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.G, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.A, Accidental.DOUBLE_FLAT));
+        put(7, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.F, new PitchClass(PitchLetter.F, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.G, new PitchClass(PitchLetter.G, Accidental.NATURAL));
+            put(PitchLetter.A, new PitchClass(PitchLetter.A, Accidental.DOUBLE_FLAT));
         }});
-        put(8, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.G, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.A, Accidental.FLAT));
+        put(8, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.G, new PitchClass(PitchLetter.G, Accidental.SHARP));
+            put(PitchLetter.A, new PitchClass(PitchLetter.A, Accidental.FLAT));
         }});
-        put(9, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.G, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.A, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.B, Accidental.DOUBLE_FLAT));
+        put(9, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.G, new PitchClass(PitchLetter.G, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.A, new PitchClass(PitchLetter.A, Accidental.NATURAL));
+            put(PitchLetter.B, new PitchClass(PitchLetter.B, Accidental.DOUBLE_FLAT));
         }});
-        put(10, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.A, Accidental.SHARP));
-            add(new PitchClass(PitchLetter.B, Accidental.FLAT));
-            add(new PitchClass(PitchLetter.C, Accidental.DOUBLE_FLAT));
+        put(10, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.A, new PitchClass(PitchLetter.A, Accidental.SHARP));
+            put(PitchLetter.B, new PitchClass(PitchLetter.B, Accidental.FLAT));
+            put(PitchLetter.C, new PitchClass(PitchLetter.C, Accidental.DOUBLE_FLAT));
         }});
-        put(11, new ArrayList<PitchClass>() {{
-            add(new PitchClass(PitchLetter.A, Accidental.DOUBLE_SHARP));
-            add(new PitchClass(PitchLetter.B, Accidental.NATURAL));
-            add(new PitchClass(PitchLetter.C, Accidental.FLAT));
+        put(11, new HashMap<PitchLetter, PitchClass>() {{
+            put(PitchLetter.A, new PitchClass(PitchLetter.A, Accidental.DOUBLE_SHARP));
+            put(PitchLetter.B, new PitchClass(PitchLetter.B, Accidental.NATURAL));
+            put(PitchLetter.C, new PitchClass(PitchLetter.C, Accidental.FLAT));
         }});
     }};
 

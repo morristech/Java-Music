@@ -2,6 +2,7 @@ package chords;
 
 import pitches.Pitch;
 import pitches.PitchClass;
+import pitches.PitchLetter;
 
 import java.util.Arrays;
 
@@ -19,12 +20,24 @@ public class PitchedChord {
         pitchedChordMembers = new Pitch[chord.getChordMembers().length];
         int currOctave = tonic.getOctave();
 
+        //TODO rethink this logic
+        boolean flag = true;
         for (int i = 0; i < pitchedChordMembers.length; i++) {
-            if (chordMembers[i].getPitchLetter().compareTo(tonicPc.getPitchLetter()) < 0) {
+            PitchLetter currPitchLetter = chordMembers[i].getPitchLetter();
+            if (currPitchLetter.compareTo(tonicPc.getPitchLetter()) < 0 && flag) {
                 currOctave++;
             }
+            flag = currPitchLetter.compareTo(tonicPc.getPitchLetter()) >= 0;
             pitchedChordMembers[i] = new Pitch(chordMembers[i], currOctave);
         }
+    }
+
+    // NB inputting an arg of n means requesting the nth chord member. See ChordMember.java's constants.
+    public Pitch getChordMember(int chordMember) {
+        if (chordMember < 0 || chordMember >= pitchedChordMembers.length) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return pitchedChordMembers[chordMember];
     }
 
     @Override

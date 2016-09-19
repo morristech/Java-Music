@@ -52,6 +52,8 @@ public class ChordTest {
         assertEquals("Daug13 ninth should be E", new PitchClass(PitchLetter.E), dAugmented13th.getChordMember(ChordMember.NINTH));
         assertEquals("Daug13 eleventh should be G", new PitchClass(PitchLetter.G), dAugmented13th.getChordMember(ChordMember.ELEVENTH));
         assertEquals("Daug13 thirteenth should be B", new PitchClass(PitchLetter.B), dAugmented13th.getChordMember(ChordMember.THIRTEENTH));
+
+        assertEquals("Fdim11 fifth should be Cb", new PitchClass(PitchLetter.C, Accidental.FLAT), fDiminished11th.getChordMember(ChordMember.FIFTH));
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)

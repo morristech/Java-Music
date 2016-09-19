@@ -32,6 +32,14 @@ public class PitchTest {
     }
 
     @Test
+    public void transposeMakesCorrectFrequency() throws Exception {
+        assertEquals("D4 should have a frequency of 293.665", 293.665, cFlat4.transpose(Interval.aug2).getPitchFrequency(), 0.001);
+        assertEquals("Cx3 should have a frequency of 146.832", 146.832, bSharp2.transpose(Interval.M2).getPitchFrequency(), 0.001);
+        assertEquals("D#4 should have a frequency of 311.127", 311.127, dSharp3.transpose(Interval.OCTAVE).getPitchFrequency(), 0.001);
+        assertEquals("e5 should have a frequency of 659.255", 659.255, e5.transpose(Interval.UNISON).getPitchFrequency(), 0.001);
+    }
+
+    @Test
     public void transposingReturnsCorrectOctave() throws Exception {
         Pitch cFlat4Other = cFlat4.transpose(Interval.UNISON);
         Pitch g3 = bSharp2.transpose(Interval.P4).transpose(Interval.dim3);
