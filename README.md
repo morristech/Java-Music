@@ -6,7 +6,7 @@ pitch[class] intervals easily. It also includes static collections of virtually 
 
 Here are a few examples.
 
-        // Query the static collections for objects
+        // Query the static dictionaries for objects
         MusicCollections.PITCH_CLASSES.get("Abb");
         MusicCollections.PITCHES.get("Fx3");
         MusicCollections.DIATONIC_COLLECTIONS.get("C#m");  // [C#, D#, E, F#, G#, A, B]
