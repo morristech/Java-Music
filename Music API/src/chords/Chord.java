@@ -22,6 +22,10 @@ public class Chord {
         return chordMembers;
     }
 
+    public int getChordSize() {
+        return chordSize;
+    }
+
     public Chord(PitchClass tonic, ChordType chordType, int chordSize) {
         if (chordSize < 3) throw new RuntimeException("Chord size must be at least 3");
 

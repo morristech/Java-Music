@@ -10,10 +10,17 @@ import java.util.Arrays;
  * Created by Nick on 2016-09-17.
  * Like the Chord class but uses an array of Pitches rather than PitchClasses
  */
+
+// TODO rethink the utility of this class. Chords are not typically stacked by strict thirds in pitch-space, but more
+// akin to how a harmonic series is stacked
 public class PitchedChord {
     private Pitch[] pitchedChordMembers;
     private ChordType chordType;
     private int chordSize;
+
+    public int getChordSize() {
+        return chordSize;
+    }
 
     public PitchedChord(Pitch tonic, ChordType chordType, int chordSize) {
         PitchClass tonicPc = tonic.getPitchClass();

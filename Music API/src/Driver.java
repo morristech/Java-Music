@@ -44,8 +44,8 @@ public class Driver {
 
         System.out.println(MusicCollections.PITCH_CLASSES.get("Abb"));
         System.out.println(MusicCollections.PITCHES.get("Fx3"));
-        System.out.println(MusicCollections.DIATONIC_COLLECTIONS.get("C#m"));  // [C#, D#, E, F#, G#, A, B]
-        System.out.println(MusicCollections.CHORDS.get("Dm9"));  // [D, F, A, C, E]
+        System.out.println(MusicCollections.DIATONIC_COLLECTIONS.get("C#maj"));  // [C#, D#, E#, F#, G#, A#, B#]
+        System.out.println(MusicCollections.CHORDS.get("Bbaug9"));  // [Bb, D, F#, A, C]
         System.out.println(MusicCollections.PITCHED_CHORDS.get("A#4m9"));  // [A#4, C#5, E#5, G#5, B#5]
     }
 }

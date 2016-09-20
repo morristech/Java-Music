@@ -94,13 +94,12 @@ public class MusicCollections {
     private static boolean isSuitableTonic(PitchClass pitchClass, String fifthType) {
         return !pitchClass.getAccidental().equals(Accidental.DOUBLE_FLAT)
                 && !pitchClass.getAccidental().equals(Accidental.DOUBLE_SHARP)
-                && !(pitchClass.getPitchLetter() == PitchLetter.B && fifthType.equals("AUGMENTED"));
+                && !(pitchClass.getPitchLetter() == PitchLetter.B
+                    && pitchClass.getAccidental().equals(Accidental.SHARP)
+                    && fifthType.equals("AUGMENTED"));
     }
 
     private static boolean isSuitableTonic(Pitch pitch, String fifthType) {
-        PitchClass pitchClass = pitch.getPitchClass();
-        return !pitchClass.getAccidental().equals(Accidental.DOUBLE_FLAT)
-                && !pitchClass.getAccidental().equals(Accidental.DOUBLE_SHARP)
-                && !(pitchClass.getPitchLetter() == PitchLetter.B && fifthType.equals("AUGMENTED"));
+        return isSuitableTonic(pitch.getPitchClass(), fifthType);
     }
 }
