@@ -22,7 +22,7 @@ Here are a few examples.
         DiatonicCollection gMajor = new DiatonicCollection(g, CollectionMode.MAJOR);  // [G, A, B, C, D, E, F#] 
         
         PitchClass c = new PitchClass(PitchLetter.C, Accidental.NATURAL);
-        Chord cMajor9th = new Chord(c, ChordType.MINOR, ChordSize.NINTH);  // [C, Eb, G, Bb, D] 
+        Chord cMinor9th = new Chord(c, ChordType.MINOR, ChordSize.NINTH);  // [C, Eb, G, Bb, D] 
         
         Pitch db4 = new Pitch(new PitchClass(PitchLetter.D, Accidental.FLAT), Octave.FOURTH);
         PitchedChord db4Major7th = new PitchedChord(db4, ChordType.MAJOR, ChordSize.SEVENTH);  // [Db4, F4, Ab4, C5] 
