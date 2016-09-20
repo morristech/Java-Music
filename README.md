@@ -9,8 +9,8 @@ Here are a few examples.
         // Query the static dictionaries for objects
         MusicCollections.PITCH_CLASSES.get("Abb");
         MusicCollections.PITCHES.get("Fx3");
-        MusicCollections.DIATONIC_COLLECTIONS.get("C#m");  // [C#, D#, E, F#, G#, A, B]
-        MusicCollections.CHORDS.get("Dm9");  // [D, F, A, C, E]
+        MusicCollections.DIATONIC_COLLECTIONS.get("C#maj");  // [C#, D#, E#, F#, G#, A#, B#]
+        MusicCollections.CHORDS.get("Bbaug9");  // [Bb, D, F#, A, C]
         MusicCollections.PITCHED_CHORDS.get("A#4m9");  // [A#4, C#5, E#5, G#5, B#5]
         
         // Create and manipulate objects from scratch
