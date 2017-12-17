@@ -1,7 +1,9 @@
 # Java-Music
 Here resides a bunch of music related Java programs I'm making in my free time
 
-**MusicDagger** is a fairly contrived example of create musical pitches facilitated by the dependency injection library, Dagger2. It is similar in spirit to the Music API project, also in this repo. The distinction between using DI and not is outlined below.
+**MusicDagger** is a fairly contrived example of creating musical pitches facilitated by 
+the dependency injection library, Dagger2. It is similar in spirit to the Music API project,
+also in this repo. The distinction between using DI and not is outlined below.
 
         // Ingredients for a Bbb3 pitch
         final PitchLetter pitchLetter = PitchLetter.B;
