@@ -1,6 +1,33 @@
 # Java-Music
 Here resides a bunch of music related Java programs I'm making in my free time
 
+**MusicDagger** is a fairly contrived example of create musical pitches facilitated by the dependency injection library, Dagger2. It is similar in spirit to the Music API project, also in this repo. The distinction between using DI and not is outlined below.
+
+        // Ingredients for a Bbb3 pitch
+        final PitchLetter pitchLetter = PitchLetter.B;
+        final AccidentalType accidentalType = AccidentalType.FLAT;
+        final @AccidentalDegree int accidentalDegree = 2;
+        final @OctaveValue int octaveValue = 3;
+
+        // Without DI
+        Accidental accidental = new Accidental(accidentalType, accidentalDegree);
+        PitchClass pitchClass = new PitchClass(pitchLetter, accidental);
+        Octave octave = new Octave(octaveValue);
+        Pitch bDoubleFlat3 = new Pitch(pitchClass, octave);
+
+        System.out.println(bDoubleFlat3);  // Bbb3
+
+        // With DI
+        PitchModule pitchModule = 
+                new PitchModule(pitchLetter, accidentalType, accidentalDegree, octaveValue);
+
+        Pitch pitch = DaggerPitchComponent.builder()
+                .pitchModule(pitchModule)
+                .build()
+                .pitch();
+
+        System.out.println(pitch);  // Bbb3
+
 **Music API** is another music-generating project which lets the user create music chord/collection objects and calculate
 pitch[class] intervals easily. It also includes static collections of virtually every reasonable diatonic collection, pitch class, pitch, chord, and pitched chord (4455 unique pitched chords spread over about twelve octaves, to be exact!).
 
