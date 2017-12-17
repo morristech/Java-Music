@@ -20,11 +20,8 @@ also in this repo. The distinction between using DI and not is outlined below.
         System.out.println(bDoubleFlat3);  // Bbb3
 
         // With DI
-        PitchModule pitchModule = 
-                new PitchModule(pitchLetter, accidentalType, accidentalDegree, octaveValue);
-
         Pitch pitch = DaggerPitchComponent.builder()
-                .pitchModule(pitchModule)
+                .pitchModule(new PitchModule(pitchLetter, accidentalType, accidentalDegree, octaveValue))
                 .build()
                 .pitch();
 
